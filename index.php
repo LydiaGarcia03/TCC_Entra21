@@ -21,7 +21,7 @@
 							<li class="nav-item active mr-4"><a href="index.php" class="nav-link p-0">Home</a></li>
 							<li class="nav-item mr-4"><a href="#sobre_nos" class="nav-link p-0">Sobre nós</a></li>
 							<li class="nav-item mr-4"><a href="trabalhe_conosco.php" class="nav-link p-0">Trabalhe conosco</a></li>
-							<li class="nav-item mr-4"><a href="#contato" class="nav-link p-0">Contate-nos</a></li>
+							<li class="nav-item mr-4"><a href="contate_nos.php" class="nav-link p-0">Contate-nos</a></li>
 							<li class="nav-item mr-4"><a href="#blog" class="nav-link p-0">Blog</a></li>
 						</ul>
 						<div class="float-right">
