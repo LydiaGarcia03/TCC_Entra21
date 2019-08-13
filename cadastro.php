@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark text-white m-0 py-4" style="background-color: rgba(15, 116, 163, 0.6);">
+	<nav class="navbar navbar-expand-lg navbar-dark text-white m-0 py-4">
 		<div class="container-fluid">
 			<div class="container">
 				<div class="row">
@@ -19,7 +19,7 @@
 
 					<div class="col-8 text-right">
 						<ul class="navbar-nav float-left pt-1">
-							<li class="nav-item active mr-4"><a href="index.php" class="nav-link p-0">Home</a></li>
+							<li class="nav-item mr-4"><a href="index.php" class="nav-link p-0">Home</a></li>
 							<li class="nav-item mr-4"><a href="sobre.php" class="nav-link p-0">Sobre nós</a></li>
 							<li class="nav-item mr-4"><a href="blog.php" class="nav-link p-0">Blog</a></li>
 							<li class="nav-item mr-4"><a href="contato.php" class="nav-link p-0">Contate-nos</a></li>
@@ -51,7 +51,7 @@
 		</div>
 	</div>
 
-	<footer class="text-center text-white py-5" style="background-color: rgba(15, 116, 163, 0.6);">
+	<footer class="text-center text-white py-5">
 		<div class="container-fluid">
 			<div class="container">
 				<div class="row">
