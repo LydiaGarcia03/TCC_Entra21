@@ -84,7 +84,7 @@
 
 										<div class="form-group">
 											<label for="c_nome">Motivo</label>
-											<input type="textarea" class="required-entry" name="comment" id="comment" placeholder="Eu gostaria de ...">
+											<input type="text area" class="required-entry" name="comment" id="comment" placeholder="Eu gostaria de ...">
 										</div> 
 									</div>
 								</div>
