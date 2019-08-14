@@ -19,8 +19,8 @@
 
 					<div class="col-8 text-right">
 						<ul class="navbar-nav float-left pt-1">
-							<li class="nav-item active mr-4"><a href="index.php" class="nav-link p-0">Home</a></li>
-							<li class="nav-item mr-4"><a href="sobre.php" class="nav-link p-0">Sobre nós</a></li>
+							<li class="nav-item mr-4"><a href="index.php" class="nav-link p-0">Home</a></li>
+							<li class="nav-item active mr-4"><a href="sobre.php" class="nav-link p-0">Sobre nós</a></li>
 							<li class="nav-item mr-4"><a href="blog.php" class="nav-link p-0">Blog</a></li>
 							<li class="nav-item mr-4"><a href="contato.php" class="nav-link p-0">Contate-nos</a></li>
 							<li class="nav-item mr-4"><a href="cadastro_cuidador.php" class="nav-link p-0">Trabalhe conosco</a></li>
@@ -40,13 +40,15 @@
 			<div class="row">
 				<div class="col-12">
 					
-					 <div class="card shadow-lg my-5" style="height: 400px"> <!-- height provisória -->
+					<div class="card shadow-lg my-5">
 						<div class="card-body">
 							
 							<p class="h1 font-weight-normal mb-4">
-							Texto
+							Sobre nós
 							<span></span>
 							</p>
+
+							<p class="text-justify">Texto</p>
 
 						</div>
 					</div>
