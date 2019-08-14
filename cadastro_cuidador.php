@@ -100,6 +100,9 @@
 											<br>
 											<input type="radio" name="c_genero_m" id="c_genero_m">
 											<label for="c_genero_m">Masculino</label>
+											<br>
+											<input type="radio" name="c_genero_o" id="c_genero_o">
+											<label for="c_genero_o">Outro</label>
 										</div>
 
 										<div class="form-group">
@@ -117,10 +120,85 @@
 											<input type="number" class="form-control" name="c_rg" id="c_rg" pattern="[0-9]{1}.[0-9]{3}-[0-9]{3}" placeholder="0.000-000">
 										</div>
 
+										<div class="form-group">
+											<label for="c_cep">CEP</label>
+											<input type="number" class="form-control" name="c_cep" id="c_cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000">
+										</div>
+
+										<div class="form-group">
+											<label for="c_rua">Rua</label>
+											<input type="text" class="form-control" name="c_rua" id="c_rua" disabled>
+										</div>
+
+										<div class="form-group">
+											<label for="c_num_casa">Número</label>
+											<input type="number" class="form-control" name="c_num_casa" id="c_num_casa" disabled>
+										</div>
+
+										<div class="form-group">
+											<label for="c_comp">Complemento</label>
+											<input type="text" class="form-control" name="c_comp" id="c_comp" disabled>
+										</div>
+
+										<div class="form-group">
+											<label for="c_cidade">Cidade</label>
+											<input type="text" class="form-control" name="c_cidade" id="c_cidade" disabled>
+										</div>
+
+										<div class="form-group">
+											<label for="c_bairro">Bairro</label>
+											<input type="text" class="form-control" name="c_bairro" id="c_bairro" disabled>
+										</div>
+
+										<div class="form-group">
+											<label for="c_comp">Estado</label>
+											<select class="custom-select" disabled>
+												<option>SC</option>
+												<option>RS</option>
+												<option>PR</option>
+											</select>
+										</div>
+
+										<div class="form-group">
+											<label for="c_formacao">Formação</label>
+											<input type="text" class="form-control" name="c_formacao" id="c_formacao" placeholder="Técnico de Enfermagem">
+										</div>
+
+										<div class="form-group">
+											<label for="c_local_formacao">Local de formação</label>
+											<input type="text" class="form-control" name="c_local_formacao" id="c_local_formacao" placeholder="UNIVALI Itajaí">
+										</div>
+
+										<div class="form-group">
+											<p>Serviço a oferecer</p>
+											<input type="radio" name="c_servico_inf" id="c_servico_inf">
+											<label for="c_servico_inf">Cuidador infantil</label>
+											<br>
+											<input type="radio" name="c_servico_id" id="c_servico_id">
+											<label for="c_servico_id">Cuidador de idosos</label>
+											<br>
+											<input type="radio" name="c_servico_po" id="c_servico_po">
+											<label for="c_servico_po">Cuidador pós-operatório</label>
+										</div>
+
+										<div class="form-group">
+											<label>Banco</label>
+											<select class="custom-select">
+												<option>Banco do Brasil</option>
+												<option>Itaú</option>
+												<option>Bradesco</option>
+											</select>
+										</div>
+
+										<div class="form-group">
+											<label for="c_conta_num">Número da conta</label>
+											<input type="number" class="form-control" name="c_conta_num" id="c_conta_num" placeholder="XX-XXXX">
+										</div>
+
 										<div class="p-0 mt-3">
 											<button type="submit" name="botao-cadastro" class="btn btn-primary font-weight-bold">Criar conta</button>	
 										</div>
-
+		
 									</div>
 								</div>
 

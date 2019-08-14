@@ -40,9 +40,14 @@
 			<div class="row">
 				<div class="col-12">
 					
-					<div class="card shadow-lg my-5" style="height: 400px">
+					 <div class="card shadow-lg my-5" style="height: 400px"> <!-- height provisória -->
 						<div class="card-body">
 							
+							<p class="h1 font-weight-normal mb-4">
+							Texto
+							<span></span>
+							</p>
+
 						</div>
 					</div>
 

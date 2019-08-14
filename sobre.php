@@ -40,9 +40,16 @@
 			<div class="row">
 				<div class="col-12">
 					
-					<div class="card shadow-lg my-5" style="height: 400px">
+					<div class="card shadow-lg my-5">
 						<div class="card-body">
 							
+							<p class="h1 font-weight-normal mb-4">
+							Sobre nós
+							<span></span>
+							</p>
+
+							<p class="text-justify">Texto</p>
+
 						</div>
 					</div>
 

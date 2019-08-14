@@ -80,7 +80,7 @@
 		</div>
 	</div>
 
-	<footer class="text-center text-white bg-dark py-5">
+	<footer class="text-center text-white py-5">
 		<div class="container-fluid">
 			<div class="container">
 				<div class="row">
