@@ -39,20 +39,43 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					
-					<div class="card shadow-lg my-5">
-						<div class="card-body">
-							
-							<p class="h1 font-weight-normal mb-4">
-							Sobre nós
-							<span></span>
+					<div class=" my-5">
+						<!-- <div class="card-body">
+ -->							<p class="h1 font-weight-normal mb-4">
+								Sobre nós
+								<span></span>
 							</p>
-
-							<p class="text-justify">Texto</p>
-
+							<div class="row no-gutters h-50">
+								<div class="col-6 col-md-4 pl-5">
+									<img src="Penguins.jpg" height="274" width="311">
+								</div>
+								<div class="col-12 col-sm-6 col-md-7 pl-5 text-justify my-auto">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>
+							</div>
+							<div class="row no-gutters h-50">
+								<div class="col-12 col-sm-6 col-md-7 pt-5 pl-5 text-justify my-auto">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>
+								<div class="col-6 col-md-3 pl-5 pt-5">
+									<img src="Penguins.jpg" height="274" width="311">
+								</div>
+							</div>
 						</div>
 					</div>
-
+				</div>
+				<div class="col-6">
+					
 				</div>
 			</div>
 		</div>
