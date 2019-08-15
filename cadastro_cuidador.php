@@ -35,7 +35,7 @@
 
 	<!-- Progress bar -->
 	<div class="progress" style="height: 5px;">
-		<div class="progress-bar" role="progressbar" style="width: 33%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+		<div class="progress-bar" id="progressbar" role="progressbar" style="width: 33%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 	</div>
 
 	<!-- Formulário -->
@@ -209,6 +209,7 @@
 										</div>
 									</div>
 								</div>
+								<!-- Fim da Tab 01 -->
 
 								<!-- Tab 02 -->
 								<div class="tab">
@@ -229,7 +230,7 @@
 												<select class="custom-select">
 													<option selected disabled>Selecione seu serviço</option>
 													<option>Cuidador infantil</option>
-													<option>Cuidador aos idosos</option>
+													<option>Cuidador de idosos</option>
 													<option>Profissional de saúde</option>
 												</select>
 											</div>
@@ -257,14 +258,15 @@
 										</div>
 									</div>
 								</div>
+								<!-- Fim da Tab 02 -->
 
 								<!-- Botões -->
 								<div class="p-0 mt-3 float-left">
-									<button name="btnVoltar" id="btnVoltar" class="btn btn-secondary font-weight-normal px-3 ">Voltar</button>
+									<button name="btnVoltar" id="btnVoltar" class="btn btn-secondary font-weight-normal px-3" onclick="passaEtapa(-1)">Voltar</button>
 								</div>
 
 								<div class="p-0 mt-3 float-right">
-									<button type="submit" name="btnNext" id="btnNext" class="btn btn-primary font-weight-normal">Criar conta</button>	
+									<button type="submit" name="btnNext" id="btnNext" class="btn btn-primary font-weight-normal" onclick="passaEtapa(1)">Criar conta</button>	
 								</div>
 								
 							</form>
@@ -292,8 +294,47 @@
 	<script src="bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		
-		var 
+		var etapaAtual = 0;
+		mostraEtapa(etapaAtual);
 
+
+		function mostraEtapa(atual){
+
+			var etapa = window.document.getElementsByClassName('tab');
+			etapa[atual].style.display = 'block';
+
+			if(atual == 0){
+				window.document.getElementById('btnVoltar').style.display = 'none';
+			} else{
+				window.document.getElementById('btnVoltar').style.display = 'inline';
+			}
+
+			if(atual == (etapa.lenght - 1)){
+				window.document.getElementById('btnNext').innerHTML = 'Criar conta';
+			} else{
+				window.document.getElementById('btnNext').innerHTML = 'Continuar';
+			}
+
+			avancaProgressBar();
+
+		}
+
+		function passaEtapa(passo){
+
+			var etapa = window.document.getElementsByClassName('tab');
+
+			// Adicionar verificação dos itens em cada form da tabs
+			etapa[etapaAtual].style.display = 'none';
+			etapaAtual += passo;
+
+			mostraEtapa(etapaAtual);		
+
+
+		} 
+
+		function avancaProgressBar(){
+			var pbar = window.document.getElementById('progressbar').style.width += '33%';
+		} 
 
 	</script>
 </body>
