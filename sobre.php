@@ -46,10 +46,10 @@
 								<span></span>
 							</p>
 							<div class="row no-gutters h-50">
-								<div class="col-6 col-md-4 pl-5">
+								<div class="col-6 col-md-4 pl-0">
 									<img src="Penguins.jpg" height="274" width="311">
 								</div>
-								<div class="col-12 col-sm-6 col-md-7 pl-5 text-justify my-auto">
+								<div class="col-12 col-sm-6 col-md-7 pl-0 text-justify my-auto">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -59,7 +59,7 @@
 								</div>
 							</div>
 							<div class="row no-gutters h-50">
-								<div class="col-12 col-sm-6 col-md-7 pt-5 pl-5 text-justify my-auto">
+								<div class="col-12 col-sm-6 col-md-7 pt-5 pl-0 text-justify my-auto">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
