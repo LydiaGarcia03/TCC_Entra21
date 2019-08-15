@@ -13,3 +13,9 @@ nav, footer{
 .h1{
 	line-height: 100px;
 }
+span{
+	width: 5%;
+	height: 3px;
+	display: block;
+	background-color: rgba(15, 116, 163, 0.6);
+}
