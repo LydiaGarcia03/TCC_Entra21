@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<!-- Navbar -->
+	<!-- Navbar --> 
 	<nav class="navbar navbar-expand-lg navbar-dark text-white m-0 py-4">
 		<div class="container-fluid">
 			<a href="index.php" style="text-decoration: none;"><p class="font-weight-light text-white h4">ComfyCare</p></a>
