@@ -9,29 +9,26 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark text-white m-0 mb-5 py-4">
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark text-white m-0 py-4">
 		<div class="container-fluid">
+			<p class="font-weight-light h4">ComfyCare</p>
 			<div class="container">
 				<div class="row">
-					<div class="col-4 text-left">
-						<p class="font-weight-light h4">CUIDADOS</p>
-					</div>
-
-					<div class="col-8 text-right">
+					<div class="col-9 offset-md-3 text-right">
 						<ul class="navbar-nav float-left pt-1">
-							<li class="nav-item mr-4"><a href="index.php" class="nav-link p-0">Home</a></li>
-							<li class="nav-item mr-4"><a href="sobre.php" class="nav-link p-0">Sobre nós</a></li>
-							<li class="nav-item mr-4"><a href="blog.php" class="nav-link p-0">Blog</a></li>
-							<li class="nav-item mr-4"><a href="contato.php" class="nav-link p-0">Contate-nos</a></li>
+							<li class="nav-item mr-5"><a href="sobre.php" class="nav-link p-0">Quem somos</a></li>
+							<li class="nav-item mr-5"><a href="blog.php" class="nav-link p-0">Serviços</a></li>
+							<li class="nav-item mr-5"><a href="contato.php" class="nav-link p-0">Como funciona</a></li>
+							<li class="nav-item mr-5"><a href="contato.php" class="nav-link p-0">Dúvidas</a></li>
+							<li class="nav-item mr-5"><a href="contato.php" class="nav-link p-0">Blog</a></li>
 							<li class="nav-item mr-4"><a href="cadastro_cuidador.php" class="nav-link p-0">Trabalhe conosco</a></li>
 						</ul>
-						<div class="float-right">
-							<a href="login.php" class="btn btn-outline-light btn-sm mr-3">Login</a>
-							<a href="cadastro.php" class="btn btn-outline-light btn-sm">Cadastre-se</a>
-						</div>
 					</div>
 				</div>
 			</div>
+			<a href="login.php" class="btn btn-outline-light btn-sm mr-3">Login</a>
+			<a href="cadastro.php" class="btn btn-outline-light btn-sm">Cadastro</a>
 		</div>
 	</nav>
 
