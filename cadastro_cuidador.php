@@ -16,14 +16,14 @@
 			<p class="font-weight-light h4">ComfyCare</p>
 			<div class="container">
 				<div class="row">
-					<div class="col-9 offset-md-3 text-right">
+					<div class="col-10 offset-md-3 text-right">
 						<ul class="navbar-nav float-left pt-1">
 							<li class="nav-item mr-5"><a href="sobre.php" class="nav-link p-0">Quem somos</a></li>
 							<li class="nav-item mr-5"><a href="blog.php" class="nav-link p-0">Serviços</a></li>
 							<li class="nav-item mr-5"><a href="contato.php" class="nav-link p-0">Como funciona</a></li>
 							<li class="nav-item mr-5"><a href="contato.php" class="nav-link p-0">Dúvidas</a></li>
 							<li class="nav-item mr-5"><a href="contato.php" class="nav-link p-0">Blog</a></li>
-							<li class="nav-item active mr-4"><a href="cadastro_cuidador.php" class="nav-link p-0">Trabalhe conosco</a></li>
+							<li class="nav-item active mr-5"><a href="cadastro_cuidador.php" class="nav-link p-0">Trabalhe conosco</a></li>
 						</ul>
 					</div>
 				</div>
@@ -294,47 +294,54 @@
 	<script src="bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		
-		var etapaAtual = 0;
-		mostraEtapa(etapaAtual);
+		$(".form-signin").steps({
+			headerTag: "h3",
+			bodyTag: "section",
+			transitionEffect: "slideLeft",
+			autoFocus: true
+		});
+
+		// var etapaAtual = 0;
+		// mostraEtapa(etapaAtual);
 
 
-		function mostraEtapa(atual){
+		// function mostraEtapa(atual){
 
-			var etapa = window.document.getElementsByClassName('tab');
-			etapa[atual].style.display = 'block';
+		// 	var etapa = window.document.getElementsByClassName('tab');
+		// 	etapa[atual].style.display = 'block';
 
-			if(atual == 0){
-				window.document.getElementById('btnVoltar').style.display = 'none';
-			} else{
-				window.document.getElementById('btnVoltar').style.display = 'inline';
-			}
+		// 	if(atual == 0){
+		// 		window.document.getElementById('btnVoltar').style.display = 'none';
+		// 	} else{
+		// 		window.document.getElementById('btnVoltar').style.display = 'inline';
+		// 	}
 
-			if(atual == (etapa.lenght - 1)){
-				window.document.getElementById('btnNext').innerHTML = 'Criar conta';
-			} else{
-				window.document.getElementById('btnNext').innerHTML = 'Continuar';
-			}
+		// 	if(atual == (etapa.lenght - 1)){
+		// 		window.document.getElementById('btnNext').innerHTML = 'Criar conta';
+		// 	} else{
+		// 		window.document.getElementById('btnNext').innerHTML = 'Continuar';
+		// 	}
 
-			avancaProgressBar();
+		// 	avancaProgressBar();
 
-		}
+		// }
 
-		function passaEtapa(passo){
+		// function passaEtapa(passo){
 
-			var etapa = window.document.getElementsByClassName('tab');
+		// 	var etapa = window.document.getElementsByClassName('tab');
 
-			// Adicionar verificação dos itens em cada form da tabs
-			etapa[etapaAtual].style.display = 'none';
-			etapaAtual += passo;
+		// 	// Adicionar verificação dos itens em cada form da tabs
+		// 	etapa[etapaAtual].style.display = 'none';
+		// 	etapaAtual += passo;
 
-			mostraEtapa(etapaAtual);		
+		// 	mostraEtapa(etapaAtual);		
 
 
-		} 
+		// } 
 
-		function avancaProgressBar(){
-			var pbar = window.document.getElementById('progressbar').style.width += '33%';
-		} 
+		// function avancaProgressBar(){
+		// 	var pbar = window.document.getElementById('progressbar').style.width += '33%';
+		// } 
 
 	</script>
 </body>
