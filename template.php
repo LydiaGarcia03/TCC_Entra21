@@ -12,16 +12,16 @@
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark text-white m-0 py-4">
 		<div class="container-fluid">
-			<p class="font-weight-light h4">ComfyCare</p>
+			<a href="index.php" style="text-decoration: none;"><p class="font-weight-light text-white h4">ComfyCare</p></a>
 			<div class="container">
 				<div class="row">
 					<div class="col-10 col-sm-12 offset-md-3 text-right">
 						<ul class="navbar-nav float-left pt-1">
 							<li class="nav-item mr-5 mr-sm-4"><a href="sobre.php" class="nav-link p-0">Quem somos</a></li>
-							<li class="nav-item mr-5 mr-sm-4"><a href="blog.php" class="nav-link p-0">Serviços</a></li>
+							<li class="nav-item mr-5 mr-sm-4"><a href="servicos.php" class="nav-link p-0">Serviços</a></li>
 							<li class="nav-item mr-5 mr-sm-4"><a href="como_funciona.php" class="nav-link p-0">Como funciona</a></li>
 							<li class="nav-item mr-5 mr-sm-4"><a href="FAQ.php" class="nav-link p-0">Dúvidas</a></li>
-							<li class="nav-item mr-5 mr-sm-4"><a href="contato.php" class="nav-link p-0">Blog</a></li>
+							<li class="nav-item mr-5 mr-sm-4"><a href="blog.php" class="nav-link p-0">Blog</a></li>
 							<li class="nav-item mr-5 mr-sm-4"><a href="cadastro_cuidador.php" class="nav-link p-0">Trabalhe conosco</a></li>
 						</ul>
 					</div>
