@@ -12,7 +12,7 @@
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark text-white m-0 py-4">
 		<div class="container-fluid">
-			<a href="index.php" style="text-decoration: none;"><p class="font-weight-light text-white h4">ComfyCare</p></a>
+			<a href="index.php"><p class="font-weight-light text-decoration-none text-white h4">ComfyCare</p></a>
 			<div class="container">
 				<div class="row">
 					<div class="col-10 col-sm-12 offset-md-3 text-right">

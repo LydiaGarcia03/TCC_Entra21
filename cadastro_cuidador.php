@@ -295,8 +295,8 @@
 	<script type="text/javascript">
 		
 		$(".form-signin").steps({
-			headerTag: "h3",
-			bodyTag: "section",
+			headerTag: "div.tag",
+			bodyTag: "div",
 			transitionEffect: "slideLeft",
 			autoFocus: true
 		});
