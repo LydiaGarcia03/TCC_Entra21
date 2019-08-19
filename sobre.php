@@ -28,13 +28,13 @@
 			<a href="index.php" style="text-decoration: none;"><p class="font-weight-light text-white h4">ComfyCare</p></a>
 			<div class="container">
 				<div class="row">
-					<div class="col-10 offset-md-3 text-right">
+					<div class="col-10 col-sm-9 offset-md-3 text-right">
 						<ul class="navbar-nav float-left pt-1">
 							<li class="nav-item active mr-5"><a href="sobre.php" class="nav-link p-0">Quem somos</a></li>
-							<li class="nav-item mr-5"><a href="blog.php" class="nav-link p-0">Serviços</a></li>
-							<li class="nav-item mr-5"><a href="contato.php" class="nav-link p-0">Como funciona</a></li>
-							<li class="nav-item mr-5"><a href="contato.php" class="nav-link p-0">Dúvidas</a></li>
-							<li class="nav-item mr-5"><a href="contato.php" class="nav-link p-0">Blog</a></li>
+							<li class="nav-item mr-5"><a href="servicos.php" class="nav-link p-0">Serviços</a></li>
+							<li class="nav-item mr-5"><a href="como_funciona.php" class="nav-link p-0">Como funciona</a></li>
+							<li class="nav-item mr-5"><a href="FAQ.php" class="nav-link p-0">Dúvidas</a></li>
+							<li class="nav-item mr-5"><a href="blog.php" class="nav-link p-0">Blog</a></li>
 							<li class="nav-item mr-5"><a href="cadastro_cuidador.php" class="nav-link p-0">Trabalhe conosco</a></li>
 						</ul>
 					</div>
@@ -44,6 +44,7 @@
 			<a href="cadastro.php" class="btn btn-outline-light btn-sm">Cadastro</a>
 		</div>
 	</nav>
+
 	<img id="imagem" src="Penguins.jpg" width="1263" height="500">
 	<div class="container-fluid">
 		<div class="container">
