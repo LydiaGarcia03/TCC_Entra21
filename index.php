@@ -20,10 +20,10 @@
 					<div class="col-10 col-sm-12 offset-md-3 text-right">
 						<ul class="navbar-nav float-left pt-1">
 							<li class="nav-item mr-5"><a href="sobre.php" class="nav-link p-0">Quem somos</a></li>
-							<li class="nav-item mr-5"><a href="blog.php" class="nav-link p-0">Serviços</a></li>
+							<li class="nav-item mr-5"><a href="servicos.php" class="nav-link p-0">Serviços</a></li>
 							<li class="nav-item mr-5"><a href="como_funciona.php" class="nav-link p-0">Como funciona</a></li>
 							<li class="nav-item mr-5"><a href="FAQ.php" class="nav-link p-0">Dúvidas</a></li>
-							<li class="nav-item mr-5"><a href="contato.php" class="nav-link p-0">Blog</a></li>
+							<li class="nav-item mr-5"><a href="blog.php" class="nav-link p-0">Blog</a></li>
 							<li class="nav-item mr-5"><a href="cadastro_cuidador.php" class="nav-link p-0">Trabalhe conosco</a></li>
 						</ul>
 					</div>
@@ -51,8 +51,7 @@
 				</div>
 
 				<div class="col-md-3 mr-3 mb-3 mb-md-0 bg-white">
-					<div class=" py-4 h-100">
-						<div class="text-center">
+					<div class="py-4 h-100">
 							<span class="fa-stack fa-4x">
 								<i class="fas fa-circle fa-stack-2x text-primary"></i>
 								<i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
@@ -61,7 +60,8 @@
 							<hr class="my-4">
 							<p class="text-muted">Acesse a plataforma, escolher um dos nossos serviços.</p>
 							<div class="small text-black-50"></div>
-						</div>
+						</div>	<div class="text-center">
+					
 					</div>
 				</div>
 
