@@ -56,12 +56,13 @@
 	<div class="container-fluid">
 		<div class="container">
 			<div class="row">
-				<div class="col-12">	
-					<img src="img/img-banner-qs.jpeg" alt="">
+				<div class="col-12">
+				<!-- Caso queira colacar algo nesta seção -->
 				</div>
 			</div>
 		</div>
 	</div>
+	<img src="img/img-banner-qs.jpeg" alt="">
 
 	<div class="container-fluid">
 		<div class="container bg-white">
