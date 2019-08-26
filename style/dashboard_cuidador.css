@@ -1,5 +1,9 @@
 @charset "UTF-8";
-/*Toggle Switch Button*/
-.icon-toggle-switch{
-	float: right;
+.profile-img{
+	width: 130px;
+	height: 130px;
+	border: 5px solid white;
+}
+.bg-primary{
+	background-color: dodgerblue !important;
 }

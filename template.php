@@ -14,6 +14,7 @@
 
 <body class="bg-light">
 
+	<!-- Navbar -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
 		<div class="container-fluid">
 			<div class="container">

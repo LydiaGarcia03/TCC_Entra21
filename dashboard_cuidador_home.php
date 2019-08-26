@@ -2,297 +2,211 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="gentelella/production/images/favicon.ico" type="image/ico"/>
-	<title>Dashboard</title>
-	<!-- Bootstrap -->
-	<link href="gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Font Awesome -->
-	<link href="gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<!-- NProgress -->
-	<link href="gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
-	<!-- iCheck -->
-	<link href="gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-	<!-- bootstrap-progressbar -->
-	<link href="gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-	<!-- JQVMap -->
-	<link href="gentelella/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-	<!-- bootstrap-daterangepicker -->
-	<link href="gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-	<!-- Custom Theme Style -->
-	<link href="gentelella/build/css/custom.css" rel="stylesheet">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>HCD | Dashboard</title>
+	<!-- Fontes -->
+	<link href="sbadmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<!-- CSS -->
+	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/dashboard_cuidador.css">
+	<link rel="stylesheet" type="text/css" href="style/calendar.css">
 </head>
-
-<body class="nav-md">
-	<div class="container body">
-		<div class="main_container">
-			<div class="col-md-2 left_col">
-				<div class="left_col scroll-view">
-
-					<div class="clearfix"></div>
-						
-					<div class="text-right">
-						<i id="icon-toggle-switch" class="fa fa-toggle-on" style="color: white;" onclick="toggle_button()"></i>
-					</div>
-
-					<!-- menu profile -->
-					<div class="profile clearfix text-center">
-						<div class="profile_pic">
-							<img src="gentelella/production/images/img.jpg" alt="..." class="img-circle profile_img">
-						</div>
-						<div class="profile_info">
-							<h2>John Doe</h2>
-						</div>
-					</div>
-					<!-- end menu profile -->
-
-					<!-- sidebar menu -->
-					<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-						<div class="menu_section">
-							<ul class="nav side-menu text-center">
-								<li>
-									<a href="#"><i class="fa fa-edit"></i> Editar perfil</a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-calendar"></i> Agenda</a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-percent"></i> Ganhos</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-						<!-- end sidebar menu -->
-
-						<!-- menu footer buttons -->
-						<div class="sidebar-footer hidden-small">
-							<a data-toggle="tooltip" data-placement="top" style="float: left;" title="Settings">
-								<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-							</a>
-							<a data-toggle="tooltip" data-placement="top" style="float: right;" title="Logout" href="index.php">
-								<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-							</a>
-						</div>
-						<!-- end menu footer buttons -->
-					</div>
+<body id="page-top">
+	<!-- Page Wrapper -->
+	<div id="wrapper">
+		<!-- Sidebar -->
+		<ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+			<!-- Sidebar - Brand -->
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+				<div class="sidebar-brand-icon">
+					<i class="fas fa-laptop-medical"></i>
 				</div>
+				<div class="sidebar-brand-text mx-3">HCDigital</div>
+			</a>
+			
+			<!-- Divider -->
+			<hr class="sidebar-divider my-0">
+			<!-- Profile Info -->
+		
+			<div class="text-center text-white my-3">
+				<img src="img/img-04.jpeg" class="rounded-circle profile-img" id="profile-img">
+				<p class="mb-0 mt-2">Nome</p>
+			</div>
 
-				<!-- top navigation
-				<div class="top_nav">
-					<div class="nav_menu">
-						<nav>
-							<div class="nav toggle">
-								<a id="menu_toggle"><i class="fa fa-bars"></i></a>
-							</div>
-						</nav>
+			<div class="text-center my-3">
+				<li class="nav-item">
+					<small>
+						<a href="#editar_perfil" class="nav-link text-center p-0"><i class="far fa-fw fa-edit"></i><span>Editar perfil</span></a>
+					</small>
+				</li>
+			</div>
+
+			<!-- Divider -->
+			<hr class="sidebar-divider my-0">
+			<!-- Nav Item - Dashboard -->
+
+			<div class="text-center my-3 mt-4">
+				<li class="nav-item">
+					<a href="#gastos" class="nav-link text-center p-0"><i class="fas fa-fw fa-wallet"></i><span>Gastos</span></a>
+				</li>
+			</div>
+
+			<div class="text-center my-3">
+				<li class="nav-item">
+					<a href="#agenda" class="nav-link text-center p-0"><i class="far fa-fw fa-calendar-alt"></i><span>Agenda</span></a>
+				</li>
+			</div>
+
+			<!-- Sidebar Toggler (Sidebar) -->
+			<div class="text-center d-none d-md-inline my-5">
+				<button class="rounded-circle border-0" id="sidebarToggle" onclick="toggleSideBar()"></button>
+			</div>
+
+			<!-- Topbar Navbar -->
+			<div class="position-absolute" style="bottom: 0px; line-height: 66px; width: 17.5%;">
+				<li class="nav-item dropdown no-arrow mb-0 text-center">
+					<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+						<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i>
+						Sair
+					</a>
+				</li>
+			</div>
+
+		</ul>
+		<!-- End of Sidebar -->
+
+		<!-- Content Wrapper -->
+		<div id="content-wrapper" class="d-flex flex-column">
+			<!-- Main Content -->
+			<div id="content">
+				<!-- Topbar -->
+				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+					<!-- Sidebar Toggle (Topbar) -->
+					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+						<i class="fa fa-bars"></i>
+					</button>
+
+				</nav>
+				<!-- End of Topbar -->
+
+				<!-- Begin Page Content -->
+				<div class="container-fluid">
+
+					<!-- Page Heading -->
+					<div class="d-sm-flex align-items-center justify-content-between mb-4">
+						<h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
 					</div>
-				</div>
-				end top navigation -->
 
-				<!-- page content -->
-				<div class="right_col" role="main">
-					<!-- top tiles -->
-					<div class="row tile_count">
-						<div class="col-md-5 col-sm-4 col-xs-6 tile_stats_count">
-							<!-- line graph -->
-							<div class="x_panel">
-								<div class="x_title">
-									<h2>Line Graph</h2>
-									<div class="clearfix"></div>
-								</div>
-								<div class="x_content2">
-									<div id="graph_line" style="width:100%; height:300px;"></div>
-								</div>
-							</div>
-							<!-- end line graph -->
-						</div>	
-					</div>
-					<!-- end top tiles -->
-
-					<!-- calendar -->
+					<!-- Content Row -->
 					<div class="row">
-						<div class="col-md-12">
-							<div class="x_panel">
-								<div class="x_title">
-									<h2>Calendar Events <small>Sessions</small></h2>
-									<ul class="nav navbar-right panel_toolbox">
-										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-											<ul class="dropdown-menu" role="menu">
-												<li><a href="#">Settings 1</a>
-												</li>
-												<li><a href="#">Settings 2</a>
-												</li>
-											</ul>
-										</li>
-										<li><a class="close-link"><i class="fa fa-close"></i></a>
-										</li>
-									</ul>
-									<div class="clearfix"></div>
+
+						<!-- Area Chart -->
+						<div class="col-xl-8 col-lg-7">
+							<div class="card shadow mb-4">
+								<!-- Card Header - Dropdown -->
+								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+									<h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+									<div class="dropdown no-arrow">
+										<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+										</a>
+										<div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+											<div class="dropdown-header">Dropdown Header:</div>
+											<a class="dropdown-item" href="#">Action</a>
+											<a class="dropdown-item" href="#">Another action</a>
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#">Something else here</a>
+										</div>
+									</div>
 								</div>
-								<div class="x_content">
-
-									<div id='calendar'></div>
-
+								<!-- Card Body -->
+								<div class="card-body">
+									<div class="chart-area">
+										<canvas id="myAreaChart"></canvas>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<!-- end page content -->
-		</div>
-	</div>
 
-	<!-- calendar modal -->
-	<div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
+					<!-- Content Row -->
+					<div class="row">
 
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h4 class="modal-title" id="myModalLabel">New Calendar Entry</h4>
-				</div>
-				<div class="modal-body">
-					<div id="testmodal" style="padding: 5px 20px;">
-						<form id="antoform" class="form-horizontal calender" role="form">
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Title</label>
-								<div class="col-sm-9">
-									<input type="text" class="form-control" id="title" name="title">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Description</label>
-								<div class="col-sm-9">
-									<textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
-								</div>
-							</div>
-						</form>
+						<!-- Content Column -->
+						<div class="col-lg-6 mb-4">
+
+
+						</div>
 					</div>
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default antoclose" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary antosubmit">Save changes</button>
-				</div>
+				<!-- /.container-fluid -->
+
 			</div>
-		</div>
-	</div>
-	<div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
+			<!-- End of Main Content -->
 
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h4 class="modal-title" id="myModalLabel2">Edit Calendar Entry</h4>
-				</div>
-				<div class="modal-body">
-
-					<div id="testmodal2" style="padding: 5px 20px;">
-						<form id="antoform2" class="form-horizontal calender" role="form">
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Title</label>
-								<div class="col-sm-9">
-									<input type="text" class="form-control" id="title2" name="title2">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Description</label>
-								<div class="col-sm-9">
-									<textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
-								</div>
-							</div>
-
-						</form>
+			<!-- Footer -->
+			<footer class="sticky-footer bg-white">
+				<div class="container my-auto">
+					<div class="copyright text-center my-auto">
+						<span>Copyright &copy; HCDigital 2019</span>
 					</div>
 				</div>
+			</footer>
+			<!-- End of Footer -->
+
+		</div>
+		<!-- End of Content Wrapper -->
+
+	</div>
+	<!-- End of Page Wrapper -->
+
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top">
+		<i class="fas fa-angle-up"></i>
+	</a>
+
+	<!-- Logout Modal-->
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Tem certeza que queres sair</h5>
+					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">Selecione sair se concordas.</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary antosubmit2">Save changes</button>
+					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+					<a class="btn btn-primary" href="sbadmin/login.html">Sair</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
-	<div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
-	<!-- /calendar modal -->
-	<!-- end calendar -->
-	</div>
-	</div>
-	</div>
-	</div>
-	<!-- end page content -->
-
-	<!-- footer -->
-	<footer>
-		<div class="pull-right">
-			Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-		</div>
-		<div class="clearfix"></div>
-	</footer>
-	<!-- end footer -->
-	</div>
-	</div>
-
-	<!-- FullCalendar -->
-	    <script src="../vendors/moment/min/moment.min.js"></script>
-	    <script src="../vendors/fullcalendar/dist/fullcalendar.min.js"></script>
-	<!-- JQuery -->
-	<script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
-	<!-- Bootstrap -->
-	<script src="gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-	<!-- FastClick -->
-	<script src="gentelella/vendors/fastclick/lib/fastclick.js"></script>
-	<!-- NProgress -->
-	<script src="gentelella/vendors/nprogress/nprogress.js"></script>
-	<!-- Chart.js -->
-	<script src="gentelella/vendors/Chart.js/dist/Chart.min.js"></script>
-	<!-- Gauge.js -->
-	<script src="gentelella/vendors/gauge.js/dist/gauge.min.js"></script>
-	<!-- Bootstrap-progressbar -->
-	<script src="gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-	<!-- ICheck -->
-	<script src="gentelella/vendors/iCheck/icheck.min.js"></script>
-	<!-- Skycons -->
-	<script src="gentelella/vendors/skycons/skycons.js"></script>
-	<!-- Flot -->
-	<script src="gentelella/vendors/Flot/jquery.flot.js"></script>
-	<script src="gentelella/vendors/Flot/jquery.flot.pie.js"></script>
-	<script src="gentelella/vendors/Flot/jquery.flot.time.js"></script>
-	<script src="gentelella/vendors/Flot/jquery.flot.stack.js"></script>
-	<script src="gentelella/vendors/Flot/jquery.flot.resize.js"></script>
-	<!-- Flot plugins -->
-	<script src="gentelella/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-	<script src="gentelella/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-	<script src="gentelella/vendors/flot.curvedlines/curvedLines.js"></script>
-	<!-- DateJS -->
-	<script src="gentelella/vendors/DateJS/build/date.js"></script>
-	<!-- JQVMap -->
-	<script src="gentelella/vendors/jqvmap/dist/jquery.vmap.js"></script>
-	<script src="gentelella/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-	<script src="gentelella/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-	<!-- Bootstrap-daterangepicker -->
-	<script src="gentelella/vendors/moment/min/moment.min.js"></script>
-	<script src="gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-	<!-- Custom Theme Scripts -->
-	<script src="gentelella/build/js/custom.min.js"></script>
-
+	<!-- Bootstrap core JavaScript-->
+	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
+	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- Core plugin JavaScript-->
+	<script src="sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+	<!-- Custom scripts for all pages-->
+	<script src="sbadmin/js/sb-admin-2.min.js"></script>
+	<!-- Page level plugins -->
+	<script src="sbadmin/vendor/chart.js/Chart.min.js"></script>
+	<!-- Page level custom scripts -->
+	<script src="sbadmin/js/demo/chart-area-demo.js"></script>
+	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
 	<script type="text/javascript">
 
-		function toggle_button(){
-			var toggle_switch = window.document.getElementById('icon-toggle-switch');
-
-			if(toggle_switch.className == 'fa fa-toggle-on')
-				toggle_switch.className = 'fa fa-toggle-off';
-			else
-				toggle_switch.className = 'fa fa-toggle-on';
+		function toggleSideBar(){
+			if(window.document.getElementById('sideBarToggle').isSelected()){
+				window.document.getElementById('profile-img').className = 'd-none';
+			}
 		}
 
 	</script>
-
 </body>
 </html>
