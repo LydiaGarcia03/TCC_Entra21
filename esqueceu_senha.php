@@ -12,7 +12,7 @@
 	<div class="container">
 		<div class="col-lg-4 m-b-3" style="position: absolute; top: 20%; left: 34%">		
 			<div class="card card-register mt-5">
-				<div class="card-header">Faça o login para acessar sua conta no HC Digital</div>
+				<div class="card-header">Confirme seu e-mail</div>
 				<div class="card-body">
 					<form>
 						<div class="form-group">
@@ -23,31 +23,16 @@
 								placeholder="Endereço de e-mail" required="required">
 							</div>
 						</div>
-						<div class="form-group">
-							<div class="form-row">
-								<div class="col-md-12">
-									<div class="form-label-group">
-										<input type="password" id="Senha" class="form-control" 
-										placeholder="Senha" required="required">    
-									</div>
-								</div>
-							</div>
-						</div>
-						<a class="btn btn-primary btn-block" href="">Entrar</a>
+						<a class="btn btn-primary btn-block" href="">Continuar</a>
 					</form>
-					<br>
-					<div class="text-center">
-						<a class="d-block small" href="esqueceu_senha.php">Esqueceu sua senha?</a>
-					</div>
 				</div>
 			</div>
 		</div>  
 	</div>
-
-
 	<a href="index.php">
-		<i style="margin-top: 61%;" class="far fa-arrow-alt-circle-left text-white fa-3x p-3"></i>
+		<i style="margin-top: 61%;"class="far fa-arrow-alt-circle-left text-white fa-3x p-3"></i>
 	</a>
+
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
