@@ -14,11 +14,11 @@
 	<link rel="stylesheet" type="text/css" href="style/calendar.css">
 </head>
 <body id="page-top">
-	<!-- Page Wrapper -->
 	<div id="wrapper">
+
 		<!-- Sidebar -->
 		<ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-			<!-- Sidebar - Brand -->
+
 			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
 				<div class="sidebar-brand-icon">
 					<i class="fas fa-laptop-medical"></i>
@@ -26,10 +26,10 @@
 				<div class="sidebar-brand-text mx-3">HCDigital</div>
 			</a>
 			
-			<!-- Divider -->
+			<!-- Divisor -->
 			<hr class="sidebar-divider my-0">
-			<!-- Profile Info -->
-		
+
+			<!-- Perfil Info -->
 			<div class="text-center text-white my-3">
 				<img src="img/img-04.jpeg" class="rounded-circle profile-img" id="profile-img">
 				<p class="mb-0 mt-2">Nome</p>
@@ -38,63 +38,93 @@
 			<div class="text-center my-3">
 				<li class="nav-item">
 					<small>
-						<a href="#editar_perfil" class="nav-link text-center p-0"><i class="far fa-fw fa-edit"></i><span>Editar perfil</span></a>
+						<a href="#editar_perfil" class="nav-link text-center p-0">
+							<i class="far fa-fw fa-edit"></i>
+							<span>Editar perfil</span>
+						</a>
 					</small>
 				</li>
 			</div>
 
-			<!-- Divider -->
+			<!-- Divisor -->
 			<hr class="sidebar-divider my-0">
-			<!-- Nav Item - Dashboard -->
 
+			<!-- Itens Sidebar -->
 			<div class="text-center my-3 mt-4">
 				<li class="nav-item">
-					<a href="#gastos" class="nav-link text-center p-0"><i class="fas fa-fw fa-wallet"></i><span>Gastos</span></a>
+					<a href="#gastos" class="nav-link text-center p-0">
+						<i class="fas fa-fw fa-wallet"></i>
+						<span>Gastos</span>
+					</a>
 				</li>
 			</div>
 
 			<div class="text-center my-3">
 				<li class="nav-item">
-					<a href="#agenda" class="nav-link text-center p-0"><i class="far fa-fw fa-calendar-alt"></i><span>Agenda</span></a>
-				</li>
-			</div>
-
-			<!-- Sidebar Toggler (Sidebar) -->
-			<div class="text-center d-none d-md-inline my-5">
-				<button class="rounded-circle border-0" id="sidebarToggle" onclick="toggleSideBar()"></button>
-			</div>
-
-			<!-- Topbar Navbar -->
-			<div class="position-absolute" style="bottom: 0px; line-height: 66px; width: 17.5%;">
-				<li class="nav-item dropdown no-arrow mb-0 text-center">
-					<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-						<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i>
-						Sair
+					<a href="#agenda" class="nav-link text-center p-0">
+						<i class="far fa-fw fa-calendar-alt"></i>
+						<span>Agenda</span>
 					</a>
 				</li>
 			</div>
 
-		</ul>
-		<!-- End of Sidebar -->
+			<!-- Logout -->
+			<div style="bottom: 0px">
+				<li class="nav-item no-arrow mb-0">
+					<a href="#" class="nav-link text-center" data-toggle="modal" data-target="#logoutModal">
+						<i class="fas fa-fw fa-sign-out-alt"></i>
+						<span>Sair</span>
+					</a>
+				</li>
+			</div>
 
-		<!-- Content Wrapper -->
+			<!-- Toggle Sidebar -->
+			<div class="text-center d-none d-md-inline mt-3">
+				<button class="rounded-circle border-0" id="sidebarToggle" onclick="toggleSideBar()"></button>
+			</div>
+
+		</ul>
+		<!-- Fim Sidebar -->
+
+		<!-- Conteúdo da página -->
 		<div id="content-wrapper" class="d-flex flex-column">
-			<!-- Main Content -->
 			<div id="content">
 				<!-- Topbar -->
 				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+					<!-- Notificações -->
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item dropdown no-arrow mx-auto">
+							<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-bell fa-fw"></i>
+								<!-- Contador -->
+								<span class="badge badge-danger badge-counter">+5</span>
+							</a>
+							<!-- Mensagens -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+								<h6 class="dropdown-header bg-info border-0">Notificações</h6>
+								<a href="#" class="dropdown-item d-flex align-items-center">
+									<i class="fas fa-exclamation-circle text-info mr-3 fa-3x"></i>
+									<div>
+										<div class="small text-gray-500">
+											kdbdbiudaijdba
+										</div>
+										<span class="font-weight-bold">
+											diuwhwihs
+										</span>
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul>
 
-					<!-- Sidebar Toggle (Topbar) -->
+					<!-- Button TopPage -->
 					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
 						<i class="fa fa-bars"></i>
 					</button>
-
 				</nav>
-				<!-- End of Topbar -->
 
 				<!-- Begin Page Content -->
 				<div class="container-fluid">
-
 					<!-- Page Heading -->
 					<div class="d-sm-flex align-items-center justify-content-between mb-4">
 						<h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -181,7 +211,7 @@
 				<div class="modal-body">Selecione sair se concordas.</div>
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-					<a class="btn btn-primary" href="sbadmin/login.html">Sair</a>
+					<a class="btn btn-primary" href="index.php">Sair</a>
 				</div>
 			</div>
 		</div>
