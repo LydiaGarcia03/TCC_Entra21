@@ -53,7 +53,7 @@
 			<div class="text-center my-3 mt-4">
 				<li class="nav-item">
 					<a href="#gastos" class="nav-link text-center p-0">
-						<i class="fas fa-fw fa-wallet"></i>
+						<i class="fas fa-fw fa-dollar-sign"></i>
 						<span>Gastos</span>
 					</a>
 				</li>
@@ -64,6 +64,15 @@
 					<a href="#agenda" class="nav-link text-center p-0">
 						<i class="far fa-fw fa-calendar-alt"></i>
 						<span>Agenda</span>
+					</a>
+				</li>
+			</div>
+
+			<div class="text-center my-3">
+				<li class="nav-item">
+					<a href="#agenda" class="nav-link text-center p-0">
+						<i class="far fa-fw fa-comments"></i>
+						<span>Chat</span>
 					</a>
 				</li>
 			</div>
@@ -79,7 +88,7 @@
 			</div>
 
 			<!-- Toggle Sidebar -->
-			<div class="text-center d-none d-md-inline mt-3">
+			<div class="text-center d-none d-md-inline mt-4">
 				<button class="rounded-circle border-0" id="sidebarToggle" onclick="toggleSideBar()"></button>
 			</div>
 
@@ -101,9 +110,9 @@
 							</a>
 							<!-- Mensagens -->
 							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-								<h6 class="dropdown-header bg-info border-0">Notificações</h6>
+								<h6 class="dropdown-header bg-primary border-0">Notificações</h6>
 								<a href="#" class="dropdown-item d-flex align-items-center">
-									<i class="fas fa-exclamation-circle text-info mr-3 fa-3x"></i>
+									<i class="fas fa-exclamation-circle text-primary mr-3 fa-3x"></i>
 									<div>
 										<div class="small text-gray-500">
 											kdbdbiudaijdba
@@ -132,7 +141,6 @@
 
 					<!-- Content Row -->
 					<div class="row">
-
 						<!-- Area Chart -->
 						<div class="col-xl-8 col-lg-7">
 							<div class="card shadow mb-4">
