@@ -12,9 +12,6 @@
 	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<link href="style/dashboard_cuidador.css" rel="stylesheet" type="text/css">
 	<link href="style/calendar.css" rel="stylesheet" type="text/css">
-	<!-- FullCalendar -->
-	<link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
-    <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
 </head>
 <body id="page-top">
 	<div id="wrapper">
@@ -72,7 +69,7 @@
 			</div>
 
 			<div class="text-center my-3">
-				<li class="nav-item">
+				<li class="nav-item active">
 					<a href="chat.php" class="nav-link text-center p-0">
 						<i class="far fa-fw fa-comments"></i>
 						<span>Chat</span>
@@ -107,6 +104,11 @@
 
 		</ul>
 		<!-- Fim Sidebar -->
+
+		<ul class="navbar-nav bg-light sidebar sidebar-dark accordion">
+			<li>Nome do contato</li>
+			<small>On/Off</small>
+		</ul>
 
 		<!-- Conteúdo da página -->
 		<div id="content-wrapper" class="d-flex flex-column">
@@ -143,127 +145,12 @@
 					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
 						<i class="fa fa-bars"></i>
 					</button>
+
 				</nav>
 
 				<!-- Begin Page Content -->
 				<div class="container-fluid">
-					
-					<div class="row cards-area mx-auto">
 
-						<div class="col-4">	
-							<div class="card text-white bg-warning mb-3 ">
-								<div class="card-body">
-									<h5 class="card-title">Avaliação</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<div>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="far fa-star"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-4">
-							<div class="card text-white bg-success mb-3">
-								<div class="card-body">
-									<h5 class="card-title">Próximo pagamento</h5>
-									<p class="card-text">Seu próximo pagamento de R$ 500,00 será redirecionado a sua conta dia dd/mm/YY</p>
-									<div class="progress mt-4" style="height: 5px">
-										<div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="background-color: seagreen"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-4">
-							<div class="card text-white bg-danger mb-3">
-								<div class="card-body">
-									<h5 class="card-title">Contratos próximos</h5>
-									<p class="card-text">Há novos contratos esperando por você na região.</p>
-									<div class="text-right mt-4">
-										<i class="fas fa-fw fa-globe-americas fa-2x"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="row">
-						<div class="col-xl-6 col-lg-5">
-							<div class="card shadow mb-3">
-								<div class="card-header d-flex flex-row align-items-center justify-content-between py-3">
-									<h6 class="m-0 font-weight-bold text-danger">Agenda</h6>
-								</div>
-
-								<div class="card-body p-0">
-									
-									<table class="table table-hover m-0">
-										
-										<tbody>
-											<tr class="table_row" onclick="agendaAppears()">
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-
-											<tr class="table_row" onclick="agendaAppears()">
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-											
-											<tr class="table_row" onclick="agendaAppears()">
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-
-											<tr class="table_row" onclick="agendaAppears()">
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-										</tbody>
-
-									</table>
-
-								</div>
-							</div>
-							
-						</div>
-
-						<div class="col-xl-6 col-lg-5">
-							
-							<!-- FullCalendar -->
-							<div class="card">
-								<div class="card-body">
-									<div id="calendar"></div>
-								</div>
-							</div>
-
-							<!-- Area Chart -->
-							<div class="card shadow mb-4">
-								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-									<h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-								</div>
-
-								<div class="card-body">
-									<div class="chart-area">
-										<canvas id="myAreaChart"></canvas>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
 				</div>
 				<!-- End container-fluid -->
 
@@ -322,25 +209,5 @@
 	<!-- Page level custom scripts -->
 	<script src="sbadmin/js/demo/chart-area-demo.js"></script>
 	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
-	<!-- FullCalendar -->
-	<script src='fullcalendar/packages/core/main.js'></script>
-    <script src='fullcalendar/packages/daygrid/main.js'></script>
-	<script src="funcoes.js"></script>
-    <script>
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          plugins: [ 'dayGrid' ],
-          height: 480,
-          locale: 'pt'
-
-        });
-
-        calendar.render();
-      });
-
-    </script>
 </body>
 </html>

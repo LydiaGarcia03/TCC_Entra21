@@ -21,13 +21,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSite">
+            <div class="collapse navbar-collapse ml-5" id="navbarSite">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a href="sobre_nos.php" class="nav-link">QUEM SOMOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">SERVIÇOS</a>
                     </li>
                     <li class="nav-item">
                         <a href="FAQ.php" class="nav-link">DÚVIDAS</a>
@@ -94,7 +91,10 @@
                 <div class="row justify-content-sm-center">
                     <div class="col-sm-6 col-md-4">
                         <div class="card mb-5">
-                            <img src="img/img-011.jpeg" alt="" class="card-top w-50">
+                            <div class="mx-auto">
+                                <img src="img/img-011.jpeg" alt="" class="card-top w-50">
+                            </div>
+
                             <div class="card-body">
                                 <h4 class="card-title">cubilia auctor</h4>
                                 <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
@@ -106,7 +106,10 @@
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <div class="card mb-5">
-                            <img src="img/img-011.jpeg" alt="" class="card-top w-50">
+                            <div class="mx-auto">
+                                <img src="img/img-011.jpeg" alt="" class="card-top w-50">
+                            </div>
+
                             <div class="card-body">
                                 <h4 class="card-title">cubilia auctor</h4>
                                 <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
@@ -118,7 +121,10 @@
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <div class="card mb-5">
-                            <img src="img/img-011.jpeg" alt="" class="card-top w-50">
+                            <div class="mx-auto">
+                                <img src="img/img-011.jpeg" alt="" class="card-top w-50">
+                            </div>
+
                             <div class="card-body">
                                 <h4 class="card-title">cubilia auctor</h4>
                                 <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>

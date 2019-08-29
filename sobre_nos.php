@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-	<title>HCD | Template</title>
+	<title>HCD | Quem somos</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- CSS -->
@@ -12,22 +12,22 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body class="bg-light">
+	
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
 		<div class="container-fluid">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<a href="index.html" class="navbar-brand h1 mb-0 float-left">HCDigital</a>
+
+						<a href="index.php" class="navbar-brand h1 mb-0 float-left">HCDigital</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
 							<span class="navbar-toggler-icon"></span>
 						</button>
-						<div class="collapse navbar-collapse" id="navbarSite">
+
+						<div class="collapse navbar-collapse ml-5" id="navbarSite">
 							<ul class="navbar-nav mr-auto">
 								<li class="nav-item active">
-									<a href="quem_somos.php" class="nav-link">QUEM SOMOS</a>
-								</li>
-								<li class="nav-item">
-									<a href="servicos.php" class="nav-link">SERVIÇOS</a>
+									<a href="sobre_nos.php" class="nav-link">QUEM SOMOS</a>
 								</li>
 								<li class="nav-item">
 									<a href="FAQ.php" class="nav-link">DÚVIDAS</a>
@@ -36,9 +36,10 @@
 									<a href="blog.php" class="nav-link">BLOG</a>
 								</li>
 								<li class="nav-item">
-									<a href="#tbConosco" class="nav-link">TRABALHE CONOSCO</a>
+									<a href="index.php#tbConosco" class="nav-link">TRABALHE CONOSCO</a>
 								</li>
 							</ul>
+
 							<a href="login.php" class="btn btn-outline-light btn-sm mr-3">Login</a>
 							<a href="cadastro_usuario.php" class="btn btn-outline-light btn-sm">Cadastro</a>
 						</div>
