@@ -1,3 +1,19 @@
+<?php 
+
+	CONST HOST = "localhost:3307";
+	CONST USER = "root";
+	CONST PASS = "";
+	CONST DB = "hcdigital";
+
+	$con = mysqli_connect(HOST, USER, PASS, DB);
+
+	if (!$con) {
+		die("ERRO: Não foi possível conectar ao banco dados ---> " . 
+			mysqli_connect_error());
+	}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -170,7 +186,7 @@
 						</div>
 
 
-						<a class="btn btn-primary btn-block" href="">Criar Conta</a>
+						<button class="btn btn-primary btn-block" href="">Criar Conta</button>
 					</form>
 
 					<div class="text-center">

@@ -33,14 +33,14 @@
                         <a href="" class="nav-link">DÚVIDAS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">BLOG</a>
+                        <a href="blog.php" class="nav-link">BLOG</a>
                     </li>
                     <li class="nav-item">
                         <a href="#tbConosco" class="nav-link">TRABALHE CONOSCO</a>
                     </li>
                 </ul>
                 <a href="login.php" class="btn btn-outline-light btn-sm mr-3">Login</a>
-                <a href="cadastro.php" class="btn btn-outline-light btn-sm">Cadastro</a>
+                <a href="cadastro_usuario.php" class="btn btn-outline-light btn-sm">Cadastro</a>
             </div>
     </nav>
 
@@ -301,10 +301,6 @@
             </form>
         </div>
     </div>
-
-
-
-
 
     <!-- Copyright -->
 
