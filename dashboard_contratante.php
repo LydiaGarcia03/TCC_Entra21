@@ -10,11 +10,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	<!-- CSS -->
 	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
-	<link href="style/dashboard_cuidador.css" rel="stylesheet" type="text/css">
-	<link href="style/calendar.css" rel="stylesheet" type="text/css">
-	<!-- FullCalendar -->
-	<link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
-    <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+	<link rel="stylesheet" type="text/css" href="style/dashboard_cuidador.css">
+	<link rel="stylesheet" type="text/css" href="style/calendar.css">
 </head>
 <body id="page-top">
 	<div id="wrapper">
@@ -90,18 +87,17 @@
 				</li>
 			</div>
 
-
 			<!-- Logout -->
 			<div style="bottom: 0px">
 				<li class="nav-item no-arrow mb-0">
-					<a href="dashboard_contratante.php" class="nav-link text-center">
-						<span>Dashboard contratante</span>
+					<a href="dashboard_cuidador_home.php" class="nav-link text-center">
+						<span>Dashboard cuidador</span>
 					</a>
 				</li>
 			</div>
 
 			<!-- Toggle Sidebar -->
-			<div class="text-center d-md-inline mt-4">
+			<div class="text-center d-none d-md-inline mt-4">
 				<button class="rounded-circle border-0" id="sidebarToggle" onclick="toggleSideBar()"></button>
 			</div>
 
@@ -151,7 +147,7 @@
 					<div class="row cards-area mx-auto">
 
 						<div class="col-4">	
-							<div class="card text-white bg-warning mb-3 ">
+							<div class="card text-white bg-warning mb-3">
 								<div class="card-body">
 									<h5 class="card-title">Avaliação</h5>
 									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -237,32 +233,9 @@
 
 								</div>
 							</div>
-							
-						</div>
-
-						<div class="col-xl-6 col-lg-5">
-							
-							<!-- FullCalendar -->
-							<div class="card">
-								<div class="card-body">
-									<div id="calendar"></div>
-								</div>
-							</div>
-
-							<!-- Area Chart -->
-							<div class="card shadow mb-4">
-								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-									<h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-								</div>
-
-								<div class="card-body">
-									<div class="chart-area">
-										<canvas id="myAreaChart"></canvas>
-									</div>
-								</div>
-							</div>
 
 						</div>
+
 					</div>
 				</div>
 				<!-- End container-fluid -->
@@ -322,23 +295,6 @@
 	<!-- Page level custom scripts -->
 	<script src="sbadmin/js/demo/chart-area-demo.js"></script>
 	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
-	<!-- FullCalendar -->
-	<script src='fullcalendar/packages/core/main.js'></script>
-    <script src='fullcalendar/packages/daygrid/main.js'></script>
-    <script>
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          plugins: [ 'dayGrid' ],
-          height: 480,
-        });
-
-        calendar.render();
-      });
-
-    </script>
 	<!-- Toggle Button -->
 	<script type="text/javascript">
 
