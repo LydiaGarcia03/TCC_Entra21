@@ -10,8 +10,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	<!-- CSS -->
 	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style/dashboard_cuidador.css">
-	<link rel="stylesheet" type="text/css" href="style/calendar.css">
+	<link href="style/dashboard_cuidador.css" rel="stylesheet" type="text/css">
+	<link href="style/calendar.css" rel="stylesheet" type="text/css">
+	<!-- FullCalendar -->
+	<link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
+    <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
 </head>
 <body id="page-top">
 	<div id="wrapper">
@@ -31,7 +34,7 @@
 
 			<!-- Perfil Info -->
 			<div class="text-center text-white my-3">
-				<img src="img/img-04.jpeg" class="rounded-circle profile-img" id="profile-img">
+				<img src="img/img-04.jpeg" class="rounded-circle profile-img d-inline" id="profile-img">
 				<p class="mb-0 mt-2">Nome</p>
 			</div>
 
@@ -87,8 +90,18 @@
 				</li>
 			</div>
 
+
+			<!-- Logout -->
+			<div style="bottom: 0px">
+				<li class="nav-item no-arrow mb-0">
+					<a href="dashboard_contratante.php" class="nav-link text-center">
+						<span>Dashboard contratante</span>
+					</a>
+				</li>
+			</div>
+
 			<!-- Toggle Sidebar -->
-			<div class="text-center d-none d-md-inline mt-4">
+			<div class="text-center d-md-inline mt-4">
 				<button class="rounded-circle border-0" id="sidebarToggle" onclick="toggleSideBar()"></button>
 			</div>
 
@@ -134,53 +147,125 @@
 
 				<!-- Begin Page Content -->
 				<div class="container-fluid">
-					<!-- Page Heading -->
-					<div class="d-sm-flex align-items-center justify-content-between mb-4">
-						<h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-					</div>
+					
+					<div class="row cards-area mx-auto">
 
-					<!-- Content Row -->
-					<div class="row">
-						<!-- Area Chart -->
-						<div class="col-xl-8 col-lg-7">
-							<div class="card shadow mb-4">
-								<!-- Card Header - Dropdown -->
-								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-									<h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-									<div class="dropdown no-arrow">
-										<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-										</a>
-										<div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-											<div class="dropdown-header">Dropdown Header:</div>
-											<a class="dropdown-item" href="#">Action</a>
-											<a class="dropdown-item" href="#">Another action</a>
-											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="#">Something else here</a>
-										</div>
+						<div class="col-4">	
+							<div class="card text-white bg-warning mb-3 ">
+								<div class="card-body">
+									<h5 class="card-title">Avaliação</h5>
+									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<div>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="far fa-star"></i>
 									</div>
 								</div>
-								<!-- Card Body -->
+							</div>
+						</div>
+
+						<div class="col-4">
+							<div class="card text-white bg-success mb-3">
+								<div class="card-body">
+									<h5 class="card-title">Próximo pagamento</h5>
+									<p class="card-text">Seu próximo pagamento de R$ 500,00 será redirecionado a sua conta dia dd/mm/YY</p>
+									<div class="progress mt-4" style="height: 5px">
+										<div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="background-color: seagreen"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-4">
+							<div class="card text-white bg-danger mb-3">
+								<div class="card-body">
+									<h5 class="card-title">Contratos próximos</h5>
+									<p class="card-text">Há novos contratos esperando por você na região.</p>
+									<div class="text-right mt-4">
+										<i class="fas fa-fw fa-globe-americas fa-2x"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class="col-xl-6 col-lg-5">
+							<div class="card shadow mb-3">
+								<div class="card-header d-flex flex-row align-items-center justify-content-between py-3">
+									<h6 class="m-0 font-weight-bold text-danger">Agenda</h6>
+								</div>
+
+								<div class="card-body p-0">
+									
+									<table class="table table-hover m-0">
+										
+										<tbody>
+											<tr>
+												<td>Cliente</td>
+												<td>Paciente</td>
+												<td>Serviço</td>
+												<td>Tempo para prox compromisso</td>
+											</tr>
+
+											<tr>
+												<td>Cliente</td>
+												<td>Paciente</td>
+												<td>Serviço</td>
+												<td>Tempo para prox compromisso</td>
+											</tr>
+											
+											<tr>
+												<td>Cliente</td>
+												<td>Paciente</td>
+												<td>Serviço</td>
+												<td>Tempo para prox compromisso</td>
+											</tr>
+
+											<tr>
+												<td>Cliente</td>
+												<td>Paciente</td>
+												<td>Serviço</td>
+												<td>Tempo para prox compromisso</td>
+											</tr>
+										</tbody>
+
+									</table>
+
+								</div>
+							</div>
+							
+						</div>
+
+						<div class="col-xl-6 col-lg-5">
+							
+							<!-- FullCalendar -->
+							<div class="card">
+								<div class="card-body">
+									<div id="calendar"></div>
+								</div>
+							</div>
+
+							<!-- Area Chart -->
+							<div class="card shadow mb-4">
+								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+									<h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+								</div>
+
 								<div class="card-body">
 									<div class="chart-area">
 										<canvas id="myAreaChart"></canvas>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-
-					<!-- Content Row -->
-					<div class="row">
-
-						<!-- Content Column -->
-						<div class="col-lg-6 mb-4">
-
 
 						</div>
 					</div>
 				</div>
-				<!-- /.container-fluid -->
+				<!-- End container-fluid -->
 
 			</div>
 			<!-- End of Main Content -->
@@ -237,11 +322,33 @@
 	<!-- Page level custom scripts -->
 	<script src="sbadmin/js/demo/chart-area-demo.js"></script>
 	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
+	<!-- FullCalendar -->
+	<script src='fullcalendar/packages/core/main.js'></script>
+    <script src='fullcalendar/packages/daygrid/main.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          plugins: [ 'dayGrid' ],
+          height: 480,
+
+        });
+
+        calendar.render();
+      });
+
+    </script>
+	<!-- Toggle Button -->
 	<script type="text/javascript">
 
 		function toggleSideBar(){
-			if(window.document.getElementById('sideBarToggle').isSelected()){
-				window.document.getElementById('profile-img').className = 'd-none';
+			var profile_img = window.document.getElementById('profile_img');
+			if(profile_img.classList.contains('d-inline')){
+				profile_img.addClass('d-none');
+			} else{
+				profile_img.addClass('d-inline');
 			}
 		}
 

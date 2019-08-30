@@ -1,0 +1,67 @@
+CREATE DATABASE IF NOT EXISTS hcdigital;
+USE hcdigitaL;
+CREATE TABLE profissional (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome_completo VARCHAR(250) NOT NULL,
+    foto BLOB NOT NULL,
+    genero SET('M', 'F', 'O') NOT NULL,
+    dt_nascimento DATE NOT NULL,
+    email VARCHAR(250) NOT NULL,
+    senha VARCHAR(128) NOT NULL, -- CRIP
+    cep VARCHAR(128) NOT NULL, -- CRIP
+    end_numero INT NULL,
+    end_complemento VARCHAR(250) NULL,
+    tel_cel REAL NOT NULL,
+    num_coren INT NOT NULL,
+    # Dados bancários
+    cod_banco VARCHAR(128) NOT NULL, -- CRIP
+    num_agencia VARCHAR(128) NOT NULL, -- CRIP
+    dig_agencia VARCHAR(128) NOT NULL, -- CRIP
+    tipo_conta VARCHAR(128) NOT NULL, -- CRIP
+    num_conta VARCHAR(128) NOT NULL, -- CRIP
+    dig_conta VARCHAR(128) NOT NULL, -- CRIP
+    num_cartao VARCHAR(128) NOT NULL, -- CRIP
+    nome_user_cartao VARCHAR(128) NOT NULL, -- CRIP
+    # Info acadêmica
+    curso_formacao VARCHAR(250) NOT NULL,
+    instituicao VARCHAR(250) NOT NULL
+) ENGINE = INNODB DEFAULT CHARSET = 'utf8';
+CREATE TABLE necessitado (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome_completo VARCHAR(250) NOT NULL,
+    foto BLOB NULL,
+    genero SET('M', 'F', 'O') NOT NULL,
+    dt_nascimento DATE NOT NULL,
+    email VARCHAR(250) NOT NULL,
+    senha VARCHAR(128) NOT NULL, -- CRIP
+    cep VARCHAR(128) NOT NULL, -- CRIP
+    end_numero INT NULL,
+    end_complemento VARCHAR(250) NULL,
+    tel_cel REAL NOT NULL,
+    tel_res REAL NULL
+) ENGINE = INNODB DEFAULT CHARSET = 'utf8';
+CREATE TABLE servico (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    # Dados do paciente
+    nome_paciente VARCHAR(250) NOT NULL,
+    dt_nascimento_paciente DATE NOT NULL,
+    genero_paciente SET('M', 'F', 'O') NOT NULL,
+    tipo_servico SET('Infantil', 'Idoso', 'Enfermagem'),
+    diabetico BOOLEAN NOT NULL,
+    deficiencia_fisica BOOLEAN NOT NULL,
+    deficiencia_mental BOOLEAN NOT NULL,
+    hipertensao BOOLEAN NOT NULL,
+    descricao_op VARCHAR(500) NULL,
+    fk_id_necessitado INT NOT NULL,
+    # Dados bancários do necessitado
+    cod_banco VARCHAR(128) NOT NULL, -- CRIP
+    num_agencia VARCHAR(128) NOT NULL, -- CRIP
+    dig_agencia VARCHAR(128) NOT NULL, -- CRIP
+    tipo_conta VARCHAR(128) NOT NULL, -- CRIP
+    num_conta VARCHAR(128) NOT NULL, -- CRIP
+    dig_conta VARCHAR(128) NOT NULL, -- CRIP
+    num_cartao VARCHAR(128) NOT NULL, -- CRIP
+    nome_user_cartao VARCHAR(128) NOT NULL, -- CRIP
+   
+    FOREIGN KEY(fk_id_necessitado) REFERENCES necessitado(id)
+);

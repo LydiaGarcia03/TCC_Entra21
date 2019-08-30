@@ -24,13 +24,13 @@
             <div class="collapse navbar-collapse" id="navbarSite">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="quemsomos.html" class="nav-link">QUEM SOMOS</a>
+                        <a href="sobre_nos.php" class="nav-link">QUEM SOMOS</a>
                     </li>
                     <li class="nav-item">
                         <a href="" class="nav-link">SERVIÇOS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">DÚVIDAS</a>
+                        <a href="FAQ.php" class="nav-link">DÚVIDAS</a>
                     </li>
                     <li class="nav-item">
                         <a href="blog.php" class="nav-link">BLOG</a>
@@ -171,7 +171,10 @@
             <div class="row justify-content-sm-center mb-3">
                 <div class="col-sm-6 col-md-4">
                     <div class="card mb-5">
-                        <img src="img/item-01.jpg" alt="" class="card-top" style="width: 300px">
+                        <div class="mx-auto">
+                            <img src="img/item-01.jpg" alt="" class="card-top" style="width: 300px">
+                        </div>
+
                         <div class="card-body">
                             <h4 class="card-title">cubilia auctor</h4>
                             <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
@@ -183,7 +186,10 @@
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="card mb-5">
-                        <img src="img/item-01.jpg" alt="" class="card-top" style="width: 300px">
+                        <div class="mx-auto">
+                            <img src="img/item-01.jpg" alt="" class="card-top" style="width: 300px">
+                        </div>
+
                         <div class="card-body">
                             <h4 class="card-title">cubilia auctor</h4>
                             <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
@@ -195,7 +201,10 @@
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="card mb-5">
-                        <img src="img/item-01.jpg" alt="" class="card-top" style="width: 300px">
+                        <div class="mx-auto">
+                            <img src="img/item-01.jpg" alt="" class="card-top" style="width: 300px">
+                        </div>
+                        
                         <div class="card-body">
                             <h4 class="card-title">cubilia auctor</h4>
                             <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
@@ -240,7 +249,7 @@
                             </span>
                             <p class="text-white mt-2">OK <br />Já pode trabalhar na plataforma</p>
                         </div>
-                        <a href="trabalhe_conosco.html" class="btn btn-lg btn-light mt-2 text-center text-dark">Quero trabalhar na HCDigital</a>
+                        <a href="cadastro_cuidador.php" class="btn btn-lg btn-light mt-2 text-center text-dark">Quero trabalhar na HCDigital</a>
                     </div>
                     <!-- <img src="" alt="..." class="rounded-circle"> -->
                 </div>
