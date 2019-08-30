@@ -4580,23 +4580,23 @@ Docs & License: https://fullcalendar.io/
     }
 
     var RAW_EN_LOCALE = {
-        code: 'en',
+        code: 'pt',
         week: {
             dow: 0,
             doy: 4 // 4 days need to be within the year to be considered the first week
         },
         dir: 'ltr',
         buttonText: {
-            prev: 'prev',
-            next: 'next',
-            prevYear: 'prev year',
-            nextYear: 'next year',
-            year: 'year',
-            today: 'today',
-            month: 'month',
-            week: 'week',
-            day: 'day',
-            list: 'list'
+            prev: 'anter',
+            next: 'prox',
+            prevYear: 'ano anter',
+            nextYear: 'prox ano',
+            year: 'ano',
+            today: 'hoje',
+            month: 'mês',
+            week: 'semana',
+            day: 'dia',
+            list: 'lista'
         },
         weekLabel: 'W',
         allDayText: 'all-day',
@@ -4604,7 +4604,7 @@ Docs & License: https://fullcalendar.io/
         noEventsMessage: 'No events to display'
     };
     function parseRawLocales(explicitRawLocales) {
-        var defaultCode = explicitRawLocales.length > 0 ? explicitRawLocales[0].code : 'en';
+        var defaultCode = explicitRawLocales.length > 0 ? explicitRawLocales[0].code : 'pt';
         var globalArray = window['FullCalendarLocalesAll'] || []; // from locales-all.js
         var globalObject = window['FullCalendarLocales'] || {}; // from locales/*.js. keys are meaningless
         var allRawLocales = globalArray.concat(// globalArray is low prio
@@ -8112,6 +8112,7 @@ Docs & License: https://fullcalendar.io/
     - dragend
     */
     var ElementDragging = /** @class */ (function () {
+
         function ElementDragging(el) {
             this.emitter = new EmitterMixin();
         }

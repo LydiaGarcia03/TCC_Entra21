@@ -50,15 +50,6 @@
 			<hr class="sidebar-divider my-0">
 
 			<!-- Itens Sidebar -->
-			<div class="text-center my-3 mt-4">
-				<li class="nav-item">
-					<a href="#gastos" class="nav-link text-center p-0">
-						<i class="fas fa-fw fa-dollar-sign"></i>
-						<span>Gastos</span>
-					</a>
-				</li>
-			</div>
-
 			<div class="text-center my-3">
 				<li class="nav-item">
 					<a href="#agenda" class="nav-link text-center p-0">
@@ -143,50 +134,8 @@
 
 				<!-- Begin Page Content -->
 				<div class="container-fluid">
-					
-					<div class="row cards-area mx-auto">
 
-						<div class="col-4">	
-							<div class="card text-white bg-warning mb-3">
-								<div class="card-body">
-									<h5 class="card-title">Avaliação</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<div>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="far fa-star"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-4">
-							<div class="card text-white bg-success mb-3">
-								<div class="card-body">
-									<h5 class="card-title">Próximo pagamento</h5>
-									<p class="card-text">Seu próximo pagamento de R$ 500,00 será redirecionado a sua conta dia dd/mm/YY</p>
-									<div class="progress mt-4" style="height: 5px">
-										<div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="background-color: seagreen"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-4">
-							<div class="card text-white bg-danger mb-3">
-								<div class="card-body">
-									<h5 class="card-title">Contratos próximos</h5>
-									<p class="card-text">Há novos contratos esperando por você na região.</p>
-									<div class="text-right mt-4">
-										<i class="fas fa-fw fa-globe-americas fa-2x"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
+					<h1 class="my-5">Página vazia com blur em foto e mini solicitação de serviço como DocWay</h1>
 
 					<div class="row">
 						<div class="col-xl-6 col-lg-5">
