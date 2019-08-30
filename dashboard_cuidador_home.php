@@ -333,6 +333,7 @@
         var calendar = new FullCalendar.Calendar(calendarEl, {
           plugins: [ 'dayGrid' ],
           height: 480,
+
         });
 
         calendar.render();
