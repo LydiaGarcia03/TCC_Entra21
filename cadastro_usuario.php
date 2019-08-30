@@ -1,16 +1,6 @@
-<?php 
-
-	CONST HOST = "localhost:3307";
-	CONST USER = "root";
-	CONST PASS = "";
-	CONST DB = "hcdigital";
-
-	$con = mysqli_connect(HOST, USER, PASS, DB);
-
-	if (!$con) {
-		die("ERRO: Não foi possível conectar ao banco dados ---> " . 
-			mysqli_connect_error());
-	}
+<?php
+// Inclusão da conexão com o banco de dados
+require_once "include/conexao.php";
 
 ?>
 
@@ -38,7 +28,7 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" id="nomeCompleto" class="form-control" 
+										<input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" 
 										placeholder="Nome Completo" required="required" autofocus="autofocus">    
 									</div>
 								</div>
@@ -46,7 +36,7 @@
 
 									<div class="input-group">
 										<label class="custom-file-label text-secondary" for="c_foto"></label>
-										<input type="file" class="custom-file-input" id="c_foto" name="c_foto" placeholder="Escolha uma foto de perfil">
+										<input type="file" class="custom-file-input" name="c_foto" id="c_foto" placeholder="Escolha uma foto de perfil">
 									</div>
 
 								</div>
@@ -65,7 +55,7 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="date" id="date" class="form-control" 
+										<input type="date" name="date" id="date" class="form-control" 
 										placeholder="Data de nascimento" required="required">    
 									</div>
 								</div>
@@ -75,13 +65,13 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="email" id="Email" class="form-control" 
+										<input type="email" name="email" id="email" class="form-control" 
 										placeholder="Endereço de e-mail" required="required">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="email" id="ConfirmarEmail" class="form-control" 
+										<input type="email" name="confirmarEmail" id="confirmarEmail" class="form-control" 
 										placeholder="Confirmar Email" required="required">    
 									</div>
 								</div>
@@ -91,13 +81,13 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="password" id="Senha" class="form-control" 
-										placeholder="Senha" required="required">    
+										<input type="password" name="senha" id="senha" class="form-control" 
+										placeholder="senha" required="required">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="password" id="ConfirmaSenha" class="form-control" 
+										<input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control" 
 										placeholder="Confirma Senha" required="required">    
 									</div>
 								</div>
@@ -107,7 +97,7 @@
 							<div class="form-row">
 								<div class="col-md-12">
 									<div class="form-label-group">
-										<input type="number" id="Cep" class="form-control" 
+										<input type="number" name="cep" id="cep" class="form-control" 
 										placeholder="CEP: (00000-000)" required="required" autofocus="autofocus">   
 									</div>
 								</div>
@@ -117,13 +107,13 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" id="rua" class="form-control" 
+										<input type="text" name="rua" id="rua" class="form-control" 
 										placeholder="Rua" required="required" autofocus="autofocus" disabled="">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" id="numero_res" class="form-control" 
+										<input type="text" name="numeroRes" id="numeroRes" class="form-control" 
 										placeholder="Numero" required="required" autofocus="autofocus">    
 									</div>
 								</div>
@@ -134,13 +124,13 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" id="complemento" class="form-control" 
+										<input type="text" name="complemento" id="complemento" class="form-control" 
 										placeholder="Complemento" required="required" autofocus="autofocus" >    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" id="cidade" class="form-control" 
+										<input type="text" name="cidade" id="cidade" class="form-control" 
 										placeholder="Cidade" required="required" autofocus="autofocus" disabled="">    
 									</div>
 								</div>
@@ -152,7 +142,7 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" id="bairro" class="form-control" 
+										<input type="text" name="bairro" id="bairro" class="form-control" 
 										placeholder="Bairro" required="required" autofocus="autofocus" disabled="">    
 									</div>	
 								</div>
@@ -172,13 +162,13 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="number" id="numero_fixo" class="form-control" 
+										<input type="number" name="numeroFixo" id="numeroFixo" class="form-control" 
 										placeholder="Numero fixo" required="required">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="number" id="numero_celular" class="form-control" 
+										<input type="number" name="numeroCelular" id="numeroCelular" class="form-control" 
 										placeholder="Numero de celular" required="required">    
 									</div>
 								</div>
