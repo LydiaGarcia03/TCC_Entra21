@@ -1,6 +1,5 @@
 <?php
-// Inclusão da conexão com o banco de dados
-require_once "include/conexao.php";
+	require_once "classes/cadastro_user.class.php";
 
 ?>
 
@@ -46,11 +45,11 @@ require_once "include/conexao.php";
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-6">
-									<select class="form-control">
+									<select class="form-control" name="genero">
 										<option>Gênero</option>
-										<option>Masculino</option>
-										<option>Feminino</option>
-										<option>Outros</option>
+										<option value="masculino">Masculino</option>
+										<option value="feminino">Feminino</option>
+										<option value="outros">Outros</option>
 									</select>
 								</div>
 								<div class="col-md-6">
@@ -113,7 +112,7 @@ require_once "include/conexao.php";
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="numeroRes" id="numeroRes" class="form-control" 
+										<input type="text" name="numeroCasa" id="numeroCasa" class="form-control" 
 										placeholder="Numero" required="required" autofocus="autofocus">    
 									</div>
 								</div>
@@ -149,9 +148,34 @@ require_once "include/conexao.php";
 								<div class="col-md-6">
 									
 									<select class="custom-select" disabled="">
-										<option>SC</option>
-										<option>RS</option>
+										<option>AC</option>
+										<option>AL</option>
+										<option>AP</option>
+										<option>AM</option>
+										<option>BA</option>
+										<option>CE</option>
+										<option>DF</option>
+										<option>ES</option>
+										<option>GO</option>
+										<option>MA</option>
+										<option>MT</option>
+										<option>MS</option>
+										<option>MG</option>
+										<option>PA</option>
+										<option>PB</option>
 										<option>PR</option>
+										<option>PE</option>
+										<option>PI</option>
+										<option>RJ</option>
+										<option>RN</option>
+										<option>RO</option>
+										<option>RS</option>
+										<option>RO</option>
+										<option>RR</option>
+										<option>SC</option>
+										<option>SP</option>
+										<option>SE</option>
+										<option>TO</option>
 									</select>
 								</div>
 							</div>
@@ -162,21 +186,21 @@ require_once "include/conexao.php";
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="number" name="numeroFixo" id="numeroFixo" class="form-control" 
+										<input type="number" name="telefone_residencial" id="telefone_residencial" class="form-control" 
 										placeholder="Numero fixo" required="required">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="number" name="numeroCelular" id="numeroCelular" class="form-control" 
+										<input type="number" name="telefone_celular" id="telefone_celular" class="form-control" 
 										placeholder="Numero de celular" required="required">    
 									</div>
 								</div>
 							</div>
 						</div>
 
+						<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Criar Conta">
 
-						<button class="btn btn-primary btn-block" href="">Criar Conta</button>
 					</form>
 
 					<div class="text-center">
