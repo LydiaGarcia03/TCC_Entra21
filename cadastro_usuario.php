@@ -189,10 +189,12 @@ require_once "include/conexao.php";
 		</div>
 
 		<div class="row">
-			<div class="col-3 bg-danger my-5 py-3">
-				<i class="fas fa-chevron-left mx-3"></i>
-				Voltar a página inicial
-			</div>
+			<a href="index.php">
+				<div class="col-3 bg-danger my-5 py-3">
+					<i class="fas fa-chevron-left mx-3"></i>
+					Voltar a página inicial
+				</div>
+			</a>
 		</div>
 
 	</div>  
