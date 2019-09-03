@@ -7,11 +7,12 @@
 	<title>HCD | Dashboard</title>
 	<!-- Fontes -->
 	<link href="sbadmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	<!-- CSS -->
-	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<link href="style/dashboard_cuidador.css" rel="stylesheet" type="text/css">
-	<link href="style/calendar.css" rel="stylesheet" type="text/css">
+	<link href="style/chat" rel="stylesheet" type="text/css">
+
 </head>
 <body id="page-top">
 	<div id="wrapper">
@@ -103,16 +104,13 @@
 			</div>
 
 		</ul>
-		<!-- Fim Sidebar -->
 
-		<ul class="navbar-nav bg-light sidebar sidebar-dark accordion">
-			<li>Nome do contato</li>
-			<small>On/Off</small>
-		</ul>
+		<!-- Fim Sidebar -->
 
 		<!-- Conteúdo da página -->
 		<div id="content-wrapper" class="d-flex flex-column">
 			<div id="content">
+
 				<!-- Topbar -->
 				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 					<!-- Notificações -->
@@ -149,10 +147,12 @@
 				</nav>
 
 				<!-- Begin Page Content -->
-				<div class="container-fluid">
+				<div class="container-fluid clearfix">
 
-				</div>
-				<!-- End container-fluid -->
+					<!-- Sidebar de contatos -->
+					
+					
+			    </div>
 
 			</div>
 			<!-- End of Main Content -->
@@ -209,5 +209,6 @@
 	<!-- Page level custom scripts -->
 	<script src="sbadmin/js/demo/chart-area-demo.js"></script>
 	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
+
 </body>
 </html>

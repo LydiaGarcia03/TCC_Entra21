@@ -52,7 +52,7 @@
 			<!-- Itens Sidebar -->
 			<div class="text-center my-3">
 				<li class="nav-item">
-					<a href="#agenda" class="nav-link text-center p-0">
+					<a href="#agenda.php" class="nav-link text-center p-0">
 						<i class="far fa-fw fa-calendar-alt"></i>
 						<span>Agenda</span>
 					</a>
@@ -61,7 +61,7 @@
 
 			<div class="text-center my-3">
 				<li class="nav-item">
-					<a href="#agenda" class="nav-link text-center p-0">
+					<a href="chat.php" class="nav-link text-center p-0">
 						<i class="far fa-fw fa-comments"></i>
 						<span>Chat</span>
 					</a>
@@ -96,43 +96,14 @@
 		<!-- Fim Sidebar -->
 
 		<!-- Conteúdo da página -->
-		<div id="content-wrapper" class="d-flex flex-column">
+		<div id="content-wrapper" class="d-flex flex-column background_contract">
 			<div id="content">
-				<!-- Topbar -->
-				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-					<!-- Notificações -->
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item dropdown no-arrow mx-auto">
-							<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="fas fa-bell fa-fw"></i>
-								<!-- Contador -->
-								<span class="badge badge-danger badge-counter">+5</span>
-							</a>
-							<!-- Mensagens -->
-							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-								<h6 class="dropdown-header bg-primary border-0">Notificações</h6>
-								<a href="#" class="dropdown-item d-flex align-items-center">
-									<i class="fas fa-exclamation-circle text-primary mr-3 fa-3x"></i>
-									<div>
-										<div class="small text-gray-500">
-											kdbdbiudaijdba
-										</div>
-										<span class="font-weight-bold">
-											diuwhwihs
-										</span>
-									</div>
-								</a>
-							</div>
-						</li>
-					</ul>
 
-					<!-- Button TopPage -->
-					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-						<i class="fa fa-bars"></i>
-					</button>
-				</nav>
+				<!-- Button TopPage -->
+				<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+					<i class="fa fa-bars"></i>
+				</button>
 
-				<!-- Begin Page Content -->
 				<div class="container-fluid">
 
 					<h1 class="my-5">Página vazia com blur em foto e mini solicitação de serviço como DocWay</h1>
