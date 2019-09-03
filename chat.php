@@ -10,8 +10,8 @@
 	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	<!-- CSS -->
-	<link href="style/dashboard_cuidador.css" rel="stylesheet" type="text/css">
-	<link href="style/chat" rel="stylesheet" type="text/css">
+	<link href="style/dashboard.css" rel="stylesheet" type="text/css">
+	<link href="style/chat.css" rel="stylesheet" type="text/css">
 
 </head>
 <body id="page-top">
@@ -149,8 +149,50 @@
 				<!-- Begin Page Content -->
 				<div class="container-fluid clearfix">
 
+					<p class="my-5">Mensagens</p>
+
 					<!-- Sidebar de contatos -->
-					
+					<div class="row">
+
+						<div class="col-3">
+							<div class="card shadow-0 border-0 rounded-0 py-3">	
+								<!-- Info contatos -->
+								<div class="text-center">
+									<img src="img/img-04.jpeg" class="rounded-circle d-inline" id="contatos-img">
+									<div>
+										<p class="mb-0 mt-2 ml-3 float-left">Nome </p>
+										<!-- Contador -->
+										<span class="badge badge-danger badge-counter p-1">5</span>
+									</div>
+
+									<div class="d-inline-block float-left ml-3">
+										<small>mensagem mensagem</small>
+									</div>
+								</div>
+
+								<hr class="mx-3">
+
+								<div class="text-center">
+									<img src="img/img-04.jpeg" class="rounded-circle d-inline" id="contatos-img">
+									<div>
+										<p class="mb-0 mt-2 ml-3 float-left">Nome </p>
+										<!-- Contador -->
+										<span class="badge badge-danger badge-counter p-1">27</span>
+									</div>
+
+									<div class="d-inline-block float-left ml-3">
+										<small>mensagem mensagem</small>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-9">
+							<div class="card shadow-0 border-0 rounded-0" style="min-height: 400px;">
+								ajnkjfnd
+							</div>
+						</div>
+					</div>
 					
 			    </div>
 

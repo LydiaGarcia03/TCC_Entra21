@@ -2,10 +2,10 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Template</title>
+	<title>HCD | Dúvidas</title>
 	<!-- CSS | Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link href="bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="style/home.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
