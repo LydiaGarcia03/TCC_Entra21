@@ -28,7 +28,7 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" 
-										placeholder="Nome Completo" required="required" autofocus="autofocus">    
+										placeholder="Nome Completo" required autofocus="autofocus">    
 									</div>
 								</div>
 								<div class="col-6">
@@ -55,7 +55,7 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="date" name="date" id="date" class="form-control" 
-										placeholder="Data de nascimento" required="required">    
+										placeholder="Data de nascimento" required>    
 									</div>
 								</div>
 							</div>
@@ -65,13 +65,13 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="email" name="email" id="email" class="form-control" 
-										placeholder="Endereço de e-mail" required="required">    
+										placeholder="Endereço de e-mail" required>    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="email" name="confirmarEmail" id="confirmarEmail" class="form-control" 
-										placeholder="Confirmar Email" required="required">    
+										placeholder="Confirmar Email" required>    
 									</div>
 								</div>
 							</div>
@@ -81,13 +81,13 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="password" name="senha" id="senha" class="form-control" 
-										placeholder="senha" required="required">    
+										placeholder="senha" required>    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control" 
-										placeholder="Confirma Senha" required="required">    
+										placeholder="Confirma Senha" required>    
 									</div>
 								</div>
 							</div>
@@ -97,7 +97,7 @@
 								<div class="col-md-12">
 									<div class="form-label-group">
 										<input type="number" name="cep" id="cep" class="form-control" 
-										placeholder="CEP: (00000-000)" required="required" autofocus="autofocus">   
+										placeholder="CEP: (00000-000)" required autofocus="autofocus">   
 									</div>
 								</div>
 							</div>
@@ -107,13 +107,13 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="rua" id="rua" class="form-control" 
-										placeholder="Rua" required="required" autofocus="autofocus" disabled="">    
+										placeholder="Rua" required autofocus="autofocus" disabled>    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="numeroCasa" id="numeroCasa" class="form-control" 
-										placeholder="Numero" required="required" autofocus="autofocus">    
+										placeholder="Numero" required autofocus="autofocus">    
 									</div>
 								</div>
 							</div>
@@ -124,13 +124,13 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="complemento" id="complemento" class="form-control" 
-										placeholder="Complemento" required="required" autofocus="autofocus" >    
+										placeholder="Complemento" required autofocus="autofocus" >    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="cidade" id="cidade" class="form-control" 
-										placeholder="Cidade" required="required" autofocus="autofocus" disabled="">    
+										placeholder="Cidade" required autofocus="autofocus" disabled>    
 									</div>
 								</div>
 							</div>
@@ -142,58 +142,56 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="bairro" id="bairro" class="form-control" 
-										placeholder="Bairro" required="required" autofocus="autofocus" disabled="">    
+										placeholder="Bairro" required autofocus="autofocus" disabled>    
 									</div>	
 								</div>
 								<div class="col-md-6">
 									
-									<select class="custom-select" disabled="">
-										<option>AC</option>
-										<option>AL</option>
-										<option>AP</option>
-										<option>AM</option>
-										<option>BA</option>
-										<option>CE</option>
-										<option>DF</option>
-										<option>ES</option>
-										<option>GO</option>
-										<option>MA</option>
-										<option>MT</option>
-										<option>MS</option>
-										<option>MG</option>
-										<option>PA</option>
-										<option>PB</option>
-										<option>PR</option>
-										<option>PE</option>
-										<option>PI</option>
-										<option>RJ</option>
-										<option>RN</option>
-										<option>RO</option>
-										<option>RS</option>
-										<option>RO</option>
-										<option>RR</option>
-										<option>SC</option>
-										<option>SP</option>
-										<option>SE</option>
-										<option>TO</option>
+									<select class="custom-select" disabled>
+										<option value="AC">AC</option>
+										<option value="AL">AL</option>
+										<option value="AP">AP</option>
+										<option value="AM">AM</option>
+										<option value="BA">BA</option>
+										<option value="CE">CE</option>
+										<option value="DF">DF</option>
+										<option value="ES">ES</option>
+										<option value="GO">GO</option>
+										<option value="MA">MA</option>
+										<option value="MT">MT</option>
+										<option value="MS">MS</option>
+										<option value="MG">MG</option>
+										<option value="PA">PA</option>
+										<option value="PB">PB</option>
+										<option value="PR">PR</option>
+										<option value="PE">PE</option>
+										<option value="PI">PI</option>
+										<option value="RJ">RJ</option>
+										<option value="RN">RN</option>
+										<option value="RO">RO</option>
+										<option value="RS">RS</option>
+										<option value="RR">RR</option>
+										<option value="SC">SC</option>
+										<option value="SP">SP</option>
+										<option value="SE">SE</option>
+										<option value="TO">TO</option>
 									</select>
 								</div>
 							</div>
 						</div>
-
 
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="number" name="telefone_residencial" id="telefone_residencial" class="form-control" 
-										placeholder="Numero fixo" required="required">    
+										placeholder="Numero fixo" required>    
 									</div>
 								</div>
+
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="number" name="telefone_celular" id="telefone_celular" class="form-control" 
-										placeholder="Numero de celular" required="required">    
+										<input type="number" name="telefone_celular" id="telefone_celular" class="form-control" placeholder="Numero de celular" required>    
 									</div>
 								</div>
 							</div>
