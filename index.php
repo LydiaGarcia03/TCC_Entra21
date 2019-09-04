@@ -36,9 +36,9 @@
                         <a href="#tbConosco" class="nav-link">TRABALHE CONOSCO</a>
                     </li>
                 </ul>
-                <a href="login.php" class="btn btn-outline-light btn-sm mr-3">Login</a>
-                <a href="cadastro_usuario.php" class="btn btn-outline-light btn-sm">Cadastro</a>
             </div>
+            <a href="login.php" class="btn btn-outline-light btn-sm mr-3">Login</a>
+            <a href="cadastro_usuario.php" class="btn btn-outline-light btn-sm">Cadastro</a>
     </nav>
 
     <!-- Carousel -->
@@ -52,21 +52,21 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/senior-01.jpg" class="img-fluid d-block" style="width: 1522px;" alt="">
+                <img src="img/elders-01.jpg" class="img-fluid d-block" style="width: 1980px; height: 600px" alt="">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Lorem Ipsum is simply</h3>
                     <p>dummy text of the printing and typesetting industry.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/senior-02.jpg" class="img-fluid d-block" style="width: 1522px;" alt="">
+                <img src="img/elders-02.jpg" class="img-fluid d-block" style="width: 1980px; height: 600px" alt="">
             </div>
             <div class="carousel-caption d-none d-md-block">
                 <h3>Lorem Ipsum is simply</h3>
                 <p>dummy text of the printing and typesetting industry.</p>
             </div>
             <div class="carousel-item">
-                <img src="img/senior-03.jpg" class="img-fluid d-block" style="width: 1522px;" alt="">
+                <img src="img/elders-03.jpg" class="img-fluid d-block" style="width: 1980px; height: 600px" alt="">
             </div>
             <div class="carousel-caption d-none d-md-block">
                 <h3>Lorem Ipsum is simply</h3>
@@ -99,9 +99,12 @@
                                 <h4 class="card-title">cubilia auctor</h4>
                                 <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
                             </div>
-                            <div class="card-footer text-muted">
-                                <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal-01">Ver +</a>
-                            </div>
+                            
+                            <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal-03">
+                                <div class="card-footer">
+                                    Ver +
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
@@ -114,9 +117,12 @@
                                 <h4 class="card-title">cubilia auctor</h4>
                                 <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
                             </div>
-                            <div class="card-footer text-muted">
-                                <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal-02">Ver +</a>
-                            </div>
+                            
+                            <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal-03">
+                                <div class="card-footer">
+                                    Ver +
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
@@ -129,9 +135,12 @@
                                 <h4 class="card-title">cubilia auctor</h4>
                                 <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
                             </div>
-                            <div class="card-footer text-muted">
-                                <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal-03">Ver +</a>
-                            </div>
+
+                            <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal-03">
+                                <div class="card-footer">
+                                    Ver +
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -255,12 +264,12 @@
                             </span>
                             <p class="text-white mt-2">OK <br />Já pode trabalhar na plataforma</p>
                         </div>
-                        <a href="cadastro_cuidador.php" class="btn btn-lg btn-light mt-2 text-center text-dark">Quero trabalhar na HCDigital</a>
+                        <a href="cadastro_cuidador.php" class="btn btn-lg btn-light mt-4 px-5 py-2 text-center text-dark">Quero trabalhar na HCDigital</a>
                     </div>
-                    <!-- <img src="" alt="..." class="rounded-circle"> -->
                 </div>
-                <div class="col-lg-3 float-left bg-white">
-                    <img src="img/equipe.jpg" style="height: 300px" alt="">
+
+                <div class="col-lg-3 float-left my-auto">
+                    <img src="img/equipe.jpg" alt="" class="mt-4">
                 </div>
             </div>
         </div>
