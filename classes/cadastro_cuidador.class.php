@@ -15,10 +15,10 @@ class Cadastro_cuidador extends Site{
 	public function receberDados(){
 
 		$nome_completo = $_POST['nome_completo'];
-		$email = $_POST[''];
-		$senha = $_POST[''];
-		$tel_celular = $_POST[''];
-		$num_coren = $_POST[''];
+		$email = $_POST['email'];
+		$senha = $_POST['senha'];
+		$tel_celular = $_POST['tel_celular'];
+		$num_coren = $_POST['num_coren'];
 		
 	}
 
