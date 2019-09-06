@@ -20,5 +20,16 @@
 	background-image: url("../img/background_contrato.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	filter: blur(4px);
+	filter: blur(1px)
 }
+
+h2 {
+	color: white;
+}
+
+
+
+
+
+
+

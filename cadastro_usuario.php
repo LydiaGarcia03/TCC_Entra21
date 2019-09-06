@@ -26,7 +26,7 @@
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-6">
-									<div class="form-label-group">
+									<iv class="form-label-group">
 										<input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" 
 										placeholder="Nome Completo" required autofocus="autofocus">    
 									</div>

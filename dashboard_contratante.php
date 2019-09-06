@@ -104,129 +104,91 @@
 					<i class="fa fa-bars"></i>
 				</button>
 
+
+			
 				<div class="container-fluid">
+					<div class="container">
+						<h2>Fazer um agendamento</h2>
+						<div class="card card-register mx-auto mt-5">
+							<div class="card-body">
+								<form>
+									<div class="row">
+										<div class="col-3 mb-3">
+											<input type="text" class="form-control" placeholder="Nome">
+										</div>
+										<div class="col-3">
+											<input type="text" class="form-control" placeholder="Idade">
+										</div>
+										<div class="col-3">
+											<input type="text" class="form-control" placeholder="Especialidade">
+										</div>
+										<div class="col-3">
+											<input type="text" class="form-control" placeholder="CEP">
+										</div>
+									</div>
+								</form>
+								<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Confirmar  agendamento">
 
-					<h1 class="my-5">Página vazia com blur em foto e mini solicitação de serviço como DocWay</h1>
-
-					<div class="row">
-						<div class="col-xl-6 col-lg-5">
-							<div class="card shadow mb-3">
-								<div class="card-header d-flex flex-row align-items-center justify-content-between py-3">
-									<h6 class="m-0 font-weight-bold text-danger">Agenda</h6>
-								</div>
-
-								<div class="card-body p-0">
-									
-									<table class="table table-hover m-0">
-										
-										<tbody>
-											<tr>
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-
-											<tr>
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-											
-											<tr>
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-
-											<tr>
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-										</tbody>
-
-									</table>
-
-								</div>
 							</div>
 
 						</div>
-
+						<!-- End of Content Wrapper -->
 					</div>
-				</div>
-				<!-- End container-fluid -->
-
-			</div>
-			<!-- End of Main Content -->
-
-			<!-- Footer -->
-			<footer class="sticky-footer bg-white">
-				<div class="container my-auto">
-					<div class="copyright text-center my-auto">
-						<span>Copyright &copy; HCDigital 2019</span>
-					</div>
-				</div>
-			</footer>
-			<!-- End of Footer -->
-
-		</div>
-		<!-- End of Content Wrapper -->
-
-	</div>
-	<!-- End of Page Wrapper -->
-
-	<!-- Scroll to Top Button-->
-	<a class="scroll-to-top rounded" href="#page-top">
-		<i class="fas fa-angle-up"></i>
-	</a>
-
-	<!-- Logout Modal-->
-	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Tem certeza que queres sair</h5>
-					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body">Selecione sair se concordas.</div>
-				<div class="modal-footer">
-					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-					<a class="btn btn-primary" href="index.php">Sair</a>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- Bootstrap core JavaScript-->
-	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
-	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<!-- Core plugin JavaScript-->
-	<script src="sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
-	<!-- Custom scripts for all pages-->
-	<script src="sbadmin/js/sb-admin-2.min.js"></script>
-	<!-- Page level plugins -->
-	<script src="sbadmin/vendor/chart.js/Chart.min.js"></script>
-	<!-- Page level custom scripts -->
-	<script src="sbadmin/js/demo/chart-area-demo.js"></script>
-	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
-	<!-- Toggle Button -->
-	<script type="text/javascript">
+					<!-- End of Page Wrapper -->
 
-		function toggleSideBar(){
-			var profile_img = window.document.getElementById('profile_img');
-			if(profile_img.classList.contains('d-inline')){
-				profile_img.addClass('d-none');
-			} else{
-				profile_img.addClass('d-inline');
-			}
-		}
 
-	</script>
-</body>
-</html>
+					<!-- Scroll to Top Button-->
+					<a class="scroll-to-top rounded" href="#page-top">
+						<i class="fas fa-angle-up"></i>
+					</a>
+
+					<!-- Logout Modal-->
+					<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Tem certeza que queres sair</h5>
+									<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">×</span>
+									</button>
+								</div>
+								<div class="modal-body">Selecione sair se concordas.</div>
+								<div class="modal-footer">
+									<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+									<a class="btn btn-primary" href="index.php">Sair</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Bootstrap core JavaScript-->
+					<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
+					<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+					<!-- Core plugin JavaScript-->
+					<script src="sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+					<!-- Custom scripts for all pages-->
+					<script src="sbadmin/js/sb-admin-2.min.js"></script>
+					<!-- Page level plugins -->
+					<script src="sbadmin/vendor/chart.js/Chart.min.js"></script>
+					<!-- Page level custom scripts -->
+					<script src="sbadmin/js/demo/chart-area-demo.js"></script>
+					<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
+					<!-- Toggle Button -->
+					<script type="text/javascript">
+
+						function toggleSideBar(){
+							var profile_img = window.document.getElementById('profile_img');
+							if(profile_img.classList.contains('d-inline')){
+								profile_img.addClass('d-none');
+							} else{
+								profile_img.addClass('d-inline');
+							}
+						}
+
+					</script>
+				</body>
+				</html>
