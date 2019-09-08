@@ -49,7 +49,7 @@
 
 							<div class="col-md-6">
 								<div class="form-label-group">
-									<input type="text" name="date" id="date" class="form-control" data-mask="00/00/0000" maxlength="10" placeholder="Data de nascimento" required>    
+									<input type="text" name="dt_nascimento" id="dt_nascimento" class="form-control" data-mask="00/00/0000" maxlength="10" placeholder="Data de nascimento" required>    
 								</div>
 							</div>
 						</div>
@@ -95,7 +95,7 @@
 						<div class="form-row">
 							<div class="col-md-12">
 								<div class="form-label-group">
-									<input type="number" name="cep" id="cep" class="form-control" 
+									<input type="text" name="cep" id="cep" class="form-control" 
 									placeholder="CEP: (00000-000)" required autofocus>   
 								</div>
 							</div>
@@ -113,7 +113,7 @@
 
 							<div class="col-md-6">
 								<div class="form-label-group">
-									<input type="text" name="numeroCasa" id="numeroCasa" class="form-control" 
+									<input type="number" name="numeroCasa" id="numeroCasa" class="form-control" 
 									placeholder="Numero" required autofocus>    
 								</div>
 							</div>
@@ -186,14 +186,14 @@
 						<div class="form-row">
 							<div class="col-md-6">
 								<div class="form-label-group">
-									<input type="number" name="tel_residencial" id="tel_residencial" class="form-control" 
+									<input type="text" name="tel_residencial" id="tel_residencial" class="form-control" 
 									placeholder="Numero fixo" required>    
 								</div>
 							</div>
 
 							<div class="col-md-6">
 								<div class="form-label-group">
-									<input type="text" name="tel_celular" id="tel_celular" class="tel_celular form-control" placeholder="(17) 9 9173-3578" data-mask="()_____-____" pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}"/>    
+									<input autocomplete="off" type="tel" class="form-control fone" id="tel_celular" name="tel_celular" value="" required="" maxlength="15" data-original-title="TELEFONE: Forneça um válido ou limpe o campo">    
 								</div>
 							</div>
 						</div>
@@ -229,35 +229,28 @@
 					<!-- Dados bancários -->
 					<div class="form-group">
 						<div class="form-row">
-							<div class="col-md-4">
+							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="text" name="cod_banco" id="cod_banco" placeholder="Código do banco" class="form-control">
 								</div>
 							</div>
 
-							<div class="col-md-4">
+							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="text" name="num_agencia" id="num_agencia" placeholder="Número da agência" class="form-control">
 								</div>
 							</div>
 
-							<div class="col-md-4">
-								<div class="form-label-group">
-									<input type="text" name="dig_agencia" id="dig_agencia" placeholder="Dígito da agência" class="form-control">
-								</div>
-							</div>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="form-row">
 							<div class="col-md-4">
-								<select class="custom-select">
-									<option value="corrente">Corrente</option>
-									<option value="poupança">Poupança</option>
-									<option value="especial">Especial</option>
-								</select>
-							</div>
+							 	<div class="form-label-group">
+							 		<input type="text" id="tipo_conta" name="tipo_conta" placeholder="Tipo de conta" class="form-control">
+							 	</div>
+							 </div>
 
 							<div class="col-md-4">
 								<input type="text" name="num_conta" id="num_conta" class="form-control" placeholder="Número da conta">
@@ -281,7 +274,7 @@
 						</div>
 					</div>
 
-					<div class="custom-control custom-checkbox mb-12">
+					<div class="custom-control custom-checkbox mb-3">
 						<input type="checkbox" class="custom-control-input" id="customCheck1" required>
 						<label class="custom-control-label" for="customCheck1">De acordo com os dados coletados?</label>
 					</div>
@@ -303,16 +296,28 @@
 		<i style="margin-top: 15%;" class="far fa-arrow-alt-circle-left text-white fa-3x p-3"></i>
 	</a>
 
-	<!-- Optional JavaScript -->
+	<!-- JQuery Mask -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"/></script>
+
 	<script type="text/javascript">
 		$(document).ready(function(){
+			$('#dt_nascimento').mask('99/99/9999');
+			$('#cep').mask('99999-999');
 			$('#tel_celular').mask('(99) 9 9999-9999');
+			$('#tel_residencial').mask('9999-9999');
+			$('#num_coren').mask('999.999');
+			$('#cod_banco').mask('999');
+			$('#num_agencia').mask('9999');
+			$('#tipo_conta').mask('999');
+			$('#num_conta').mask('99999999');
+			$('#dig_conta').mask('9');
+			$('#num_cartao').mask('9999 9999 9999 9999');
 		});
 	</script>
-	<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"/></script>
+
+	<!-- Optional JavaScript -->
 	<script src="https://kit.fontawesome.com/635b697ad0.js"></script>
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
