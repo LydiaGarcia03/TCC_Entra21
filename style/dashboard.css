@@ -16,17 +16,25 @@
 .cards-area .card:hover{
 	box-shadow: 0px 0px 15px #ccc6c6;
 }
+
 .background_contract{
-	background-image: url("../img/background_contrato.jpg");
+	background-image: url("../img/medico_mao.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	filter: blur(1px)
+	filter: blur(0px)
 }
 
 h2 {
-	color: white;
+	text-align: center;
+	padding: 75px;
+	color: white; 
+	text-shadow: 
+	black 0.1em 0.1em 0.2em;
 }
 
+.accordionSidebar {
+	background-color: black;
+}
 
 
 

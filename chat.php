@@ -99,9 +99,6 @@
 			</div>
 
 			<!-- Toggle Sidebar -->
-			<div class="text-center d-md-inline mt-4">
-				<button class="rounded-circle border-0" id="sidebarToggle" onclick="toggleSideBar()"></button>
-			</div>
 
 		</ul>
 

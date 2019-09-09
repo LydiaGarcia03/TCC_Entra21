@@ -101,9 +101,7 @@
 			</div>
 
 			<!-- Toggle Sidebar -->
-			<div class="text-center d-md-inline mt-4">
-				<button class="rounded-circle border-0" id="sidebarToggle" onclick="toggleSideBar()"></button>
-			</div>
+			
 
 		</ul>
 		<!-- Fim Sidebar -->
@@ -296,12 +294,12 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Tem certeza que queres sair</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Tem certeza que quer sair</h5>
 					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
-				<div class="modal-body">Selecione sair se concordas.</div>
+				<div class="modal-body">Selecione sair se deseja.</div>
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
 					<a class="btn btn-primary" href="index.php">Sair</a>

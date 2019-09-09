@@ -81,16 +81,14 @@
 			<!-- Logout -->
 			<div style="bottom: 0px">
 				<li class="nav-item no-arrow mb-0">
-					<a href="dashboard_cuidador_home.php" class="nav-link text-center">
+					<a href="dashboard_cuidador.php" class="nav-link text-center">
 						<span>Dashboard cuidador</span>
 					</a>
 				</li>
 			</div>
 
 			<!-- Toggle Sidebar -->
-			<div class="text-center d-none d-md-inline mt-4">
-				<button class="rounded-circle border-0" id="sidebarToggle" onclick="toggleSideBar()"></button>
-			</div>
+			
 
 		</ul>
 		<!-- Fim Sidebar -->
@@ -151,12 +149,12 @@
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">Tem certeza que queres sair</h5>
+									<h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja sair</h5>
 									<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">×</span>
 									</button>
 								</div>
-								<div class="modal-body">Selecione sair se concordas.</div>
+								<div class="modal-body">Selecione sair se deseja.</div>
 								<div class="modal-footer">
 									<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
 									<a class="btn btn-primary" href="index.php">Sair</a>
