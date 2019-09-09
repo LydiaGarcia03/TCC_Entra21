@@ -28,10 +28,10 @@
 
 						<div class="collapse navbar-collapse" id="navbarSite">
 							<ul class="navbar-nav mr-auto">
-								<li class="nav-item active">
+								<li class="nav-item">
 									<a href="quem_somos.php" class="nav-link">QUEM SOMOS</a>
 								</li>
-								<li class="nav-item">
+								<li class="nav-item active">
 									<a href="FAQ.php" class="nav-link">DÚVIDAS</a>
 								</li>
 								<li class="nav-item">
