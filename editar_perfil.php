@@ -304,24 +304,24 @@
 										placeholder="Digito da agência" required="required" autofocus="autofocus">    
 									</div>
 								</div>
+
 								<div class="col-md-4 mt-3">
-									<div class="form-label-group">
-										<input type="text" name="tipo_conta" id="tipo_conta" class="form-control" 
-										placeholder="Tipo de conta" required="required" autofocus="autofocus">  
-									</div>
+									<select class="custom-select">
+										<option disabled selected>Tipo</option>
+										<option value="corrente">Corrente</option>
+										<option value="poupança">Poupança</option>
+										<option value="especial">Especial</option>
+									</select>
 								</div>
-								<div class="col-md-4 mt-3">
-									<div class="form-label-group">
-										<input type="text" name="num_conta" id="num_conta" class="form-control" 
-										placeholder="Número dda conta" required="required" autofocus="autofocus">    
-									</div>
+
+								<div class="col-md-4 mt-3 mt-3">
+									<input type="text" name="num_conta" id="num_conta" class="form-control" placeholder="Número da conta">
 								</div>
-								<div class="col-md-4 mt-3">
-									<div class="form-label-group">
-										<input type="text" name="dig_conta" id="dig_conta" class="form-control" 
-										placeholder="Dígito da conta" required="required" autofocus="autofocus">
-									</div>
+
+								<div class="col-md-4 mt-3 mt-3">
+									<input type="text" name="dig_conta" id="dig_conta" class="form-control" placeholder="Dígito da conta">
 								</div>
+
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
 										<input type="text" name="num_cartao" id="num_cartao" class="form-control" 

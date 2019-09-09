@@ -38,7 +38,7 @@
 			<div class="text-center my-3">
 				<li class="nav-item">
 					<small>
-						<a href="#editar_perfil" class="nav-link text-center p-0">
+						<a href="editar_perfil.php" class="nav-link text-center p-0">
 							<i class="far fa-fw fa-edit"></i>
 							<span>Editar perfil</span>
 						</a>
