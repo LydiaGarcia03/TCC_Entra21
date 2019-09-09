@@ -16,7 +16,7 @@
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a href="index.html" class="navbar-brand h1 mb-0">HCDigital</a>
+            <a href="index.php" class="navbar-brand h1 mb-0">HCDigital</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                 <span class="navbar-toggler-icon"></span>
             </button>
