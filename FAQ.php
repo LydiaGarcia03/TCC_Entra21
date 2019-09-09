@@ -28,13 +28,10 @@
 
 						<div class="collapse navbar-collapse" id="navbarSite">
 							<ul class="navbar-nav mr-auto">
-								<li class="nav-item active">
+								<li class="nav-item">
 									<a href="quem_somos.php" class="nav-link">QUEM SOMOS</a>
 								</li>
-								<li class="nav-item">
-									<a href="servicos.php" class="nav-link">SERVIÇOS</a>
-								</li>
-								<li class="nav-item">
+								<li class="nav-item active">
 									<a href="FAQ.php" class="nav-link">DÚVIDAS</a>
 								</li>
 								<li class="nav-item">
@@ -64,7 +61,7 @@
 		</div>
 	</div>
 
-	<img src="img/sobre.jpg" alt="" style="background-size: cover">
+	<img src="img/sobre.jpg" id="img1">
 
 	<div class="container-fluid">
 		<div class="container bg-white">

@@ -39,7 +39,15 @@ class Cadastro_cuidador extends Site{
 		$nome_user_cartao = $_POST['nome_user_cartao'];
 
 		// Criptografia
-		
+		$crip_senha = hash('sha512', $senha);
+		$crip_cod_banco = hash('sha512', $cod_banco);
+		$crip_num_agencia = hash('sha512', $num_agencia);
+		$crip_dig_agencia = hash('sha512', $dig_agencia);
+		$crip_tipo_conta = hash('sha512', $tipo_conta);
+		$crip_num_conta = hash('sha512', $num_conta);
+		$crip_dig_conta = hash('sha512', $dig_conta);
+		$crip_num_cartao = hash('sha512', $num_cartao);
+		$crip_nome_user_cartao = hash('sha512', $nome_user_cartao);
 
 	}
 
