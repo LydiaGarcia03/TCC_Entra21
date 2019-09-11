@@ -1,4 +1,5 @@
 <?php
+
 	require_once "classes/cadastro_user.class.php";
 
 ?>

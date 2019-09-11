@@ -63,4 +63,8 @@ class Site{
 
 }
 
+$site = new Site();
+var_dump($site->session_verify());
+die();
+
 ?>

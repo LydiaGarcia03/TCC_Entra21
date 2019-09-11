@@ -92,7 +92,7 @@
 		<!-- Fim Sidebar -->
 
 		<!-- Conteúdo da página -->
-		<div id="content-wrapper" class="d-flex flex-column background_contract">
+		<div id="content-wrapper" class="d-flex flex-column">
 			<div id="content">
 
 				<!-- Button TopPage -->
@@ -100,51 +100,87 @@
 					<i class="fa fa-bars"></i>
 				</button>
 
-				<div class="container-fluid">
-					<div class="container">
-						<h2>Fazer um agendamento</h2>
-						<div class="card card-register mx-auto mt-5">
-							<div class="card-body">
-								
-								<form>
-									<div class="row">
-										<div class="col-3 mb-3">
-											<input type="text" class="form-control" placeholder="Nome">
-										</div>
-										<div class="col-3">
-											<input type="text" class="form-control" placeholder="Idade">
-										</div>
-										<div class="col-3">
-											<input type="text" class="form-control" placeholder="Especialidade">
-										</div>
-										<div class="col-3">
-											<input type="text" class="form-control" placeholder="CEP">
-										</div>
+				<div class="card-header">Solicitação de serviço</div>
+
+				<div class="card-body">
+
+					<form>
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-12">
+									<div class="form-label-group">
+										<input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control"
+										placeholder="Nome completo do paciente" required autofocus>    
 									</div>
-
-									<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Confirmar  agendamento">
-
-								</form>
-
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
 
-			<!-- Footer -->
-			<footer class="sticky-footer bg-white">
-				<div class="container my-auto">
-					<div class="copyright text-center my-auto">
-						<span>Copyright &copy; HCDigital 2019</span>
-					</div>
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-6">
+									<select class="custom-select" name="genero">
+										<option selected disabled>Gênero</option>
+										<option value="masculino">Masculino</option>
+										<option value="feminino">Feminino</option>
+										<option value="outro">Outro</option>
+									</select>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-label-group">
+										<input type="text" name="dt_nascimento" id="dt_nascimento" class="form-control"
+										placeholder="Data de nascimento" required>    
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-6">
+									<div class="form-label-group">
+										 <select class="custom-select">
+										 	<option selected disabled>Tipo de serviço</option>
+										 	<option>Cuidador infantil</option>
+										 	<option>Cuidador de idosos</option>
+										 	<option>Enfermagem</option>
+										 </select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-12">
+									<div class="form-label-group">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<input type="submit" class="btn btn-primary btn-block" name="btnSolicitarServico" value="Solicitar serviço">
+
+					</form>
+
 				</div>
-			</footer>
-			<!-- End of Footer -->
+				<!-- End of Main Content -->
+
+				<!-- Footer -->
+				<footer class="sticky-footer bg-white">
+					<div class="container my-auto">
+						<div class="copyright text-center my-auto">
+							<span>Copyright &copy; HCDigital 2019</span>
+						</div>
+					</div>
+				</footer>
+				<!-- End of Footer -->
+
+			</div>
+			<!-- End of Content Wrapper -->
 
 		</div>
 		<!-- End of Page Wrapper -->
-
 
 		<!-- Scroll to Top Button-->
 		<a class="scroll-to-top rounded" href="#page-top">
@@ -183,6 +219,14 @@
 	<!-- Page level custom scripts -->
 	<script src="sbadmin/js/demo/chart-area-demo.js"></script>
 	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
-	
+	<!-- JQuery Mask -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"/></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#dt_nascimento').mask('99/99/9999');
+		});
+	</script>
+
 </body>
 </html>

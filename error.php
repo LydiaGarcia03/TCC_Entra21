@@ -15,7 +15,7 @@
 				<div class="row">
 					<div class="col-12">
 
-						<a href="index.html" class="navbar-brand h1 mb-0 float-left">HCDigital</a>
+						<a href="index.php" class="navbar-brand h1 mb-0 float-left">HCDigital</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
 							<span class="navbar-toggler-icon"></span>
 						</button>
@@ -37,8 +37,8 @@
 							<p>Lamentamos pelo imprevisto. Retorne à página de login ou à página inicial</p>
 
 							<div class="my-5">
-								<button class="btn btn-primary">Voltar ao login</button>
-								<button class="btn btn-primary">Voltar a página inicial</button>
+								<a href="login.php" class="btn btn-primary">Voltar ao login</a>
+								<a href="index.php" class="btn btn-primary">Voltar a página inicial</a>
 							</div>
 						</div>
 					</div>
