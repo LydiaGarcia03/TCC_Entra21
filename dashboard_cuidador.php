@@ -331,9 +331,18 @@
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
           plugins: [ 'dayGrid' ],
-          height: 480,
-          locale: 'pt'
-
+          height: 675,
+          locale: 'pt',
+          events: [
+				{
+					id: 1,
+					title: 'Teste',
+					start: new Date(2019, 8, 11),
+					allDay: false,
+					className: 'info'
+				}
+			]
+			
         });
 
         calendar.render();
