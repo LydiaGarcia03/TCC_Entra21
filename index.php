@@ -6,17 +6,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS -->
-    <link href="style/home.css" rel="stylesheet" type="text/css">
+    <link href="style/index.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="bg-light">
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a href="index.php" class="navbar-brand h1 mb-0">HCDigital</a>
+            <a href="index.php" class="navbar-brand h1 mb-0"><i class="fas fa-heartbeat"></i>HCDigital</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -52,21 +55,21 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/elders-01.jpg" class="img-fluid d-block" style="width: 1980px; height: 600px" alt="">
+                <img src="img/elders-01.jpg" class="img-fluid d-block"  alt="">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Lorem Ipsum is simply</h3>
                     <p>dummy text of the printing and typesetting industry.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/elders-02.jpg" class="img-fluid d-block" style="width: 1980px; height: 600px" alt="">
+                <img src="img/elders-02.jpg" class="img-fluid d-block"  alt="">
             </div>
             <div class="carousel-caption d-none d-md-block">
                 <h3>Lorem Ipsum is simply</h3>
                 <p>dummy text of the printing and typesetting industry.</p>
             </div>
             <div class="carousel-item">
-                <img src="img/elders-03.jpg" class="img-fluid d-block" style="width: 1980px; height: 600px" alt="">
+                <img src="img/elders-03.jpg" class="img-fluid d-block"  alt="">
             </div>
             <div class="carousel-caption d-none d-md-block">
                 <h3>Lorem Ipsum is simply</h3>
@@ -82,76 +85,10 @@
     </div>
 
 
-    <div class="container bg-white">
-        <div class="row m-5">
-            <div class="col-12 text-center my-5">
-
-                <h2 class="mb-5">Serviços</h2>
-
-                <div class="row justify-content-sm-center">
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card mb-5">
-                            <div class="mx-auto">
-                                <img src="img/img-011.jpeg" alt="" class="card-top w-50">
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="card-title">cubilia auctor</h4>
-                                <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
-                            </div>
-                            
-                            <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal-03">
-                                <div class="card-footer">
-                                    Ver +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card mb-5">
-                            <div class="mx-auto">
-                                <img src="img/img-011.jpeg" alt="" class="card-top w-50">
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="card-title">cubilia auctor</h4>
-                                <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
-                            </div>
-                            
-                            <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal-03">
-                                <div class="card-footer">
-                                    Ver +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card mb-5">
-                            <div class="mx-auto">
-                                <img src="img/img-011.jpeg" alt="" class="card-top w-50">
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="card-title">cubilia auctor</h4>
-                                <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
-                            </div>
-
-                            <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal-03">
-                                <div class="card-footer">
-                                    Ver +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Por que criamos -->
     
     <div class="container bg-white">
-        <div class="row m-3">
+        <div class="row ">
             <div class="col-12 text-center my-5">
                 <h3 class="mb-5">Por que criamos o HCDigital?</h3>            
             </div>
@@ -175,6 +112,101 @@
         </div>
     </div>
 
+
+     <div class="container servicos">
+        <div class="row m-5">
+            <div class="col-12 text-center my-5">
+
+                <h2 class="mb-5">Serviços</h2>
+
+                <div class="row justify-content-sm-center">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card mb-5">
+                            <div class="mx-auto">
+                                <img src="img/cuidador-idoso.jpg" alt="" class="card-top">
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title">cubilia auctor</h4>
+                                <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
+                            </div>
+                            
+                            <a href="#" class="card-link btn btn-primary" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card mb-5">
+                            <div class="mx-auto">
+                                <img src="img/image_infantil.png" alt="" class="card-top w-50">
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title">cubilia auctor</h4>
+                                <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
+                            </div>
+                            
+                            <a href="#" class="card-link btn btn-primary" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card mb-5">
+                            <div class="mx-auto">
+                                <img src="img/cuidador-idoso.jpg" alt="" class="card-top w-50">
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title">cubilia auctor</h4>
+                                <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
+                            </div>
+
+                            <a href="#" class="card-link btn btn-primary" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRABALHE CONOSCO -->
+    <div class="jumbotron jumbotron-fluid bg-primary mt-5" id="tbConosco">
+        <div class="row text-white text-left">
+            <div class="container  py-3">
+                <div class="col-lg-8 float-left ">
+                    <h3 class="py-1">QUER FAZER PARTE DA EQUIPE HCDIGITAL?<br /> JUNTE-SE A NÓS!</h3>
+                    <p class="py-3">Você define os seus horários e dias de atendimento,<br />com total controle sobre a sua
+                        agenda.</p>
+                    <div class="text-center">
+                        <div class="col-md-3 mb-1 float-left mr-5">
+                            <span class="fa-stack fa-3x">
+                                <i class="fas fa-circle fa-stack-2x "></i>
+                                <i class="fas fa-clipboard-list fa-stack-1x fa-inverse text-primary"></i>
+                            </span>
+                            <p class="text-white mt-2">Cadastro <br /> cadastre seus dados</p>                           
+                        </div>
+                        <div class="col-md-3 mb-1 float-left mr-5">
+                            <span class="fa-stack fa-3x">
+                                <i class="fas fa-circle fa-stack-2x "></i>
+                                <i class="fas fa-user-friends fa-stack-1x fa-inverse text-primary"></i>
+                            </span>
+                            <p class="text-white mt-2"> Aprovação <br/>analisaremos cuidadosamente dados</p>
+                        </div>
+                        <div class="col-md-3 mb-1 float-left mr-5">
+                            <span class="fa-stack fa-3x">
+                                <i class="fas fa-circle fa-stack-2x "></i>
+                                <i class="fas fa-user-friends fa-stack-1x fa-inverse text-primary"></i>
+                            </span>
+                            <p class="text-white mt-2">OK <br />Já pode trabalhar na plataforma</p>
+                        </div>
+                        <a href="cadastro_cuidador.php" class="btn btn-lg btn-light mt-4 px-5 py-2 text-center text-dark">Quero trabalhar na HCDigital</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 float-left my-auto">
+                    <img src="img/equipe.jpg" alt="" class="mt-4">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- REDES SOCIAL -->
     <div class="container bg-white">
@@ -234,46 +266,6 @@
     </div>
 
 
-    <!-- TRABALHE CONOSCO -->
-    <div class="jumbotron jumbotron-fluid bg-primary mt-5" id="tbConosco">
-        <div class="row text-white text-left">
-            <div class="container  py-3">
-                <div class="col-lg-8 float-left ">
-                    <h3 class="py-1">QUER FAZER PARTE DA EQUIPE HCDIGITAL?<br /> JUNTE-SE A NÓS!</h3>
-                    <p class="py-3">Você define os seus horários e dias de atendimento,<br />com total controle sobre a sua
-                        agenda.</p>
-                    <div class="text-center">
-                        <div class="col-md-3 mb-1 float-left mr-5">
-                            <span class="fa-stack fa-3x">
-                                <i class="fas fa-circle fa-stack-2x "></i>
-                                <i class="fas fa-clipboard-list fa-stack-1x fa-inverse text-primary"></i>
-                            </span>
-                            <p class="text-white mt-2">Cadastro <br /> cadastre seus dados</p>                           
-                        </div>
-                        <div class="col-md-3 mb-1 float-left mr-5">
-                            <span class="fa-stack fa-3x">
-                                <i class="fas fa-circle fa-stack-2x "></i>
-                                <i class="fas fa-user-friends fa-stack-1x fa-inverse text-primary"></i>
-                            </span>
-                            <p class="text-white mt-2"> Aprovação <br/>analisaremos cuidadosamente dados</p>
-                        </div>
-                        <div class="col-md-3 mb-1 float-left mr-5">
-                            <span class="fa-stack fa-3x">
-                                <i class="fas fa-circle fa-stack-2x "></i>
-                                <i class="fas fa-user-friends fa-stack-1x fa-inverse text-primary"></i>
-                            </span>
-                            <p class="text-white mt-2">OK <br />Já pode trabalhar na plataforma</p>
-                        </div>
-                        <a href="cadastro_cuidador.php" class="btn btn-lg btn-light mt-4 px-5 py-2 text-center text-dark">Quero trabalhar na HCDigital</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 float-left my-auto">
-                    <img src="img/equipe.jpg" alt="" class="mt-4">
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Formulario -->
 
@@ -359,53 +351,7 @@
                         euismod feugiat sagittis tincidunt mattis himenaeos, hendrerit sodales proin rhoncus sem non
                         curabitur rutrum nibh.</p>
 
-                    <p>Hac aenean vel adipiscing at suspendisse pulvinar porttitor malesuada ullamcorper ultrices,
-                        cras sagittis erat tortor nulla varius congue etiam dolor, magna massa curae dictumst facilisis
-                        nisl scelerisque praesent massa.
-                        facilisis leo gravida curabitur vehicula curabitur suscipit egestas ipsum mattis rutrum
-                        sagittis,
-                        vitae dolor semper nisi lectus class consequat nisl suspendisse aenean,magna pulvinar nam aptent
-                        interdum massa ornare sollicitudin libero non.
-                        in hac magna posuere fringilla suscipit libero dictumst vulputate curabitur pharetra,
-                        senectus pellentesque fusce sit felis mattis suscipit augue himenaeos tortor, donec torquent
-                        purus adipiscing faucibus mattis euismod venenatis congue.</p>
-
-                    <p>Conubia mattis vehicula laoreet fusce congue augue condimentum dapibus pellentesque phasellus
-                        ornare porta potenti,
-                        nisi fames pulvinar convallis eros arcu iaculis imperdiet phasellus netus praesent cras.
-                        curae erat ad sem nibh curabitur placerat sapien dictumst mattis magna,
-                        malesuada luctus nisl dictum vestibulum adipiscing cubilia libero nam, fames tempor varius
-                        ultricies nisi est vivamus blandit cras.
-                        donec et dui varius curabitur accumsan nibh conubia aenean, et venenatis et potenti leo netus
-                        fermentum,
-                        eu nulla vivamus imperdiet neque scelerisque lectus. adipiscing fames felis consequat quis
-                        aliquam per conubia primis posuere bibendum habitasse,
-                        elit curae laoreet rhoncus malesuada quisque sociosqu semper inceptos faucibus, etiam taciti id
-                        vitae cras etiam erat varius ornare pellentesque.</p>
-
-                    <p>Curae fames consequat sociosqu hac luctus tellus posuere orci, erat auctor sagittis aliquam nunc
-                        nullam at fermentum,
-                        eget aliquam fringilla volutpat non nec in. mattis dictum adipiscing felis diam fringilla per
-                        erat elit platea fringilla a,
-                        platea fames himenaeos per fames etiam egestas risus morbi varius augue vivamus,
-                        fringilla nostra sociosqu habitant sodales turpis adipiscing nulla quisque malesuada.
-                        ut tincidunt vel orci proin enim iaculis habitant a, nisi placerat tempus mattis consectetur
-                        habitasse quam interdum,
-                        porta aliquam facilisis tempor mi aliquam suscipit. egestas vel pharetra donec proin venenatis
-                        proin platea elementum cras luctus,
-                        platea lacus justo diam netus ut integer magna mollis, fermentum velit interdum cursus torquent
-                        litora tempus integer blandit.</p>
-
-                    <p>Nam ut congue vestibulum justo pharetra lorem rhoncus fringilla mattis, morbi ultricies
-                        consectetur eu amet tristique habitant suspendisse metus,
-                        orci condimentum fermentum ligula et diam fusce hendrerit. maecenas dolor venenatis sociosqu
-                        accumsan egestas hendrerit habitasse torquent quisque ultricies vitae,
-                        ornare quisque eleifend interdum malesuada faucibus quisque ac fusce gravida.
-                        id commodo pharetra class aptent cubilia phasellus lobortis ut, imperdiet torquent rutrum
-                        vestibulum hac sagittis felis donec vehicula,
-                        senectus euismod ante et sapien torquent senectus. faucibus aliquet vehicula curae iaculis nisl
-                        ut,
-                        tellus ad pharetra dictum netus ipsum, duis nulla curabitur varius placerat.</p>
+                   
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
@@ -437,54 +383,7 @@
                         blandit faucibus, libero torquent diam in
                         euismod feugiat sagittis tincidunt mattis himenaeos, hendrerit sodales proin rhoncus sem non
                         curabitur rutrum nibh.</p>
-
-                    <p>Hac aenean vel adipiscing at suspendisse pulvinar porttitor malesuada ullamcorper ultrices,
-                        cras sagittis erat tortor nulla varius congue etiam dolor, magna massa curae dictumst facilisis
-                        nisl scelerisque praesent massa.
-                        facilisis leo gravida curabitur vehicula curabitur suscipit egestas ipsum mattis rutrum
-                        sagittis,
-                        vitae dolor semper nisi lectus class consequat nisl suspendisse aenean,magna pulvinar nam aptent
-                        interdum massa ornare sollicitudin libero non.
-                        in hac magna posuere fringilla suscipit libero dictumst vulputate curabitur pharetra,
-                        senectus pellentesque fusce sit felis mattis suscipit augue himenaeos tortor, donec torquent
-                        purus adipiscing faucibus mattis euismod venenatis congue.</p>
-
-                    <p>Conubia mattis vehicula laoreet fusce congue augue condimentum dapibus pellentesque phasellus
-                        ornare porta potenti,
-                        nisi fames pulvinar convallis eros arcu iaculis imperdiet phasellus netus praesent cras.
-                        curae erat ad sem nibh curabitur placerat sapien dictumst mattis magna,
-                        malesuada luctus nisl dictum vestibulum adipiscing cubilia libero nam, fames tempor varius
-                        ultricies nisi est vivamus blandit cras.
-                        donec et dui varius curabitur accumsan nibh conubia aenean, et venenatis et potenti leo netus
-                        fermentum,
-                        eu nulla vivamus imperdiet neque scelerisque lectus. adipiscing fames felis consequat quis
-                        aliquam per conubia primis posuere bibendum habitasse,
-                        elit curae laoreet rhoncus malesuada quisque sociosqu semper inceptos faucibus, etiam taciti id
-                        vitae cras etiam erat varius ornare pellentesque.</p>
-
-                    <p>Curae fames consequat sociosqu hac luctus tellus posuere orci, erat auctor sagittis aliquam nunc
-                        nullam at fermentum,
-                        eget aliquam fringilla volutpat non nec in. mattis dictum adipiscing felis diam fringilla per
-                        erat elit platea fringilla a,
-                        platea fames himenaeos per fames etiam egestas risus morbi varius augue vivamus,
-                        fringilla nostra sociosqu habitant sodales turpis adipiscing nulla quisque malesuada.
-                        ut tincidunt vel orci proin enim iaculis habitant a, nisi placerat tempus mattis consectetur
-                        habitasse quam interdum,
-                        porta aliquam facilisis tempor mi aliquam suscipit. egestas vel pharetra donec proin venenatis
-                        proin platea elementum cras luctus,
-                        platea lacus justo diam netus ut integer magna mollis, fermentum velit interdum cursus torquent
-                        litora tempus integer blandit.</p>
-
-                    <p>Nam ut congue vestibulum justo pharetra lorem rhoncus fringilla mattis, morbi ultricies
-                        consectetur eu amet tristique habitant suspendisse metus,
-                        orci condimentum fermentum ligula et diam fusce hendrerit. maecenas dolor venenatis sociosqu
-                        accumsan egestas hendrerit habitasse torquent quisque ultricies vitae,
-                        ornare quisque eleifend interdum malesuada faucibus quisque ac fusce gravida.
-                        id commodo pharetra class aptent cubilia phasellus lobortis ut, imperdiet torquent rutrum
-                        vestibulum hac sagittis felis donec vehicula,
-                        senectus euismod ante et sapien torquent senectus. faucibus aliquet vehicula curae iaculis nisl
-                        ut,
-                        tellus ad pharetra dictum netus ipsum, duis nulla curabitur varius placerat.</p>
+              
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
@@ -516,54 +415,7 @@
                         blandit faucibus, libero torquent diam in
                         euismod feugiat sagittis tincidunt mattis himenaeos, hendrerit sodales proin rhoncus sem non
                         curabitur rutrum nibh.</p>
-
-                    <p>Hac aenean vel adipiscing at suspendisse pulvinar porttitor malesuada ullamcorper ultrices,
-                        cras sagittis erat tortor nulla varius congue etiam dolor, magna massa curae dictumst facilisis
-                        nisl scelerisque praesent massa.
-                        facilisis leo gravida curabitur vehicula curabitur suscipit egestas ipsum mattis rutrum
-                        sagittis,
-                        vitae dolor semper nisi lectus class consequat nisl suspendisse aenean,magna pulvinar nam aptent
-                        interdum massa ornare sollicitudin libero non.
-                        in hac magna posuere fringilla suscipit libero dictumst vulputate curabitur pharetra,
-                        senectus pellentesque fusce sit felis mattis suscipit augue himenaeos tortor, donec torquent
-                        purus adipiscing faucibus mattis euismod venenatis congue.</p>
-
-                    <p>Conubia mattis vehicula laoreet fusce congue augue condimentum dapibus pellentesque phasellus
-                        ornare porta potenti,
-                        nisi fames pulvinar convallis eros arcu iaculis imperdiet phasellus netus praesent cras.
-                        curae erat ad sem nibh curabitur placerat sapien dictumst mattis magna,
-                        malesuada luctus nisl dictum vestibulum adipiscing cubilia libero nam, fames tempor varius
-                        ultricies nisi est vivamus blandit cras.
-                        donec et dui varius curabitur accumsan nibh conubia aenean, et venenatis et potenti leo netus
-                        fermentum,
-                        eu nulla vivamus imperdiet neque scelerisque lectus. adipiscing fames felis consequat quis
-                        aliquam per conubia primis posuere bibendum habitasse,
-                        elit curae laoreet rhoncus malesuada quisque sociosqu semper inceptos faucibus, etiam taciti id
-                        vitae cras etiam erat varius ornare pellentesque.</p>
-
-                    <p>Curae fames consequat sociosqu hac luctus tellus posuere orci, erat auctor sagittis aliquam nunc
-                        nullam at fermentum,
-                        eget aliquam fringilla volutpat non nec in. mattis dictum adipiscing felis diam fringilla per
-                        erat elit platea fringilla a,
-                        platea fames himenaeos per fames etiam egestas risus morbi varius augue vivamus,
-                        fringilla nostra sociosqu habitant sodales turpis adipiscing nulla quisque malesuada.
-                        ut tincidunt vel orci proin enim iaculis habitant a, nisi placerat tempus mattis consectetur
-                        habitasse quam interdum,
-                        porta aliquam facilisis tempor mi aliquam suscipit. egestas vel pharetra donec proin venenatis
-                        proin platea elementum cras luctus,
-                        platea lacus justo diam netus ut integer magna mollis, fermentum velit interdum cursus torquent
-                        litora tempus integer blandit.</p>
-
-                    <p>Nam ut congue vestibulum justo pharetra lorem rhoncus fringilla mattis, morbi ultricies
-                        consectetur eu amet tristique habitant suspendisse metus,
-                        orci condimentum fermentum ligula et diam fusce hendrerit. maecenas dolor venenatis sociosqu
-                        accumsan egestas hendrerit habitasse torquent quisque ultricies vitae,
-                        ornare quisque eleifend interdum malesuada faucibus quisque ac fusce gravida.
-                        id commodo pharetra class aptent cubilia phasellus lobortis ut, imperdiet torquent rutrum
-                        vestibulum hac sagittis felis donec vehicula,
-                        senectus euismod ante et sapien torquent senectus. faucibus aliquet vehicula curae iaculis nisl
-                        ut,
-                        tellus ad pharetra dictum netus ipsum, duis nulla curabitur varius placerat.</p>
+           
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
