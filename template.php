@@ -32,9 +32,6 @@
 									<a href="quem_somos.php" class="nav-link">QUEM SOMOS</a>
 								</li>
 								<li class="nav-item">
-									<a href="servicos.php" class="nav-link">SERVIÇOS</a>
-								</li>
-								<li class="nav-item">
 									<a href="FAQ.php" class="nav-link">DÚVIDAS</a>
 								</li>
 								<li class="nav-item">

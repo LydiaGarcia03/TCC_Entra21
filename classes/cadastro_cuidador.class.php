@@ -57,7 +57,10 @@ class Cadastro_cuidador extends Site{
 
 		if(isset($_POST['btnNovaConta'])){
 
-			
+			$sql = "INSERT INTO profissional.hcdigital VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento', '$email', '$crip_senha', '$cep', '$end_numero', '$end_complemento', '$tel_celular', '$num_coren', '$crip_cod_banco', '$crip_num_agencia', '$crip_dig_agencia', '$crip_tipo_conta', '$crip_num_conta', '$crip_dig_conta', '$crip_num_cartao', '$crip_nome_user_cartao', '$curso_formacao', '$instituicao')";
+
+			$query = mysqli_query($con, $sql);
+			// $result = mysqli_fetch_array($query);
 
 		}
 

@@ -88,7 +88,7 @@
 			</div>
 
 			<!-- Toggle Sidebar -->
-			
+
 
 		</ul>
 		<!-- Fim Sidebar -->
@@ -110,7 +110,7 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" 
+										<input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control"
 										placeholder="Nome Completo" required="required" autofocus="autofocus">    
 									</div>
 								</div>
@@ -137,7 +137,7 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="date" name="date" id="date" class="form-control" 
+										<input type="date" name="date" id="date" class="form-control"
 										placeholder="Data de nascimento" required="required">    
 									</div>
 								</div>
@@ -147,13 +147,13 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="email" name="email" id="email" class="form-control" 
+										<input type="email" name="email" id="email" class="form-control"
 										placeholder="Endereço de e-mail" required="required">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="email" name="confirmarEmail" id="confirmarEmail" class="form-control" 
+										<input type="email" name="confirmarEmail" id="confirmarEmail" class="form-control"
 										placeholder="Confirmar Email" required="required">    
 									</div>
 								</div>
@@ -163,13 +163,13 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="password" name="senha" id="senha" class="form-control" 
+										<input type="password" name="senha" id="senha" class="form-control"
 										placeholder="senha" required="required">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control" 
+										<input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control"
 										placeholder="Confirma Senha" required="required">    
 									</div>
 								</div>
@@ -179,8 +179,8 @@
 							<div class="form-row">
 								<div class="col-md-12">
 									<div class="form-label-group">
-										<input type="number" name="cep" id="cep" class="form-control" 
-										placeholder="CEP: (00000-000)" required="required" autofocus="autofocus">   
+										<input type="number" name="cep" id="cep" class="form-control"
+										placeholder="CEP: (00000-000)" required="required" autofocus="autofocus">  
 									</div>
 								</div>
 							</div>
@@ -189,13 +189,13 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="rua" id="rua" class="form-control" 
+										<input type="text" name="rua" id="rua" class="form-control"
 										placeholder="Rua" required="required" autofocus="autofocus" disabled="">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="numeroCasa" id="numeroCasa" class="form-control" 
+										<input type="text" name="numeroCasa" id="numeroCasa" class="form-control"
 										placeholder="Numero" required="required" autofocus="autofocus">    
 									</div>
 								</div>
@@ -206,13 +206,13 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="complemento" id="complemento" class="form-control" 
+										<input type="text" name="complemento" id="complemento" class="form-control"
 										placeholder="Complemento" required="required" autofocus="autofocus" >    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="cidade" id="cidade" class="form-control" 
+										<input type="text" name="cidade" id="cidade" class="form-control"
 										placeholder="Cidade" required="required" autofocus="autofocus" disabled="">    
 									</div>
 								</div>
@@ -224,9 +224,9 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="bairro" id="bairro" class="form-control" 
+										<input type="text" name="bairro" id="bairro" class="form-control"
 										placeholder="Bairro" required="required" autofocus="autofocus" disabled="">    
-									</div>	
+									</div>
 								</div>
 								<div class="col-md-6">
 
@@ -268,37 +268,37 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="number" name="telefone_residencial" id="telefone_residencial" class="form-control" 
+										<input type="number" name="telefone_residencial" id="telefone_residencial" class="form-control"
 										placeholder="Numero fixo" required="required">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="number" name="telefone_celular" id="telefone_celular" class="form-control" 
+										<input type="number" name="telefone_celular" id="telefone_celular" class="form-control"
 										placeholder="Numero de celular" required="required">    
 									</div>
 								</div>
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
-										<input type="text" name="num_coren" id="num_coren" class="form-control" 
+										<input type="text" name="num_coren" id="num_coren" class="form-control"
 										placeholder="Numero do coren" required="required" autofocus="autofocus">
 									</div>
 								</div>
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
-										<input type="text" name="cod_banco" id="cod_banco" class="form-control" 
+										<input type="text" name="cod_banco" id="cod_banco" class="form-control"
 										placeholder="Código do banco" required="required" autofocus="autofocus">    
 									</div>
 								</div>
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
-										<input type="text" name="num_agencia" id="num_agencia" class="form-control" 
+										<input type="text" name="num_agencia" id="num_agencia" class="form-control"
 										placeholder="Número da agência" required="required" autofocus="autofocus">    
 									</div>
 								</div>
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
-										<input type="text" name="dig_agencia" id="dig_agencia" class="form-control" 
+										<input type="text" name="dig_agencia" id="dig_agencia" class="form-control"
 										placeholder="Digito da agência" required="required" autofocus="autofocus">    
 									</div>
 								</div>
@@ -322,26 +322,26 @@
 
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
-										<input type="text" name="num_cartao" id="num_cartao" class="form-control" 
+										<input type="text" name="num_cartao" id="num_cartao" class="form-control"
 										placeholder="Número do cartão" required="required" autofocus="autofocus" >    
 									</div>
 								</div>
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
-										<input type="text" name="nome_user_cartao" id="nome_user_cartao" class="form-control" 
+										<input type="text" name="nome_user_cartao" id="nome_user_cartao" class="form-control"
 										placeholder="Nome do usuário do cartão" required="required" autofocus="autofocus" >    
 									</div>
 								</div>
 
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
-										<input type="text" name="curso_formacao" id="curso_formacao" class="form-control" 
+										<input type="text" name="curso_formacao" id="curso_formacao" class="form-control"
 										placeholder="Curso de formação" required="required" autofocus="autofocus" >    
 									</div>
 								</div>
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
-										<input type="text" name="instituicao" id="instituicao" class="form-control" 
+										<input type="text" name="instituicao" id="instituicao" class="form-control"
 										placeholder="Instituição de formação" required="required" autofocus="autofocus" >    
 									</div>
 								</div>

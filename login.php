@@ -1,3 +1,9 @@
+<?php
+
+	require_once 'classes/login.class.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,7 +39,7 @@
 								</div>
 							</div>
 						</div>
-						<a class="btn btn-primary btn-block" href="">Entrar</a>
+						<input type="submit" href="dashboard_cuidador.php" name="btnEntrar" value="Entrar" class="btn btn-primary btn-block">
 					</form>
 					<br>
 					<div class="text-center">
