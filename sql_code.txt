@@ -60,7 +60,6 @@ CREATE TABLE servico (
     # Dados bancários do necessitado
     cod_banco VARCHAR(32) NOT NULL, -- CRIP
     num_agencia VARCHAR(32) NOT NULL, -- CRIP
-    dig_agencia VARCHAR(32) NOT NULL, -- CRIP
     tipo_conta VARCHAR(32) NOT NULL, -- CRIP
     num_conta VARCHAR(32) NOT NULL, -- CRIP
     dig_conta VARCHAR(32) NOT NULL, -- CRIP

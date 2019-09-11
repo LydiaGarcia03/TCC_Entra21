@@ -27,7 +27,7 @@ class Cadastro_user extends Site{
 		$tel_residencial = $POST['telefone_residencial'];
 
 		// Criptografia de senha
-		$senha_crip = hash('sha512', $senha);
+		$crip_senha = hash('sha512', $senha);
 		
 	}
 
@@ -37,7 +37,7 @@ class Cadastro_user extends Site{
 
 		if(isset($_POST['btnNovaConta'])){
 
-			$sql = "INSERT INTO necessitado.hcdigital VALUES (DEFAULT, '$nomeCompleto', NULL, '$genero', '$dt_nascimento', '$senha_crip', '$cep', '$numero', '$complemento', '$tel_celular', '$tel_residencial')";
+			$sql = "INSERT INTO necessitado.hcdigital VALUES (DEFAULT, '$nomeCompleto', NULL, '$genero', '$dt_nascimento', '$crip_senha', '$cep', '$numero', '$complemento', '$tel_celular', '$tel_residencial')";
 
 
 			$query = mysqli_query($this->con, $sql);

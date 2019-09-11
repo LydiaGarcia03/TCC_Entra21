@@ -1,5 +1,10 @@
-<!DOCTYPE html>
+<?php
 
+	require_once 'classes/solicitar_servico.class.php';
+
+?>
+
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
@@ -109,7 +114,7 @@
 							<div class="form-row">
 								<div class="col-md-12">
 									<div class="form-label-group">
-										<input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control"
+										<input type="text" name="nomePaciente" id="nomePaciente" class="form-control"
 										placeholder="Nome completo do paciente" required autofocus>    
 									</div>
 								</div>
@@ -139,11 +144,11 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										 <select class="custom-select">
+										 <select class="custom-select" name="servico">
 										 	<option selected disabled>Tipo de serviço</option>
-										 	<option>Cuidador infantil</option>
-										 	<option>Cuidador de idosos</option>
-										 	<option>Enfermagem</option>
+										 	<option value="infantil">Cuidador infantil</option>
+										 	<option value="idoso">Cuidador de idosos</option>
+										 	<option value="enfermagem">Enfermagem</option>
 										 </select>
 									</div>
 								</div>
