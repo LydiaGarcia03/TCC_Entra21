@@ -12,6 +12,74 @@
 	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<link href="style/dashboard.css" rel="stylesheet" type="text/css">
 	<link href="style/calendar.css" rel="stylesheet" type="text/css">
+	<script>        function limpa_formulário_cep() {
+            //Limpa valores do formulário de cep.
+            document.getElementById('rua').value=("");
+            document.getElementById('bairro').value=("");
+            document.getElementById('cidade').value=("");
+            document.getElementById('estado').value=("");
+            document.getElementById('ibge').value=("");
+        }
+
+        function meu_callback(conteudo) {
+            if (!("erro" in conteudo)) {
+            //Atualiza os campos com os valores.
+            document.getElementById('rua').value=(conteudo.logradouro);
+            document.getElementById('bairro').value=(conteudo.bairro);
+            document.getElementById('cidade').value=(conteudo.localidade);
+            document.getElementById('estado').value=(conteudo.estado);
+            document.getElementById('ibge').value=(conteudo.ibge);
+        } //end if.
+        else {
+            //CEP não Encontrado.
+            limpa_formulário_cep();
+            alert("CEP não encontrado.");
+        }
+    }
+
+    function pesquisacep(valor) {
+
+        //Nova variável "cep" somente com dígitos.
+        var cep = valor.replace(/\D/g, '');
+
+        //Verifica se campo cep possui valor informado.
+        if (cep != "") {
+
+            //Expressão regular para validar o CEP.
+            var validacep = /^[0-9]{8}$/;
+
+            //Valida o formato do CEP.
+            if(validacep.test(cep)) {
+
+                //Preenche os campos com "..." enquanto consulta webservice.
+                document.getElementById('rua').value="...";
+                document.getElementById('bairro').value="...";
+                document.getElementById('cidade').value="...";
+                document.getElementById('estado').value="...";
+                document.getElementById('ibge').value="...";
+
+                //Cria um elemento javascript.
+                var script = document.createElement('script');
+
+                //Sincroniza com o callback.
+                script.src = 'https://viacep.com.br/ws/'+ '89026350' + '/json/?callback=meu_callback';
+
+                //Insere script no documento e carrega o conteúdo.
+                document.head.appendChild(script);
+
+            } //end if.
+            else {
+                //cep é inválido.
+                limpa_formulário_cep();
+                alert("Formato de CEP inválido.");
+            }
+        } //end if.
+        else {
+            //cep sem valor, limpa formulário.
+            limpa_formulário_cep();
+        }
+    };
+</script>
 </head>
 <body id="page-top">
 	<div id="wrapper">
@@ -179,8 +247,8 @@
 							<div class="form-row">
 								<div class="col-md-12">
 									<div class="form-label-group">
-										<input type="number" name="cep" id="cep" class="form-control"
-										placeholder="CEP: (00000-000)" required="required" autofocus="autofocus">  
+										<input type="text" name="cep" id="cep" class="form-control"
+										placeholder="CEP: (00000-000)" required="required" autofocus="autofocus" value="" onblur="pesquisacep(this.value);">  
 									</div>
 								</div>
 							</div>
@@ -190,13 +258,13 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="rua" id="rua" class="form-control"
-										placeholder="Rua" required="required" autofocus="autofocus" disabled="">    
+										placeholder="Rua" required autofocus disabled>    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="numeroCasa" id="numeroCasa" class="form-control"
-										placeholder="Numero" required="required" autofocus="autofocus">    
+										placeholder="Numero" required autofocus>    
 									</div>
 								</div>
 							</div>
@@ -207,30 +275,31 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="complemento" id="complemento" class="form-control"
-										placeholder="Complemento" required="required" autofocus="autofocus" >    
+										placeholder="Complemento" autofocus="autofocus" required >    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="cidade" id="cidade" class="form-control"
-										placeholder="Cidade" required="required" autofocus="autofocus" disabled="">    
+										placeholder="Cidade" required autofocus disabled>    
 									</div>
 								</div>
 							</div>
 						</div>
-
 
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="bairro" id="bairro" class="form-control"
-										placeholder="Bairro" required="required" autofocus="autofocus" disabled="">    
+										placeholder="Bairro" required autofocus disabled>    
 									</div>
 								</div>
 								<div class="col-md-6">
-
-									<select class="custom-select" disabled="">
+									<div class="form-label-group">
+										<input type="text" name="estado" id="estado" class="form-control" placeholder="Estado" required autofocus disabled>    
+									</div>
+									<!-- <select class="custom-select" disabled="">
 										<option>AC</option>
 										<option>AL</option>
 										<option>AP</option>
@@ -258,7 +327,7 @@
 										<option>SP</option>
 										<option>SE</option>
 										<option>TO</option>
-									</select>
+									</select> -->
 								</div>
 							</div>
 						</div>
@@ -418,6 +487,14 @@
 				}
 			}
 
+		</script>
+		<!-- MASK -->
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#cep").mask("99999-999");
+			});
 		</script>
 	</body>
 	</html>
