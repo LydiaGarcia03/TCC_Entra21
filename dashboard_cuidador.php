@@ -330,19 +330,23 @@
         var calendarEl = document.getElementById('calendar');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          plugins: [ 'dayGrid' ],
-          height: 675,
-          contentHeight: 6,
-          locale: 'pt',
-          events: [
-				{
-					id: 1,
-					title: 'Teste',
-					start: new Date(2019, 8, 11),
-					allDay: false,
-					className: 'info'
-				}
-			]
+		    plugins: [ 'dayGrid' ],
+		    defaultView: 'dayGridMonth',
+			fixedWeekCount: Boolean, default: true,
+		    height: 480,
+		    contentHeight: 6,
+		    locale: 'pt',
+		    events: [{
+				id: 1,
+				title: 'Teste',
+				start: new Date(2019, 8, 11),
+				allDay: false,
+				className: 'info'
+			}],
+			header: {
+				center: '',
+				right: 'today, prev, next'
+			}
 
         });
 
