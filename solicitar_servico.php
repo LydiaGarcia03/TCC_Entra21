@@ -232,6 +232,7 @@
 			$('#dt_nascimento').mask('99/99/9999');
 		});
 	</script>
-
+	<!-- Google Maps Plugin -->
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=ColoqueASuaKeyAqui&amp;sensor=false"></script>
 </body>
 </html>

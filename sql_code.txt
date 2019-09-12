@@ -57,6 +57,8 @@ CREATE TABLE servico (
     hipertensao BOOLEAN NOT NULL,
     descricao_op VARCHAR(500) NULL,
     fk_id_necessitado INT NOT NULL,
+    qtd_horas_diarias INT NOT NULL,
+    dias_servico VARCHAR(250) NOT NULL,
     # Dados bancários do necessitado
     cod_banco VARCHAR(32) NOT NULL, -- CRIP
     num_agencia VARCHAR(32) NOT NULL, -- CRIP
@@ -67,7 +69,10 @@ CREATE TABLE servico (
     nome_user_cartao VARCHAR(32) NOT NULL, -- CRIP
    
     FOREIGN KEY(fk_id_necessitado) REFERENCES necessitado(id)
-);
+) ENGINE = InnoDB DEFAULT CHARSET = 'utf8';
 
 -- CRIP de 32 caracteres é utilizado para sha512 que retorna 512 bits
 -- 512 bits = 32 caracteres
+
+INSERT INTO necessitado VALUES 
+    (DEFAULT, 'Lydia Garcia', NULL, 'F', '2002-01-03', 'lydiagarcia.chan@gmail.com', '5c63b0c8d48b70eba12f932113bfeb8c3e9a2f56ca8307fc4a9f9e1349f7cde361a128b1e40eb38ce37c9892c787a54f0d407854094e723d9a3089ff0ef8eebd', '89115040', '2229', 'Fundos 2225', '47999340994', '4733322549');

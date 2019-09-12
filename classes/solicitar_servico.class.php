@@ -24,6 +24,8 @@ class Solicitar_Servico extends Site{
 		$hipertensao = $_POST[''];
 		$descricao = $_POST[''];
 		$email_responsavel = $_POST[''];
+		$qtd_funcionarios_necessarios = $_POST[''];
+		$qtd_funcionarios_contratados = $_POST[''];
 		$cod_banco = $_POST[''];
 		$num_agencia = $_POST[''];
 		$tipo_conta = $_POST[''];
@@ -53,7 +55,7 @@ class Solicitar_Servico extends Site{
 			$queryIdResponsavel = mysqli_query($con, $sqlAcharFK);
 			$resultIdResponsavel = mysqli_fetch_array($queryIdResponsavel);
 
-			$sql = "INSERT INTO servico.hcdigital VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento', '$genero', '$tipo_servico', '$diabetico', '$deficiencia_fisica', '$deficiencia_mental', '$hipertensao', '$descricao', '$resultIdResponsavel', '$cod_banco_crip', '$num_agencia_crip', '$tipo_conta_crip', '$num_conta_crip', '$dig_conta_crip', '$num_cartao_crip', '$nome_usuario_cartao_crip')";
+			$sql = "INSERT INTO servico.hcdigital VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento', '$genero', '$tipo_servico', '$diabetico', '$deficiencia_fisica', '$deficiencia_mental', '$hipertensao', '$descricao', '$resultIdResponsavel', '$qtd_funcionarios_necessarios', '$qtd_funcionarios_contratados', '$cod_banco_crip', '$num_agencia_crip', '$tipo_conta_crip', '$num_conta_crip', '$dig_conta_crip', '$num_cartao_crip', '$nome_usuario_cartao_crip')";
 			$query = mysqli_query($con, $sql);
 			$result = mysqli_fetch_array($query);
 

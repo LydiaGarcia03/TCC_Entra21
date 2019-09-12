@@ -123,7 +123,6 @@
 									</div>
 
 									<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Confirmar  agendamento">
-
 								</form>
 
 							</div>
