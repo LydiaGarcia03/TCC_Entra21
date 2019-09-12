@@ -1,9 +1,3 @@
-/*!
-FullCalendar Core Package v4.3.1
-Docs & License: https://fullcalendar.io/
-(c) 2019 Adam Shaw
-*/
-
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -1135,12 +1129,10 @@ Docs & License: https://fullcalendar.io/
     Licensed under the Apache License, Version 2.0 (the "License"); you may not use
     this file except in compliance with the License. You may obtain a copy of the
     License at http://www.apache.org/licenses/LICENSE-2.0
-
     THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
     KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
     WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
     MERCHANTABLITY OR NON-INFRINGEMENT.
-
     See the Apache Version 2.0 License for specific language governing permissions
     and limitations under the License.
     ***************************************************************************** */
@@ -8103,7 +8095,6 @@ Docs & License: https://fullcalendar.io/
     Does higher-level things than PointerDragger, such as possibly:
     - a "mirror" that moves with the pointer
     - a minimum number of pixels or other criteria for a true drag to begin
-
     subclasses must emit:
     - pointerdown
     - dragstart
@@ -8112,7 +8103,6 @@ Docs & License: https://fullcalendar.io/
     - dragend
     */
     var ElementDragging = /** @class */ (function () {
-
         function ElementDragging(el) {
             this.emitter = new EmitterMixin();
         }

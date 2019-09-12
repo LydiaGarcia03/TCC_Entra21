@@ -332,6 +332,7 @@
         var calendar = new FullCalendar.Calendar(calendarEl, {
           plugins: [ 'dayGrid' ],
           height: 675,
+          contentHeight: 6,
           locale: 'pt',
           events: [
 				{
