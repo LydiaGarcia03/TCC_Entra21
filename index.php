@@ -131,7 +131,7 @@
                                 <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
                             </div>
                             
-                            <a href="#" class="card-link btn btn-primary" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
+                            <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
@@ -145,7 +145,7 @@
                                 <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
                             </div>
                             
-                            <a href="#" class="card-link btn btn-primary" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
+                            <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
@@ -159,7 +159,7 @@
                                 <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
                             </div>
 
-                            <a href="#" class="card-link btn btn-primary" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
+                            <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
                         </div>
                     </div>
                 </div>

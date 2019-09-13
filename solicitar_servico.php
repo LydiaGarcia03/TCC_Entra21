@@ -1,8 +1,8 @@
-<?php
+<!-- <?php
 
-	require_once 'classes/solicitar_servico.class.php';
+	//require_once 'classes/solicitar_servico.class.php';
 
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -156,9 +156,53 @@
 						</div>
 						<div class="form-group">
 							<div class="form-row">
-								<div class="col-md-12">
+								<div class="col-md-6">
 									<div class="form-label-group">
-										
+										<p>O paciente é diabético?</p>
+										<input type="radio" name="diabetico" id="diabetico_true" value="diabetico_true">
+										<label>Sim</label>
+										<br>
+										<input type="radio" name="diabetico" id="diabetico_false" value="diabetico_false">
+										<label>Não</label>
+									</div>
+
+									<div class="form-label-group">
+										<p>O paciente possui deficiência física?</p>
+										<input type="radio" name="deficFisica" id="deficFisica_true" value="deficFisica_true">
+										<label>Sim</label>
+										<br>
+										<input type="radio" name="deficFisica" id="deficFisica_false" value="deficFisica_false">
+										<label>Não</label>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-label-group">
+										<p>O paciente possui deficiência mental?</p>
+										<input type="radio" name="deficMental" id="deficMental_true" value="deficMental_true">
+										<label>Sim</label>
+										<br>
+										<input type="radio" name="deficMental" id="deficMental_false" value="deficMental_false">
+										<label>Não</label>
+									</div>
+
+									<div class="form-label-group">
+										<p>O paciente é hipertenso?</p>
+										<input type="radio" name="hipertenso" id="hipertenso_true" value="hipertenso_true">
+										<label>Sim</label>
+										<br>
+										<input type="radio" name="hipertenso" id="hipertenso_false" value="hipertenso_false">
+										<label>Não</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-6">
+									<div class="form-label-group">
+										<textarea cols="64" rows="7" placeholder="Descreva, se necessário, algumas informações a mais e essenciais do paciente" class="form-control"></textarea>
 									</div>
 								</div>
 							</div>
@@ -183,7 +227,6 @@
 
 			</div>
 			<!-- End of Content Wrapper -->
-
 		</div>
 		<!-- End of Page Wrapper -->
 
