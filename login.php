@@ -1,8 +1,8 @@
-<?php
+<!-- <?php
 
-	require_once 'classes/login.class.php';
+	//require_once 'classes/login.class.php';
 
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -17,23 +17,22 @@
 <body style="background-color: rgba(0, 123, 255, 0.75);">
 	<div class="container">
 		<div class="col-lg-4 m-b-3" style="position: absolute; top: 20%; left: 34%">		
-			<div class="card card-register mt-5">
+			<div class="card card-register mt-5 rounded-0 shadow-lg">
 
-				<div class="card-header">
-					Faça o login para acessar sua conta no HC Digital
+				<div class="card-header py-4 text-center">
+					Faça o login para acessar sua conta
 				</div>
 
 				<div class="card-body">
-
 					<form method="POST" name="formLogin">
-						<div class="form-group">
-						</div>
+
 						<div class="form-group">
 							<div class="form-label-group">
 								<input type="email" id="email" class="form-control" 
-								placeholder="Endereço de e-mail" required="required">
+								placeholder="Endereço de e-mail" required autocomplete="off">
 							</div>
 						</div>
+
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-12">
@@ -44,10 +43,30 @@
 								</div>
 							</div>
 						</div>
-						<input type="submit" href="dashboard_cuidador.php" name="btnEntrar" value="Entrar" class="btn btn-primary btn-block">
+
+						<div class="form-group my-4">
+							<div class="form-row">
+								<div class="col-md-8 offset-md-2 bg-light p-0 rounded">
+									
+									<div class="btn-group btn-group-toggle" style="width: 100%" data-toggle="buttons">
+										<label class="btn btn-light">
+											<input type="radio" name="cuidador" id="cuidador" value="Cuidador" autocomplete="off">Cuidador
+										</label>										
+								
+										<label class="btn btn-light">
+											<input type="radio" name="contratante" id="contratante" value="Contratante" autocomplete="off">Contratante
+										</label>										
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<input type="submit" href="dashboard_cuidador.php" name="btnEntrar" value="Entrar" class="btn btn-primary btn-block mt-5">
+
 					</form>
 
-					<div class="text-center">
+					<div class="text-center mt-3">
 						<a class="d-block small" href="esqueceu_senha.php">Esqueceu sua senha?</a>
 					</div>
 

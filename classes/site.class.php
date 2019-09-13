@@ -2,9 +2,9 @@
 
 class Site{
 	
-	CONST HOST = 'localhost';
-	CONST DB = 'hcdigital';
+	CONST HOST = '127.0.0.1';
 	CONST USER = 'root';
+	CONST DB = 'hcdigital';
 	CONST PASS = '';
 
 	public $con;
@@ -22,7 +22,8 @@ class Site{
 
 		// Verifica erro
 		if(!$this->con){
-			header('location: error.php');
+			die('erro na conexao');
+			// header('location: ../error.php');
 		}
 
 	}
@@ -41,7 +42,7 @@ class Site{
 		// Verifica erro
 		if( (!isset($_SESSION['user']) || $_SESSION['user'] == false) || (!isset($_SESSION['cuidador']) || $_SESSION['cuidador'] == false) ){
 
-			header('location: error.php');
+			return 0;
 
 		} 
 
@@ -58,13 +59,11 @@ class Site{
 		else if((isset($_SESSION['cuidador']) || $_SESSION['cuidador'] == true))
 
 			return 'cuidador';
+		else
+			return 'saco';
 		
 	}
 
 }
-
-$site = new Site();
-var_dump($site->session_verify());
-die();
 
 ?>

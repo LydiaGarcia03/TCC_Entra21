@@ -40,3 +40,7 @@ span{
 .form-control:focus{
 	background-color: rgba(0,0,0,.03) !important;
 }
+.btn:focus, .btn:active{
+	outline: none !important;
+	box-shadow: none !important;
+}
