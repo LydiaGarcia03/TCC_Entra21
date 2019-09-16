@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <title>HCD | Página Inicial</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
     <link href="style/index.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="bg-light">
 
+    <!-- NAVBAR -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a href="index.php" class="navbar-brand h1 mb-0"><i class="fas fa-heartbeat"></i>HCDigital</a>
+
+            <a href="index.php" class="navbar-brand h1 mb-0"><i class="fas fa-heartbeat pr-2"></i>HCDigital</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse ml-5" id="navbarSite">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a href="sobre_nos.php" class="nav-link">QUEM SOMOS</a>
+                    <li class="nav-item active">
+                        <a href="quem_somos.php" class="nav-link">QUEM SOMOS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="FAQ.php" class="nav-link">DÚVIDAS</a>
+                        <a href="duvidas.php" class="nav-link">DÚVIDAS</a>
                     </li>
                     <li class="nav-item">
                         <a href="blog.php" class="nav-link">BLOG</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#tbConosco" class="nav-link">TRABALHE CONOSCO</a>
+                        <a href="index.php#tbConosco" class="nav-link">TRABALHE CONOSCO</a>
                     </li>
                 </ul>
             </div>
+            
             <a href="login.php" class="btn btn-outline-light btn-sm mr-3">Login</a>
             <a href="cadastro_usuario.php" class="btn btn-outline-light btn-sm">Cadastro</a>
+
     </nav>
 
-    <!-- Carousel -->
+    <!-- CARROSEL -->
     <div id="carouselsite" class="carousel slide" data-ride="carousel">
 
         <ol class="carousel-indicators">

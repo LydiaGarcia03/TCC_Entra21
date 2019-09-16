@@ -7,6 +7,74 @@
 	<link href="style/home.css" rel="stylesheet" type="text/css">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
+
+	<!-- CEP -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            function limpa_formulário_cep() {
+                // Limpa valores do formulário de cep.
+                $("#rua").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");
+                $("#estado").val("");
+            }
+            
+            //Quando o campo cep perde o foco.
+            $("#cep").blur(function() {
+
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if(validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#rua").val("...");
+                        $("#bairro").val("...");
+                        $("#cidade").val("...");
+                        $("#estado").val("...");
+
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#rua").val(dados.logradouro);
+                                $("#bairro").val(dados.bairro);
+                                $("#cidade").val(dados.localidade);
+                                $("#estado").val(dados.estado);
+                            } 
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                alert("CEP não encontrado.");
+                            }
+                        });
+                    } 
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        alert("Formato de CEP inválido.");
+                    }
+                } 
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            });
+        });
+
+    </script>
 </head>
 <body class="bg-info">
 	<div class="container">
@@ -23,7 +91,7 @@
 							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" 
-									placeholder="Nome Completo" required autofocus>    
+									placeholder="Nome completo" required autofocus autocomplete="off">    
 								</div>
 							</div>
 
@@ -60,7 +128,7 @@
 							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="email" name="email" id="email" class="form-control" 
-									placeholder="Endereço de e-mail" required>    
+									placeholder="E-mail" required>    
 								</div>
 							</div>
 
@@ -85,7 +153,7 @@
 							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control" 
-									placeholder="Confirma Senha" required>    
+									placeholder="Confirmar Senha" required>    
 								</div>
 							</div>
 						</div>
@@ -96,7 +164,7 @@
 							<div class="col-md-12">
 								<div class="form-label-group">
 									<input type="text" name="cep" id="cep" class="form-control" 
-									placeholder="CEP: (00000-000)" required autofocus>   
+									placeholder="CEP" required autofocus>   
 								</div>
 							</div>
 						</div>
@@ -149,35 +217,7 @@
 							</div>
 
 							<div class="col-md-6">
-								<select class="custom-select" disabled>
-									<option value="AC">AC</option>
-									<option value="AL">AL</option>
-									<option value="AP">AP</option>
-									<option value="AM">AM</option>
-									<option value="BA">BA</option>
-									<option value="CE">CE</option>
-									<option value="DF">DF</option>
-									<option value="ES">ES</option>
-									<option value="GO">GO</option>
-									<option value="MA">MA</option>
-									<option value="MT">MT</option>
-									<option value="MS">MS</option>
-									<option value="MG">MG</option>
-									<option value="PA">PA</option>
-									<option value="PB">PB</option>
-									<option value="PR">PR</option>
-									<option value="PE">PE</option>
-									<option value="PI">PI</option>
-									<option value="RJ">RJ</option>
-									<option value="RN">RN</option>
-									<option value="RO">RO</option>
-									<option value="RS">RS</option>
-									<option value="RR">RR</option>
-									<option value="SC">SC</option>
-									<option value="SP">SP</option>
-									<option value="SE">SE</option>
-									<option value="TO">TO</option>
-								</select>
+								<input type="text" name="estado" id="estado" placeholder="Estado" class="form-control" disabled>
 							</div>
 						</div>
 					</div>
@@ -282,8 +322,8 @@
 					<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Criar Conta">
 
 					<div class="text-center">
-						<a class="d-block small mt-3" href="">Página de login</a>
-						<a class="d-block small" href="">Esqueceu sua senha?</a>
+						<a class="d-block small mt-3" href="login.php">Página de login</a>
+						<a class="d-block small" href="esqueceu_senha.php">Esqueceu sua senha?</a>
 					</div>
 
 				</form>
@@ -292,8 +332,9 @@
 		</div>
 	</div>
 
-	<a href="index.php">
-		<i style="margin-top: 15%;" class="far fa-arrow-alt-circle-left text-white fa-3x p-3"></i>
+	<!-- Button TopPage -->
+	<a class="scroll-to-top rounded d-inline" href="index.php">
+		<i class="fas fa-angle-left"></i>
 	</a>
 
 	<!-- JQuery Mask -->

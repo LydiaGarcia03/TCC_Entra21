@@ -22,7 +22,7 @@
 		<!-- Sidebar -->
 		<ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard_cuidador.php">
 				<div class="sidebar-brand-icon">
 					<i class="fas fa-laptop-medical"></i>
 				</div>
@@ -41,7 +41,7 @@
 			<div class="text-center my-3">
 				<li class="nav-item">
 					<small>
-						<a href="#editar_perfil" class="nav-link text-center p-0">
+						<a href="editar_perfil.php" class="nav-link text-center p-0">
 							<i class="far fa-fw fa-edit"></i>
 							<span>Editar perfil</span>
 						</a>
@@ -99,10 +99,6 @@
 					</a>
 				</li>
 			</div>
-
-			<!-- Toggle Sidebar -->
-			
-
 		</ul>
 		<!-- Fim Sidebar -->
 
@@ -136,11 +132,6 @@
 							</div>
 						</li>
 					</ul>
-
-					<!-- Button TopPage -->
-					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-						<i class="fa fa-bars"></i>
-					</button>
 				</nav>
 
 				<!-- Begin Page Content -->

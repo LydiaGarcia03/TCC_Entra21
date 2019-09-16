@@ -50,11 +50,11 @@
 									
 									<div class="btn-group btn-group-toggle" style="width: 100%" data-toggle="buttons">
 										<label class="btn btn-light">
-											<input type="radio" name="cuidador" id="cuidador" value="Cuidador" autocomplete="off">Cuidador
+											<input type="radio" name="btnCuidador" id="cuidador" value="Cuidador" autocomplete="off">Cuidador
 										</label>										
 								
 										<label class="btn btn-light">
-											<input type="radio" name="contratante" id="contratante" value="Contratante" autocomplete="off">Contratante
+											<input type="radio" name="btnContratante" id="contratante" value="Contratante" autocomplete="off">Contratante
 										</label>										
 									</div>
 

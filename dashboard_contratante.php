@@ -95,30 +95,32 @@
 		<div id="content-wrapper" class="d-flex flex-column background_contract">
 			<div id="content">
 
-				<!-- Button TopPage -->
-				<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-					<i class="fa fa-bars"></i>
-				</button>
-
 				<div class="container-fluid">
 					<div class="container">
-						<h2>Fazer um agendamento</h2>
+
+						<h2 class="my-5">Fazer um agendamento</h2>
+
 						<div class="card card-register mx-auto mt-5">
 							<div class="card-body">
 								
 								<form>
 									<div class="row">
 										<div class="col-3 mb-3">
-											<input type="text" class="form-control" placeholder="Nome">
+											<input type="text" class="form-control" name="nome" id="nome" placeholder="Nome do paciente">
 										</div>
 										<div class="col-3">
-											<input type="text" class="form-control" placeholder="Idade">
+											<input type="text" class="form-control" name="dt_nascimento" id="dt_nascimento" placeholder="Data de nascimento">
 										</div>
 										<div class="col-3">
-											<input type="text" class="form-control" placeholder="Especialidade">
+											<select class="custom-select">
+												<option selected disabled>Especialidade requerida</option>
+												<option value="c_infantil">Cuidador infantil</option>
+												<option value="c_idoso">Cuidador de idosos</option>
+												<option value="enfermagem">Profissional de saúde</option>
+											</select>
 										</div>
 										<div class="col-3">
-											<input type="text" class="form-control" placeholder="CEP">
+											<input type="text" class="form-control" name="cep" id="cep" placeholder="CEP">
 										</div>
 									</div>
 
@@ -182,6 +184,15 @@
 	<!-- Page level custom scripts -->
 	<script src="sbadmin/js/demo/chart-area-demo.js"></script>
 	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
-	
+	<!-- JQuery Mask -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"/></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#dt_nascimento').mask('99/99/9999');
+			$('#cep').mask('99999-999');
+		});
+	</script>
 </body>
 </html>

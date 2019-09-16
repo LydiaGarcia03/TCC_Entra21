@@ -12,74 +12,99 @@
 	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<link href="style/dashboard.css" rel="stylesheet" type="text/css">
 	<link href="style/calendar.css" rel="stylesheet" type="text/css">
-	<script>        function limpa_formulário_cep() {
-            //Limpa valores do formulário de cep.
-            document.getElementById('rua').value=("");
-            document.getElementById('bairro').value=("");
-            document.getElementById('cidade').value=("");
-            document.getElementById('estado').value=("");
-            document.getElementById('ibge').value=("");
-        }
 
-        function meu_callback(conteudo) {
-            if (!("erro" in conteudo)) {
-            //Atualiza os campos com os valores.
-            document.getElementById('rua').value=(conteudo.logradouro);
-            document.getElementById('bairro').value=(conteudo.bairro);
-            document.getElementById('cidade').value=(conteudo.localidade);
-            document.getElementById('estado').value=(conteudo.estado);
-            document.getElementById('ibge').value=(conteudo.ibge);
-        } //end if.
-        else {
-            //CEP não Encontrado.
-            limpa_formulário_cep();
-            alert("CEP não encontrado.");
-        }
-    }
+	<!-- CEP -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
 
-    function pesquisacep(valor) {
+        $(document).ready(function() {
 
-        //Nova variável "cep" somente com dígitos.
-        var cep = valor.replace(/\D/g, '');
-
-        //Verifica se campo cep possui valor informado.
-        if (cep != "") {
-
-            //Expressão regular para validar o CEP.
-            var validacep = /^[0-9]{8}$/;
-
-            //Valida o formato do CEP.
-            if(validacep.test(cep)) {
-
-                //Preenche os campos com "..." enquanto consulta webservice.
-                document.getElementById('rua').value="...";
-                document.getElementById('bairro').value="...";
-                document.getElementById('cidade').value="...";
-                document.getElementById('estado').value="...";
-                document.getElementById('ibge').value="...";
-
-                //Cria um elemento javascript.
-                var script = document.createElement('script');
-
-                //Sincroniza com o callback.
-                script.src = 'https://viacep.com.br/ws/'+ '89026350' + '/json/?callback=meu_callback';
-
-                //Insere script no documento e carrega o conteúdo.
-                document.head.appendChild(script);
-
-            } //end if.
-            else {
-                //cep é inválido.
-                limpa_formulário_cep();
-                alert("Formato de CEP inválido.");
+            function limpa_formulário_cep() {
+                // Limpa valores do formulário de cep.
+                $("#rua").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");
+                $("#estado").val("");
             }
-        } //end if.
-        else {
-            //cep sem valor, limpa formulário.
-            limpa_formulário_cep();
-        }
-    };
-</script>
+            
+            //Quando o campo cep perde o foco.
+            $("#cep").blur(function() {
+
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if(validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#rua").val("...");
+                        $("#bairro").val("...");
+                        $("#cidade").val("...");
+                        $("#estado").val("...");
+
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#rua").val(dados.logradouro);
+                                $("#bairro").val(dados.bairro);
+                                $("#cidade").val(dados.localidade);
+                                $("#estado").val(dados.estado);
+                            } 
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                alert("CEP não encontrado.");
+                            }
+                        });
+                    } 
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        alert("Formato de CEP inválido.");
+                    }
+                } 
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            });
+        });
+
+    </script>
+
+    <style type="text/css">
+  		/*Arrumar depois*/
+		.form-control, select.custom-select, .custom-file-label{
+			border-radius: 0 !important;
+		    border: none !important;
+		    border-bottom: 1px solid lightgray !important;
+		    background-color: white !important;
+		    transition: 0.5s !important;
+		    margin-top: 10px !important;
+		}
+		.form-control:focus, .form-control:active, .btn:focus, .btn:active{
+			background-color: rgba(0,0,0,.03) !important;
+			outline: none !important;
+			box-shadow: none !important;
+			border-bottom: 1px solid darkgray !important;
+		}
+		.custom-file-label:after{
+			content: "Escolha a foto de perfil" !important;
+			background-color: white !important;
+			float: left !important;
+			left: 0 !important;
+			padding-bottom: 0 !important;
+		}
+    </style>
+
 </head>
 <body id="page-top">
 	<div id="wrapper">
@@ -179,7 +204,7 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control"
-										placeholder="Nome Completo" required="required" autofocus="autofocus">    
+										placeholder="Nome completo" required autofocus autocomplete="off">    
 									</div>
 								</div>
 								<div class="col-6">
@@ -197,7 +222,7 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<select class="form-control" name="genero">
-										<option>Gênero</option>
+										<option selected disabled>Gênero</option>
 										<option value="masculino">Masculino</option>
 										<option value="feminino">Feminino</option>
 										<option value="outros">Outros</option>
@@ -205,8 +230,8 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="date" name="date" id="date" class="form-control"
-										placeholder="Data de nascimento" required="required">    
+										<input type="text" name="dt_nascimento" id="dt_nascimento" class="form-control"
+										placeholder="Data de nascimento" required autocomplete="off">    
 									</div>
 								</div>
 							</div>
@@ -216,13 +241,13 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="email" name="email" id="email" class="form-control"
-										placeholder="Endereço de e-mail" required="required">    
+										placeholder="E-mail" required autocomplete="off">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="email" name="confirmarEmail" id="confirmarEmail" class="form-control"
-										placeholder="Confirmar Email" required="required">    
+										placeholder="Confirmar Email" required autocomplete="off">    
 									</div>
 								</div>
 							</div>
@@ -232,13 +257,13 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="password" name="senha" id="senha" class="form-control"
-										placeholder="senha" required="required">    
+										placeholder="Senha" required autocomplete="off">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control"
-										placeholder="Confirma Senha" required="required">    
+										placeholder="Confirmar Senha" required autocomplete="off">    
 									</div>
 								</div>
 							</div>
@@ -248,7 +273,7 @@
 								<div class="col-md-12">
 									<div class="form-label-group">
 										<input type="text" name="cep" id="cep" class="form-control"
-										placeholder="CEP: (00000-000)" required="required" autofocus="autofocus" value="" onblur="pesquisacep(this.value);">  
+										placeholder="CEP" required autofocus autocomplete="off" value="" onblur="pesquisacep(this.value);">  
 									</div>
 								</div>
 							</div>
@@ -258,13 +283,13 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="rua" id="rua" class="form-control"
-										placeholder="Rua" required autofocus disabled>    
+										placeholder="Rua" required autofocus disabled autocomplete="off">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="numeroCasa" id="numeroCasa" class="form-control"
-										placeholder="Numero" required autofocus>    
+										placeholder="Número da residência" required autofocus autocomplete="off">    
 									</div>
 								</div>
 							</div>
@@ -275,13 +300,13 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="complemento" id="complemento" class="form-control"
-										placeholder="Complemento" autofocus="autofocus" required >    
+										placeholder="Complemento" autofocus required autocomplete="off">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="cidade" id="cidade" class="form-control"
-										placeholder="Cidade" required autofocus disabled>    
+										placeholder="Cidade" required autofocus disabled autocomplete="off">    
 									</div>
 								</div>
 							</div>
@@ -297,37 +322,8 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="estado" id="estado" class="form-control" placeholder="Estado" required autofocus disabled>    
+										<input type="text" name="estado" id="estado" size="2" class="form-control" placeholder="Estado" required disabled autocomplete="off">    
 									</div>
-									<!-- <select class="custom-select" disabled="">
-										<option>AC</option>
-										<option>AL</option>
-										<option>AP</option>
-										<option>AM</option>
-										<option>BA</option>
-										<option>CE</option>
-										<option>DF</option>
-										<option>ES</option>
-										<option>GO</option>
-										<option>MA</option>
-										<option>MT</option>
-										<option>MS</option>
-										<option>MG</option>
-										<option>PA</option>
-										<option>PB</option>
-										<option>PR</option>
-										<option>PE</option>
-										<option>PI</option>
-										<option>RJ</option>
-										<option>RN</option>
-										<option>RO</option>
-										<option>RS</option>
-										<option>RR</option>
-										<option>SC</option>
-										<option>SP</option>
-										<option>SE</option>
-										<option>TO</option>
-									</select> -->
 								</div>
 							</div>
 						</div>
@@ -336,44 +332,38 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="number" name="telefone_residencial" id="telefone_residencial" class="form-control"
-										placeholder="Numero fixo" required="required">    
+										<input type="text" name="tel_residencial" id="tel_residencial" class="form-control"
+										placeholder="Número de telefone fixo" required autocomplete="off">    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="number" name="telefone_celular" id="telefone_celular" class="form-control"
-										placeholder="Numero de celular" required="required">    
+										<input type="text" name="tel_celular" id="tel_celular" class="form-control"
+										placeholder="Número de celular" requiredautocomplete="off">    
 									</div>
 								</div>
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
 										<input type="text" name="num_coren" id="num_coren" class="form-control"
-										placeholder="Numero do coren" required="required" autofocus="autofocus">
+										placeholder="Número do Coren" required autofocusautocomplete="off">
 									</div>
 								</div>
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
 										<input type="text" name="cod_banco" id="cod_banco" class="form-control"
-										placeholder="Código do banco" required="required" autofocus="autofocus">    
+										placeholder="Código do banco" required autofocusautocomplete="off">    
 									</div>
 								</div>
-								<div class="col-md-6 mt-3">
+								<div class="col-md-12 mt-3">
 									<div class="form-label-group">
 										<input type="text" name="num_agencia" id="num_agencia" class="form-control"
-										placeholder="Número da agência" required="required" autofocus="autofocus">    
-									</div>
-								</div>
-								<div class="col-md-6 mt-3">
-									<div class="form-label-group">
-										<input type="text" name="dig_agencia" id="dig_agencia" class="form-control"
-										placeholder="Digito da agência" required="required" autofocus="autofocus">    
+										placeholder="Número da agência" required autofocusautocomplete="off">    
 									</div>
 								</div>
 
 								<div class="col-md-4 mt-3">
 									<select class="custom-select">
-										<option disabled selected>Tipo</option>
+										<option disabled selected>Tipo de conta</option>
 										<option value="corrente">Corrente</option>
 										<option value="poupança">Poupança</option>
 										<option value="especial">Especial</option>
@@ -381,36 +371,36 @@
 								</div>
 
 								<div class="col-md-4 mt-3 mt-3">
-									<input type="text" name="num_conta" id="num_conta" class="form-control" placeholder="Número da conta">
+									<input type="text" name="num_conta" id="num_conta" class="form-control" placeholder="Número da conta"autocomplete="off">
 								</div>
 
 								<div class="col-md-4 mt-3 mt-3">
-									<input type="text" name="dig_conta" id="dig_conta" class="form-control" placeholder="Dígito da conta">
+									<input type="text" name="dig_conta" id="dig_conta" class="form-control" placeholder="Dígito da conta"autocomplete="off">
 								</div>
 
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
 										<input type="text" name="num_cartao" id="num_cartao" class="form-control"
-										placeholder="Número do cartão" required="required" autofocus="autofocus" >    
+										placeholder="Número do cartão" required autofocus autocomplete="off">    
 									</div>
 								</div>
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
 										<input type="text" name="nome_user_cartao" id="nome_user_cartao" class="form-control"
-										placeholder="Nome do usuário do cartão" required="required" autofocus="autofocus" >    
+										placeholder="Nome do usuário do cartão" required autofocus autocomplete="off">    
 									</div>
 								</div>
 
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
 										<input type="text" name="curso_formacao" id="curso_formacao" class="form-control"
-										placeholder="Curso de formação" required="required" autofocus="autofocus" >    
+										placeholder="Curso de formação" required autofocus autocomplete="off">    
 									</div>
 								</div>
 								<div class="col-md-6 mt-3">
 									<div class="form-label-group">
 										<input type="text" name="instituicao" id="instituicao" class="form-control"
-										placeholder="Instituição de formação" required="required" autofocus="autofocus" >    
+										placeholder="Instituição de formação" required autofocus autocomplete="off">    
 									</div>
 								</div>
 							</div>
@@ -432,69 +422,69 @@
 					</div>
 				</footer>
 				<!-- End of Footer -->
-
 			</div>
-			<!-- End of Content Wrapper -->
 
 		</div>
-		<!-- End of Page Wrapper -->
+		<!-- End of Content Wrapper -->
 
-		<!-- Scroll to Top Button-->
-		<a class="scroll-to-top rounded" href="#page-top">
-			<i class="fas fa-angle-up"></i>
-		</a>
+	</div>
+	<!-- End of Page Wrapper -->
 
-		<!-- Logout Modal-->
-		<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Tem certeza que quer sair</h5>
-						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-					</div>
-					<div class="modal-body">Selecione sair se deseja.</div>
-					<div class="modal-footer">
-						<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-						<a class="btn btn-primary" href="index.php">Sair</a>
-					</div>
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top">
+		<i class="fas fa-angle-up"></i>
+	</a>
+
+	<!-- Logout Modal-->
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Tem certeza que quer sair</h5>
+					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">Selecione sair se deseja.</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+					<a class="btn btn-primary" href="index.php">Sair</a>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<!-- Bootstrap core JavaScript-->
-		<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
-		<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<!-- Core plugin JavaScript-->
-		<script src="sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
-		<!-- Custom scripts for all pages-->
-		<script src="sbadmin/js/sb-admin-2.min.js"></script>
-		<!-- Page level plugins -->
-		<script src="sbadmin/vendor/chart.js/Chart.min.js"></script>
-		<!-- Page level custom scripts -->
-		<script src="sbadmin/js/demo/chart-area-demo.js"></script>
-		<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
-		<!-- Toggle Button -->
-		<script type="text/javascript">
+	<!-- Bootstrap core JavaScript-->
+	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
+	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- Core plugin JavaScript-->
+	<script src="sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+	<!-- Custom scripts for all pages-->
+	<script src="sbadmin/js/sb-admin-2.min.js"></script>
+	<!-- Page level plugins -->
+	<script src="sbadmin/vendor/chart.js/Chart.min.js"></script>
+	<!-- Page level custom scripts -->
+	<script src="sbadmin/js/demo/chart-area-demo.js"></script>
+	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
+	<!-- JQuery Mask -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"/></script>
 
-			function toggleSideBar(){
-				var profile_img = window.document.getElementById('profile_img');
-				if(profile_img.classList.contains('d-inline')){
-					profile_img.addClass('d-none');
-				} else{
-					profile_img.addClass('d-inline');
-				}
-			}
-
-		</script>
-		<!-- MASK -->
-		<script type="text/javascript" src="js/main.js"></script>
-		<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$("#cep").mask("99999-999");
-			});
-		</script>
-	</body>
-	</html>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#dt_nascimento').mask('99/99/9999');
+			$('#cep').mask('99999-999');
+			$('#tel_celular').mask('(99) 9 9999-9999');
+			$('#tel_residencial').mask('9999-9999');
+			$('#num_coren').mask('999.999');
+			$('#cod_banco').mask('999');
+			$('#num_agencia').mask('9999');
+			$('#tipo_conta').mask('999');
+			$('#num_conta').mask('99999999');
+			$('#dig_conta').mask('9');
+			$('#num_cartao').mask('9999 9999 9999 9999');
+		});
+	</script>
+		
+</body>
+</html>
