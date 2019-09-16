@@ -6,21 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>HCD | Dashboard</title>
-
-	<style type="text/css">
-		td, th {
-			padding: .7em;
-			margin: 0;
-			/*border: 1px solid #ccc;*/
-			text-align: center;
-		}
-
-		tr:hover{
-			background-color: #EAEAEA;
-			margin-top: 5px;
-		}
-		
-	</style>
+	<link href="style/servicos_disponiveis.css" rel="stylesheet" type="text/css">
+	
 	<!-- Fontes -->
 	<link href="sbadmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -138,14 +125,19 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+
+						<tr titulo>
 							<th scope="row">Caue</th>
 							<td>Cuidado Infantil</td>
 							<td>4h</td>
 							<td>20/10</td>
 							<td>Funeraria</td>
 							<td>Funeraria</td>
-							<td> <button class="btn btn-primary" type="button" data-dismiss="modal">Aceitar</button> </td>
+							<td> <button type="button" class="btn btn-outline-info" id="botao-animate" value="slide">Mais</button>  <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
+							<p class="conteudo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</p>
 						</tr> 
 						<tr>
 							<th scope="row">Nathan</th>
@@ -154,7 +146,7 @@
 							<td>20/10</td>
 							<td>Funeraria</td>
 							<td>Funeraria</td>
-							<td> <button class="btn btn-primary" type="button" data-dismiss="modal">Aceitar</button> </td>
+							<td> <button type="button" class="btn btn-outline-info" id="botao-animate" value="slide">Mais</button>  <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
 						</tr>
 						<tr>
 							<th scope="row">Maicon</th>
@@ -163,7 +155,11 @@
 							<td>20/10</td>
 							<td>Funeraria</td>
 							<td>Funeraria</td>
-							<td> <button class="btn btn-primary" type="button" data-dismiss="modal">Aceitar</button> </td>
+							<p class="conteudo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</p>
+							<td> <button type="button" class="btn btn-outline-info" id="botao-animate" value="slide">Mais</button> 	 <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
 						</tr>
 					</tbody>
 				</table>
@@ -208,8 +204,14 @@
 
 <!-- Bootstrap core JavaScript-->
 <script>
-	$("serv_infantil").click(function(p) {
-		$("#serv_infantil").slideToggle("slow");
+	$(document).ready(function () {
+		$('#botao-animate').click(function () {
+			$('.conteudo').slideToggle('slow');
+		});
+	});
+
+	$('#table').on('click', '.remover-linha', function(){
+		$(this).closest('tr').fadeOut(300);
 	});
 
 </script>
