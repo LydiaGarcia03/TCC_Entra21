@@ -14,7 +14,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body style="background-color: rgba(0, 123, 255, 0.75);">
+<body style="background-color: dodgerblue">
 	<div class="container">
 		<div class="col-lg-4 m-b-3" style="position: absolute; top: 20%; left: 34%">		
 			<div class="card card-register mt-5 rounded-0 shadow-lg">
@@ -50,11 +50,11 @@
 									
 									<div class="btn-group btn-group-toggle" style="width: 100%" data-toggle="buttons">
 										<label class="btn btn-light">
-											<input type="radio" name="btnCuidador" id="cuidador" value="Cuidador" autocomplete="off">Cuidador
+											<input type="radio" name="btnTipoUsuario" id="cuidador" value="Cuidador">Cuidador
 										</label>										
 								
 										<label class="btn btn-light">
-											<input type="radio" name="btnContratante" id="contratante" value="Contratante" autocomplete="off">Contratante
+											<input type="radio" name="btnTipoUsuario" id="contratante" value="Contratante">Contratante
 										</label>										
 									</div>
 

@@ -75,7 +75,7 @@
 
     </script>
 </head>
-<body class="bg-info">
+<body style="background-color: dodgerblue">
 	<div class="container">
 
 		<div class="card card-register mx-auto mt-5">

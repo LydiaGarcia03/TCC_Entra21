@@ -48,22 +48,6 @@ class Site{
 
 	}
 
-	public function session_verify(){
-
-		$this->session_error();
-
-		if((isset($_SESSION['user']) || $_SESSION['user'] == true))
-
-			return 'user';
-
-		else if((isset($_SESSION['cuidador']) || $_SESSION['cuidador'] == true))
-
-			return 'cuidador';
-		else
-			return 'saco';
-		
-	}
-
 }
 
 ?>

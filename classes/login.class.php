@@ -23,13 +23,15 @@ class Login extends Site{
 				$email = $_POST['email'];
 				$crip_senha = hash('sha512', $_POST['senha']);
 
-				if(parent::session_verify() == 'user'){
+				$tipoUser = $_POST['btnTipoUsuario'])
+
+				if($tipoUser == 'Contratante'){
 
 					$user = 'user';
 					$sql = "SELECT * FROM necessitado.hcdigital WHERE email = '$email' AND senha = '$crip_senha'";
 
 				}
-				else if(parent::session_verify() == 'cuidador'){
+				else if($tipoUser == 'Cuidador'){
 
 					$user = 'cuidador';
 					$sql = "SELECT * FROM profissional.hcdigital WHERE email = '$email' AND senha = '$crip_senha'";

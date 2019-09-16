@@ -80,7 +80,7 @@
 
     </script>
 </head>
-<body class="bg-info">
+<body style="background-color: dodgerblue">
 
 	<div class="container-fluid">
 		<div class="container">
@@ -93,7 +93,7 @@
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-6">
-									<iv class="form-label-group">
+									<div class="form-label-group">
 										<input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" 
 										placeholder="Nome Completo" required autofocus="autofocus">    
 									</div>

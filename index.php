@@ -323,7 +323,7 @@
 
     <footer class="btn-primary text-white py-2 mt-4">
         <div class="container">
-            <div class="footer-copyright text-center py-3"> HCDigital © 2019 Copyright:</div>
+            <div class="footer-copyright text-center py-3"> HCDigital © 2019 Copyright</div>
         </div>
     </footer>
 
