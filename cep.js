@@ -3,7 +3,7 @@
             document.getElementById('rua').value=("");
             document.getElementById('bairro').value=("");
             document.getElementById('cidade').value=("");
-            document.getElementById('uf').value=("");
+            document.getElementById('estado').value=("");
             document.getElementById('ibge').value=("");
         }
 
@@ -13,7 +13,7 @@
             document.getElementById('rua').value=(conteudo.logradouro);
             document.getElementById('bairro').value=(conteudo.bairro);
             document.getElementById('cidade').value=(conteudo.localidade);
-            document.getElementById('uf').value=(conteudo.uf);
+            document.getElementById('estado').value=(conteudo.estado);
             document.getElementById('ibge').value=(conteudo.ibge);
         } //end if.
         else {
@@ -41,7 +41,7 @@
                 document.getElementById('rua').value="...";
                 document.getElementById('bairro').value="...";
                 document.getElementById('cidade').value="...";
-                document.getElementById('uf').value="...";
+                document.getElementById('estado').value="...";
                 document.getElementById('ibge').value="...";
 
                 //Cria um elemento javascript.

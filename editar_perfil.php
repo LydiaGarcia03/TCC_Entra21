@@ -24,7 +24,7 @@
                 $("#rua").val("");
                 $("#bairro").val("");
                 $("#cidade").val("");
-                $("#estado").val("");
+                $("#uf").val("");
             }
             
             //Quando o campo cep perde o foco.
@@ -46,7 +46,7 @@
                         $("#rua").val("...");
                         $("#bairro").val("...");
                         $("#cidade").val("...");
-                        $("#estado").val("...");
+                        $("#uf").val("...");
 
                         //Consulta o webservice viacep.com.br/
                         $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
@@ -56,7 +56,7 @@
                                 $("#rua").val(dados.logradouro);
                                 $("#bairro").val(dados.bairro);
                                 $("#cidade").val(dados.localidade);
-                                $("#estado").val(dados.estado);
+                                $("#uf").val(dados.uf);
                             } 
                             else {
                                 //CEP pesquisado não foi encontrado.
@@ -322,7 +322,8 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="estado" id="estado" size="2" class="form-control" placeholder="Estado" required disabled autocomplete="off">    
+										<input type="text" name="uf" id="uf" class="form-control"
+										placeholder="Estado" required autofocus disabled autocomplete="off">    
 									</div>
 								</div>
 							</div>
