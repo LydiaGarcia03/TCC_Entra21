@@ -19,11 +19,10 @@ class Site{
 	public function conexao(){
 
 		$this->con = mysqli_connect(self::HOST, self::USER, self::PASS, self::DB);
-
 		// Verifica erro
 		if(!$this->con){
 			die('erro na conexao');
-			// header('location: ../error.php');
+			header('location: ../error.php');
 		}
 
 	}
@@ -40,7 +39,7 @@ class Site{
 		session_start();
 
 		// Verifica erro
-		if( (!isset($_SESSION['user']) || $_SESSION['user'] == false) || (!isset($_SESSION['cuidador']) || $_SESSION['cuidador'] == false) ){
+		if( (!isset($_SESSION['contratante']) || $_SESSION['contratante'] == false) || (!isset($_SESSION['cuidador']) || $_SESSION['cuidador'] == false) ){
 
 			return 0;
 
@@ -49,5 +48,6 @@ class Site{
 	}
 
 }
+
 
 ?>

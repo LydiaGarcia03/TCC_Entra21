@@ -18,21 +18,21 @@ class Solicitar_Servico extends Site{
 		$dt_nascimento = $_POST['dt_nascimento'];
 		$genero = $_POST['genero'];
 		$tipo_servico = $_POST['servico'];
-		$diabetico = $_POST[''];
-		$deficiencia_fisica = $_POST[''];
-		$deficiencia_mental = $_POST[''];
-		$hipertensao = $_POST[''];
-		$descricao = $_POST[''];
-		$email_responsavel = $_POST[''];
-		$qtd_funcionarios_necessarios = $_POST[''];
-		$qtd_funcionarios_contratados = $_POST[''];
-		$cod_banco = $_POST[''];
-		$num_agencia = $_POST[''];
-		$tipo_conta = $_POST[''];
-		$num_conta = $_POST[''];
-		$dig_conta = $_POST[''];
-		$num_cartao = $_POST[''];
-		$nome_usuario_cartao = $_POST[''];
+		$diabetico = $_POST['diabetico'];
+		$deficiencia_fisica = $_POST['deficFisica'];
+		$deficiencia_mental = $_POST['deficMental'];
+		$hipertensao = $_POST['hipertenso'];
+		$descricao = $_POST['descricao'];
+		$email_responsavel = $_POST['email'];
+		$qtd_funcionarios_necessarios = $_POST['qtd_cuidadores'];
+		// $qtd_funcionarios_contratados = $_POST[''];
+		$cod_banco = $_POST['cod_banco'];
+		$num_agencia = $_POST['num_agencia'];
+		$tipo_conta = $_POST['tipo_conta'];
+		$num_conta = $_POST['num_conta'];
+		$dig_conta = $_POST['dig_conta'];
+		$num_cartao = $_POST['num]'];
+		$nome_usuario_cartao = $_POST['nome_usuario_cartao'];
 
 		// Criptografia
 		$cod_banco_crip = hash('sha512', $cod_banco);
@@ -55,7 +55,7 @@ class Solicitar_Servico extends Site{
 			$queryIdResponsavel = mysqli_query($con, $sqlAcharFK);
 			$resultIdResponsavel = mysqli_fetch_array($queryIdResponsavel);
 
-			$sql = "INSERT INTO servico.hcdigital VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento', '$genero', '$tipo_servico', '$diabetico', '$deficiencia_fisica', '$deficiencia_mental', '$hipertensao', '$descricao', '$resultIdResponsavel', '$qtd_funcionarios_necessarios', '$qtd_funcionarios_contratados', '$cod_banco_crip', '$num_agencia_crip', '$tipo_conta_crip', '$num_conta_crip', '$dig_conta_crip', '$num_cartao_crip', '$nome_usuario_cartao_crip')";
+			$sql = "INSERT INTO servico.hcdigital VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento', '$genero', '$tipo_servico', '$diabetico', '$deficiencia_fisica', '$deficiencia_mental', '$hipertensao', '$descricao', '$resultIdResponsavel', '$qtd_funcionarios_necessarios', NULL, '$cod_banco_crip', '$num_agencia_crip', '$tipo_conta_crip', '$num_conta_crip', '$dig_conta_crip', '$num_cartao_crip', '$nome_usuario_cartao_crip')";
 			$query = mysqli_query($con, $sql);
 			$result = mysqli_fetch_array($query);
 

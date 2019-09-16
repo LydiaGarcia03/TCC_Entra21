@@ -124,7 +124,7 @@
 										</div>
 									</div>
 
-									<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Confirmar  agendamento">
+									<a href="solicitar_servico.php"><!--<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Confirmar  agendamento">--></a>
 								</form>
 
 							</div>

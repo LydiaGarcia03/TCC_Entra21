@@ -1,8 +1,9 @@
-<!-- <?php
+<?php
 
-	//require_once 'classes/login.class.php';
+	require_once 'classes/login.class.php';
+	$login = new Login();
 
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,6 +12,7 @@
 	<meta charset="utf-8">
 	<!-- CSS -->   
 	<link href="style/home.css" rel="stylesheet" type="text/css">
+	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -24,7 +26,7 @@
 				</div>
 
 				<div class="card-body">
-					<form method="POST" name="formLogin">
+					<form method="POST" action="" name="formLogin">
 
 						<div class="form-group">
 							<div class="form-label-group">
@@ -50,11 +52,11 @@
 									
 									<div class="btn-group btn-group-toggle" style="width: 100%" data-toggle="buttons">
 										<label class="btn btn-light">
-											<input type="radio" name="btnTipoUsuario" id="cuidador" value="Cuidador">Cuidador
+											<input type="radio" name="btnTipoUsuario" id="cuidador" value="cuidador">Cuidador
 										</label>										
 								
 										<label class="btn btn-light">
-											<input type="radio" name="btnTipoUsuario" id="contratante" value="Contratante">Contratante
+											<input type="radio" name="btnTipoUsuario" id="contratante" value="contratante">Contratante
 										</label>										
 									</div>
 

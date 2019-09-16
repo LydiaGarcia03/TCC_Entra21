@@ -15,6 +15,11 @@
 	<!-- FullCalendar -->
 	<link href='fullcalendar/packages/core/main.css' rel='stylesheet'>
     <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet'>
+    <style type="text/css">
+    	#wrapper #content-wrapper{
+    		overflow-x: inherit !important;
+    	}
+    </style>
 </head>
 <body id="page-top">
 	<div id="wrapper">

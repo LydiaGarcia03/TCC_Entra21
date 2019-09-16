@@ -26,7 +26,7 @@
 		<!-- Sidebar -->
 		<ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard_contratante.php">
 				<div class="sidebar-brand-icon">
 					<i class="fas fa-laptop-medical"></i>
 				</div>
@@ -154,6 +154,33 @@
 								</div>
 							</div>
 						</div>
+
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-6">
+									<div class="form-label-group">
+										<input type="email" name="email" id="email" class="form-control" placeholder="E-mail do responsável">
+									</div>
+								</div>
+							</div>	
+						</div>
+
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-6">
+									<div class="form-label-group">
+										<input type="text" name="date" class="form-control date" placeholder="Escolha os dias para o serviço">
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-label-group">
+										<input type="number" name="qtd_cuidadores" id="qtd_cuidadores" class="form-control" placeholder="Quantidade de profissionais necessários">
+									</div>
+								</div>
+							</div>
+						</div>
+
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-6">
@@ -202,8 +229,58 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<textarea cols="64" rows="7" placeholder="Descreva, se necessário, algumas informações a mais e essenciais do paciente" class="form-control"></textarea>
+										<textarea style="resize: none;" cols="64" rows="7" placeholder="Descreva, se necessário, algumas informações a mais e essenciais do paciente" class="form-control" name="descricao"></textarea>
 									</div>
+								</div>
+							</div>
+						</div>
+
+						<hr>
+
+						<!-- Dados bancários -->
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-6">
+									<div class="form-label-group">
+										<input type="text" name="cod_banco" id="cod_banco" placeholder="Código do banco" class="form-control">
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-label-group">
+										<input type="text" name="num_agencia" id="num_agencia" placeholder="Número da agência" class="form-control">
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-4">
+								 	<div class="form-label-group">
+								 		<input type="text" id="tipo_conta" name="tipo_conta" placeholder="Tipo de conta" class="form-control">
+								 	</div>
+								 </div>
+
+								<div class="col-md-4">
+									<input type="text" name="num_conta" id="num_conta" class="form-control" placeholder="Número da conta">
+								</div>
+
+								<div class="col-md-4">
+									<input type="text" name="dig_conta" id="dig_conta" class="form-control" placeholder="Dígito da conta">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-6">
+									<input type="text" name="num_cartao" id="num_cartao" class="form-control" placeholder="Número do cartão">
+								</div>
+
+								<div class="col-md-6">
+									<input type="text" name="nome_user_cartao" id="nome_user_cartao" class="form-control" placeholder="Nome do usuário no cartão">
 								</div>
 							</div>
 						</div>
@@ -270,9 +347,23 @@
 	<!-- JQuery Mask -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"/></script>
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#dt_nascimento').mask('99/99/9999');
+			$('#cod_banco').mask('999');
+			$('#num_agencia').mask('9999');
+			$('#tipo_conta').mask('999');
+			$('#num_conta').mask('99999999');
+			$('#dig_conta').mask('9');
+			$('#num_cartao').mask('9999 9999 9999 9999');
+		});
+	</script>
+
+	<script type="text/javascript">
+		$('.date').datepicker({
+			multidate: true,
+			format: 'dd-mm-yyyy'
 		});
 	</script>
 	<!-- Google Maps Plugin -->

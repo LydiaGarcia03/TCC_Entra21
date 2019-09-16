@@ -17,36 +17,36 @@ class Login extends Site{
 	public function autenticacao(){
 
 		if(!parent::session_error()){
-
+			
 			if(isset($_POST['btnEntrar'])){
 
 				$email = $_POST['email'];
 				$crip_senha = hash('sha512', $_POST['senha']);
 
-				$tipoUser = $_POST['btnTipoUsuario'])
+				$tipoUser = $_POST['btnTipoUsuario'];
 
-				if($tipoUser == 'Contratante'){
+				if($tipoUser == 'contratante'){
 
-					$user = 'user';
+					$user = 'contratante';
 					$sql = "SELECT * FROM necessitado.hcdigital WHERE email = '$email' AND senha = '$crip_senha'";
 
 				}
-				else if($tipoUser == 'Cuidador'){
+				else if($tipoUser == 'cuidador'){
 
 					$user = 'cuidador';
 					$sql = "SELECT * FROM profissional.hcdigital WHERE email = '$email' AND senha = '$crip_senha'";
-
 				}
 
 				$query = mysqli_query($con, $sql);
 				$result = mysqli_fetch_array($query);
+				die(var_dump($con));
 
 				if($result != NULL){
 
 					// Criando sessões
-					if($user == 'user'){
+					if($user == 'contratante'){
 
-						$_SESSION['user'] = true;
+						$_SESSION['contratante'] = true;
 						header('Location: ../dashboard_usuario.php');
 
 					} else if($user == 'cuidador'){
@@ -68,13 +68,5 @@ class Login extends Site{
 	}
 
 }
-
-$login = new Login();
-
-var_dump($login->autenticacao());
-
-die();
-
-
 
 ?>
