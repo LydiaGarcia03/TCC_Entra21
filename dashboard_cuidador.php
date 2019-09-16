@@ -244,7 +244,7 @@
 									<h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
 								</div>
 
-								<div class="card-body" style="height: 200px; width: 100%;">
+								<div class="card-body" style="height: 320px; width: 100%;">
 									<div class="chart-area">
 										<canvas id="myAreaChart" ></canvas>
 									</div>
