@@ -18,7 +18,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
 
-            <a href="index.php" class="navbar-brand h1 mb-0"><i class="fas fa-heartbeat pr-2"></i>HCDigital</a>
+            <a href="index.php" class="navbar-brand h1 mb-0"><i class="fas fa-laptop-medical pr-2"></i>HCDigital</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -124,7 +124,7 @@
                     <div class="col-sm-6 col-md-4">
                         <div class="card mb-5">
                             <div class="mx-auto">
-                                <img src="img/cuidador-idoso.jpg" alt="" class="card-top">
+                                <img src="img/cuidador-idoso.jpg" alt="" class="card-top w-50">
                             </div>
 
                             <div class="card-body">
