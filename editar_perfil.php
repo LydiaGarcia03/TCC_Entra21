@@ -12,19 +12,20 @@
 	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<link href="style/dashboard.css" rel="stylesheet" type="text/css">
 	<link href="style/calendar.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<!-- CEP -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
 
-        $(document).ready(function() {
+		$(document).ready(function() {
 
-            function limpa_formulário_cep() {
+			function limpa_formulário_cep() {
                 // Limpa valores do formulário de cep.
                 $("#rua").val("");
                 $("#bairro").val("");
                 $("#cidade").val("");
-                $("#estado").val("");
+                $("#uf").val("");
             }
             
             //Quando o campo cep perde o foco.
@@ -46,17 +47,17 @@
                         $("#rua").val("...");
                         $("#bairro").val("...");
                         $("#cidade").val("...");
-                        $("#estado").val("...");
+                        $("#uf").val("...");
 
                         //Consulta o webservice viacep.com.br/
                         $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
 
-                            if (!("erro" in dados)) {
+                        	if (!("erro" in dados)) {
                                 //Atualiza os campos com os valores da consulta.
                                 $("#rua").val(dados.logradouro);
                                 $("#bairro").val(dados.bairro);
                                 $("#cidade").val(dados.localidade);
-                                $("#estado").val(dados.estado);
+                                $("#uf").val(dados.uf);
                             } 
                             else {
                                 //CEP pesquisado não foi encontrado.
@@ -81,28 +82,28 @@
     </script>
 
     <style type="text/css">
-  		/*Arrumar depois*/
-		.form-control, select.custom-select, .custom-file-label{
-			border-radius: 0 !important;
-		    border: none !important;
-		    border-bottom: 1px solid lightgray !important;
-		    background-color: white !important;
-		    transition: 0.5s !important;
-		    margin-top: 10px !important;
-		}
-		.form-control:focus, .form-control:active, .btn:focus, .btn:active{
-			background-color: rgba(0,0,0,.03) !important;
-			outline: none !important;
-			box-shadow: none !important;
-			border-bottom: 1px solid darkgray !important;
-		}
-		.custom-file-label:after{
-			content: "Escolha a foto de perfil" !important;
-			background-color: white !important;
-			float: left !important;
-			left: 0 !important;
-			padding-bottom: 0 !important;
-		}
+    	/*Arrumar depois*/
+    	.form-control, select.custom-select, .custom-file-label{
+    		border-radius: 0 !important;
+    		border: none !important;
+    		border-bottom: 1px solid lightgray !important;
+    		background-color: white !important;
+    		transition: 0.5s !important;
+    		margin-top: 10px !important;
+    	}
+    	.form-control:focus, .form-control:active, .btn:focus, .btn:active{
+    		background-color: rgba(0,0,0,.03) !important;
+    		outline: none !important;
+    		box-shadow: none !important;
+    		border-bottom: 1px solid darkgray !important;
+    	}
+    	.custom-file-label:after{
+    		content: "Escolha a foto de perfil" !important;
+    		background-color: white !important;
+    		float: left !important;
+    		left: 0 !important;
+    		padding-bottom: 0 !important;
+    	}
     </style>
 
 </head>
@@ -322,7 +323,8 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="estado" id="estado" size="2" class="form-control" placeholder="Estado" required disabled autocomplete="off">    
+										<input type="text" name="uf" id="uf" class="form-control"
+										placeholder="Estado" required autofocus disabled autocomplete="off">    
 									</div>
 								</div>
 							</div>
@@ -407,7 +409,26 @@
 						</div>
 
 						<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Concluir alterações">
-
+						<script>
+							// Example starter JavaScript for disabling form submissions if there are invalid fields
+							(function() {
+								'use strict';
+								window.addEventListener('load', function() {
+    							// Fetch all the forms we want to apply custom Bootstrap validation styles to
+    							var forms = document.getElementsByClassName('needs-validation');
+    							// Loop over them and prevent submission
+    							var validation = Array.prototype.filter.call(forms, function(form) {
+    								form.addEventListener('submit', function(event) {
+    									if (form.checkValidity() === false) {
+    										event.preventDefault();
+    										event.stopPropagation();
+    									}
+    									form.classList.add('was-validated');
+    								}, false);
+    							});
+    						}, false);
+							})();
+						</script>
 					</form>
 
 				</div>
@@ -454,6 +475,10 @@
 		</div>
 	</div>
 
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 	<!-- Bootstrap core JavaScript-->
 	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
 	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -485,6 +510,6 @@
 			$('#num_cartao').mask('9999 9999 9999 9999');
 		});
 	</script>
-		
+
 </body>
 </html>
