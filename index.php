@@ -18,7 +18,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
 
-            <a href="index.php" class="navbar-brand h1 mb-0"><i class="fas fa-laptop-medical pr-2"></i>HCDigital</a>
+            <a href="index.php" class="navbar-brand h1 mb-0"><i class="fas fa-laptop-medical"></i>HCDigital</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -107,7 +107,6 @@
                         Et nemo amet qui ex odio perspiciatis aliquid ipsa accusamus <br />
                         explicabo aperiam, animi corporis vel quo! Quos quasi labore <br />
                         impedit nostrum vel.Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
-                        Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
                 </div>
             </div>
         </div>
