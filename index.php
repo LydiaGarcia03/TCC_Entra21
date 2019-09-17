@@ -298,15 +298,15 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="inputMsg">Mensagem</label>
-                            <textarea class="form-control" id="inputMsg" rows="8"
+                            <textarea style="resize: none;" class="form-control" id="inputMsg" rows="8"
                                 placeholder="Como podemos ajudar?"></textarea>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-sm-12">
                             <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input"> Desejo receber novidades por e-mail
+                                <label class="custom-form-label">
+                                    <input type="checkbox" class="custom-form-input" name=""> Desejo receber novidades por e-mail
                                 </label>
                             </div>
                         </div>

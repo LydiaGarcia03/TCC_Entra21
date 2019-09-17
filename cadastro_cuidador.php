@@ -80,7 +80,7 @@
 
 		<div class="card card-register mx-auto mt-5">
 
-			<div class="card-header">Crie sua conta grátis</div>
+			<div class="card-header text-center">Crie sua conta grátis</div>
 			<div class="card-body">
 
 				<form id="formExemplo" data-toggle="validator" role="form">

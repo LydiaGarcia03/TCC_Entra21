@@ -10,6 +10,8 @@ class Cadastro_user extends Site{
 
 		session_start();
 
+		$this->novaConta();
+
 	}
 
 	public function receberDados(){

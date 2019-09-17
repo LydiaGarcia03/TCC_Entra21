@@ -130,11 +130,11 @@
 			</div>
 
 			<div class="text-center my-3">
-				<li class="nav-item">
+				<li class="nav-item active">
 					<small>
-						<a href="dashboard_contratante.php" class="nav-link text-center p-0">
+						<a href="editar_perfil.php" class="nav-link text-center p-0">
 							<i class="far fa-fw fa-edit"></i>
-							<span>Página inicial</span>
+							<span>Editar perfil</span>
 						</a>
 					</small>
 				</li>
