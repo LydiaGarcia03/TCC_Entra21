@@ -26,7 +26,9 @@ CREATE TABLE profissional (
     nome_user_cartao VARCHAR(32) NOT NULL, -- CRIP
     # Info acadêmica
     curso_formacao VARCHAR(250) NOT NULL,
-    instituicao VARCHAR(250) NOT NULL
+    instituicao VARCHAR(250) NOT NULL,
+    dt_ingresso DATE NOT NULL,
+    avaliacao REAL NULL
 ) ENGINE = INNODB DEFAULT CHARSET = 'utf8';
 
 CREATE TABLE necessitado (

@@ -58,7 +58,7 @@ class Login extends Site{
 
 				} else{
 
-					// header('Location: error.php');
+					header('Location: error.php');
 
 				}
 

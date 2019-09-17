@@ -285,6 +285,15 @@
 							</div>
 						</div>
 
+						<div class="form-group" class="my-4">
+							<div class="form-row">
+								<div class="col-md-6">
+									<input type="checkbox" name="confirmaResponsavel" id="confirmaResponsavel">
+									<label>Confirmo que sou responsável pelo paciente descrito acima</label>
+								</div>
+							</div>
+						</div>
+
 						<input type="submit" class="btn btn-primary btn-block" name="btnSolicitarServico" value="Solicitar serviço">
 
 					</form>
