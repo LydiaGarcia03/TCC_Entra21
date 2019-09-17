@@ -61,6 +61,7 @@ CREATE TABLE servico (
     fk_id_necessitado INT NOT NULL,
     qtd_horas_diarias INT NOT NULL,
     dias_servico VARCHAR(250) NOT NULL,
+    estado BOOLEAN NULL,
     # Dados bancários do necessitado
     cod_banco VARCHAR(32) NOT NULL, -- CRIP
     num_agencia VARCHAR(32) NOT NULL, -- CRIP

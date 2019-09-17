@@ -28,18 +28,19 @@ class Login extends Site{
 				if($tipoUser == 'contratante'){
 
 					$user = 'contratante';
-					$sql = "SELECT * FROM necessitado.hcdigital WHERE email = '$email' AND senha = '$crip_senha'";
+					$sql = "SELECT * FROM necessitado WHERE email = '$email' AND senha = '$crip_senha'";
 
 				}
 				else if($tipoUser == 'cuidador'){
 
 					$user = 'cuidador';
-					$sql = "SELECT * FROM profissional.hcdigital WHERE email = '$email' AND senha = '$crip_senha'";
+					$sql = "SELECT * FROM profissional WHERE email = '$email' AND senha = '$crip_senha'";
 				}
 
-				$query = mysqli_query($con, $sql);
+				$query = mysqli_query($this->con, $sql);
 				$result = mysqli_fetch_array($query);
-				die(var_dump($con));
+
+				die(var_dump($this->con));
 
 				if($result != NULL){
 

@@ -39,7 +39,7 @@ class Cadastro_user extends Site{
 
 		if(isset($_POST['btnNovaConta'])){
 
-			$sql = "INSERT INTO necessitado.hcdigital VALUES (DEFAULT, '$nomeCompleto', NULL, '$genero', '$dt_nascimento', '$crip_senha', '$cep', '$numero', '$complemento', '$tel_celular', '$tel_residencial')";
+			$sql = "INSERT INTO necessitado VALUES (DEFAULT, '$nomeCompleto', NULL, '$genero', '$dt_nascimento', '$crip_senha', '$cep', '$numero', '$complemento', '$tel_celular', '$tel_residencial')";
 
 
 			$query = mysqli_query($this->con, $sql);

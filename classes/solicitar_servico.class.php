@@ -52,11 +52,11 @@ class Solicitar_Servico extends Site{
 		if(isset($_POST['btnSolicitarServico'])){
 
 			$sqlAcharFK = "SELECT id FROM necessitado WHERE email = $email_responsavel";
-			$queryIdResponsavel = mysqli_query($con, $sqlAcharFK);
+			$queryIdResponsavel = mysqli_query($this->con, $sqlAcharFK);
 			$resultIdResponsavel = mysqli_fetch_array($queryIdResponsavel);
 
 			$sql = "INSERT INTO servico VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento', '$genero', '$tipo_servico', '$diabetico', '$deficiencia_fisica', '$deficiencia_mental', '$hipertensao', '$descricao', '$resultIdResponsavel', '$qtd_funcionarios_necessarios', NULL, '$cod_banco_crip', '$num_agencia_crip', '$tipo_conta_crip', '$num_conta_crip', '$dig_conta_crip', '$num_cartao_crip', '$nome_usuario_cartao_crip')";
-			$query = mysqli_query($con, $sql);
+			$query = mysqli_query($this->con, $sql);
 			$result = mysqli_fetch_array($query);
 
 

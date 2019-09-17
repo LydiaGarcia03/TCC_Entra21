@@ -25,6 +25,7 @@ class Site{
 			header('location: ../error.php');
 		}
 
+
 	}
 
 	public function config(){

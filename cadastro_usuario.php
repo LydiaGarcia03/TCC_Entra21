@@ -85,11 +85,13 @@
 
 	<div class="container-fluid">
 		<div class="container">
+
 			<div class="card card-register mx-auto mt-5">
 				
 				<div class="card-header">Crie sua conta grátis</div>
 
 				<div class="card-body">
+
 					<form method="POST" action="login.php">
 						<div class="form-group">
 							<div class="form-row">
