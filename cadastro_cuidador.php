@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<!-- CSS -->    
 	<link href="style/home.css" rel="stylesheet" type="text/css">
+	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<!-- CEP -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -181,7 +181,7 @@
 							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="number" name="numeroCasa" id="numeroCasa" class="form-control" 
-									placeholder="Numero" required autofocus>    
+									placeholder="Número da residência" required autofocus>    
 								</div>
 							</div>
 						</div>
@@ -192,7 +192,7 @@
 							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="text" name="complemento" id="complemento" class="form-control" 
-									placeholder="Complemento" required autofocus >    
+									placeholder="Complemento" required autofocus>    
 								</div>
 							</div>
 
@@ -226,13 +226,13 @@
 							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="text" name="tel_residencial" id="tel_residencial" class="form-control" 
-									placeholder="Numero fixo" required>    
+									placeholder="Número da residência fixo" required>    
 								</div>
 							</div>
 
 							<div class="col-md-6">
 								<div class="form-label-group">
-									<input autocomplete="off" type="tel" class="form-control fone" id="tel_celular" name="tel_celular" value="" required="" maxlength="15" data-original-title="TELEFONE: Forneça um válido ou limpe o campo">    
+									<input autocomplete="off" type="tel" placeholder="Número de celular" class="form-control fone" id="tel_celular" name="tel_celular" value="" required maxlength="15" data-original-title="TELEFONE: Forneça um válido ou limpe o campo">    
 								</div>
 							</div>
 						</div>

@@ -288,8 +288,8 @@
 						<div class="form-group" class="my-4">
 							<div class="form-row">
 								<div class="col-md-6">
-									<input type="checkbox" name="confirmaResponsavel" id="confirmaResponsavel">
-									<label>Confirmo que sou responsável pelo paciente descrito acima</label>
+									<input type="checkbox" class="custom-control-input" name="confirmaResponsavel" id="confirmaResponsavel">
+									<label class="custom-control-label">Confirmo que sou responsável pelo paciente descrito acima</label>
 								</div>
 							</div>
 						</div>

@@ -17,14 +17,14 @@ class Cadastro_user extends Site{
 		$nome_completo = $POST['nomeCompleto'];
 		// Upload de imagens 
 		$genero = $POST['genero'];
-		$dt_nascimento = $POST['date'];
+		$dt_nascimento = $POST['dt_nascimento'];
 		$email = $POST['email'];
 		$senha = $POST['senha'];
 		$cep = $POST['cep'];
 		$numero = $POST['numeroCasa'];
 		$complemento = $POST['complemento'];
-		$tel_celular = $POST['telefone_celular'];
-		$tel_residencial = $POST['telefone_residencial'];
+		$tel_celular = $POST['tel_celular'];
+		$tel_residencial = $POST['tel_residencial'];
 
 		// Criptografia de senha
 		$crip_senha = hash('sha512', $senha);
