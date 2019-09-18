@@ -13,6 +13,7 @@
 	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<link href="style/dashboard.css" rel="stylesheet" type="text/css">
 	<link href="style/calendar.css" rel="stylesheet" type="text/css">
+	
 </head>
 <body id="page-top">
 	
@@ -65,72 +66,80 @@
 					</a>
 				</li>
 			</div>
-		
+
 		</ul>
 		<!-- Fim Sidebar -->
 
-		
-
-			<!-- Footer -->
-			<footer class="sticky-footer bg-white">
-				<div class="container my-auto">
-					<div class="copyright text-center my-auto">
-						<span>Copyright &copy; HCDigital 2019</span>
+		<div class="container-fluid">
+			<div class="container">
+				<div class="card ">
+					<div class="card-header">
+						Featured
 					</div>
-				</div>
-			</footer>
-			<!-- End of Footer -->
-
+					<div class="card-body float-left">
+						<h5 class="card-title">#ID</h5> <i class="far fa-user-circle fa-3x"></i>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<a href="#" class="btn btn-primary">Detalhes</a>
+					</div>
+					<div class="card-footer text-muted">
+						Dias
+					</div>
+				</div>				
+			</div>			
 		</div>
-		<!-- End of Page Wrapper -->
 
 
-		<!-- Scroll to Top Button-->
-		<a class="scroll-to-top rounded" href="#page-top">
-			<i class="fas fa-angle-up"></i>
-		</a>
 
-		<!-- Logout Modal-->
-		<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja sair</h5>
-						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-					</div>
-					<div class="modal-body">Selecione sair se deseja.</div>
-					<div class="modal-footer">
-						<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-						<a class="btn btn-primary" href="index.php">Sair</a>
-					</div>
+	</div>
+	<!-- End of Page Wrapper -->
+
+
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top">
+		<i class="fas fa-angle-up"></i>
+	</a>
+
+	<!-- Logout Modal-->
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja sair</h5>
+					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">Selecione sair se deseja.</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+					<a class="btn btn-primary" href="index.php">Sair</a>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
-	<!-- Bootstrap core JavaScript-->
-	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
-	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<!-- Core plugin JavaScript-->
-	<script src="sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
-	<!-- Custom scripts for all pages-->
-	<script src="sbadmin/js/sb-admin-2.min.js"></script>
-	<!-- Page level plugins -->
-	<script src="sbadmin/vendor/chart.js/Chart.min.js"></script>
-	<!-- Page level custom scripts -->
-	<script src="sbadmin/js/demo/chart-area-demo.js"></script>
-	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
-	<!-- JQuery Mask -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"/></script>
+<!-- Bootstrap core JavaScript-->
+<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
+<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="sbadmin/js/sb-admin-2.min.js"></script>
+<!-- Page level plugins -->
+<script src="sbadmin/vendor/chart.js/Chart.min.js"></script>
+<!-- Page level custom scripts -->
+<script src="sbadmin/js/demo/chart-area-demo.js"></script>
+<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
+<!-- JQuery Mask -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"/></script>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('#dt_nascimento').mask('99/99/9999');
-			$('#cep').mask('99999-999');
-		});
-	</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#dt_nascimento').mask('99/99/9999');
+		$('#cep').mask('99999-999');
+	});
+</script>
 </body>
 </html>
