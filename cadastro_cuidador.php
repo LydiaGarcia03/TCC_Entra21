@@ -1,3 +1,10 @@
+<?php
+
+	require_once "classes/cadastro_cuidador.class.php";
+	$cadastro = new Cadastro_cuidador();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

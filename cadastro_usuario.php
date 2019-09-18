@@ -1,6 +1,7 @@
 <?php
 
 	require_once "classes/cadastro_user.class.php";
+	$cadastro = new Cadastro_user();
 
 ?>
 
@@ -105,7 +106,7 @@
 
 									<div class="input-group">
 										<label class="custom-file-label text-secondary" for="c_foto"></label>
-										<input type="file" class="custom-file-input" name="c_foto" id="c_foto" placeholder="Escolha uma foto de perfil">
+										<input type="file" name="c_foto" id="c_foto" class="custom-file-input" placeholder="Escolha uma foto de perfil">
 									</div>
 
 								</div>
@@ -116,7 +117,7 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<select class="form-control" name="genero">
-										<option>Gênero</option>
+										<option selected disabled>Gênero</option>
 										<option value="masculino">Masculino</option>
 										<option value="feminino">Feminino</option>
 										<option value="outros">Outros</option>
@@ -134,14 +135,13 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="email" name="email" id="email" class="form-control" 
+										<input type="email" name="email" id="email" class="form-control"
 										placeholder="E-mail" required>    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="email" name="confirmarEmail" id="confirmarEmail" class="form-control" 
-										placeholder="Confirmar E-mail" required>    
+										<input type="email" name="confirmarEmail" id="confirmarEmail" class="form-control" placeholder="Confirmar E-mail" required> 
 									</div>
 								</div>
 							</div>
@@ -182,8 +182,7 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="numeroCasa" id="numeroCasa" class="form-control" 
-										placeholder="Número da residência" required autofocus>    
+										<input type="text" name="numeroCasa" id="numeroCasa" class="form-control" placeholder="Número da residência" required autofocus>    
 									</div>
 								</div>
 							</div>
@@ -193,14 +192,12 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="complemento" id="complemento" class="form-control" 
-										placeholder="Complemento" required autofocus>    
+										<input type="text" name="complemento" id="complemento" class="form-control" placeholder="Complemento" required autofocus>    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="cidade" id="cidade" class="form-control" 
-										placeholder="Cidade" required autofocus disabled>    
+										<input type="text" name="cidade" id="cidade" class="form-control" placeholder="Cidade" required autofocus disabled>    
 									</div>
 								</div>
 							</div>
@@ -211,8 +208,7 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="bairro" id="bairro" class="form-control" 
-										placeholder="Bairro" required autofocus disabled>    
+										<input type="text" name="bairro" id="bairro" class="form-control" placeholder="Bairro" required autofocus disabled>    
 									</div>	
 								</div>
 								<div class="col-md-6">
@@ -225,8 +221,7 @@
 							<div class="form-row">
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="tel_residencial" id="tel_residencial" class="form-control" 
-										placeholder="Número fixo" required>    
+										<input type="text" name="tel_residencial" id="tel_residencial" class="form-control" placeholder="Número fixo" required>    
 									</div>
 								</div>
 
