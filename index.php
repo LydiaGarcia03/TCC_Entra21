@@ -124,12 +124,12 @@
                     <div class="col-sm-6 col-md-4">
                         <div class="card mb-5">
                             <div class="mx-auto">
-                                <img src="img/cuidador-idoso.jpg" alt="" class="card-top w-50">
+                                <img src="img/gravida.png" alt="" class="card-top w-50">
                             </div>
 
                             <div class="card-body">
-                                <h4 class="card-title">cubilia auctor</h4>
-                                <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
+                                <h4 class="card-title">Cuidador infantil</h4>
+                                <p class="card-text">Esse serviço auxilia mulheres que estão gerendo seu primeiro filho.</p>
                             </div>
                             
                             <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
@@ -138,12 +138,12 @@
                     <div class="col-sm-6 col-md-4">
                         <div class="card mb-5">
                             <div class="mx-auto">
-                                <img src="img/image_infantil.png" alt="" class="card-top w-50">
+                                <img src="img/cadeirante.png" alt="" class="card-top w-50">
                             </div>
 
                             <div class="card-body">
-                                <h4 class="card-title">cubilia auctor</h4>
-                                <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
+                                <h4 class="card-title">Profinais de saúde</h4>
+                                <p class="card-text">Esse serviço auxilia pessoas com problemas de saúde ou físico.</p>
                             </div>
                             
                             <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
@@ -152,11 +152,11 @@
                     <div class="col-sm-6 col-md-4">
                         <div class="card mb-5">
                             <div class="mx-auto">
-                                <img src="img/cuidador-idoso.jpg" alt="" class="card-top w-50">
+                                <img src="img/medica.png" alt="" class="card-top w-50">
                             </div>
 
                             <div class="card-body">
-                                <h4 class="card-title">cubilia auctor</h4>
+                                <h4 class="card-title">Cuidador de idosos</h4>
                                 <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
                             </div>
 

@@ -210,7 +210,7 @@
 				<div class="card-header">Edição de conta</div>
 
 				<div class="card-body">
-					<form>
+					<form class="validation">
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-6">
@@ -233,7 +233,7 @@
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-6">
-									<select class="form-control" name="genero">
+									<select class="form-control" name="genero" required autofocus>
 										<option selected disabled>Gênero</option>
 										<option value="masculino">Masculino</option>
 										<option value="feminino">Feminino</option>
@@ -426,7 +426,7 @@
 								'use strict';
 								window.addEventListener('load', function() {
     							// Fetch all the forms we want to apply custom Bootstrap validation styles to
-    							var forms = document.getElementsByClassName('needs-validation');
+    							var forms = document.getElementsByClassName('validation');
     							// Loop over them and prevent submission
     							var validation = Array.prototype.filter.call(forms, function(form) {
     								form.addEventListener('submit', function(event) {
