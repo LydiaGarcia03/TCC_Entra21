@@ -29,7 +29,7 @@
                         <a href="quem_somos.php" class="nav-link">QUEM SOMOS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="duvidas.php" class="nav-link">DÚVIDAS</a>
+                        <a href="faq.php" class="nav-link">DÚVIDAS</a>
                     </li>
                     <li class="nav-item">
                         <a href="blog.php" class="nav-link">BLOG</a>
