@@ -1,11 +1,16 @@
 <?php
 
-	// require_once "classes/site.class.php";
-	// $site = new Site();
+	session_start();
+	require_once "classes/site.class.php";
+	$site = new Site();
 
-	// if(!$site->session_error()){
-	// 	header('Location: error.php');
-	// 
+	if($site->session_error() == 0){
+		// session_destroy();
+		// header('Location: error.php');
+		var_dump($site->session_error());
+		die();
+		
+	}	
 
 ?>
 
@@ -49,7 +54,16 @@
 				<p class="mb-0 mt-2">Nome</p>
 			</div>
 
-			
+			<div class="text-center my-3">
+				<li class="nav-item">
+					<small>
+						<a href="editar_perfil.php" class="nav-link text-center p-0">
+							<i class="far fa-fw fa-edit"></i>
+							<span>Editar perfil</span>
+						</a>
+					</small>
+				</li>
+			</div>
 
 			<div class="text-center my-3">
 				<li class="nav-item">
@@ -83,12 +97,12 @@
 
 		<div class="container-fluid">
 			<div class="container">
-				<div class="card ">
+				<div class="card my-5">
 					<div class="card-header">
-						Featured
+						<p class="card-title m-0">#ID</p>
 					</div>
 					<div class="card-body float-left">
-						<h5 class="card-title">#ID</h5> <i class="far fa-user-circle fa-3x"></i>
+						<i class="far fa-user-circle fa-3x"></i>
 						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 						<a href="#" class="btn btn-primary">Detalhes</a>
 					</div>

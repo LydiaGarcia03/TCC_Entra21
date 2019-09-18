@@ -44,6 +44,8 @@ class Cadastro_user extends Site{
 
 			$query = mysqli_query($this->con, $sql);
 
+			echo 'oi';
+			die('droga');
 		}
 
 	}

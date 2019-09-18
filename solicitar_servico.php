@@ -1,8 +1,13 @@
-<!-- <?php
+<?php
 
-	//require_once 'classes/solicitar_servico.class.php';
+	require_once "classes/site.class.php";
+	$site = new Site();
 
-?> -->
+	if(!$site->session_error()){
+		header('Location: error.php');
+	}
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
