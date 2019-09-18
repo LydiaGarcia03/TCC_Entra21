@@ -14,12 +14,12 @@
 	<link href="style/calendar.css" rel="stylesheet" type="text/css">
 	<!-- FullCalendar -->
 	<link href='fullcalendar/packages/core/main.css' rel='stylesheet'>
-    <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet'>
-    <style type="text/css">
-    	#wrapper #content-wrapper{
-    		overflow-x: inherit !important;
-    	}
-    </style>
+	<link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet'>
+	<style type="text/css">
+		#wrapper #content-wrapper{
+			overflow-x: inherit !important;
+		}
+	</style>
 </head>
 <body id="page-top">
 	<div id="wrapper">
@@ -58,29 +58,13 @@
 			<hr class="sidebar-divider my-0">
 
 			<!-- Itens Sidebar -->
-			<div class="text-center my-3 mt-4">
-				<li class="nav-item">
-					<a href="#gastos" class="nav-link text-center p-0">
-						<i class="fas fa-fw fa-dollar-sign"></i>
-						<span>Gastos</span>
-					</a>
-				</li>
-			</div>
+			
 
 			<div class="text-center my-3">
 				<li class="nav-item">
-					<a href="#agenda" class="nav-link text-center p-0">
-						<i class="far fa-fw fa-calendar-alt"></i>
-						<span>Agenda</span>
-					</a>
-				</li>
-			</div>
-
-			<div class="text-center my-3">
-				<li class="nav-item">
-					<a href="chat.php" class="nav-link text-center p-0">
+					<a href="servicos_disponiveis.php" class="nav-link text-center p-0">
 						<i class="far fa-fw fa-comments"></i>
-						<span>Chat</span>
+						<span>Serviços disponiveis</span>
 					</a>
 				</li>
 			</div>
@@ -144,119 +128,7 @@
 					
 					<div class="row cards-area mx-auto">
 
-						<div class="col-4">	
-							<div class="card text-white bg-warning mb-3 ">
-								<div class="card-body">
-									<h5 class="card-title">Avaliação</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<div>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="far fa-star"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-4">
-							<div class="card text-white bg-success mb-3">
-								<div class="card-body">
-									<h5 class="card-title">Próximo pagamento</h5>
-									<p class="card-text">Seu próximo pagamento de R$ 500,00 será redirecionado a sua conta dia dd/mm/YY</p>
-									<div class="progress mt-4" style="height: 5px">
-										<div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="background-color: seagreen"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-4">
-							<div class="card text-white bg-danger mb-3">
-								<div class="card-body">
-									<h5 class="card-title">Contratos próximos</h5>
-									<p class="card-text">Há novos contratos esperando por você na região.</p>
-									<div class="text-right mt-4">
-										<i class="fas fa-fw fa-globe-americas fa-2x"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="row">
-						<div class="col-xl-6 col-lg-5">
-							<div class="card shadow mb-3">
-								<div class="card-header d-flex flex-row align-items-center justify-content-between py-3">
-									<h6 class="m-0 font-weight-bold text-danger">Agenda</h6>
-								</div>
-
-								<div class="card-body p-0">
-									
-									<table class="table table-hover m-0">
-										
-										<tbody>
-											<tr class="table_row" onclick="agendaAppears()">
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-
-											<tr class="table_row" onclick="agendaAppears()">
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-											
-											<tr class="table_row" onclick="agendaAppears()">
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-
-											<tr class="table_row" onclick="agendaAppears()">
-												<td>Cliente</td>
-												<td>Paciente</td>
-												<td>Serviço</td>
-												<td>Tempo para prox compromisso</td>
-											</tr>
-										</tbody>
-
-									</table>
-
-								</div>
-							</div>
-							
-						</div>
-
-						<div class="col-xl-6 col-lg-5">
-							
-							<!-- FullCalendar -->
-							<div class="card">
-								<div class="card-body">
-									<div id="calendar"></div>
-								</div>
-							</div>
-
-							<!-- Area Chart -->
-							<div class="card shadow mb-4 mt-3">
-								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between" >
-									<h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-								</div>
-
-								<div class="card-body" style="height: 360px; width: 100%;">
-									<div class="chart-area">
-										<canvas id="myAreaChart" ></canvas>
-									</div>
-								</div>
-							</div>
-
-						</div>
+						
 					</div>
 				</div>
 				<!-- End container-fluid -->
@@ -318,37 +190,42 @@
 	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
 	<!-- FullCalendar -->
 	<script src='fullcalendar/packages/core/main.js'></script>
-    <script src='fullcalendar/packages/daygrid/main.js'></script>
+	<script src='fullcalendar/packages/daygrid/main.js'></script>
 	<script src="funcoes.js"></script>
-    <script>
+	<script>
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
+		document.addEventListener('DOMContentLoaded', function() {
+			var calendarEl = document.getElementById('calendar');
 
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-		    plugins: [ 'dayGrid' ],
-		    defaultView: 'dayGridMonth',
-			fixedWeekCount: Boolean, default: true,
-		    height: 480,
-		    contentHeight: 6,
-		    locale: 'pt',
-		    events: [{
-				id: 1,
-				title: 'AQUI',
-				start: new Date(2019, 8, 11),
-				allDay: false,
-				className: 'info'
-			}],
-			header: {
-				center: '',
-				right: 'today, prev, next'
-			}
+			var calendar = new FullCalendar.Calendar(calendarEl, {
+				plugins: [ 'dayGrid' ],
+				defaultView: 'dayGridMonth',
+				fixedWeekCount: Boolean, default: true,
+				height: 370,
+				contentHeight: 4,
+				locale: 'pt',
+				events: [{
+					id: 1,
+					title: 'Serviço',
+					start: new Date(2019, 8, 11),
+					allDay: false,
+					className: 'info'
+				}],
+				header: {
+					center: '',
+					right: 'today, prev, next'
+				}
 
-        });
+			});
 
-        calendar.render();
-      });
+			calendar.render();
+		});
 
-    </script>
+		var agendaFun = 
+
+
+
+
+	</script>
 </body>
 </html>
