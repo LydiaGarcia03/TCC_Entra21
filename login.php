@@ -30,7 +30,7 @@
 
 						<div class="form-group">
 							<div class="form-label-group">
-								<input type="email" id="email" class="form-control" 
+								<input type="email" id="email" name="email" class="form-control" 
 								placeholder="Endereço de e-mail" required autocomplete="off">
 							</div>
 						</div>
@@ -52,7 +52,7 @@
 									
 									<div class="btn-group btn-group-toggle" style="width: 100%" data-toggle="buttons">
 										<label class="btn btn-light">
-											<input type="radio" name="btnTipoUsuario" id="cuidador" value="cuidador">Cuidador
+											<input type="radio" name="btnTipoUsuario" id="cuidador" value="cuidador" required>Cuidador
 										</label>										
 								
 										<label class="btn btn-light">

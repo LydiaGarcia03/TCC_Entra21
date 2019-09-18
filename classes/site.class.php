@@ -22,7 +22,7 @@ class Site{
 		// Verifica erro
 		if(!$this->con){
 			die('erro na conexao');
-			header('location: ../error.php');
+			header('location: error.php');
 		}
 
 
@@ -40,7 +40,7 @@ class Site{
 		session_start();
 
 		// Verifica erro
-		if( (!isset($_SESSION['contratante']) || $_SESSION['contratante'] == false) || (!isset($_SESSION['cuidador']) || $_SESSION['cuidador'] == false) ){
+		if(!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] == false){
 
 			return 0;
 
