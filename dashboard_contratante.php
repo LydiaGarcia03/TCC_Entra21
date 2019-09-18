@@ -37,35 +37,13 @@
 				<p class="mb-0 mt-2">Nome</p>
 			</div>
 
-			<div class="text-center my-3">
-				<li class="nav-item">
-					<small>
-						<a href="editar_perfil.php" class="nav-link text-center p-0">
-							<i class="far fa-fw fa-edit"></i>
-							<span>Editar perfil</span>
-						</a>
-					</small>
-				</li>
-			</div>
-
-			<!-- Divisor -->
-			<hr class="sidebar-divider my-0">
-
-			<!-- Itens Sidebar -->
-			<div class="text-center my-3">
-				<li class="nav-item">
-					<a href="#agenda.php" class="nav-link text-center p-0">
-						<i class="far fa-fw fa-calendar-alt"></i>
-						<span>Agenda</span>
-					</a>
-				</li>
-			</div>
+			
 
 			<div class="text-center my-3">
 				<li class="nav-item">
-					<a href="chat.php" class="nav-link text-center p-0">
+					<a href="solicitar_servico.php" class="nav-link text-center p-0">
 						<i class="far fa-fw fa-comments"></i>
-						<span>Chat</span>
+						<span>Solicitar Serviço</span>
 					</a>
 				</li>
 			</div>
@@ -91,47 +69,7 @@
 		</ul>
 		<!-- Fim Sidebar -->
 
-		<!-- Conteúdo da página -->
-		<div id="content-wrapper" class="d-flex flex-column background_contract">
-			<div id="content">
-
-				<div class="container-fluid">
-					<div class="container">
-
-						<h2 class="my-5">Fazer um agendamento</h2>
-
-						<div class="card card-register mx-auto mt-5">
-							<div class="card-body">
-								
-								<form>
-									<div class="row">
-										<div class="col-3 mb-3">
-											<input type="text" class="form-control" name="nome" id="nome" placeholder="Nome do paciente">
-										</div>
-										<div class="col-3">
-											<input type="text" class="form-control" name="dt_nascimento" id="dt_nascimento" placeholder="Data de nascimento">
-										</div>
-										<div class="col-3">
-											<select class="custom-select">
-												<option selected disabled>Especialidade requerida</option>
-												<option value="c_infantil">Cuidador infantil</option>
-												<option value="c_idoso">Cuidador de idosos</option>
-												<option value="enfermagem">Profissional de saúde</option>
-											</select>
-										</div>
-										<div class="col-3">
-											<input type="text" class="form-control" name="cep" id="cep" placeholder="CEP">
-										</div>
-									</div>
-
-									<a href="solicitar_servico.php"><!--<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Confirmar  agendamento">--></a>
-								</form>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		
 
 			<!-- Footer -->
 			<footer class="sticky-footer bg-white">
