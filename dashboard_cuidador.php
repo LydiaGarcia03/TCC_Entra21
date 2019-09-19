@@ -135,7 +135,6 @@
 				</nav>
 
 				<!-- Begin Page Content -->
-				<div class="container-fluid">
 			<div class="container">
 				<div class="card my-5">
 					<div class="card-header">
@@ -143,7 +142,26 @@
 					</div>
 					<div class="card-body float-left">
 						<i class="far fa-user-circle fa-3x"></i>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<p class="card-text">Tipo do serviço:</p>
+						<p class="card-text">Nome do pasciente:</p>
+						<a href="#" class="btn btn-primary">Detalhes</a>
+					</div>
+					<div class="card-footer text-muted">
+						Dias
+					</div>
+				</div>							
+		</div>
+
+		
+			<div class="container">
+				<div class="card my-5">
+					<div class="card-header">
+						<p class="card-title m-0">#ID</p>
+					</div>
+					<div class="card-body float-left">
+						<i class="far fa-user-circle fa-3x"></i>
+						<p class="card-text">Tipo do serviço:</p>
+						<p class="card-text">Nome do pasciente:</p>
 						<a href="#" class="btn btn-primary">Detalhes</a>
 					</div>
 					<div class="card-footer text-muted">
@@ -153,7 +171,7 @@
 			</div>			
 		</div>
 
-		<div class="container-fluid">
+			
 			<div class="container">
 				<div class="card my-5">
 					<div class="card-header">
@@ -161,25 +179,8 @@
 					</div>
 					<div class="card-body float-left">
 						<i class="far fa-user-circle fa-3x"></i>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						<a href="#" class="btn btn-primary">Detalhes</a>
-					</div>
-					<div class="card-footer text-muted">
-						Dias
-					</div>
-				</div>				
-			</div>			
-		</div>
-
-		<div class="container-fluid">
-			<div class="container">
-				<div class="card my-5">
-					<div class="card-header">
-						<p class="card-title m-0">#ID</p>
-					</div>
-					<div class="card-body float-left">
-						<i class="far fa-user-circle fa-3x"></i>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<p class="card-text">Tipo do serviço:</p>
+						<p class="card-text">Nome do pasciente:</p>
 						<a href="#" class="btn btn-primary">Detalhes</a>
 					</div>
 					<div class="card-footer text-muted">
