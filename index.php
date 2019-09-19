@@ -129,10 +129,10 @@
 
                             <div class="card-body">
                                 <h4 class="card-title">Cuidador infantil</h4>
-                                <p class="card-text">Esse serviço auxilia mulheres que estão gerendo seu primeiro filho.</p>
+                                <p class="card-text">Esse serviço auxilia mães e pais com seus bebês.</p>
                             </div>
                             
-                            <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
+                            <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-01">Ver mais</a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
@@ -142,11 +142,11 @@
                             </div>
 
                             <div class="card-body">
-                                <h4 class="card-title">Profinais de saúde</h4>
-                                <p class="card-text">Esse serviço auxilia pessoas com problemas de saúde ou físico.</p>
+                                <h4 class="card-title">Profissionais de saúde</h4>
+                                <p class="card-text">Esse serviço auxilia pessoas com problemas de saúde, físico, etc.</p>
                             </div>
                             
-                            <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
+                            <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-02">Ver mais</a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
@@ -157,7 +157,7 @@
 
                             <div class="card-body">
                                 <h4 class="card-title">Cuidador de idosos</h4>
-                                <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
+                                <p class="card-text">Esse serviço e para pessoas idosas que precisam de cuidados especiais.</p>
                             </div>
 
                             <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
@@ -243,7 +243,7 @@
                             <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
                         </div> 
                         <div class="mb-2 mt-5">                      
-                            <a href="#" class="card-link text ml-3" data-toggle="modal" data-target="#siteModal-01">Twitter<i class="fab fa-twitter fa-2x mr-3  float-right"></i></a>
+                            <a href="#" class="card-link text ml-3" data-toggle="modal" data-target="#siteModal-02">Twitter<i class="fab fa-twitter fa-2x mr-3  float-right"></i></a>
                         </div>                       
                     </div>
                 </div>
@@ -258,7 +258,7 @@
                             <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
                         </div> 
                         <div class="mb-2 mt-5">                      
-                            <a href="#" class="card-link text ml-3" data-toggle="modal" data-target="#siteModal-01">Facebook<i class="fab fa-facebook-f fa-2x mr-3  float-right"></i></a>
+                            <a href="#" class="card-link text ml-3" data-toggle="modal" data-target="#siteModal-03">Facebook<i class="fab fa-facebook-f fa-2x mr-3  float-right"></i></a>
                         </div>                       
                     </div>
                 </div>                
@@ -333,26 +333,13 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title">Lorem ipsum nam </h5>
+                    <h5 class="modal-title">Cuidador infantil</h5>
                     <button class="close" type="button" data-dismiss="modal">
                         <span>&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum nam nisi aenean viverra cubilia, pretium eleifend porttitor fames egestas porta
-                        pretium,
-                        sed cras vitae etiam ad. massa pulvinar elementum pharetra ad tortor facilisis erat ultrices
-                        cras,
-                        tempor arcu non quisque lorem proin torquent mauris, nullam inceptos sagittis lectus potenti
-                        pellentesque scelerisque ante.
-                        consectetur vulputate praesent nullam vel conubia hac curabitur donec ullamcorper cubilia
-                        auctor, metus dapibus quisque malesuada
-                        dictumst maecenas proin dictum ad. dapibus nunc dictum etiam laoreet a ad iaculis cubilia
-                        blandit faucibus, libero torquent diam in
-                        euismod feugiat sagittis tincidunt mattis himenaeos, hendrerit sodales proin rhoncus sem non
-                        curabitur rutrum nibh.</p>
-
-                   
+                    <p>Esse serviço lhe oferecerá um auxílio de profissionais para as mães e os pais que acabaram de ganhar seu filho, porém, tem medo de machuca-lo ao dar o seu primeiro banho, troca-lo, alimenta-lo, etc. Nossos profissionais podem ajudar você com essas tarefas.</p>                   
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
@@ -366,24 +353,13 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title">Lorem ipsum nam </h5>
+                    <h5 class="modal-title">Profissionais de saúde</h5>
                     <button class="close" type="button" data-dismiss="modal">
                         <span>&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum nam nisi aenean viverra cubilia, pretium eleifend porttitor fames egestas porta
-                        pretium,
-                        sed cras vitae etiam ad. massa pulvinar elementum pharetra ad tortor facilisis erat ultrices
-                        cras,
-                        tempor arcu non quisque lorem proin torquent mauris, nullam inceptos sagittis lectus potenti
-                        pellentesque scelerisque ante.
-                        consectetur vulputate praesent nullam vel conubia hac curabitur donec ullamcorper cubilia
-                        auctor, metus dapibus quisque malesuada
-                        dictumst maecenas proin dictum ad. dapibus nunc dictum etiam laoreet a ad iaculis cubilia
-                        blandit faucibus, libero torquent diam in
-                        euismod feugiat sagittis tincidunt mattis himenaeos, hendrerit sodales proin rhoncus sem non
-                        curabitur rutrum nibh.</p>
+                    <p>Esse serviço ajuda pessoas que sofreram algum tipo de acidente, fizeram uma cirurgia, ou então tenha algum tipo deficiência física ou mental e não conseguem se locomover direito para fazer suas necessidades diárias, pessoas que não conseguem fazer seus curativos ou até mesmo tenha algum tipo de dificuldade para tomar seus remédios.</p>
               
                 </div>
                 <div class="modal-footer">
@@ -398,24 +374,13 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title">Lorem ipsum nam </h5>
+                    <h5 class="modal-title">Cuidador de idosos</h5>
                     <button class="close" type="button" data-dismiss="modal">
                         <span>&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum nam nisi aenean viverra cubilia, pretium eleifend porttitor fames egestas porta
-                        pretium,
-                        sed cras vitae etiam ad. massa pulvinar elementum pharetra ad tortor facilisis erat ultrices
-                        cras,
-                        tempor arcu non quisque lorem proin torquent mauris, nullam inceptos sagittis lectus potenti
-                        pellentesque scelerisque ante.
-                        consectetur vulputate praesent nullam vel conubia hac curabitur donec ullamcorper cubilia
-                        auctor, metus dapibus quisque malesuada
-                        dictumst maecenas proin dictum ad. dapibus nunc dictum etiam laoreet a ad iaculis cubilia
-                        blandit faucibus, libero torquent diam in
-                        euismod feugiat sagittis tincidunt mattis himenaeos, hendrerit sodales proin rhoncus sem non
-                        curabitur rutrum nibh.</p>
+                    <p>Este serviço serve para idosos que precisam de um auxílio médico para tomar seus remédios, idosos que tenham dificuldade para fazer esforços físicos ou até mesmo para ajudar a tratar algum tipo de doença que o impeça de fazer algumas coisas.</p>
            
                 </div>
                 <div class="modal-footer">
