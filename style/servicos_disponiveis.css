@@ -1,7 +1,6 @@
 td, th, tr{
 	padding: .7em;
 	margin: 0;
-	/*border: 1px solid #ccc;*/
 	text-align: center;
 }
 
@@ -35,16 +34,43 @@ table {
 	border:1px solid #CCC;
 }
 
-.conteudo {
-	display: none;
-}
-
 tr{
 	cursor: pointer;
 }
- p.conteudo {
-        display: none;
-        clear: both;
-        margin: 1em 0;
-        padding: 1em 15px;
-        background: #EAEAEA;
+
+
+.conteud {
+	display: none;
+	clear: both;
+	margin: 1em 0;
+	padding: 1em 15px;
+	background: #EAEAEA;
+}
+
+#teste{
+	margin-left: 5px;
+}
+
+.div_aba1{
+	display:none;
+	width: 1041px;
+	height: 129px;
+	border: 1px solid #EAEAEA;
+	background-color: white;"
+}
+
+.div_aba2{
+	display:none;
+	width: 1041px;
+	height: 129px;
+	border: 1px solid #EAEAEA;
+	background-color: white;"
+}
+
+.div_aba3{
+	display:none;
+	width: 1041px;
+	height: 129px;
+	border: 1px solid #EAEAEA;
+	background-color: white;"
+}

@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 	require_once "classes/site.class.php";
 	$site = new Site();
@@ -7,10 +7,9 @@
 		header('Location: error.php');
 	}
 
-?>
-
+ ?>
+ 
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
@@ -136,19 +135,35 @@
 						</tr>
 					</thead>
 					<tbody>
-
-						<tr titulo>
+						<tr>
 							<th scope="row">Caue</th>
 							<td>Cuidado Infantil</td>
 							<td>4h</td>
 							<td>20/10</td>
 							<td>Funeraria</td>
 							<td>Funeraria</td>
-							<td> <button type="button" class="btn btn-outline-info" id="botao-animate" value="slide">Mais</button>  <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
-							<p class="conteudo">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</p>
+							<td> <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba1">Mais</button>  <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
+
+							<div id="div_aba1" style="display: none">
+								<p>Hipertenso: Sim </p> 
+								<p>Diabético: Nao </p>
+								<p>
+									<strong>Descrição:</strgon> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.
+									</p>
+								</div>
+							</tr>
+							<tr id="tr_descricao" style="display: none;">
+								<th scope="row">Nathan</th>
+								<td>Cuidado Infantil</td>
+								<td>0h</td>
+								<td>20/10</td>
+								<td>Funeraria</td>
+								<td>Funeraria</td>
+
+
+							</tr>
+
 						</tr> 
 						<tr>
 							<th scope="row">Nathan</th>
@@ -157,73 +172,101 @@
 							<td>20/10</td>
 							<td>Funeraria</td>
 							<td>Funeraria</td>
-							<td> <button type="button" class="btn btn-outline-info" id="botao-animate" value="slide">Mais</button>  <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
+							<td> <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba2">Mais</button> <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
+
+							<div id="div_aba2" style="display: none">
+								<p>Hipertenso: Sim </p> 
+								<p>Diabético: Nao </p>
+								<p><strong>Descrição:</strgon> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</p>
+							</div>
 						</tr>
-						<tr>
-							<th scope="row">Maicon</th>
-							<td>Cuidado Infantil</td>
-							<td>12h</td>
-							<td>20/10</td>
-							<td>Funeraria</td>
-							<td>Funeraria</td>
-							<p class="conteudo">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</p>
-							<td> <button type="button" class="btn btn-outline-info" id="botao-animate" value="slide">Mais</button> 	 <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+					</tr>
+
+					<tr>
+						<th scope="row">Maicon</th>
+						<td>Cuidado Infantil</td>
+						<td>12h</td>
+						<td>20/10</td>
+						<td>Funeraria</td>
+						<td>Funeraria</td>
+						<td> <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba3">Mais</button> 	 <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
+
+						<div id="div_aba3" style="display: none">
+							<p>Hipertenso: Sim </p> 
+							<p>Diabético: Nao </p>
+							<p><strong>Descrição:</strgon> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</p>
+						</div>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
-	<!-- End of Page Wrapper -->
-	<!-- Footer -->
-	<footer class="sticky-footer bg-white">
-		<div class="container my-auto">
-			<div class="copyright text-center my-auto">
-				<span>Copyright &copy; HCDigital 2019</span>
-			</div>
+</div>
+<!-- End of Page Wrapper -->
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+	<div class="container my-auto">
+		<div class="copyright text-center my-auto">
+			<span>Copyright &copy; HCDigital 2019</span>
 		</div>
-	</footer>
-	<!-- End of Footer -->
+	</div>
+</footer>
+<!-- End of Footer -->
 
-	<!-- Scroll to Top Button-->
-	<a class="scroll-to-top rounded" href="#page-top">
-		<i class="fas fa-angle-up"></i>
-	</a>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+	<i class="fas fa-angle-up"></i>
+</a>
 
-	<!-- Logout Modal-->
-	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja sair</h5>
-					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body">Selecione sair se deseja.</div>
-				<div class="modal-footer">
-					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-					<a class="btn btn-primary" href="index.php">Sair</a>
-				</div>
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja sair</h5>
+				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				Selecione sair se deseja.
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+				<a class="btn btn-primary" href="index.php">Sair</a>
 			</div>
 		</div>
 	</div>
 </div>
+</div>
+
+
+
+
+</div>
 
 <!-- Bootstrap core JavaScript-->
 <script>
-	$(document).ready(function () {
-		$('#botao-animate').click(function () {
-			$('.conteudo').slideToggle('slow');
-		});
-	});
 
-	$('#table').on('click', '.remover-linha', function(){
-		$(this).closest('tr').fadeOut(300);
-	});
+	function mostrar_abas(obj) {
+		document.getElementById('div_aba1').style.display="none";
+		document.getElementById('div_aba2').style.display="none";
+		document.getElementById('div_aba3').style.display="none";
+
+		switch (obj.id) {
+			case 'mostra_aba1':
+			document.getElementById('div_aba1').style.display="block";
+			break
+			case 'mostra_aba2':
+			document.getElementById('div_aba2').style.display="block";
+			break
+			case 'mostra_aba3':
+			document.getElementById('div_aba3').style.display="block";
+			break
+		}
+	}
 
 </script>
 <script src="sbadmin/vendor/jquery/jquery.min.js"></script>
