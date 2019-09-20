@@ -1,13 +1,13 @@
 <?php
 
-	require_once "classes/site.class.php";
-	$site = new Site();
+require_once "classes/site.class.php";
+$site = new Site();
 
-	if($site->session_error() == 0){
+if($site->session_error() == 0){
 		// header('Location: error.php');
-		echo 'droga';
-		var_dump($_SESSION['tipo_usuario']);
-	}
+	echo 'droga';
+	var_dump($_SESSION['tipo_usuario']);
+}
 
 ?>
 
@@ -124,10 +124,10 @@
 									<i class="fas fa-exclamation-circle text-primary mr-3 fa-3x"></i>
 									<div>
 										<div class="small text-gray-500">
-											kdbdbiudaijdba
+											Serviço
 										</div>
 										<span class="font-weight-bold">
-											diuwhwihs
+											Você tem uma nova solicitação de serviço
 										</span>
 									</div>
 								</a>
@@ -137,50 +137,59 @@
 				</nav>
 
 				<!-- Begin Page Content -->
-			<div class="container">
-				<div class="card my-5">
-					<div class="card-header">
-						<p class="card-title m-0">#ID</p>
-					</div>
-					<div class="card-body float-left">
-						<i class="far fa-user-circle fa-3x"></i>
-						<p class="card-text">Tipo do serviço:</p>
-						<p class="card-text">Nome do pasciente:</p>
-						<a href="#" class="btn btn-primary">Detalhes</a>
-					</div>
-					<div class="card-footer text-muted">
-						Dias
-					</div>
-				</div>							
-		</div>
+				<div class="container">
+					<div class="card my-5">
+						<div class="card-header">
+							<p class="card-title m-0">#ID</p>
+							<div class="spinner-grow text-primary float-right" role="status">
+								<span class="sr-only">Loading...</span>
+							</div>
+						</div>
+						<div class="card-body float-left">
+							<i class="far fa-user-circle fa-2x"></i>
+							<p class="card-text">Tipo do serviço:</p>
+							<p class="card-text">Nome do pasciente:</p>
+							<a href="#" class="btn btn-primary">Detalhes</a>
+						</div>
+						<div class="card-footer text-muted">
+							Dias
+						</div>
+					</div>							
+				</div>
 
-		
-			<div class="container">
-				<div class="card my-5">
-					<div class="card-header">
-						<p class="card-title m-0">#ID</p>
-					</div>
-					<div class="card-body float-left">
-						<i class="far fa-user-circle fa-3x"></i>
-						<p class="card-text">Tipo do serviço:</p>
-						<p class="card-text">Nome do pasciente:</p>
-						<a href="#" class="btn btn-primary">Detalhes</a>
-					</div>
-					<div class="card-footer text-muted">
-						Dias
-					</div>
-				</div>				
-			</div>			
-		</div>
+
+				<div class="container">
+					<div class="card my-5">
+						<div class="card-header">
+							<p class="card-title m-0">#ID</p>
+							<div class="spinner-grow text-danger float-right" role="status">
+								<span class="sr-only">Loading...</span>
+							</div>
+						</div>
+						<div class="card-body float-left">
+							<i class="far fa-user-circle fa-2x"></i>
+							<p class="card-text">Tipo do serviço:</p>
+							<p class="card-text">Nome do pasciente:</p>
+							<a href="#" class="btn btn-primary">Detalhes</a>
+						</div>
+						<div class="card-footer text-muted">
+							Dias
+						</div>
+					</div>				
+				</div>			
+			</div>
 
 			
 			<div class="container">
 				<div class="card my-5">
 					<div class="card-header">
 						<p class="card-title m-0">#ID</p>
+						<div class="spinner-grow text-success float-right" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
 					</div>
 					<div class="card-body float-left">
-						<i class="far fa-user-circle fa-3x"></i>
+						<i class="far fa-user-circle fa-2x"></i>
 						<p class="card-text">Tipo do serviço:</p>
 						<p class="card-text">Nome do pasciente:</p>
 						<a href="#" class="btn btn-primary">Detalhes</a>
@@ -192,95 +201,95 @@
 			</div>			
 		</div>
 	</div>
-	
-					
-		<!-- Footer -->
-		<footer class="sticky-footer bg-white">
-			<div class="container my-auto">
-				<div class="copyright text-center my-auto">
-					<span>Copyright &copy; HCDigital 2019</span>
-				</div>
+
+
+	<!-- Footer -->
+	<footer class="sticky-footer bg-white">
+		<div class="container my-auto">
+			<div class="copyright text-center my-auto">
+				<span>Copyright &copy; HCDigital 2019</span>
 			</div>
-		</footer>
-		<!-- End of Footer -->
+		</div>
+	</footer>
+	<!-- End of Footer -->
 
-	</div>
-	<!-- End of Page Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
 
-	<!-- Scroll to Top Button-->
-	<a class="scroll-to-top rounded" href="#page-top">
-		<i class="fas fa-angle-up"></i>
-	</a>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+	<i class="fas fa-angle-up"></i>
+</a>
 
-	<!-- Logout Modal-->
-	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Tem certeza que quer sair</h5>
-					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body">Selecione sair se deseja.</div>
-				<div class="modal-footer">
-					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-					<a class="btn btn-primary" href="index.php">Sair</a>
-				</div>
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Tem certeza que quer sair</h5>
+				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">Selecione sair se deseja.</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+				<a class="btn btn-primary" href="index.php">Sair</a>
 			</div>
 		</div>
 	</div>
+</div>
 
-	<!-- Bootstrap core JavaScript-->
-	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
-	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<!-- Core plugin JavaScript-->
-	<script src="sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
-	<!-- Custom scripts for all pages-->
-	<script src="sbadmin/js/sb-admin-2.min.js"></script>
-	<!-- Page level plugins -->
-	<script src="sbadmin/vendor/chart.js/Chart.min.js"></script>
-	<!-- Page level custom scripts -->
-	<script src="sbadmin/js/demo/chart-area-demo.js"></script>
-	<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
-	<!-- FullCalendar -->
-	<script src='fullcalendar/packages/core/main.js'></script>
-	<script src='fullcalendar/packages/daygrid/main.js'></script>
-	<script src="funcoes.js"></script>
-	<script>
+<!-- Bootstrap core JavaScript-->
+<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
+<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="sbadmin/js/sb-admin-2.min.js"></script>
+<!-- Page level plugins -->
+<script src="sbadmin/vendor/chart.js/Chart.min.js"></script>
+<!-- Page level custom scripts -->
+<script src="sbadmin/js/demo/chart-area-demo.js"></script>
+<script src="sbadmin/js/demo/chart-pie-demo.js"></script>
+<!-- FullCalendar -->
+<script src='fullcalendar/packages/core/main.js'></script>
+<script src='fullcalendar/packages/daygrid/main.js'></script>
+<script src="funcoes.js"></script>
+<script>
 
-		document.addEventListener('DOMContentLoaded', function() {
-			var calendarEl = document.getElementById('calendar');
+	document.addEventListener('DOMContentLoaded', function() {
+		var calendarEl = document.getElementById('calendar');
 
-			var calendar = new FullCalendar.Calendar(calendarEl, {
-				plugins: [ 'dayGrid' ],
-				defaultView: 'dayGridMonth',
-				fixedWeekCount: Boolean, default: true,
-				height: 370,
-				contentHeight: 4,
-				locale: 'pt',
-				events: [{
-					id: 1,
-					title: 'Serviço',
-					start: new Date(2019, 8, 11),
-					allDay: false,
-					className: 'info'
-				}],
-				header: {
-					center: '',
-					right: 'today, prev, next'
-				}
+		var calendar = new FullCalendar.Calendar(calendarEl, {
+			plugins: [ 'dayGrid' ],
+			defaultView: 'dayGridMonth',
+			fixedWeekCount: Boolean, default: true,
+			height: 370,
+			contentHeight: 4,
+			locale: 'pt',
+			events: [{
+				id: 1,
+				title: 'Serviço',
+				start: new Date(2019, 8, 11),
+				allDay: false,
+				className: 'info'
+			}],
+			header: {
+				center: '',
+				right: 'today, prev, next'
+			}
 
-			});
-
-			calendar.render();
 		});
 
-		var agendaFun = 
+		calendar.render();
+	});
+
+	var agendaFun = 
 
 
 
 
-	</script>
+</script>
 </body>
 </html>
