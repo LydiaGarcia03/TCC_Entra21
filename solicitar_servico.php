@@ -4,7 +4,7 @@
 	$site = new Site();
 
 	if(!$site->session_error()){
-		header('Location: error.php');
+		// header('Location: error.php');
 	}
 
 ?>
@@ -63,19 +63,10 @@
 
 			<!-- Itens Sidebar -->
 			<div class="text-center my-3">
-				<li class="nav-item">
-					<a href="#agenda.php" class="nav-link text-center p-0">
-						<i class="far fa-fw fa-calendar-alt"></i>
-						<span>Agenda</span>
-					</a>
-				</li>
-			</div>
-
-			<div class="text-center my-3">
-				<li class="nav-item">
-					<a href="chat.php" class="nav-link text-center p-0">
+				<li class="nav-item active">
+					<a href="solicitar_servico.php" class="nav-link text-center p-0">
 						<i class="far fa-fw fa-comments"></i>
-						<span>Chat</span>
+						<span>Solicitar Serviço</span>
 					</a>
 				</li>
 			</div>

@@ -23,6 +23,8 @@ class Site{
 		if(!$this->con){
 			die('erro na conexao');
 			header('location: error.php');
+		} else{
+			echo 'conexao ok';
 		}
 
 
@@ -37,7 +39,7 @@ class Site{
 
 	public function session_error(){
 
-		// session_start();
+		session_start();
 
 		// Verifica erro
 		if(!isset($_SESSION['tipo_usuario']) || is_null($_SESSION['tipo_usuario'])){

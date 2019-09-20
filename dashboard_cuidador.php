@@ -1,11 +1,13 @@
 <?php
 
-	// require_once "classes/site.class.php";
-	// $site = new Site();
+	require_once "classes/site.class.php";
+	$site = new Site();
 
-	// if(!$site->session_error()){
-	// 	header('Location: error.php');
-	// }
+	if($site->session_error() == 0){
+		// header('Location: error.php');
+		echo 'droga';
+		var_dump($_SESSION['tipo_usuario']);
+	}
 
 ?>
 
@@ -189,26 +191,16 @@
 				</div>				
 			</div>			
 		</div>
-						
-					</div>
+					
+		<!-- Footer -->
+		<footer class="sticky-footer bg-white">
+			<div class="container my-auto">
+				<div class="copyright text-center my-auto">
+					<span>Copyright &copy; HCDigital 2019</span>
 				</div>
-				<!-- End container-fluid -->
-
 			</div>
-			<!-- End of Main Content -->
-
-			<!-- Footer -->
-			<footer class="sticky-footer bg-white">
-				<div class="container my-auto">
-					<div class="copyright text-center my-auto">
-						<span>Copyright &copy; HCDigital 2019</span>
-					</div>
-				</div>
-			</footer>
-			<!-- End of Footer -->
-
-		</div>
-		<!-- End of Content Wrapper -->
+		</footer>
+		<!-- End of Footer -->
 
 	</div>
 	<!-- End of Page Wrapper -->

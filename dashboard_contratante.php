@@ -7,8 +7,8 @@
 	if($site->session_error() == 0){
 		// session_destroy();
 		// header('Location: error.php');
-		var_dump($site->session_error());
-		die();
+		// var_dump($site->session_error());
+		// die();
 		
 	}	
 

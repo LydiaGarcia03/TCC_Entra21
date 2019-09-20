@@ -3,7 +3,11 @@
 	require_once "classes/site.class.php";
 	$site = new Site();
 
-	if(!$site->session_error()){
+	if(!isset($_SESSION))
+		session_start();
+
+	if(!isset($_SESSION['tipo_usuario'])){
+		session_destroy();
 		header('Location: error.php');
 	}
 
