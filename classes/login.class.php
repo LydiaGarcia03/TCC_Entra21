@@ -40,7 +40,7 @@ class Login extends Site{
 				$query = mysqli_query($this->con, $sql);
 				$result = mysqli_fetch_array($query);
 
-				if($result != NULL){
+				if($result !== null){
 
 					// Criando sessões
 					if($user == 'contratante'){
@@ -58,7 +58,7 @@ class Login extends Site{
 
 				} else{
 
-					header('Location: error.php');
+					// header('Location: error.php');
 
 				}
 

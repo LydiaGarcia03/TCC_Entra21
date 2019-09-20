@@ -39,7 +39,7 @@
 							<div class="form-row">
 								<div class="col-md-12">
 									<div class="form-label-group">
-										<input type="password" id="Senha" class="form-control" 
+										<input type="password" name="senha" id="senha" class="form-control" 
 										placeholder="Senha" required="required">    
 									</div>
 								</div>
