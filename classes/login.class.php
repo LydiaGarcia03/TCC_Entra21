@@ -47,11 +47,19 @@ class Login extends Site{
 
                         $_SESSION['tipo_usuario'] = 'contratante';
 
+                        // De acordo com a session do nome e da foto, modificar a sidebar
+                        
+                        // $_SESSION['foto_usuario'] = $result['foto'];
+                        $_SESSION['nome_usuario'] = $result['nome'];
+
 						header('Location: dashboard_contratante.php');
 
 					} else if($user == 'cuidador'){
 
 						$_SESSION['tipo_usuario'] = 'cuidador';
+						// $_SESSION['foto_usuario'] = $result['foto'];
+                        $_SESSION['nome_usuario'] = $result['nome'];
+
 						header('Location: dashboard_cuidador.php');
 
 					}
