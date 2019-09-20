@@ -117,7 +117,7 @@ section .card p {
 .section-3 .box .circulo {
     width: 25px;
     height: 25px;
-    background: rgb(151, 151, 153);
+    background: #E0E0E0;
     border-radius: 50%;
     margin-top: 20px;
     margin-left: 20px;

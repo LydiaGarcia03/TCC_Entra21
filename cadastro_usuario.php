@@ -239,7 +239,6 @@
 
 					<div class="text-center">
 						<a class="d-block small mt-3" href="login.php">Página de login</a>
-						<a class="d-block small" href="esqueceu_senha.php">Esqueceu sua senha?</a>
 					</div>
 
 				</div>

@@ -5,10 +5,11 @@
 	<meta charset="utf-8">
 	<!-- CSS -->   
 	<link href="style/home.css" rel="stylesheet" type="text/css">
+	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body style="background-color: rgba(0, 123, 255, 0.75);">
+<body style="background-color: dodgerblue">
 	<div class="container">
 		<div class="col-lg-4 m-b-3" style="position: absolute; top: 20%; left: 34%">		
 			<div class="card card-register mt-5">
@@ -29,10 +30,11 @@
 			</div>
 		</div>  
 	</div>
-	<a href="index.php">
-		<i style="margin-top: 61%;"class="far fa-arrow-alt-circle-left text-white fa-3x p-3"></i>
-	</a>
 
+	<!-- Button TopPage -->
+	<a class="scroll-to-top rounded d-inline" href="login.php">
+		<i class="fas fa-angle-left"></i>
+	</a>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
