@@ -56,25 +56,25 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/elders-01.jpg" class="img-fluid d-block"  alt="">
+                <img src="img/elders-01.jpg" class="img-fluid d-block"  alt="" id="1">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Lorem Ipsum is simply</h3>
-                    <p>dummy text of the printing and typesetting industry.</p>
+                    <h3 class="text-info" id="1">teste 1 retirando lorem do carroussel</h3>
+                    <p class="text-primary" id="1">gay nathan e</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/elders-02.jpg" class="img-fluid d-block"  alt="">
+                <img src="img/elders-02.jpg" class="img-fluid d-block"  alt="" id="2">
             </div>
             <div class="carousel-caption d-none d-md-block">
-                <h3>Lorem Ipsum is simply</h3>
-                <p>dummy text of the printing and typesetting industry.</p>
+                <h3 class="text-info" id="2">teste 2 retirando lorem do carroussel</h3>
+                <p class="text-primary" id="2">nathan gay e</p>
             </div>
             <div class="carousel-item">
-                <img src="img/elders-03.jpg" class="img-fluid d-block"  alt="">
+                <img src="img/elders-03.jpg" class="img-fluid d-block"  alt="" id="3">
             </div>
             <div class="carousel-caption d-none d-md-block">
-                <h3>Lorem Ipsum is simply</h3>
-                <p>dummy text of the printing and typesetting industry.</p>
+                <h3 class="text-info" id="3">teste 3 retirando lorem do carroussel</h3>
+                <p class="text-primary" id="3">nathan e gay</p>
             </div>
         </div>
         <a href="#carouselsite" class="carousel-control-prev" role="button" data-slide="prev">
@@ -339,7 +339,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Esse serviço lhe oferecerá um auxílio de profissionais para as mães e os pais que acabaram de ganhar seu filho, porém, tem medo de machuca-lo ao dar o seu primeiro banho, troca-lo, alimenta-lo, etc. Nossos profissionais podem ajudar você com essas tarefas.</p>                   
+                    <p>Esse serviço lhe oferecerá um auxílio de profissionais para as mães e os pais que acabaram de ganhar seu filho, porém, tem medo de machucá-lo ao dar o seu primeiro banho, troca-lo, alimenta-lo, etc. Nossos profissionais podem ajudar você com essas tarefas.</p>                   
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
@@ -380,7 +380,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Este serviço serve para idosos que precisam de um auxílio médico para tomar seus remédios, idosos que tenham dificuldade para fazer esforços físicos ou até mesmo para ajudar a tratar algum tipo de doença que o impeça de fazer algumas coisas.</p>
+                    <p>Esse serviço lhe oferece um auxílio médico para idosos. Nesse serviço o acompanhante podera ajudar o paciente a se locomover, fazer exercícios físicos, fará companhia para o paciente, ajudará o paciente a tomar seus remédios e pode auxiliar em diversas atividades que o paciente tenha dificuldades.</p>
            
                 </div>
                 <div class="modal-footer">
