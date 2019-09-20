@@ -56,25 +56,25 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/elders-01.jpg" class="img-fluid d-block"  alt="" id="1">
+                <img src="img/elders-01.jpg" class="img-fluid d-block"  alt="">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3 class="text-info" id="1">teste 1 retirando lorem do carroussel</h3>
-                    <p class="text-primary" id="1">gay nathan e</p>
+                    <h3>Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/elders-02.jpg" class="img-fluid d-block"  alt="" id="2">
+                <img src="img/elders-02.jpg" class="img-fluid d-block"  alt="">
             </div>
             <div class="carousel-caption d-none d-md-block">
-                <h3 class="text-info" id="2">teste 2 retirando lorem do carroussel</h3>
-                <p class="text-primary" id="2">nathan gay e</p>
+                <h3>Lorem ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet</p>
             </div>
             <div class="carousel-item">
-                <img src="img/elders-03.jpg" class="img-fluid d-block"  alt="" id="3">
+                <img src="img/elders-03.jpg" class="img-fluid d-block"  alt="">
             </div>
             <div class="carousel-caption d-none d-md-block">
-                <h3 class="text-info" id="3">teste 3 retirando lorem do carroussel</h3>
-                <p class="text-primary" id="3">nathan e gay</p>
+                <h3>Lorem ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet</p>
             </div>
         </div>
         <a href="#carouselsite" class="carousel-control-prev" role="button" data-slide="prev">

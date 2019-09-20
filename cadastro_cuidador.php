@@ -1,9 +1,9 @@
-<?php
+<!-- <?php
 
-	require_once "classes/cadastro_cuidador.class.php";
-	$cadastro = new Cadastro_cuidador();
+	//require_once "classes/cadastro_cuidador.class.php";
+	//$cadastro = new Cadastro_cuidador();
 
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -152,7 +152,7 @@
 							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="password" name="senha" id="senha" class="form-control" 
-									placeholder="Senha" required>    
+									placeholder="Senha" minlength="8" maxlength="16" required>    
 								</div>
 							</div>
 
@@ -188,7 +188,7 @@
 							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="number" name="numeroCasa" id="numeroCasa" class="form-control" 
-									placeholder="Número da residência" required autofocus>    
+									placeholder="Número da residência" maxlength="5" minlength="2" required autofocus>    
 								</div>
 							</div>
 						</div>
@@ -206,7 +206,7 @@
 							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="text" name="cidade" id="cidade" class="form-control" 
-									placeholder="Cidade" required autofocus disabled>    
+									placeholder="Cidade" maxlength="6" autocomplete="off" required autofocus disabled>    
 								</div>
 							</div>
 						</div>
@@ -354,7 +354,7 @@
 	
 	<!-- JQuery Mask -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"/></script>
+	<script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
 
 	<script type="text/javascript">
 		$(document).ready(function(){
