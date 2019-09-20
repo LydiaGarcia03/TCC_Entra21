@@ -19,66 +19,17 @@ if($site->session_error() == 0){
 
         <!-- Begin Page Content -->
         <div class="container">
-            <div class="card my-5">
-                <div class="card-header">
-                    <p class="card-title m-0">#ID</p>
-                    <div class="spinner-grow text-primary float-right" role="status">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                </div>
+            <div class="card my-5 ml-5" style=" width: 890px; height: 25%;">
+                
                 <div class="card-body float-left">
-                    <i class="far fa-user-circle fa-2x"></i>
+                	<h5>#ID</h5>
+                	<hr>
+                    <i class="far fa-user-circle fa-3x float-right mr-5"></i>
+                     <p class="card-text">Nome do pasciente:</p>
                     <p class="card-text">Tipo do serviço:</p>
-                    <p class="card-text">Nome do pasciente:</p>
-                    <a href="#" class="btn btn-primary">Detalhes</a>
-                </div>
-                <div class="card-footer text-muted">
-                    Dias
                 </div>
             </div>
         </div>
-
-
-        <div class="container">
-            <div class="card my-5">
-                <div class="card-header">
-                    <p class="card-title m-0">#ID</p>
-                    <div class="spinner-grow text-danger float-right" role="status">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                </div>
-                <div class="card-body float-left">
-                    <i class="far fa-user-circle fa-2x"></i>
-                    <p class="card-text">Tipo do serviço:</p>
-                    <p class="card-text">Nome do pasciente:</p>
-                    <a href="#" class="btn btn-primary">Detalhes</a>
-                </div>
-                <div class="card-footer text-muted">
-                    Dias
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="card my-5">
-                <div class="card-header">
-                    <p class="card-title m-0">#ID</p>
-                    <div class="spinner-grow text-success float-right" role="status">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                </div>
-                <div class="card-body float-left">
-                    <i class="far fa-user-circle fa-2x"></i>
-                    <p class="card-text">Tipo do serviço:</p>
-                    <p class="card-text">Nome do pasciente:</p>
-                    <a href="#" class="btn btn-primary">Detalhes</a>
-                </div>
-                <div class="card-footer text-muted">
-                    Dias
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <!-- SCRIPT PARA CONVERTER DEPOIS... -->
