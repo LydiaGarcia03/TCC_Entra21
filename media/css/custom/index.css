@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+html, body {
+    background: #fafafa;
+    color: #1BBBFB;
+  }
+
+.carousel-inner img{
+	width: 1980px;
+	height:	500px;
+}
+
+.servicos {
+	background: #fff;
+	border-radius: 5px;
+}
+
+.servico .card {
+
+}
+
+.servicos img {
+	width: 300px;
+	height: 150px;
+}
+.row{
+	margin-left: auto !important; 
+	margin-right: auto !important; 
+}
+#tbConosco img{
+	margin-left: -21px;
+}
