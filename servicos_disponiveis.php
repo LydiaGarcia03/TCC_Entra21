@@ -257,14 +257,14 @@
 
 		switch (obj.id) {
 			case 'mostra_aba1':
-			document.getElementById('div_aba1').style.display="block";
-			break
+				document.getElementById('div_aba1').style.display="block";
+				break;
 			case 'mostra_aba2':
-			document.getElementById('div_aba2').style.display="block";
-			break
+				document.getElementById('div_aba2').style.display="block";
+				break;
 			case 'mostra_aba3':
-			document.getElementById('div_aba3').style.display="block";
-			break
+				document.getElementById('div_aba3').style.display="block";
+				break;
 		}
 	}
 
