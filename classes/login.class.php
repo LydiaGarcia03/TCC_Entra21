@@ -40,19 +40,13 @@ class Login extends Site{
 				$query = mysqli_query($this->con, $sql);
 				$result = mysqli_fetch_array($query);
 
-				var_dump($result);
-				die();
-
 				if($result != NULL){
 
 					// Criando sessões
 					if($user == 'contratante'){
 
 						$_SESSION['tipo_usuario'] = 'contratante';
-						// TESTE
-						echo 'foi';
-						sleep(10);
-						// END TESTE
+						
 						header('Location: dashboard_contratante.php');
 
 					} else if($user == 'cuidador'){
