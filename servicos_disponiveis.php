@@ -4,7 +4,7 @@
 	$site = new Site();
 
 	if(!$site->session_error()){
-		header('Location: error.php');
+		// header('Location: error.php');
 	}
 
 ?>
@@ -12,8 +12,10 @@
 <?php require_once('includes/header.php'); ?>
 <?php // Inclusão da NAVBAR lateral do sistema ?>
 <?php require_once('includes/navbar.php'); ?>
-    <div id="content">
+<!--linkando css -->
+<link rel="stylesheet" type="text/css" href="media/css/custom/servicos_disponiveis.css">
 
+    <div id="content">
         <!-- Button TopPage -->
         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
@@ -28,10 +30,12 @@
                     <th scope="col" class="py-0">Dia</th>
                     <th scope="col" class="py-0">Funcionarios <br> necessitados</th>
                     <th scope="col" class="py-0">Funcionarios <br> aceitos</th>
+                 	<th scope="col" class="py-0">&nbsp</th>
+                    <th scope="col" class="py-0">&nbsp</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr id="tr_servico">
                     <th scope="row">Caue</th>
                     <td>Cuidado Infantil</td>
                     <td>4h</td>
@@ -39,6 +43,8 @@
                     <td>Funeraria</td>
                     <td>Funeraria</td>
                     <td> <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba1">Mais</button>  <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
+                    <th scope="col" class="py-0">&nbsp</th>
+
 
                     <div id="div_aba1" style="display: none">
                         <p>Hipertenso: Sim </p>
@@ -61,7 +67,7 @@
                     </tr>
 
                 </tr>
-                <tr>
+                <tr id="tr_servico">
                     <th scope="row">Nathan</th>
                     <td>Cuidado Infantil</td>
                     <td>8h</td>
@@ -69,6 +75,7 @@
                     <td>Funeraria</td>
                     <td>Funeraria</td>
                     <td> <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba2">Mais</button> <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
+                    <th scope="col" class="py-0">&nbsp</th>
 
                     <div id="div_aba2" style="display: none">
                         <p>Hipertenso: Sim </p>
@@ -79,7 +86,7 @@
                 </tr>
             </tr>
 
-            <tr>
+            <tr id="tr_servico">
                 <th scope="row">Maicon</th>
                 <td>Cuidado Infantil</td>
                 <td>12h</td>
@@ -87,6 +94,7 @@
                 <td>Funeraria</td>
                 <td>Funeraria</td>
                 <td> <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba3">Mais</button> 	 <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
+                <th scope="col" class="py-0">&nbsp</th>
 
                 <div id="div_aba3" style="display: none">
                     <p>Hipertenso: Sim </p>

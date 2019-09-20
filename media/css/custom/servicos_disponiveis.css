@@ -4,23 +4,14 @@ td, th, tr{
 	text-align: center;
 }
 
-tr:hover{
-	background-color: #EAEAEA;
-	margin-top: 5px;
-}
-
-p.neat {
-	display: none;
-	clear: both;
-	margin: 1em 0;
-	padding: 1em 15px;
-	width:100px;
-	background: #0F67A1;
-}
-
 table {
 	border-collapse:collapse;
 	border:1px solid #CCC;
+}
+
+#tr_servico:hover{
+	cursor: pointer;
+	background-color: #EAEAEA;
 }
 
 #tabela tr {
@@ -32,23 +23,6 @@ table {
 	height:40px;
 	padding:10px;
 	border:1px solid #CCC;
-}
-
-tr{
-	cursor: pointer;
-}
-
-
-.conteud {
-	display: none;
-	clear: both;
-	margin: 1em 0;
-	padding: 1em 15px;
-	background: #EAEAEA;
-}
-
-#teste{
-	margin-left: 5px;
 }
 
 .div_aba1{
@@ -74,3 +48,8 @@ tr{
 	border: 1px solid #EAEAEA;
 	background-color: white;"
 }
+
+
+
+
+

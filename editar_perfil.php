@@ -7,8 +7,8 @@
 		session_start();
 
 	if(!isset($_SESSION['tipo_usuario'])){
-		session_destroy();
-		header('Location: error.php');
+		// session_destroy(   );
+		// header('Location: error.php');
 	}
 
 ?>
