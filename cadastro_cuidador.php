@@ -10,18 +10,27 @@
 <head>
 	<title>HCD | Cadastro</title>
 	<meta charset="utf-8">
-	<!-- CSS -->    
-	<link href="style/home.css" rel="stylesheet" type="text/css">
-	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="media/css/custom/cadastro_cuidador.css" rel="stylesheet" type="text/css">
+    <link href="media/css/custom/style.css" rel="stylesheet" type="text/css">
+    <link href="media/css/custom/style_blog.css" rel="stylesheet" type="text/css">
+
+    <!-- ============ RESOURCES ============ -->
+    <!-- Boostrap -->
+    <link href="media/css/resource/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Datepicker -->
+    <link href="media/css/resource/datepicker.css" rel="stylesheet" type="text/css">
+
+    <!-- SBAdmin -->
+    <link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet" type="text/css">
 	<!-- CEP -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
 
-        $(document).ready(function() {
 
-            function limpa_formulário_cep() {
+		$(document).ready(function() {
+
+			function limpa_formulário_cep() {
                 // Limpa valores do formulário de cep.
                 $("#rua").val("");
                 $("#bairro").val("");
@@ -53,7 +62,7 @@
                         //Consulta o webservice viacep.com.br/
                         $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
 
-                            if (!("erro" in dados)) {
+                        	if (!("erro" in dados)) {
                                 //Atualiza os campos com os valores da consulta.
                                 $("#rua").val(dados.logradouro);
                                 $("#bairro").val(dados.bairro);
@@ -248,11 +257,11 @@
 					<!-- Dados acadêmicos -->
 					<div class="form-group">
 						<div class="form-row">
-							 <div class="col-md-12">
-							 	<div class="form-label-group">
-							 		<input type="text" id="num_coren" name="num_coren" placeholder="Número do Coren" class="form-control">
-							 	</div>
-							 </div>
+							<div class="col-md-12">
+								<div class="form-label-group">
+									<input type="text" id="num_coren" name="num_coren" placeholder="Número do Coren" class="form-control">
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -290,12 +299,13 @@
 				
 			</div>
 		</div>
-	</div>
 
+	</div>
 	<!-- Button TopPage -->
 	<a class="scroll-to-top rounded d-inline" href="index.php">
 		<i class="fas fa-angle-left"></i>
 	</a>
+	
 
 	<!-- Bootstrap core JavaScript-->
 	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
