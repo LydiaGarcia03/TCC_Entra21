@@ -15,8 +15,8 @@ html, body {
 	border-radius: 5px;
 }
 
-.servico .card {
-
+.servicos .card {
+ width: 18rem;
 }
 
 .servicos img {

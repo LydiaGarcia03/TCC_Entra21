@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
-    <link href="style/index.css" rel="stylesheet" type="text/css">
+    <link href="media/css/custom/index.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -43,365 +43,408 @@
             <a href="login.php" class="btn btn-outline-light btn-sm mr-3">Login</a>
             <a href="cadastro_usuario.php" class="btn btn-outline-light btn-sm">Cadastro</a>
 
-    </nav>
+        </nav>
 
-    <!-- CARROSEL -->
-    <div id="carouselsite" class="carousel slide" data-ride="carousel">
+        <!-- CARROSEL -->
+        <div id="carouselsite" class="carousel slide" data-ride="carousel">
 
-        <ol class="carousel-indicators">
-            <li data-target="#carouselsite" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselsite" data-slide-to="1"></li>
-            <li data-target="#carouselsite" data-slide-to="2"></li>
-        </ol>
+            <ol class="carousel-indicators">
+                <li data-target="#carouselsite" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselsite" data-slide-to="1"></li>
+                <li data-target="#carouselsite" data-slide-to="2"></li>
+            </ol>
 
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/elders-01.jpg" class="img-fluid d-block"  alt="">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="media/img/elders-01.jpg" class="img-fluid d-block"  alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Lorem ipsum dolor</h3>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="media/img/elders-02.jpg" class="img-fluid d-block"  alt="">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="media/img/elders-03.jpg" class="img-fluid d-block"  alt="">
+                </div>
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Lorem ipsum dolor</h3>
                     <p>Lorem ipsum dolor sit amet</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="img/elders-02.jpg" class="img-fluid d-block"  alt="">
-            </div>
-            <div class="carousel-caption d-none d-md-block">
-                <h3>Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet</p>
-            </div>
-            <div class="carousel-item">
-                <img src="img/elders-03.jpg" class="img-fluid d-block"  alt="">
-            </div>
-            <div class="carousel-caption d-none d-md-block">
-                <h3>Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet</p>
-            </div>
+            <a href="#carouselsite" class="carousel-control-prev" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a href="#carouselsite" class="carousel-control-next" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
         </div>
-        <a href="#carouselsite" class="carousel-control-prev" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a href="#carouselsite" class="carousel-control-next" role="button" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-    </div>
 
 
-    <!-- Por que criamos -->
-    
-    <div class="container bg-white">
-        <div class="row ">
-            <div class="col-12 text-center my-5">
-                <h3 class="mb-5">Por que criamos o HCDigital?</h3>            
-            </div>
-            <div class="row mb-4">
-                <div class="col-6">
-                    <img src="img/dashboard.jpeg" alt="" style="width: 500px;">
+        <!-- Por que criamos -->
+
+        <div class="container bg-white">
+            <div class="row ">
+                <div class="col-12 text-center my-5">
+                    <h3 class="mb-5">COMO FUNCIONA</h3>            
                 </div>
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <img src="media/img/dashboard.jpeg" alt="" style="width: 500px;">
+                    </div>
                     <!-- Texto Por que criamos o HCDigital -->
-                <div class="col-6 ">
-                    <h2 class="py-3">Pensando no futuro</h2>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-                        Et nemo amet qui ex odio perspiciatis aliquid ipsa accusamus <br />
-                        explicabo aperiam, animi corporis vel quo! Quos quasi labore <br />
-                        impedit nostrum vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-                        Et nemo amet qui ex odio perspiciatis aliquid ipsa accusamus <br />
-                        explicabo aperiam, animi corporis vel quo! Quos quasi labore <br />
-                        impedit nostrum vel.Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
-                        Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-     <div class="container servicos">
-        <div class="row m-5">
-            <div class="col-12 text-center my-5">
-
-                <h2 class="mb-5">Serviços</h2>
-
-                <div class="row justify-content-sm-center">
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card mb-5">
-                            <div class="mx-auto">
-                                <img src="img/gravida.png" alt="" class="card-top w-50">
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="card-title">Cuidador infantil</h4>
-                                <p class="card-text">Esse serviço auxilia mães e pais com seus bebês.</p>
-                            </div>
-                            
-                            <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-01">Ver mais</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card mb-5">
-                            <div class="mx-auto">
-                                <img src="img/cadeirante.png" alt="" class="card-top w-50">
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="card-title">Profissionais de saúde</h4>
-                                <p class="card-text">Esse serviço auxilia pessoas com problemas de saúde, físico, etc.</p>
-                            </div>
-                            
-                            <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-02">Ver mais</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card mb-5">
-                            <div class="mx-auto">
-                                <img src="img/medica.png" alt="" class="card-top w-50">
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="card-title">Cuidador de idosos</h4>
-                                <p class="card-text">Esse serviço e para pessoas idosas que precisam de cuidados especiais.</p>
-                            </div>
-
-                            <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- TRABALHE CONOSCO -->
-    <div class="jumbotron jumbotron-fluid bg-primary mt-5" id="tbConosco">
-        <div class="row text-white text-left">
-            <div class="container  py-3">
-                <div class="col-lg-8 float-left ">
-                    <h3 class="py-1">QUER FAZER PARTE DA EQUIPE HCDIGITAL?<br /> JUNTE-SE A NÓS!</h3>
-                    <p class="py-3">Você define os seus horários e dias de atendimento,<br />com total controle sobre a sua
-                        agenda.</p>
-                    <div class="text-center">
-                        <div class="col-md-3 mb-1 float-left mr-5">
-                            <span class="fa-stack fa-3x">
-                                <i class="fas fa-circle fa-stack-2x "></i>
-                                <i class="fas fa-clipboard-list fa-stack-1x fa-inverse text-primary"></i>
-                            </span>
-                            <p class="text-white mt-2">Cadastro <br /> cadastre seus dados</p>                           
-                        </div>
-                        <div class="col-md-3 mb-1 float-left mr-5">
-                            <span class="fa-stack fa-3x">
-                                <i class="fas fa-circle fa-stack-2x "></i>
-                                <i class="fas fa-user-friends fa-stack-1x fa-inverse text-primary"></i>
-                            </span>
-                            <p class="text-white mt-2"> Aprovação <br/>analisaremos cuidadosamente dados</p>
-                        </div>
-                        <div class="col-md-3 mb-1 float-left mr-5">
-                            <span class="fa-stack fa-3x">
-                                <i class="fas fa-circle fa-stack-2x "></i>
-                                <i class="fas fa-user-friends fa-stack-1x fa-inverse text-primary"></i>
-                            </span>
-                            <p class="text-white mt-2">OK <br />Já pode trabalhar na plataforma</p>
-                        </div>
-                        <a href="cadastro_cuidador.php" class="btn btn-lg btn-light mt-4 px-5 py-2 text-center text-dark">Quero trabalhar na HCDigital</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 float-left my-auto">
-                    <img src="img/equipe.jpg" alt="" class="mt-4">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- REDES SOCIAL -->
-    <div class="container bg-white">
-        <div class="row m-5">
-            <div class="col-12 text-center">
-                <h3 class="mb-5 mt-5">Siga nossas redes</h3>
-            </div>
-
-            <div class="row justify-content-sm-center mb-3">
-                <div class="col-sm-6 col-md-4">
-                    <div class="card mb-5">
-                        <div class="mx-auto">
-                            <img src="img/item-01.jpg" alt="" class="card-top" style="width: 300px">
-                        </div>
-
-                        <div class="card-body">
-                            <h4 class="card-title">cubilia auctor</h4>
-                            <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
-                        </div> 
-                        <div class="mb-2 mt-5">                      
-                            <a href="#" class="card-link text ml-3" data-toggle="modal" data-target="#siteModal-01">Instagram<i class="fab fa-instagram fa-2x mr-3  float-right"></i></a>
-                        </div>                       
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="card mb-5">
-                        <div class="mx-auto">
-                            <img src="img/item-01.jpg" alt="" class="card-top" style="width: 300px">
-                        </div>
-
-                        <div class="card-body">
-                            <h4 class="card-title">cubilia auctor</h4>
-                            <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
-                        </div> 
-                        <div class="mb-2 mt-5">                      
-                            <a href="#" class="card-link text ml-3" data-toggle="modal" data-target="#siteModal-02">Twitter<i class="fab fa-twitter fa-2x mr-3  float-right"></i></a>
-                        </div>                       
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="card mb-5">
-                        <div class="mx-auto">
-                            <img src="img/item-01.jpg" alt="" class="card-top" style="width: 300px">
-                        </div>
+                    <div class="col-6 ">
+                        <h2 class="py-3">Pensando no futuro</h2>
                         
-                        <div class="card-body">
-                            <h4 class="card-title">cubilia auctor</h4>
-                            <p class="card-text">Lorem ipsum nam nisi aenean viverra cubilia.</p>
-                        </div> 
-                        <div class="mb-2 mt-5">                      
-                            <a href="#" class="card-link text ml-3" data-toggle="modal" data-target="#siteModal-03">Facebook<i class="fab fa-facebook-f fa-2x mr-3  float-right"></i></a>
-                        </div>                       
+                        Home Care Digital é uma plataforma que, por meio da tecnologia promove a contração entre prestador de saúde e pessoas que busca profissionais na sua região para apoio no cuidado de seus entes queridos em domicilio, profissionais como: Téc. de Enfermagem, Aux. de Enfermagem, Enfermeiros(a), Cuidador(a) de Idosos, Cuidador(a) de Crianças e serviços pós operatórios para um atendimento em domicílio imediato ou programado.
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
-    </div>
 
 
+        <div class="container servicos">
+            <div class="row m-5">
+                <div class="col-12 text-center my-5">
 
-    <!-- Formulario -->
+                    <h2 class="mb-5">PROFISSINAIS</h2>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="display-5"><i class="fas fa-paper-plane text-primary" aria-hidden="true"></i> CONTATO</h1>
-            </div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-sm-12 col-md-10 col-lg-8">
-            <form id="contactForm" name="sentMessage" novalidate="novalidate">
-                <div class="form-row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="inputNome">Nome</label>
-                            <input class="form-control" id="inputNome" type="text" placeholder="Nome">
+                    <div class="row justify-content-sm-center">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card mb-5">
+                                <div class="mx-auto">
+                                    <img src="media/img/gravida.png" alt="" class="card-top w-50">
+                                </div>
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Cuidador(a) de crianças</h4>
+                                    <p class="card-text">Auxilia mães e pais com seus bebês.</p>
+                                </div>
+
+                                <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-01">Ver mais</a>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="inputEmail">Email</label>
-                            <input class="form-control" id="V" type="email" placeholder="Email">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card mb-5">
+                                <div class="mx-auto">
+                                    <img src="media/img/cadeirante.png" alt="" class="card-top w-50">
+                                </div>
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Profissionais de saúde</h4>
+                                    <p class="card-text">Aux. de enfermagem, Téc.(a) de enfermagem, Enfermeiro(a).</p>
+                                </div>
+
+                                <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-02">Ver mais</a>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="inputTel">Telefone</label>
-                            <input class="form-control" id="inputTel" type="tel" placeholder="Telefone">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card mb-5">
+                                <div class="mx-auto">
+                                    <img src="media/img/medica.png" alt="" class="card-top w-50">
+                                </div>
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Cuidador(a) de idosos </h4>
+                                    <p class="card-text">Esse serviço e para pessoas idosas que precisam de cuidados especiais.</p>
+                                </div>
+
+                                <a href="#" class="card-link btn btn-primary rounded-bottom" data-toggle="modal" data-target="#siteModal-03">Ver mais</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="inputMsg">Mensagem</label>
-                            <textarea style="resize: none;" class="form-control" id="inputMsg" rows="8"
+                </div>
+            </div>
+        </div>
+
+        <!-- TRABALHE CONOSCO -->
+        <div class="jumbotron jumbotron-fluid bg-primary mt-5" id="tbConosco">
+            <div class="row text-white text-left">
+                <div class="container  py-3">
+                    <div class="col-lg-8 float-left ">
+                        <h3 class="py-1">QUER FAZER PARTE DA EQUIPE HCDIGITAL?<br /> JUNTE-SE A NÓS!</h3>
+                        <p class="py-3">Você define os seus horários e dias de atendimento,<br />com total controle sobre a sua
+                        agenda.</p>
+                        <div class="text-center">
+                            <div class="col-md-3 mb-1 float-left mr-5">
+                                <span class="fa-stack fa-3x">
+                                    <i class="fas fa-circle fa-stack-2x "></i>
+                                    <i class="fas fa-clipboard-list fa-stack-1x fa-inverse text-primary"></i>
+                                </span>
+                                <p class="text-white mt-2">Cadastro <br /> cadastre seus dados</p>                           
+                            </div>
+                            <div class="col-md-3 mb-1 float-left mr-5">
+                                <span class="fa-stack fa-3x">
+                                    <i class="fas fa-circle fa-stack-2x "></i>
+                                    <i class="fas fa-user-friends fa-stack-1x fa-inverse text-primary"></i>
+                                </span>
+                                <p class="text-white mt-2"> Aprovação <br/>analisaremos cuidadosamente dados</p>
+                            </div>
+                            <div class="col-md-3 mb-1 float-left mr-5">
+                                <span class="fa-stack fa-3x">
+                                    <i class="fas fa-circle fa-stack-2x "></i>
+                                    <i class="fas fa-user-friends fa-stack-1x fa-inverse text-primary"></i>
+                                </span>
+                                <p class="text-white mt-2">OK <br />Já pode trabalhar na plataforma</p>
+                            </div>
+                            <a href="cadastro_cuidador.php" class="btn btn-lg btn-light mt-4 px-5 py-2 text-center text-dark">Quero trabalhar na HCDigital</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 float-left my-auto">
+                        <img src="img/equipe.jpg" alt="" class="mt-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+
+
+        <!-- Formulario -->
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-5"><i class="fas fa-paper-plane text-primary" aria-hidden="true"></i> CONTATO</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10 col-lg-8">
+                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNome">Nome</label>
+                                <input class="form-control" id="inputNome" type="text" placeholder="Nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail">Email</label>
+                                <input class="form-control" id="V" type="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTel">Telefone</label>
+                                <input class="form-control" id="inputTel" type="tel" placeholder="Telefone">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputMsg">Mensagem</label>
+                                <textarea style="resize: none;" class="form-control" id="inputMsg" rows="8"
                                 placeholder="Como podemos ajudar?"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <div class="form-check">
+                                    <label class="custom-form-label">
+                                        <input type="checkbox" class="custom-form-input" name=""> Desejo receber novidades por e-mail
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-sm-12">
-                            <div class="form-check">
-                                <label class="custom-form-label">
-                                    <input type="checkbox" class="custom-form-input" name=""> Desejo receber novidades por e-mail
-                                </label>
-                            </div>
-                        </div>
+                        <button class="btn btn-primary btn-lg">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+
+        <footer class="btn-primary text-white py-2 mt-4">
+            <div class="container">
+                <div class="footer-copyright text-center py-3"> HCDigital © 2019 Copyright</div>
+            </div>
+        </footer>
+
+        <!-- modal 01 -->
+        <div class="modal fade" id="siteModal-01" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Cuidador infantil</h5>
+                        <button class="close" type="button" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2></h2>
+                        <p></p>
+
+                        <ul>
+                            <li>Acompanhamento a exames</li>
+                            <li>Acompanhamento a passeios</li>
+                            <li>Acompanhamentos em Hospitais e Clínicas </li>
+                            <li>Atendimento Diário (Até 12 horas)</li>
+                            <li>Cuidados com a higiene</li>
+                            <li>Conforto e alimentação </li>
+                            <li>Observar possíveis alterações no estado geral da criança </li>
+                            <li>Zelar pela integridade física</li>
+                            <li>Prestar primeiros socorros </li>
+                            <li>Promover atividades lúdicas e de entretenimento</li>
+                        </ul>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
                     </div>
                 </div>
-                <div class="form-row">
-                    <button class="btn btn-primary btn-lg">Enviar</button>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
+        <!-- modal 02-->
+        <div class="modal fade" id="siteModal-02" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
 
-    <!-- Copyright -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">Profissionais de saúde</h5>
+                        <button class="close" type="button" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>Auxiliar de enfermagem</h2>
+                        <p>O Auxiliar de enfermagem ele está apto a realizar curativos, aplicar vacinas, injeções, administrar medicamentos, higienizar o paciente, alimentá-lo, entre outras atividades de baixa complexidade.</p>
 
-    <footer class="btn-primary text-white py-2 mt-4">
-        <div class="container">
-            <div class="footer-copyright text-center py-3"> HCDigital © 2019 Copyright</div>
-        </div>
-    </footer>
+                        <h3>Alguns Serviços</h3>
 
-    <!-- modal 01 -->
-    <div class="modal fade" id="siteModal-01" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
+                        <ul>
+                            <li>companhamento a exames</li>
+                            <li>Acompanhamento a passeios</li>
+                            <li>Acompanhamentos em internações de Hospitais, Clínicas e Instituição de Longa Permanência ILPIs </li>
+                            <li>Atendimento Diário (Até 12 horas)</li>
+                            <li>Administração de medicamentos (somente com prescrição médica)</li>
+                            <li>Banho, higiene e conforto </li>
+                            <li>Monitoramento dos sinais vitais (temperatura, pressão arterial, batimentos cardíacos, frequência respiratória)</li>
+                            <li>Teste de Glicose</li>
+                            <li>Nebulização</li>
+                            <li>Cuidados pós-operatórios </li>
+                            <li>Curativos Simples</li>
+                        </ul>
+                        <p>Administração de medicamentos somente com prescrição médica</p>
 
-                <div class="modal-header">
-                    <h5 class="modal-title">Cuidador infantil</h5>
-                    <button class="close" type="button" data-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Esse serviço lhe oferecerá um auxílio de profissionais para as mães e os pais que acabaram de ganhar seu filho, porém, tem medo de machucá-lo ao dar o seu primeiro banho, troca-lo, alimenta-lo, etc. Nossos profissionais podem ajudar você com essas tarefas.</p>                   
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
+                        <h2>Técnico(a) de enfermagem</h2>
+                        <p></p>
+
+                        <h3>Alguns Serviços</h3>
+
+                        <ul>
+                            <li>Acompanhamento a exames</li>
+                            <li>Acompanhamento a passeios</li>
+                            <li>Acompanhamentos em internações de Hospitais, Clínicas e Instituição de Longa Permanência ILPIs</li>
+                            <li>Atendimento Diário (Até 12 horas)</li>
+                            <li>Administração de medicamentos (somente com prescrição médica)</li>
+                            <li>Banho, higiene e conforto</li>
+                            <li>Monitoramento dos sinais vitais (temperatura, pressão arterial, batimentos cardíacos, frequência respiratória) </li>
+                            <li>Teste de Glicose</li>
+                            <li>Nebulização</li>
+                            <li>Prevenção de escaras</li>
+                            <li>Cuidados  pós-operatórios</li>
+                            <li>Higienização e cuidados com sondas, traqueostomia, ostomias</li>
+                            <li>Curativo de ferida aberta </li>
+                            <li>Curativo de ferida operatória</li>
+                            <li>Administração dieta enteral</li>
+                            <li>Cuidados com a pele ao redor da gastrostomia</li>
+                            <li>Esvaziamento e higienização da bolsa de colostomia e ileostomia</li>
+                            <li>Cuidados com sonda vesical de demora</li>
+                        </ul>
+                        <p>Administração de medicamentos somente com prescrição médica</p>
+
+                        <h2>Enfermeiro(a)</h2>
+                        <p></p>
+
+                        <h3>Alguns Serviços</h3>
+
+                        <ul>
+                            <li>Acompanhamento a exames </li>
+                            <li>Acompanhamento a passeios </li>
+                            <li>Acompanhamentos em internações de Hospitais, Clínicas e e Instituição de Longa Permanência ILPIs </li>
+                            <li>Atendimento Diário (Até 12 horas) </li>
+                            <li>Administração de medicamentos (somente com prescrição médica) </li>
+                            <li>Banho, higiene e conforto </li>
+                            <li>Monitoramento dos sinais vitais (temperatura, pressão arterial, batimentos cardíacos, frequência respiratória) </li>
+                            <li>Teste de Glicose </li>
+                            <li>Nebulização</li>
+                            <li>Tratamento e prevenção de escaras</li>
+                            <li>Cuidados pós-operatórios </li>
+                            <li>Cuidados pós-operatórios </li>
+                            <li>Prevenção de queda</li>
+                            <li>Prevenção de lesão por pressão</li>
+                            <li>Administração dieta enteral  </li>
+                            <li>Cuidados com a pele ao redor da gastrostomia</li>
+                            <li>Esvaziamento e higienização da bolsa de colostomia e ileostomia </li>                           
+                        </ul>
+                        
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <p>Administração de medicamentos somente com prescrição médica</p>
+                        <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- modal 02-->
-    <div class="modal fade" id="siteModal-02" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
+        <!-- modal 03-->
+        <div class="modal fade" id="siteModal-03" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
 
-                <div class="modal-header">
-                    <h5 class="modal-title">Profissionais de saúde</h5>
-                    <button class="close" type="button" data-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Esse serviço ajuda pessoas que sofreram algum tipo de acidente, fizeram uma cirurgia, ou então tenha algum tipo deficiência física ou mental e não conseguem se locomover direito para fazer suas necessidades diárias, pessoas que não conseguem fazer seus curativos ou até mesmo tenha algum tipo de dificuldade para tomar seus remédios.</p>
-              
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Cuidador de idosos</h5>
+                        <button class="close" type="button" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+
+                        <ul>
+                            <li>Acompanhamento a exames </li>
+                            <li>Acompanhamento a passeios </li>
+                            <li>Acompanhamentos em internações de Hospitais, Clínicas e Geriatrias</li>
+                            <li>Atendimento Diário (Até 12 horas) </li>
+                            <li>Fazer companhia</li>
+                            <li>Dar remédios de acordo com a prescrição médica</li>
+                            <li>Cuidar da higiene pessoal do acompanhado</li>
+                            <li>Servir e auxiliar nas refeições </li>
+                            <li>Levar o acompanhado para exercícios físicos e passeios autorizados pelo médico e/ou pela família </li>
+                            <li>Levar o acompanhado a consultas médicas, fisioterapia, etc…</li>
+                            <li>Prezar pelo bem-estar e lazer do acompanhado </li>
+                            <li>Prestar auxílio em tarefas cotidianas do acompanhado </li>
+                            <li>Observar por possíveis problemas de saúde e conhecer os procedimentos requeridos em cada caso </li>
+                        </ul>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- modal 03-->
-    <div class="modal fade" id="siteModal-03" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
 
-                <div class="modal-header">
-                    <h5 class="modal-title">Cuidador de idosos</h5>
-                    <button class="close" type="button" data-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Esse serviço lhe oferece um auxílio médico para idosos. Nesse serviço o acompanhante podera ajudar o paciente a se locomover, fazer exercícios físicos, fará companhia para o paciente, ajudará o paciente a tomar seus remédios e pode auxiliar em diversas atividades que o paciente tenha dificuldades.</p>
-           
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/635b697ad0.js"></script>
-</body>
+        <script src="https://kit.fontawesome.com/635b697ad0.js"></script>
+    </body>
 
-</html>
+    </html>
