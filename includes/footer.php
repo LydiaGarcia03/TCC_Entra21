@@ -45,6 +45,9 @@
         <!-- jQuery -->
         <script src="media/js/custom/jquery.min.js"></script>
 
+        <!-- Bootstrap Datepicker -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+
         <!-- jQuery Mask -->
         <script src="media/js/custom/jquery.mask.min.js"></script>
 

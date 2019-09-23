@@ -9,7 +9,7 @@ table {
 	border:1px solid #CCC;
 }
 
-#tr_servico:hover{
+#tr_visible:hover{
 	cursor: pointer;
 	background-color: #EAEAEA;
 }
@@ -18,19 +18,19 @@ table {
 	border:1px solid #CCC;
 }
 
-#tabela td {
+/*#tabela td {
 	width:40px;
 	height:40px;
 	padding:10px;
 	border:1px solid #CCC;
-}
+}*/
 
-.div_aba1{
+.tr_hidden{
 	display:none;
-	width: 1041px;
+	width: 1041px !important;
 	height: 129px;
 	border: 1px solid #EAEAEA;
-	background-color: white;"
+	background-color: white;
 }
 
 .div_aba2{
@@ -38,7 +38,7 @@ table {
 	width: 1041px;
 	height: 129px;
 	border: 1px solid #EAEAEA;
-	background-color: white;"
+	background-color: white;
 }
 
 .div_aba3{
@@ -46,7 +46,7 @@ table {
 	width: 1041px;
 	height: 129px;
 	border: 1px solid #EAEAEA;
-	background-color: white;"
+	background-color: white;
 }
 
 
