@@ -159,7 +159,7 @@
 							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control" 
-									placeholder="Confirmar Senha" required>    
+									placeholder="Confirmar Senha" minlength="8" maxlength="16" required>    
 								</div>
 							</div>
 						</div>

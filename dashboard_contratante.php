@@ -1,20 +1,20 @@
-<?php
+<!-- <?php
 
-session_start();
-require_once "classes/site.class.php";
-$site = new Site();
+//session_start();
+//require_once "classes/site.class.php";
+$site //= new Site();
 
 
-if($site->session_error() == 0){
-    session_destroy();
-    header('Location: error.php');
+//if($site->session_error() == 0){
+  //  session_destroy();
+    //header('Location: error.php');
 }
 
 ?>
 <?php // Inclusão do HEADER do sistema ?>
-<?php require_once('includes/header.php'); ?>
+<?php //require_once('includes/header.php'); ?>
 <?php // Inclusão da NAVBAR lateral do sistema ?>
-<?php require_once('includes/navbar.php'); ?>
+<?php //require_once('includes/navbar.php'); ?> -->
 
     <div class="container-fluid">
         <div class="container">

@@ -111,13 +111,13 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="password" name="senha" id="senha" class="form-control"
-                                placeholder="Senha" required autocomplete="off">
+                                placeholder="Senha" minlength="8" maxlength="16" required autocomplete="off">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control"
-                                placeholder="Confirmar Senha" required autocomplete="off">
+                                placeholder="Confirmar Senha" minlength="8" maxlength="16" required autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -269,6 +269,8 @@
     </div>
 
     <!-- SCRIPTS PARA EDITAR E GERAR ARQUIVOS SEPARADOS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
 
 
 	<script type="text/javascript">
@@ -276,7 +278,7 @@
 			$('#dt_nascimento').mask('99/99/9999');
 			$('#cep').mask('99999-999');
 			$('#tel_celular').mask('(99) 9 9999-9999');
-			$('#tel_residencial').mask('9999-9999');
+			$('#tel_residencial').mask('(99) 9999-9999');
 			$('#num_coren').mask('999.999');
 			$('#cod_banco').mask('999');
 			$('#num_agencia').mask('9999');
