@@ -42,8 +42,8 @@
                     <td>Cuidado Infantil</td>
                     <td>4h</td>
                     <td>20/10</td>
-                    <td>Funeraria</td>
-                    <td>Funeraria</td>
+                    <td>Cuidador infantil</td>
+                    <td>3/5</td>
                     <td> 
                         <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba1">Mais</button>  
                         <button type="button" class="btn btn-outline-success">Aceitar</button> 
@@ -55,10 +55,8 @@
 
                     <td>Hipertenso: sim</td>
                     <td>Diabético: não</td>
-                    <td colspan="5">
-                        <strong>Descrição:</strong> 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </td>
+                    <td colspan="5">Descrição:
+                    Aqui devera ficar as informações sobre o "paciente" dentro delas algumas observações</td>
                 </tr>
 
                 <!-- Visible -->
@@ -67,8 +65,8 @@
                     <td>Cuidado Infantil</td>
                     <td>8h</td>
                     <td>20/10</td>
-                    <td>Funeraria</td>
-                    <td>Funeraria</td>
+                    <td>Cuidador infantil</td>
+                    <td>2/3</td>
                     <td> 
                         <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba2">Mais</button> 
                         <button type="button" class="btn btn-outline-success">Aceitar</button> 
@@ -92,8 +90,8 @@
                     <td>Cuidado Infantil</td>
                     <td>12h</td>
                     <td>20/10</td>
-                    <td>Funeraria</td>
-                    <td>Funeraria</td>
+                    <td>Cuidador infantil</td>
+                    <td>4/5</td>
                     <td> 
                         <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba3">Mais</button> 	 
                         <button type="button" class="btn btn-outline-success">Aceitar</button> 
@@ -126,10 +124,10 @@
                     document.getElementById('tr_hidden').style.display = "block";
                     break;
                 case 'mostra_aba2':
-                    // document.getElementById('div_aba2').style.display = "block";
+                     document.getElementById('div_aba2').style.display = "block";
                     break;
                 case 'mostra_aba3':
-                    // document.getElementById('div_aba3').style.display = "block";
+                     document.getElementById('div_aba3').style.display = "block";
                     break;
             }
         }
