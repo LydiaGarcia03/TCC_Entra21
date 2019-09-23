@@ -15,32 +15,7 @@
 <?php // Inclusão do HEADER do sistema ?>
 <?php require_once('includes/header.php'); ?>
 <?php // Inclusão da NAVBAR lateral do sistema ?>
-<?php require_once('includes/navbar.php'); ?>
-
-    <style type="text/css">
-    	/*Arrumar depois*/
-    	.form-control, select.custom-select, .custom-file-label{
-    		border-radius: 0 !important;
-    		border: none !important;
-    		border-bottom: 1px solid lightgray !important;
-    		background-color: white !important;
-    		transition: 0.5s !important;
-    		margin-top: 10px !important;
-    	}
-    	.form-control:focus, .form-control:active, .btn:focus, .btn:active{
-    		background-color: rgba(0,0,0,.03) !important;
-    		outline: none !important;
-    		box-shadow: none !important;
-    		border-bottom: 1px solid darkgray !important;
-    	}
-    	.custom-file-label:after{
-    		content: "Escolha a foto de perfil" !important;
-    		background-color: white !important;
-    		float: left !important;
-    		left: 0 !important;
-    		padding-bottom: 0 !important;
-    	}
-    </style>
+<?php require_once('includes/navbar.php'); ?>	
 
     <div id="content">
 
