@@ -151,13 +151,13 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="password" name="senha" id="senha" class="form-control" 
-										placeholder="Senha" required>    
+										placeholder="Senha" minlength="8" maxlength="16" required>    
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control" 
-										placeholder="Confirmar Senha" required>    
+										placeholder="Confirmar Senha" minlength="8" maxlength="16" required>    
 									</div>
 								</div>
 							</div>
@@ -264,7 +264,7 @@
 	
 	<!-- JQuery Mask -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="jQuery-Mask-Plugin/jquery.mask.min.js"/></script>
+	<script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
 
 	<script type="text/javascript">
 		$(document).ready(function(){

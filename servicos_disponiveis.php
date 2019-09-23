@@ -20,113 +20,119 @@
         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
         </button>
-        <!--Colunas -->
-        <table class="table">
+
+        <!-- Tabela -->
+        <table class="table table-hover">
             <thead>
                 <tr class="my-auto">
-                    <th scope="col" class="py-0">Nome</th>
-                    <th scope="col" class="py-0">Tipo de Serviço</th>
-                    <th scope="col" class="py-0">Carga Horaria</th>
-                    <th scope="col" class="py-0">Dia</th>
-                    <th scope="col" class="py-0">Funcionarios <br> necessitados</th>
-                    <th scope="col" class="py-0">Funcionarios <br> aceitos</th>
-                 	<th scope="col" class="py-0">&nbsp</th>
-                    <th scope="col" class="py-0">&nbsp</th>
+                    <th class="py-0">Nome</th>
+                    <th class="py-0">Tipo de Serviço</th>
+                    <th class="py-0">Carga Horaria</th>
+                    <th class="py-0">Dia</th>
+                    <th class="py-0">Funcionarios<br>necessitados</th>
+                    <th class="py-0">Funcionarios<br>aceitos</th>
+                 	<th class="py-0"></th>
                 </tr>
             </thead>
+
             <tbody>
-                <tr id="tr_servico">
-                    <th scope="row">Caue</th>
+                <!-- Visible -->
+                <tr id="tr_visible">
+                    <td>Caue</td>
                     <td>Cuidado Infantil</td>
                     <td>4h</td>
                     <td>20/10</td>
-                    <td>Funeraria</td>
-                    <td>Funeraria</td>
-                    <td> <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba1">Mais</button>  <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
-                    <th scope="col" class="py-0">&nbsp</th>
-
-
-                    <div id="div_aba1" style="display: none">
-                        <p>Hipertenso: Sim </p>
-                        <p>Diabético: Nao </p>
-                        <p>
-                            <strong>Descrição:</strgon> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.
-                            </p>
-                        </div>
-                    </tr>
-                    <tr id="tr_descricao" style="display: none;">
-                        <th scope="row">Nathan</th>
-                        <td>Cuidado Infantil</td>
-                        <td>0h</td>
-                        <td>20/10</td>
-                        <td>Funeraria</td>
-                        <td>Funeraria</td>
-
-
-                    </tr>
-
+                    <td>Cuidador infantil</td>
+                    <td>3/5</td>
+                    <td> 
+                        <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba1">Mais</button>  
+                        <button type="button" class="btn btn-outline-success">Aceitar</button> 
+                    </td>
                 </tr>
-                <tr id="tr_servico">
-                    <th scope="row">Nathan</th>
+
+                <!-- Hidden -->
+                <tr id="tr_hidden" style="display: none;">
+
+                    <td>Hipertenso: sim</td>
+                    <td>Diabético: não</td>
+                    <td colspan="5">Descrição:
+                    Aqui devera ficar as informações sobre o "paciente" dentro delas algumas observações</td>
+                </tr>
+
+                <!-- Visible -->
+                <tr id="tr_visible">
+                    <td>Nathan</td>
                     <td>Cuidado Infantil</td>
                     <td>8h</td>
                     <td>20/10</td>
-                    <td>Funeraria</td>
-                    <td>Funeraria</td>
-                    <td> <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba2">Mais</button> <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
-                    <th scope="col" class="py-0">&nbsp</th>
-
-                    <div id="div_aba2" style="display: none">
-                        <p>Hipertenso: Sim </p>
-                        <p>Diabético: Nao </p>
-                        <p><strong>Descrição:</strgon> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</p>
-                    </div>
+                    <td>Cuidador infantil</td>
+                    <td>2/3</td>
+                    <td> 
+                        <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba2">Mais</button> 
+                        <button type="button" class="btn btn-outline-success">Aceitar</button> 
+                    </td>
                 </tr>
-            </tr>
 
-            <tr id="tr_servico">
-                <th scope="row">Maicon</th>
-                <td>Cuidado Infantil</td>
-                <td>12h</td>
-                <td>20/10</td>
-                <td>Funeraria</td>
-                <td>Funeraria</td>
-                <td> <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba3">Mais</button> 	 <button type="button" class="btn btn-outline-success">Aceitar</button> </td>
-                <th scope="col" class="py-0">&nbsp</th>
+                <!-- Hidden -->
+                <tr id="tr_hidden" style="display: none;">
 
-                <div id="div_aba3" style="display: none">
-                    <p>Hipertenso: Sim </p>
-                    <p>Diabético: Nao </p>
-                    <p><strong>Descrição:</strgon> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</p>
-                </div>
-            </tr>
-        </tbody>
-    </table>
-</div>
+                    <td>Hipertenso: sim</td>
+                    <td>Diabético: não</td>
+                    <td colspan="5">
+                        <strong>Descrição:</strong> 
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </td>
+                </tr>
 
-<script>
+                <!-- Visible -->
+                <tr id="tr_visible">
+                    <td>Maicon</td>
+                    <td>Cuidado Infantil</td>
+                    <td>12h</td>
+                    <td>20/10</td>
+                    <td>Cuidador infantil</td>
+                    <td>4/5</td>
+                    <td> 
+                        <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba3">Mais</button> 	 
+                        <button type="button" class="btn btn-outline-success">Aceitar</button> 
+                    </td>
+                </tr>
 
-    function mostrar_abas(obj) {
-        document.getElementById('div_aba1').style.display="none";
-        document.getElementById('div_aba2').style.display="none";
-        document.getElementById('div_aba3').style.display="none";
+                <!-- Hidden -->
+                <tr id="tr_hidden" style="display: none;">
 
-        switch (obj.id) {
-            case 'mostra_aba1':
-                document.getElementById('div_aba1').style.display="block";
-                break;
-            case 'mostra_aba2':
-                document.getElementById('div_aba2').style.display="block";
-                break;
-            case 'mostra_aba3':
-                document.getElementById('div_aba3').style.display="block";
-                break;
+                    <td>Hipertenso: sim</td>
+                    <td>Diabético: não</td>
+                    <td colspan="5">
+                        <strong>Descrição:</strong> 
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+
+        function mostrar_abas(obj) {
+            document.getElementById('tr_hidden').style.display = "none";
+            // document.getElementById('div_aba2').style.display = "none";
+            // document.getElementById('div_aba3').style.display = "none";
+
+            switch (obj.id) {
+                case 'mostra_aba1':
+                    document.getElementById('tr_hidden').style.display = "block";
+                    break;
+                case 'mostra_aba2':
+                     document.getElementById('div_aba2').style.display = "block";
+                    break;
+                case 'mostra_aba3':
+                     document.getElementById('div_aba3').style.display = "block";
+                    break;
+            }
         }
-    }
 
-</script>
+    </script>
+
 <?php // Inclusão da FOOTER do sistema ?>
 <?php require_once('includes/footer.php'); ?>

@@ -111,13 +111,13 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="password" name="senha" id="senha" class="form-control"
-                                placeholder="Senha" required autocomplete="off">
+                                placeholder="Senha" minlength="8" maxlength="16" required autocomplete="off">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control"
-                                placeholder="Confirmar Senha" required autocomplete="off">
+                                placeholder="Confirmar Senha" minlength="8" maxlength="16" required autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -182,7 +182,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-6">
@@ -197,62 +196,19 @@
                                 placeholder="Número de celular" requiredautocomplete="off">
                             </div>
                         </div>
-                        <div class="col-md-6 mt-3">
+                        <div class="col-md-4 mt-3">
                             <div class="form-label-group">
                                 <input type="text" name="num_coren" id="num_coren" class="form-control"
                                 placeholder="Número do Coren" required autofocusautocomplete="off">
                             </div>
                         </div>
-                        <div class="col-md-6 mt-3">
-                            <div class="form-label-group">
-                                <input type="text" name="cod_banco" id="cod_banco" class="form-control"
-                                placeholder="Código do banco" required autofocusautocomplete="off">
-                            </div>
-                        </div>
-                        <div class="col-md-12 mt-3">
-                            <div class="form-label-group">
-                                <input type="text" name="num_agencia" id="num_agencia" class="form-control"
-                                placeholder="Número da agência" required autofocusautocomplete="off">
-                            </div>
-                        </div>
-
                         <div class="col-md-4 mt-3">
-                            <select class="custom-select">
-                                <option disabled selected>Tipo de conta</option>
-                                <option value="corrente">Corrente</option>
-                                <option value="poupança">Poupança</option>
-                                <option value="especial">Especial</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-4 mt-3 mt-3">
-                            <input type="text" name="num_conta" id="num_conta" class="form-control" placeholder="Número da conta"autocomplete="off">
-                        </div>
-
-                        <div class="col-md-4 mt-3 mt-3">
-                            <input type="text" name="dig_conta" id="dig_conta" class="form-control" placeholder="Dígito da conta"autocomplete="off">
-                        </div>
-
-                        <div class="col-md-6 mt-3">
-                            <div class="form-label-group">
-                                <input type="text" name="num_cartao" id="num_cartao" class="form-control"
-                                placeholder="Número do cartão" required autofocus autocomplete="off">
-                            </div>
-                        </div>
-                        <div class="col-md-6 mt-3">
-                            <div class="form-label-group">
-                                <input type="text" name="nome_user_cartao" id="nome_user_cartao" class="form-control"
-                                placeholder="Nome do usuário do cartão" required autofocus autocomplete="off">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 mt-3">
                             <div class="form-label-group">
                                 <input type="text" name="curso_formacao" id="curso_formacao" class="form-control"
                                 placeholder="Curso de formação" required autofocus autocomplete="off">
                             </div>
                         </div>
-                        <div class="col-md-6 mt-3">
+                        <div class="col-md-4 mt-3">
                             <div class="form-label-group">
                                 <input type="text" name="instituicao" id="instituicao" class="form-control"
                                 placeholder="Instituição de formação" required autofocus autocomplete="off">
@@ -262,13 +218,13 @@
                 </div>
 
                 <input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Concluir alterações">
-
             </form>
-
         </div>
     </div>
 
     <!-- SCRIPTS PARA EDITAR E GERAR ARQUIVOS SEPARADOS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
 
 
 	<script type="text/javascript">
@@ -276,7 +232,7 @@
 			$('#dt_nascimento').mask('99/99/9999');
 			$('#cep').mask('99999-999');
 			$('#tel_celular').mask('(99) 9 9999-9999');
-			$('#tel_residencial').mask('9999-9999');
+			$('#tel_residencial').mask('(99) 9999-9999');
 			$('#num_coren').mask('999.999');
 			$('#cod_banco').mask('999');
 			$('#num_agencia').mask('9999');

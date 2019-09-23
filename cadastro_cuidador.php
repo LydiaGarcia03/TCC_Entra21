@@ -159,7 +159,7 @@
 							<div class="col-md-6">
 								<div class="form-label-group">
 									<input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control" 
-									placeholder="Confirmar Senha" required>    
+									placeholder="Confirmar Senha" minlength="8" maxlength="16" required>    
 								</div>
 							</div>
 						</div>
@@ -272,53 +272,7 @@
 						</div>
 					</div>
 
-					<!-- Dados bancários -->
-					<div class="form-group">
-						<div class="form-row">
-							<div class="col-md-6">
-								<div class="form-label-group">
-									<input type="text" name="cod_banco" id="cod_banco" placeholder="Código do banco" class="form-control">
-								</div>
-							</div>
-
-							<div class="col-md-6">
-								<div class="form-label-group">
-									<input type="text" name="num_agencia" id="num_agencia" placeholder="Número da agência" class="form-control">
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="form-row">
-							<div class="col-md-4">
-							 	<div class="form-label-group">
-							 		<input type="text" id="tipo_conta" name="tipo_conta" placeholder="Tipo de conta" class="form-control">
-							 	</div>
-							 </div>
-
-							<div class="col-md-4">
-								<input type="text" name="num_conta" id="num_conta" class="form-control" placeholder="Número da conta">
-							</div>
-
-							<div class="col-md-4">
-								<input type="text" name="dig_conta" id="dig_conta" class="form-control" placeholder="Dígito da conta">
-							</div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="form-row">
-							<div class="col-md-6">
-								<input type="text" name="num_cartao" id="num_cartao" class="form-control" placeholder="Número do cartão">
-							</div>
-
-							<div class="col-md-6">
-								<input type="text" name="nome_user_cartao" id="nome_user_cartao" class="form-control" placeholder="Nome do usuário no cartão">
-							</div>
-						</div>
-					</div>
+					
 
 					<div class="custom-control custom-checkbox mb-3">
 						<input type="checkbox" class="custom-control-input" id="customCheck1" required>
