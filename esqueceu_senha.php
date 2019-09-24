@@ -10,8 +10,8 @@ $login = new Login();
 	<title>HCD | Esqueceu sua senha</title>
 	<meta charset="utf-8">
 	<!-- CSS -->   
-	<link href="media/css/custom/home.css" rel="stylesheet" type="text/css">
 	<link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet">
+	<link href="media/css/custom/home.css" rel="stylesheet" type="text/css">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -43,8 +43,7 @@ $login = new Login();
 			<i class="fas fa-angle-left"></i>
 		</a>
 	
-</body>
-</html>
+
 
 <!-- 	<div class="container">
 		<div class="col-lg-4 m-b-3" style="position: absolute; top: 20%; left: 34%">		

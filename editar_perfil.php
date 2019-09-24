@@ -13,7 +13,9 @@
 
 ?>
 <?php // Inclusão do HEADER do sistema ?>
-<?php require_once('includes/header.php'); ?>
+<?php require_once('includes/startfile.php'); ?>
+<body id="page-top">
+  <div id="wrapper">
 <?php // Inclusão da NAVBAR lateral do sistema ?>
 <?php require_once('includes/navbar.php'); ?>	
 
