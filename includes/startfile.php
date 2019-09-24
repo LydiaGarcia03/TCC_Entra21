@@ -28,7 +28,3 @@
     <!-- SBAdmin -->
     <link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet" type="text/css">
 </head>
-
-<body id="page-top">
-
-    <div id="wrapper">
