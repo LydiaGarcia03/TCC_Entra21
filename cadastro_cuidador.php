@@ -94,12 +94,12 @@
 <body style="background-color: dodgerblue">
 	<div class="container">
 
-		<div class="card card-register mx-auto mt-5">
+		<div class="card mx-auto my-5">
 
 			<div class="card-header text-center">Crie sua conta grátis</div>
 			<div class="card-body">
 
-				<form id="formExemplo" data-toggle="validator" role="form">
+				<form action="" method="POST" id="formCadastroCuidador">
 
 					<div class="form-group">
 						<div class="form-row">
@@ -112,8 +112,8 @@
 
 							<div class="col-6">
 								<div class="input-group">
-									<label class="custom-file-label text-secondary" for="c_foto"></label>
-									<input type="file" class="custom-file-input" name="c_foto" id="c_foto" placeholder="Escolha uma foto de perfil">
+									<input type="file" class="custom-file-input" name="c_foto" id="c_foto" placeholder="Escolha uma foto de perfil" style="cursor: pointer;">
+									<label class="text-secondary custom-file-label" for="c_foto"></label>
 								</div>
 							</div>
 						</div>
@@ -281,8 +281,6 @@
 						</div>
 					</div>
 
-					
-
 					<div class="custom-control custom-checkbox mb-3">
 						<input type="checkbox" class="custom-control-input" id="customCheck1" required>
 						<label class="custom-control-label" for="customCheck1">De acordo com os dados coletados?</label>
@@ -292,7 +290,6 @@
 
 					<div class="text-center">
 						<a class="d-block small mt-3" href="login.php">Página de login</a>
-						<a class="d-block small" href="esqueceu_senha.php">Esqueceu sua senha?</a>
 					</div>
 
 				</form>
@@ -306,7 +303,6 @@
 		<i class="fas fa-angle-left"></i>
 	</a>
 	
-
 	<!-- Bootstrap core JavaScript-->
 	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
 	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -327,14 +323,15 @@
 			$('#tel_celular').mask('(99) 9 9999-9999');
 			$('#tel_residencial').mask('(99) 9999-9999');
 			$('#num_coren').mask('999.999');
-			$('#cod_banco').mask('999');
-			$('#num_agencia').mask('9999');
-			$('#tipo_conta').mask('999');
-			$('#num_conta').mask('99999999');
-			$('#dig_conta').mask('9');
-			$('#num_cartao').mask('9999 9999 9999 9999');
 		});
 	</script>
+
+	<script>
+	    $('.custom-file-input').on('change', function() {
+	    	var fileName = $(this).val();
+	    	$(this).attr('placeholder', fileName);
+		});
+    </script>
 
 </body>
 </html>

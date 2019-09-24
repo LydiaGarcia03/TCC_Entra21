@@ -1,14 +1,14 @@
 <?php
 
+    require_once "classes/solicitar_servico.class.php";
+    $solicitar_servico = new Solicitar_servico();
 
-require_once "classes/site.class.php";
-$site = new Site();
-
-if(!$site->session_error()){
-		// header('Location: error.php');
-}
+    if(!parent::$solicitar_servico->session_error()){
+        header('Location: error.php');
+    }
 
 ?>
+
 <?php // Inclusão do HEADER do sistema ?>
 <?php require_once('includes/header.php'); ?>
 <?php // Inclusão da NAVBAR lateral do sistema ?>
@@ -86,7 +86,7 @@ if(!$site->session_error()){
                 <div class="form-row">
                     <div class="col-md-6">
                         <div class="form-label-group">
-                            <input type="text" name="date" id="date" style="cursor: pointer;" class="form-control date" placeholder="Escolha os dias para o serviço">
+                            <input type="text" name="diasServico" id="diasServico" style="cursor: pointer;" class="form-control date" placeholder="Escolha os dias para o serviço">
                         </div>
                     </div>
 
@@ -188,7 +188,7 @@ if(!$site->session_error()){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
 
 <script type="text/javascript">
-    $("#date").datepicker({
+    $("#diasServico").datepicker({
     format: 'dd-mm-yyyy',
     inline: false,
     lang: 'pt',

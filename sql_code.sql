@@ -15,15 +15,6 @@ CREATE TABLE profissional (
     end_complemento VARCHAR(250) NULL,
     tel_cel REAL NOT NULL,
     num_coren INT NOT NULL,
-    # Dados bancários
-    cod_banco VARCHAR(128) NOT NULL, -- CRIP
-    num_agencia VARCHAR(128) NOT NULL, -- CRIP
-    dig_agencia VARCHAR(128) NOT NULL, -- CRIP
-    tipo_conta VARCHAR(128) NOT NULL, -- CRIP
-    num_conta VARCHAR(128) NOT NULL, -- CRIP
-    dig_conta VARCHAR(128) NOT NULL, -- CRIP
-    num_cartao VARCHAR(128) NOT NULL, -- CRIP
-    nome_user_cartao VARCHAR(128) NOT NULL, -- CRIP
     # Info acadêmica
     curso_formacao VARCHAR(250) NOT NULL,
     instituicao VARCHAR(250) NOT NULL,
@@ -62,15 +53,7 @@ CREATE TABLE servico (
     qtd_horas_diarias INT NOT NULL,
     dias_servico VARCHAR(250) NOT NULL,
     estado BOOLEAN NULL,
-    # Dados bancários do necessitado
-    cod_banco VARCHAR(128) NOT NULL, -- CRIP
-    num_agencia VARCHAR(128) NOT NULL, -- CRIP
-    tipo_conta VARCHAR(128) NOT NULL, -- CRIP
-    num_conta VARCHAR(128) NOT NULL, -- CRIP
-    dig_conta VARCHAR(128) NOT NULL, -- CRIP
-    num_cartao VARCHAR(128) NOT NULL, -- CRIP
-    nome_user_cartao VARCHAR(128) NOT NULL, -- CRIP
-   
+    
     FOREIGN KEY(fk_id_necessitado) REFERENCES necessitado(id)
 ) ENGINE = InnoDB DEFAULT CHARSET = 'utf8';
 
