@@ -60,6 +60,31 @@ class Solicitar_Servico extends Site{
 
 	}
 
+	public function listarDetalhesServico(){
+
+		$sql = "SELECT * FROM servico WHERE id = "
+
+	}
+
 }
+
+/*
+Tarefas para Lydia:
+
+CADASTRO
+	veficar se cadastra contratante
+	verificar se cadastra cuidador
+	verificar se cadastra servico
+
+LISTAGEM
+	fazer PHP para listagem de serviços disponiveis
+	botão aceitar serviço muda o estado dele
+	dashboard recebe histórico de todos os serviços do usuario
+
+DETALHES
+	mudar o banco do contratante para receber seu valor hora
+	mudar o banco de servico pois exclui 'hipertensao' e 'diabetes'
+*/
+
 
 ?>
