@@ -10,6 +10,12 @@ html, body {
 	height:	500px;
 }
 
+.container .sobre h2 {
+	margin: 20px;
+	
+}
+
+
 .servicos {
 	background: #fff;
 	border-radius: 5px;
