@@ -19,3 +19,12 @@
   left: 0 !important;
   padding-bottom: 0 !important;
 }
+
+#btnNovaConta{
+ background-color: rgb(30, 144, 255);
+}
+
+#btn-voltar{
+  position: absolute; bottom: 0px; left: 18px;
+
+}

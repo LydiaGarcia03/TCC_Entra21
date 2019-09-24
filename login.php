@@ -9,6 +9,10 @@ $login = new Login();
 <head>
 	<title>HCD | Login</title>
 	<meta charset="utf-8">
+	<link href="media/css/custom/cadastro_cuidador.css" rel="stylesheet" type="text/css">
+	<link href="media/css/custom/style.css" rel="stylesheet" type="text/css">
+	<link href="media/css/custom/style_blog.css" rel="stylesheet" type="text/css">
+
 	<!-- CSS -->   
 	<link href="media/css/custom/home.css" rel="stylesheet" type="text/css">
 	<link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet">
@@ -75,9 +79,9 @@ $login = new Login();
 			</div>
 		</div>  
 	</div>
-	<a class="scroll-to-top rounded" href="#page-top">
-		<i class="fas fa-angle-up"></i>
+	<a class="scroll-to-top rounded d-inline" href="index.php" id="btn-blockvoltar">
+		<i class="fas fa-angle-left"></i>
 	</a>
-
-
+</body>
+</html>
 	

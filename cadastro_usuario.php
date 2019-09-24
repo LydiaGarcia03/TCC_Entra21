@@ -1,7 +1,7 @@
 <?php
 
-	require_once "classes/cadastro_user.class.php";
-	$cadastro = new Cadastro_user();
+require_once "classes/cadastro_user.class.php";
+$cadastro = new Cadastro_user();
 
 ?>
 
@@ -10,6 +10,9 @@
 <head>
 	<title>HCD | Cadastro</title>
 	<meta charset="utf-8">
+	<link href="media/css/custom/cadastro_cuidador.css" rel="stylesheet" type="text/css">
+	<link href="media/css/custom/style.css" rel="stylesheet" type="text/css">
+	<link href="media/css/custom/style_blog.css" rel="stylesheet" type="text/css">
 	<!-- CSS -->   
 	<link href="style/home.css" rel="stylesheet" type="text/css">
 	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
@@ -17,12 +20,12 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- CEP -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
 
-        $(document).ready(function() {
+		$(document).ready(function() {
 
-            function limpa_formulário_cep() {
+			function limpa_formulário_cep() {
                 // Limpa valores do formulário de cep.
                 $("#rua").val("");
                 $("#bairro").val("");
@@ -54,7 +57,7 @@
                         //Consulta o webservice viacep.com.br/
                         $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
 
-                            if (!("erro" in dados)) {
+                        	if (!("erro" in dados)) {
                                 //Atualiza os campos com os valores da consulta.
                                 $("#rua").val(dados.logradouro);
                                 $("#bairro").val(dados.bairro);
@@ -175,49 +178,46 @@
 						</div>
 						<div class="form-group">
 							<div class="form-row">
-								<div class="col-md-6">
+								<div class="col-md-8">
 									<div class="form-label-group">
 										<input type="text" name="rua" id="rua" class="form-control" 
 										placeholder="Rua" required autofocus disabled>    
 									</div>
 								</div>
-								<div class="col-md-6">
+								<div class="col-md-4">
 									<div class="form-label-group">
 										<input type="text" name="numeroCasa" id="numeroCasa" class="form-control" placeholder="Número da residência" required autofocus>    
 									</div>
 								</div>
 							</div>
 						</div>
-
 						<div class="form-group">
 							<div class="form-row">
-								<div class="col-md-6">
-									<div class="form-label-group">
-										<input type="text" name="complemento" id="complemento" class="form-control" placeholder="Complemento" required autofocus>    
-									</div>
-								</div>
-								<div class="col-md-6">
+								<div class="col-md-4">
 									<div class="form-label-group">
 										<input type="text" name="cidade" id="cidade" class="form-control" placeholder="Cidade" required autofocus disabled>    
 									</div>
 								</div>
-							</div>
-						</div>
-
-
-						<div class="form-group">
-							<div class="form-row">
-								<div class="col-md-6">
+								<div class="col-md-4">
 									<div class="form-label-group">
 										<input type="text" name="bairro" id="bairro" class="form-control" placeholder="Bairro" required autofocus disabled>    
 									</div>	
 								</div>
-								<div class="col-md-6">
+								<div class="col-md-4">
 									<input type="text" name="uf" id="uf" placeholder="Estado" class="form-control" disabled>
 								</div>
 							</div>
 						</div>
-
+						<div class="form-group">
+							<div class="form-row">
+								<div class="col-md-12">
+									<div class="form-label-group">
+										<input type="text" name="complemento" id="complemento" class="form-control" placeholder="Complemento" required autofocus>    
+									</div>
+								</div>
+								
+							</div>
+						</div>
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-6">
@@ -244,15 +244,11 @@
 
 				</div>
 			</div>
-		</div>
-
-		<!-- Button TopPage -->
-		<a class="scroll-to-top rounded d-inline" href="index.php">
+		</div> 
+	</div>
+		<a class="scroll-to-top rounded d-inline" href="index.php" id="btn-blockvoltar">
 			<i class="fas fa-angle-left"></i>
 		</a>
-
-	</div>  
-
 	<!-- Bootstrap core JavaScript-->
 	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
 	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

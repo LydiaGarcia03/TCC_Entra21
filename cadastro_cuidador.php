@@ -11,18 +11,18 @@
 	<title>HCD | Cadastro</title>
 	<meta charset="utf-8">
 	<link href="media/css/custom/cadastro_cuidador.css" rel="stylesheet" type="text/css">
-    <link href="media/css/custom/style.css" rel="stylesheet" type="text/css">
-    <link href="media/css/custom/style_blog.css" rel="stylesheet" type="text/css">
+	<link href="media/css/custom/style.css" rel="stylesheet" type="text/css">
+	<link href="media/css/custom/style_blog.css" rel="stylesheet" type="text/css">
 
-    <!-- ============ RESOURCES ============ -->
-    <!-- Boostrap -->
-    <link href="media/css/resource/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!-- ============ RESOURCES ============ -->
+	<!-- Boostrap -->
+	<link href="media/css/resource/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Datepicker -->
-    <link href="media/css/resource/datepicker.css" rel="stylesheet" type="text/css">
+	<!-- Datepicker -->
+	<link href="media/css/resource/datepicker.css" rel="stylesheet" type="text/css">
 
-    <!-- SBAdmin -->
-    <link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet" type="text/css">
+	<!-- SBAdmin -->
+	<link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet" type="text/css">
 	<!-- CEP -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
@@ -187,14 +187,14 @@
 
 					<div class="form-group">
 						<div class="form-row">
-							<div class="col-md-6">
+							<div class="col-md-8">
 								<div class="form-label-group">
 									<input type="text" name="rua" id="rua" class="form-control" 
 									placeholder="Rua" required autofocus disabled>    
 								</div>
 							</div>
 
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-label-group">
 									<input type="number" name="numeroCasa" id="numeroCasa" class="form-control" 
 									placeholder="Número da residência" maxlength="5" minlength="2" required autofocus>    
@@ -202,37 +202,32 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="form-group">
 						<div class="form-row">
-							<div class="col-md-6">
-								<div class="form-label-group">
-									<input type="text" name="complemento" id="complemento" class="form-control" 
-									placeholder="Complemento" required autofocus>    
-								</div>
-							</div>
-
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-label-group">
 									<input type="text" name="cidade" id="cidade" class="form-control" 
 									placeholder="Cidade" maxlength="6" autocomplete="off" required autofocus disabled>    
 								</div>
 							</div>
-						</div>
-					</div>
-
-
-					<div class="form-group">
-						<div class="form-row">
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-label-group">
 									<input type="text" name="bairro" id="bairro" class="form-control" 
 									placeholder="Bairro" required autofocus disabled>    
 								</div>	
 							</div>
-
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<input type="text" name="uf" id="uf" placeholder="Estado" class="form-control" disabled>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row">
+							<div class="col-md-12">
+								<div class="form-label-group">
+									<input type="text" name="complemento" id="complemento" class="form-control" 
+									placeholder="Complemento" required autofocus>    
+								</div>
 							</div>
 						</div>
 					</div>
@@ -257,36 +252,31 @@
 					<!-- Dados acadêmicos -->
 					<div class="form-group">
 						<div class="form-row">
-							<div class="col-md-12">
+							<div class="col-md-4">
 								<div class="form-label-group">
 									<input type="text" id="num_coren" name="num_coren" placeholder="Número do Coren" class="form-control">
 								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="form-group">
-						<div class="form-row">
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-label-group">
 									<input type="text" name="form_curso" id="form_curso" placeholder="Curso de formação" class="form-control">
 								</div>
 							</div>
 
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-label-group">
 									<input type="text" name="form_instituicao" id="form_instituicao" placeholder="Instituição de formação" class="form-control">
 								</div>
 							</div>
 						</div>
 					</div>
-
 					<div class="custom-control custom-checkbox mb-3">
 						<input type="checkbox" class="custom-control-input" id="customCheck1" required>
 						<label class="custom-control-label" for="customCheck1">De acordo com os dados coletados?</label>
 					</div>
 
-					<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Criar Conta">
+					<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" id="btnNovaConta" value="Criar Conta">
 
 					<div class="text-center">
 						<a class="d-block small mt-3" href="login.php">Página de login</a>
@@ -299,10 +289,9 @@
 
 	</div>
 	<!-- Button TopPage -->
-	<a class="scroll-to-top rounded d-inline" href="index.php">
+	<a class="scroll-to-top rounded d-inline" href="index.php" id="btn-voltar">
 		<i class="fas fa-angle-left"></i>
 	</a>
-	
 	<!-- Bootstrap core JavaScript-->
 	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
 	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -327,11 +316,11 @@
 	</script>
 
 	<script>
-	    $('.custom-file-input').on('change', function() {
-	    	var fileName = $(this).val();
-	    	$(this).attr('placeholder', fileName);
+		$('.custom-file-input').on('change', function() {
+			var fileName = $(this).val();
+			$(this).attr('placeholder', fileName);
 		});
-    </script>
+	</script>
 
 </body>
 </html>
