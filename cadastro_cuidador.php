@@ -10,18 +10,27 @@
 <head>
 	<title>HCD | Cadastro</title>
 	<meta charset="utf-8">
-	<!-- CSS -->    
-	<link href="style/home.css" rel="stylesheet" type="text/css">
-	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="media/css/custom/cadastro_cuidador.css" rel="stylesheet" type="text/css">
+    <link href="media/css/custom/style.css" rel="stylesheet" type="text/css">
+    <link href="media/css/custom/style_blog.css" rel="stylesheet" type="text/css">
+
+    <!-- ============ RESOURCES ============ -->
+    <!-- Boostrap -->
+    <link href="media/css/resource/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Datepicker -->
+    <link href="media/css/resource/datepicker.css" rel="stylesheet" type="text/css">
+
+    <!-- SBAdmin -->
+    <link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet" type="text/css">
 	<!-- CEP -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
 
-        $(document).ready(function() {
 
-            function limpa_formulário_cep() {
+		$(document).ready(function() {
+
+			function limpa_formulário_cep() {
                 // Limpa valores do formulário de cep.
                 $("#rua").val("");
                 $("#bairro").val("");
@@ -53,7 +62,7 @@
                         //Consulta o webservice viacep.com.br/
                         $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
 
-                            if (!("erro" in dados)) {
+                        	if (!("erro" in dados)) {
                                 //Atualiza os campos com os valores da consulta.
                                 $("#rua").val(dados.logradouro);
                                 $("#bairro").val(dados.bairro);
@@ -85,12 +94,12 @@
 <body style="background-color: dodgerblue">
 	<div class="container">
 
-		<div class="card card-register mx-auto mt-5">
+		<div class="card mx-auto my-5">
 
 			<div class="card-header text-center">Crie sua conta grátis</div>
 			<div class="card-body">
 
-				<form id="formExemplo" data-toggle="validator" role="form">
+				<form action="" method="POST" id="formCadastroCuidador">
 
 					<div class="form-group">
 						<div class="form-row">
@@ -103,8 +112,8 @@
 
 							<div class="col-6">
 								<div class="input-group">
-									<label class="custom-file-label text-secondary" for="c_foto"></label>
-									<input type="file" class="custom-file-input" name="c_foto" id="c_foto" placeholder="Escolha uma foto de perfil">
+									<input type="file" class="custom-file-input" name="c_foto" id="c_foto" placeholder="Escolha uma foto de perfil" style="cursor: pointer;">
+									<label class="text-secondary custom-file-label" for="c_foto"></label>
 								</div>
 							</div>
 						</div>
@@ -248,11 +257,11 @@
 					<!-- Dados acadêmicos -->
 					<div class="form-group">
 						<div class="form-row">
-							 <div class="col-md-12">
-							 	<div class="form-label-group">
-							 		<input type="text" id="num_coren" name="num_coren" placeholder="Número do Coren" class="form-control">
-							 	</div>
-							 </div>
+							<div class="col-md-12">
+								<div class="form-label-group">
+									<input type="text" id="num_coren" name="num_coren" placeholder="Número do Coren" class="form-control">
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -272,8 +281,6 @@
 						</div>
 					</div>
 
-					
-
 					<div class="custom-control custom-checkbox mb-3">
 						<input type="checkbox" class="custom-control-input" id="customCheck1" required>
 						<label class="custom-control-label" for="customCheck1">De acordo com os dados coletados?</label>
@@ -283,20 +290,19 @@
 
 					<div class="text-center">
 						<a class="d-block small mt-3" href="login.php">Página de login</a>
-						<a class="d-block small" href="esqueceu_senha.php">Esqueceu sua senha?</a>
 					</div>
 
 				</form>
 				
 			</div>
 		</div>
-	</div>
 
+	</div>
 	<!-- Button TopPage -->
 	<a class="scroll-to-top rounded d-inline" href="index.php">
 		<i class="fas fa-angle-left"></i>
 	</a>
-
+	
 	<!-- Bootstrap core JavaScript-->
 	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
 	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -317,14 +323,15 @@
 			$('#tel_celular').mask('(99) 9 9999-9999');
 			$('#tel_residencial').mask('(99) 9999-9999');
 			$('#num_coren').mask('999.999');
-			$('#cod_banco').mask('999');
-			$('#num_agencia').mask('9999');
-			$('#tipo_conta').mask('999');
-			$('#num_conta').mask('99999999');
-			$('#dig_conta').mask('9');
-			$('#num_cartao').mask('9999 9999 9999 9999');
 		});
 	</script>
+
+	<script>
+	    $('.custom-file-input').on('change', function() {
+	    	var fileName = $(this).val();
+	    	$(this).attr('placeholder', fileName);
+		});
+    </script>
 
 </body>
 </html>

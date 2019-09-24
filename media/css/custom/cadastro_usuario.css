@@ -1,0 +1,28 @@
+.form-control, select.custom-select, .custom-file-label{
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid lightgray !important;
+  background-color: white !important;
+  transition: 0.5s !important;
+  margin-top: 10px !important;
+}
+.form-control:focus, .form-control:active, .btn:focus, .btn:active{
+  background-color: rgba(0,0,0,.03) !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid darkgray !important;
+}
+.custom-file-label:after{
+  content: "Escolha a foto de perfil" !important;
+  background-color: white !important;
+  float: left !important;
+  left: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#btn-voltar{
+    right: auto; bottom: auto;
+    left: expression( ( -20 - fixme.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+    top: expression( ( -10 - fixme.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}   
+}

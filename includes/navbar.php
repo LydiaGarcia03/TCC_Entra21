@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 
 
 ?>
@@ -94,9 +94,6 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow mx-auto">
                 <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-bell fa-fw"></i>
-                    <!-- Contador -->
-                    <span class="badge badge-danger badge-counter">+5</span>
                 </a>
                 <!-- Mensagens -->
                 <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
@@ -108,8 +105,8 @@
                                 Serviço
                             </div>
                             <span class="font-weight-bold">
-                                        Você tem uma nova solicitação de serviço
-                                    </span>
+                                Você tem uma nova solicitação de serviço
+                            </span>
                         </div>
                     </a>
                 </div>

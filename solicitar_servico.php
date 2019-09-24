@@ -1,15 +1,20 @@
 <?php
 
-require_once "classes/site.class.php";
-$site = new Site();
+    require_once "classes/solicitar_servico.class.php";
+    $solicitar_servico = new Solicitar_servico();
 
-if(!$site->session_error()){
-		// header('Location: error.php');
-}
+    // if(!parent::$solicitar_servico->session_error()){
+    //     header('Location: error.php');
+    // }
 
 ?>
+
 <?php // Inclusão do HEADER do sistema ?>
-<?php require_once('includes/header.php'); ?>
+<?php require_once('includes/startfile.php'); ?>
+
+<body id="page-top">
+    <div id="wrapper">
+
 <?php // Inclusão da NAVBAR lateral do sistema ?>
 <?php require_once('includes/navbar.php'); ?>
 
@@ -24,7 +29,7 @@ if(!$site->session_error()){
 
     <div class="card-body">
 
-        <form>
+        <form method="POST" action="" name="formServico">
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-md-12">
@@ -55,179 +60,178 @@ if(!$site->session_error()){
                     </div>
                 </div>
             </div>
+
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-md-6">
                         <div class="form-label-group">
-                         <select class="custom-select" name="servico">
-                            <option selected disabled>Tipo de serviço</option>
-                            <option value="infantil">Cuidador infantil</option>
-                            <option value="idoso">Cuidador de idosos</option>
-                            <option value="enfermagem">Enfermagem</option>
-                        </select>
+                            <select class="custom-select" name="servico">
+                                <option selected disabled>Tipo de serviço</option>
+                                <option value="infantil">Cuidador infantil</option>
+                                <option value="idoso">Cuidador de idosos</option>
+                                <option value="enfermagem">Enfermagem</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="form-row">
-                <div class="col-md-6">
-                    <div class="form-label-group">
-                        <input type="email" name="email" id="email" class="form-control" placeholder="E-mail do responsável">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-label-group">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="E-mail do responsável">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="form-row">
-                <div class="col-md-6">
-                    <div class="form-label-group">
-                        <input type="text" name="date" class="form-control date" placeholder="Escolha os dias para o serviço">
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-label-group">
-                        <input type="number" name="qtd_cuidadores" id="qtd_cuidadores" class="form-control" placeholder="Quantidade de profissionais necessários">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-label-group">
+                            <input type="text" name="diasServico" id="diasServico" style="cursor: pointer;" class="form-control date" placeholder="Escolha os dias para o serviço">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="form-row">
-                <div class="col-md-6">
-                    <div class="form-label-group">
-                        <p>O paciente é diabético?</p>
-                        <input type="radio" name="diabetico" id="diabetico_true" value="diabetico_true">
-                        <label>Sim</label>
-                        <br>
-                        <input type="radio" name="diabetico" id="diabetico_false" value="diabetico_false">
-                        <label>Não</label>
-                    </div>
-
-                    <div class="form-label-group">
-                        <p>O paciente possui deficiência física?</p>
-                        <input type="radio" name="deficFisica" id="deficFisica_true" value="deficFisica_true">
-                        <label>Sim</label>
-                        <br>
-                        <input type="radio" name="deficFisica" id="deficFisica_false" value="deficFisica_false">
-                        <label>Não</label>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-label-group">
-                        <p>O paciente possui deficiência mental?</p>
-                        <input type="radio" name="deficMental" id="deficMental_true" value="deficMental_true">
-                        <label>Sim</label>
-                        <br>
-                        <input type="radio" name="deficMental" id="deficMental_false" value="deficMental_false">
-                        <label>Não</label>
-                    </div>
-
-                    <div class="form-label-group">
-                        <p>O paciente é hipertenso?</p>
-                        <input type="radio" name="hipertenso" id="hipertenso_true" value="hipertenso_true">
-                        <label>Sim</label>
-                        <br>
-                        <input type="radio" name="hipertenso" id="hipertenso_false" value="hipertenso_false">
-                        <label>Não</label>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-label-group">
+                            <input type="number" name="carga_horaria" id="carga_horaria" class="form-control" placeholder="Carga horária diária">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="form-row">
-                <div class="col-md-6">
-                    <div class="form-label-group">
-                        <textarea style="resize: none;" cols="64" rows="7" placeholder="Descreva, se necessário, algumas informações a mais e essenciais do paciente" class="form-control" name="descricao"></textarea>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-label-group">
+                            <input type="number" name="qtd_cuidadores" id="qtd_cuidadores" class="form-control" placeholder="Quantidade de profissionais necessários" disabled>
+                            <small>A quantidade é definida pelo sistema de acordo com a PLC Nº 11, DE 2016</small>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <hr>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            O paciente possui alguma doença crônica?
+                            <input type="radio" name="doenca" id="doenca_true" value="doenca_true">
+                            <label>Sim</label>
+                            <input type="radio" name="doenca" id="doenca_false" value="doenca_false">
+                            <label>Não</label>
+                            <!-- Hidden -->
+                            <input type="text" name="desc_doenca" id="desc_doenca" placeholder="Se sim, qual?" class="form-control mb-3 d-none desc_hidden">
+                        </div>
+                    </div>
 
-        <!-- Dados bancários -->
-        <div class="form-group">
-            <div class="form-row">
-                <div class="col-md-6">
-                    <div class="form-label-group">
-                        <input type="text" name="cod_banco" id="cod_banco" placeholder="Código do banco" class="form-control">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            O paciente possui deficiência física?
+                            <input type="radio" name="deficFisica" id="deficFisica_true" value="deficFisica_true">
+                            <label>Sim</label>
+                            <input type="radio" name="deficFisica" id="deficFisica_false" value="deficFisica_false">
+                            <label>Não</label>
+                            <!-- Hidden -->
+                            <input type="text" name="desc_doenca" id="desc_doenca" placeholder="Se sim, qual?" class="form-control mb-3 d-none desc_hidden">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            O paciente possui deficiência mental?
+                            <input type="radio" name="deficMental" id="deficMental_true" value="deficMental_true">
+                            <label>Sim</label>
+                            <input type="radio" name="deficMental" id="deficMental_false" value="deficMental_false">
+                            <label>Não</label>
+                            <!-- Hidden -->
+                            <input type="text" name="desc_doenca" id="desc_doenca" placeholder="Se sim, qual?" class="form-control mb-3 d-none desc_hidden">
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-md-6">
-                    <div class="form-label-group">
-                        <input type="text" name="num_agencia" id="num_agencia" placeholder="Número da agência" class="form-control">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-label-group">
+                            <textarea style="resize: none;" cols="64" rows="7" placeholder="Descreva, se necessário, algumas informações a mais e essenciais do paciente" class="form-control" name="descricao"></textarea>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="form-row">
-                <div class="col-md-4">
-                    <div class="form-label-group">
-                        <input type="text" id="tipo_conta" name="tipo_conta" placeholder="Tipo de conta" class="form-control">
+            <div class="form-group" class="my-4">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="confirmaResponsavel" id="confirmaResponsavel">
+                            <label class="form-check-label">Confirmo que sou responsável pelo paciente descrito acima</label>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <input type="text" name="num_conta" id="num_conta" class="form-control" placeholder="Número da conta">
-                </div>
-
-                <div class="col-md-4">
-                    <input type="text" name="dig_conta" id="dig_conta" class="form-control" placeholder="Dígito da conta">
-                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="form-row">
-                <div class="col-md-6">
-                    <input type="text" name="num_cartao" id="num_cartao" class="form-control" placeholder="Número do cartão">
-                </div>
+            <input type="submit" class="btn btn-primary btn-block" name="btnSolicitarServico" value="Solicitar serviço">
 
-                <div class="col-md-6">
-                    <input type="text" name="nome_user_cartao" id="nome_user_cartao" class="form-control" placeholder="Nome do usuário no cartão">
-                </div>
-            </div>
-        </div>
+        </form>
 
-        <div class="form-group" class="my-4">
-            <div class="form-row">
-                <div class="col-md-6">
-                    <input type="checkbox" class="custom-control-input" name="confirmaResponsavel" id="confirmaResponsavel">
-                    <label class="custom-control-label">Confirmo que sou responsável pelo paciente descrito acima</label>
-                </div>
-            </div>
-        </div>
-
-        <input type="submit" class="btn btn-primary btn-block" name="btnSolicitarServico" value="Solicitar serviço">
-
-    </form>
-
+    </div>
 </div>
-</div>
+
+<!-- Mask -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
+
 <script type="text/javascript">
-  $(document).ready(function(){
-   $('#dt_nascimento').mask('99/99/9999');
-   $('#cod_banco').mask('999');
-   $('#num_agencia').mask('9999');
-   $('#tipo_conta').mask('999');
-   $('#num_conta').mask('99999999');
-   $('#dig_conta').mask('9');
-   $('#num_cartao').mask('9999 9999 9999 9999');
-});
+    $(document).ready(function(){
+        $('#dt_nascimento').mask('99/99/9999');
+    });
+</script>
+
+<!-- DatePicker -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+
+<script type="text/javascript">
+    $("#diasServico").datepicker({
+        format: 'dd-mm-yyyy',
+        inline: false,
+        lang: 'pt',
+        todayHighlight: true,
+        multidate: true,
+        closeOnDateSelect: true
+    });
+</script>
+
+<!-- JS para alternar o campo de descrever infermidades -->
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+        $("input[name='doenca']:radio", "formServico").checked(function(){
+
+            $('.desc_hidden').toggleClass('d-block');
+
+        });
+    });
+
 </script>
 
 <?php // Inclusão da FOOTER do sistema ?>
 <?php require_once('includes/footer.php'); ?>
+
+<?php 
+
+/* 
+PLC Nº 11, DE 2016 ART4.I
+
+LEI COMPLEMENTAR Nº 150, DE 1º DE JUNHO DE 2015
+*/
+
+?>
