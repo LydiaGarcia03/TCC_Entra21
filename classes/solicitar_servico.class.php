@@ -18,10 +18,9 @@ class Solicitar_Servico extends Site{
 		$dt_nascimento = $_POST['dt_nascimento'];
 		$genero = $_POST['genero'];
 		$tipo_servico = $_POST['servico'];
-		$diabetico = $_POST['diabetico'];
+		$doenca = $_POST['doenca'];
 		$deficiencia_fisica = $_POST['deficFisica'];
 		$deficiencia_mental = $_POST['deficMental'];
-		$hipertensao = $_POST['hipertenso'];
 		$descricao = $_POST['descricao'];
 		$email_responsavel = $_POST['email'];
 		$carga_horaria_diaria = $_POST['carga_horaria'];

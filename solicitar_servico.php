@@ -10,7 +10,11 @@
 ?>
 
 <?php // Inclusão do HEADER do sistema ?>
-<?php require_once('includes/header.php'); ?>
+<?php require_once('includes/startfile.php'); ?>
+
+<body id="page-top">
+    <div id="wrapper">
+
 <?php // Inclusão da NAVBAR lateral do sistema ?>
 <?php require_once('includes/navbar.php'); ?>
 
@@ -25,7 +29,7 @@
 
     <div class="card-body">
 
-        <form>
+        <form method="POST" action="" name="formServico">
             <div class="form-group">
                 <div class="form-row">
                     <div class="col-md-12">
@@ -118,10 +122,12 @@
                     <div class="col-md-12">
                         <div class="form-label-group">
                             O paciente possui alguma doença crônica?
-                            <input type="radio" name="diabetico" id="diabetico_true" value="diabetico_true">
+                            <input type="radio" name="doenca" id="doenca_true" value="doenca_true">
                             <label>Sim</label>
-                            <input type="radio" name="diabetico" id="diabetico_false" value="diabetico_false">
+                            <input type="radio" name="doenca" id="doenca_false" value="doenca_false">
                             <label>Não</label>
+                            <!-- Hidden -->
+                            <input type="text" name="desc_doenca" id="desc_doenca" placeholder="Se sim, qual?" class="form-control mb-3 d-none desc_hidden">
                         </div>
                     </div>
 
@@ -132,6 +138,8 @@
                             <label>Sim</label>
                             <input type="radio" name="deficFisica" id="deficFisica_false" value="deficFisica_false">
                             <label>Não</label>
+                            <!-- Hidden -->
+                            <input type="text" name="desc_doenca" id="desc_doenca" placeholder="Se sim, qual?" class="form-control mb-3 d-none desc_hidden">
                         </div>
                     </div>
 
@@ -142,6 +150,8 @@
                             <label>Sim</label>
                             <input type="radio" name="deficMental" id="deficMental_false" value="deficMental_false">
                             <label>Não</label>
+                            <!-- Hidden -->
+                            <input type="text" name="desc_doenca" id="desc_doenca" placeholder="Se sim, qual?" class="form-control mb-3 d-none desc_hidden">
                         </div>
                     </div>
                 </div>
@@ -175,27 +185,42 @@
     </div>
 </div>
 
+<!-- Mask -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
 
 <script type="text/javascript">
-  $(document).ready(function(){
-   $('#dt_nascimento').mask('99/99/9999');
-});
+    $(document).ready(function(){
+        $('#dt_nascimento').mask('99/99/9999');
+    });
 </script>
 
+<!-- DatePicker -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
 
 <script type="text/javascript">
     $("#diasServico").datepicker({
-    format: 'dd-mm-yyyy',
-    inline: false,
-    lang: 'pt',
-    todayHighlight: true,
-    multidate: true,
-    closeOnDateSelect: true
-});
+        format: 'dd-mm-yyyy',
+        inline: false,
+        lang: 'pt',
+        todayHighlight: true,
+        multidate: true,
+        closeOnDateSelect: true
+    });
+</script>
+
+<!-- JS para alternar o campo de descrever infermidades -->
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+        $("input[name='doenca']:radio", "formServico").checked(function(){
+
+            $('.desc_hidden').toggleClass('d-block');
+
+        });
+    });
+
 </script>
 
 <?php // Inclusão da FOOTER do sistema ?>
