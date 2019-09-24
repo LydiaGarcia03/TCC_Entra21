@@ -30,7 +30,9 @@ span{
 .card-register{
     max-width:40rem
 }
-.form-control, select.custom-select, .custom-file-label{
+.form-control, 
+select.custom-select, 
+.custom-file-label{
 	border-radius: 0 !important;
     border: none !important;
     border-bottom: 1px solid lightgray !important;
@@ -38,7 +40,12 @@ span{
     transition: 0.5s !important;
     margin-top: 10px !important;
 }
-.form-control:focus, .form-control:active, .btn input:focus, .btn input:active{
+.form-control:focus, 
+.form-control:active, 
+.btn input:focus, 
+.btn input:active, 
+select.custom-select:active, 
+select.custom-select:focus{
 	background-color: rgba(0,0,0,.03) !important;
 	outline: none !important;
 	box-shadow: none !important;

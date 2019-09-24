@@ -24,19 +24,20 @@ class Solicitar_Servico extends Site{
 		$hipertensao = $_POST['hipertenso'];
 		$descricao = $_POST['descricao'];
 		$email_responsavel = $_POST['email'];
-		$carga_horaria_diaria = $_POST['']
+		$carga_horaria_diaria = $_POST['carga_horaria'];
 		$estado = 'em espera';
-		$dias_servico = $_POST['diasServico'];
+		$dias_servico_string = $_POST['diasServico'];
 
-		if($carga_horaria_diaria > 12)
-			die();
+		$qtd_funcionarios_necessarios = 1;
 
 		// Separando a string no array
-		$dias_servico = explode(',', $dias_servico);
+		$dias_servico = explode(',', $dias_servico_string);
 
-		if(count($dias_servico) > 2){
-			$qtd_funcionarios_necessarios++;
-		}
+		if($carga_horaria_diaria > 12)
+			die('mais de 12h');
+
+		if(count($dias_servico) >= 2)
+			$qtd_funcionarios_necessarios = 2;
 
 	}
 
@@ -50,7 +51,7 @@ class Solicitar_Servico extends Site{
 			$queryIdResponsavel = mysqli_query($this->con, $sqlAcharFK);
 			$resultIdResponsavel = mysqli_fetch_array($queryIdResponsavel);
 
-			$sql = "INSERT INTO servico VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento', '$genero', '$tipo_servico', '$diabetico', '$deficiencia_fisica', '$deficiencia_mental', '$hipertensao', '$descricao', '$resultIdResponsavel', '$qtd_funcionarios_necessarios', NULL, '$cod_banco_crip', '$num_agencia_crip', '$tipo_conta_crip', '$num_conta_crip', '$dig_conta_crip', '$num_cartao_crip', '$nome_usuario_cartao_crip')";
+			$sql = "INSERT INTO servico VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento', '$genero', '$tipo_servico', '$diabetico', '$deficiencia_fisica', '$deficiencia_mental', '$hipertensao', '$descricao', '$resultIdResponsavel', '$carga_horaria_diaria', '$dias_servico_string', '$estado')";
 			$query = mysqli_query($this->con, $sql);
 			$result = mysqli_fetch_array($query);
 

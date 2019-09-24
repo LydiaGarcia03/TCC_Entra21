@@ -3,9 +3,9 @@
     require_once "classes/solicitar_servico.class.php";
     $solicitar_servico = new Solicitar_servico();
 
-    if(!parent::$solicitar_servico->session_error()){
-        header('Location: error.php');
-    }
+    // if(!parent::$solicitar_servico->session_error()){
+    //     header('Location: error.php');
+    // }
 
 ?>
 
@@ -89,8 +89,16 @@
                             <input type="text" name="diasServico" id="diasServico" style="cursor: pointer;" class="form-control date" placeholder="Escolha os dias para o serviço">
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-label-group">
+                            <input type="number" name="carga_horaria" id="carga_horaria" class="form-control" placeholder="Carga horária diária">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -107,42 +115,32 @@
 
             <div class="form-group">
                 <div class="form-row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-label-group">
-                            <p>O paciente é diabético?</p>
+                            O paciente possui alguma doença crônica?
                             <input type="radio" name="diabetico" id="diabetico_true" value="diabetico_true">
                             <label>Sim</label>
-                            <br>
                             <input type="radio" name="diabetico" id="diabetico_false" value="diabetico_false">
                             <label>Não</label>
                         </div>
+                    </div>
 
+                    <div class="col-md-12">
                         <div class="form-label-group">
-                            <p>O paciente possui deficiência física?</p>
+                            O paciente possui deficiência física?
                             <input type="radio" name="deficFisica" id="deficFisica_true" value="deficFisica_true">
                             <label>Sim</label>
-                            <br>
                             <input type="radio" name="deficFisica" id="deficFisica_false" value="deficFisica_false">
                             <label>Não</label>
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-label-group">
-                            <p>O paciente possui deficiência mental?</p>
+                            O paciente possui deficiência mental?
                             <input type="radio" name="deficMental" id="deficMental_true" value="deficMental_true">
                             <label>Sim</label>
-                            <br>
                             <input type="radio" name="deficMental" id="deficMental_false" value="deficMental_false">
-                            <label>Não</label>
-                        </div>
-
-                        <div class="form-label-group">
-                            <p>O paciente é hipertenso?</p>
-                            <input type="radio" name="hipertenso" id="hipertenso_true" value="hipertenso_true">
-                            <label>Sim</label>
-                            <br>
-                            <input type="radio" name="hipertenso" id="hipertenso_false" value="hipertenso_false">
                             <label>Não</label>
                         </div>
                     </div>
@@ -151,7 +149,7 @@
 
             <div class="form-group">
                 <div class="form-row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-label-group">
                             <textarea style="resize: none;" cols="64" rows="7" placeholder="Descreva, se necessário, algumas informações a mais e essenciais do paciente" class="form-control" name="descricao"></textarea>
                         </div>
@@ -161,9 +159,11 @@
 
             <div class="form-group" class="my-4">
                 <div class="form-row">
-                    <div class="col-md-6">
-                        <input type="checkbox" class="custom-control-input" name="confirmaResponsavel" id="confirmaResponsavel">
-                        <label class="custom-control-label">Confirmo que sou responsável pelo paciente descrito acima</label>
+                    <div class="col-md-12">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="confirmaResponsavel" id="confirmaResponsavel">
+                            <label class="form-check-label">Confirmo que sou responsável pelo paciente descrito acima</label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -192,6 +192,7 @@
     format: 'dd-mm-yyyy',
     inline: false,
     lang: 'pt',
+    todayHighlight: true,
     multidate: true,
     closeOnDateSelect: true
 });
@@ -203,14 +204,9 @@
 <?php 
 
 /* 
-    12h diarias max
+PLC Nº 11, DE 2016 ART4.I
 
-    +2 dias -> +1 profissional
-    alterna prof. dias s/ dia n/
-
-    PLC Nº 11, DE 2016 ART4.I
-
-    LEI COMPLEMENTAR Nº 150, DE 1º DE JUNHO DE 2015
+LEI COMPLEMENTAR Nº 150, DE 1º DE JUNHO DE 2015
 */
 
 ?>
