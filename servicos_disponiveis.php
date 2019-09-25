@@ -47,13 +47,13 @@ if(!$site->session_error()){
                 <td>Cuidador infantil</td>
                 <td>3/5</td>
                 <td> 
-                    <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba1">Mais</button>  
+                    <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" class="mostra_aba1">Mais</button>  
                     <button type="button" class="btn btn-outline-success">Aceitar</button> 
                 </td>
             </tr>
 
             <!-- Hidden -->
-            <tr id="tr_hidden" style="display: none;">
+            <tr class="tr_hidden" style="display: none;">
                 <td>Hipertenso: sim</td>
                 <td>Diabético: não</td>
                 <td>Descrição:
@@ -115,23 +115,23 @@ if(!$site->session_error()){
 
     <script>
 
-        //function mostrar_abas(obj) {
-            //document.getElementById('tr_hidden').style.display = "none";
+        function mostrar_abas(obj) {
+            document.getElementsByClassName('tr_hidden').style.display = "none";
             // document.getElementById('div_aba2').style.display = "none";
             // document.getElementById('div_aba3').style.display = "none";
 
-            //switch (obj.id) {
-                //case 'mostra_aba1':
-                //document.getElementById('tr_hidden').style.display = "block";
-                //break;
+            switch (obj.class) {
+                case 'mostra_aba1':
+                document.getElementById('tr_hidden').style.display = "block";
+                break;
                 //case 'mostra_aba2':
                 //document.getElementById('div_aba2').style.display = "block";
                 //break;
                // case 'mostra_aba3':
                // document.getElementById('div_aba3').style.display = "block";
                 //break;
-           // }
-        //}
+            }
+        }
 
     </script>
 
