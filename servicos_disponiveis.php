@@ -124,12 +124,12 @@ if(!$site->session_error()){
                 case 'mostra_aba1':
                 document.getElementById('tr_hidden').style.display = "block";
                 break;
-                //case 'mostra_aba2':
-                //document.getElementById('div_aba2').style.display = "block";
-                //break;
-               // case 'mostra_aba3':
-               // document.getElementById('div_aba3').style.display = "block";
-                //break;
+                case 'mostra_aba2':
+                document.getElementById('div_aba2').style.display = "block";
+                break;
+                case 'mostra_aba3':
+                document.getElementById('div_aba3').style.display = "block";
+                break;
             }
         }
 
