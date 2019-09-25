@@ -40,7 +40,7 @@ if(!$site->session_error()){
         <tbody>
             <!-- Visible -->
             <tr id="tr_visible">
-                <td>Caue</td>
+                <td>Alpha</td>
                 <td>Cuidado Infantil</td>
                 <td>4h</td>
                 <td>20/10</td>
@@ -62,7 +62,7 @@ if(!$site->session_error()){
 
                 <!-- Visible -->
                 <tr id="tr_visible">
-                    <td>Nathan</td>
+                    <td>Beta</td>
                     <td>Cuidado Infantil</td>
                     <td>8h</td>
                     <td>20/10</td>
@@ -87,7 +87,7 @@ if(!$site->session_error()){
 
                 <!-- Visible -->
                 <tr id="tr_visible">
-                    <td>Maicon</td>
+                    <td>Charlie</td>
                     <td>Cuidado Infantil</td>
                     <td>12h</td>
                     <td>20/10</td>
@@ -122,7 +122,7 @@ if(!$site->session_error()){
 
             switch (obj.class) {
                 case 'mostra_aba1':
-                document.getElementById('tr_hidden').style.display = "block";
+                document.getElementById('div_aba1').style.display = "block";
                 break;
                 case 'mostra_aba2':
                 document.getElementById('div_aba2').style.display = "block";
