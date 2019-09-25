@@ -17,8 +17,14 @@ $cadastro = new Cadastro_user();
 	<link href="style/home.css" rel="stylesheet" type="text/css">
 	<link href="sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="media/css/custom/cadastro_usuario.css">
+	<!-- Datepicker -->
+	<link href="media/css/resource/datepicker.css" rel="stylesheet" type="text/css">
+
+	<!-- SBAdmin -->
+	<link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet" type="text/css">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="media/css/resource/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<!-- CEP -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
@@ -88,11 +94,17 @@ $cadastro = new Cadastro_user();
 </head>
 <body style="background-color: dodgerblue">
 
+
 	<div class="container-fluid">
+
 		<div class="container">
 
+
 			<div class="card card-register mx-auto mt-5">
-				
+
+			
+
+
 				<div class="card-header">Crie sua conta grátis</div>
 
 				<div class="card-body">
@@ -215,7 +227,7 @@ $cadastro = new Cadastro_user();
 										<input type="text" name="complemento" id="complemento" class="form-control" placeholder="Complemento" required autofocus>    
 									</div>
 								</div>
-								
+
 							</div>
 						</div>
 						<div class="form-group">
@@ -246,9 +258,11 @@ $cadastro = new Cadastro_user();
 			</div>
 		</div> 
 	</div>
-		<a class="scroll-to-top rounded d-inline" href="index.php" id="btn-blockvoltar">
-			<i class="fas fa-angle-left"></i>
-		</a>
+<!-- Button TopPage -->
+<a class="scroll-to-top rounded d-inline" href="index.php" id="btn-voltar">
+	<i class="fas fa-angle-left"></i>
+</a>
+
 	<!-- Bootstrap core JavaScript-->
 	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
 	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -258,7 +272,7 @@ $cadastro = new Cadastro_user();
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/635b697ad0.js"></script>
-	
+
 	<!-- JQuery Mask -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
