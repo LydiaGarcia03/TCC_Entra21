@@ -3,21 +3,10 @@
 require_once 'classes/login.class.php';
 $login = new Login();
 
-?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<title>HCD | Login</title>
-	<meta charset="utf-8">
-	<link href="media/css/custom/cadastro_cuidador.css" rel="stylesheet" type="text/css">
-	<link href="media/css/custom/style.css" rel="stylesheet" type="text/css">
-	<link href="media/css/custom/style_blog.css" rel="stylesheet" type="text/css">
+require_once 'includes/startfile.php';
 
-	<!-- CSS -->   
-	<link href="media/css/custom/home.css" rel="stylesheet" type="text/css">
-	<link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+?>
+	<title>HCD | Login</title>
 </head>
 <body style="background-color: dodgerblue">
 	<!--botao voltar-->

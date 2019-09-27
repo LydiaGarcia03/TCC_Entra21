@@ -32,9 +32,11 @@ class Servico extends Site{
 		// Separando a string no array
 		$dias_servico = explode(',', $dias_servico_string);
 
+		// Não é permitido carga horária superior a 12h diárias
 		if($carga_horaria_diaria > 12)
-			die('mais de 12h');
+			die('mais de 12h'); 
 
+		// Como os cuidadores são alternados (dia s/ dia n/), o máximo que se pode ter são 2
 		if(count($dias_servico) >= 2)
 			$qtd_funcionarios_necessarios = 2;
 
@@ -64,10 +66,6 @@ class Servico extends Site{
 
 		$sql = "SELECT * FROM servico";
 		$query = mysqli_query($this->con, $sql);
-
-	}
-
-	public function listarServicosPorCuidador(){
 
 	}
 

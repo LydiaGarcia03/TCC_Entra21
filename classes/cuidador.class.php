@@ -17,7 +17,6 @@ class Cuidador extends Site{
 
 	public function receberDados(){
 
-		// Primeira etapa
 		$nome_completo = $_POST['nome_completo'];
 		// Upload de foto
 		$genero = $_POST['genero'];
@@ -63,5 +62,9 @@ class Cuidador extends Site{
 	}
 
 }
+
+/*
+Fazer upload de fotos
+*/
 
 ?>

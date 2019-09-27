@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>HCD | Dashboard</title>
 
     <!-- ============ CUSTOM CSS ============ -->
     <link href="media/css/custom/blog.css" rel="stylesheet" type="text/css">
@@ -27,4 +26,5 @@
 
     <!-- SBAdmin -->
     <link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet" type="text/css">
-</head>
+
+<!-- TITLE e fechamento da HEAD a parte -->
