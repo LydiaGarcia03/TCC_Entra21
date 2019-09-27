@@ -207,17 +207,7 @@
 </script>
 
 <!-- JS para alternar o campo de descrever infermidades -->
-<script type="text/javascript">
-    
-    $(document).ready(function(){
-        $("input[name='doenca']:radio", "formServico").checked(function(){
-
-            $('.desc_hidden').toggleClass('d-block');
-
-        });
-    });
-
-</script>
+<script type="text/javascript" src="media/js/custom/escolha_enfermidade.js"></script>
 
 <?php // Inclusão da FOOTER do sistema ?>
 <?php require_once('includes/footer.php'); ?>
