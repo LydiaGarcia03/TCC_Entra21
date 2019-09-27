@@ -15,12 +15,12 @@ CREATE TABLE profissional (
     end_complemento VARCHAR(250) NULL,
     tel_cel REAL NOT NULL,
     num_coren INT NOT NULL,
+    valor_hora REAL NOT NULL,
     # Info acadêmica
     curso_formacao VARCHAR(250) NOT NULL,
     instituicao VARCHAR(250) NOT NULL,
-    dt_ingresso DATE NOT NULL,
-    avaliacao REAL NULL
-) ENGINE = INNODB DEFAULT CHARSET = 'utf8';
+    dt_ingresso DATE NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = 'utf8';
 
 CREATE TABLE necessitado (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -35,7 +35,7 @@ CREATE TABLE necessitado (
     end_complemento VARCHAR(250) NULL,
     tel_cel REAL NOT NULL,
     tel_res REAL NULL
-) ENGINE = INNODB DEFAULT CHARSET = 'utf8';
+) ENGINE = InnoDB DEFAULT CHARSET = 'utf8';
 
 CREATE TABLE servico (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

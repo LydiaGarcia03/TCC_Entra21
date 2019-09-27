@@ -1,20 +1,18 @@
 <?php
 
-require_once "classes/site.class.php";
-$site = new Site();
+    require_once 'classes/cuidador.class.php';
 
-if($site->session_error() == 0){
-    // header('Location: error.php');
-    echo 'droga';
-    var_dump($_SESSION['tipo_usuario']);
-}
+    $cuidador = new Cuidador();
+    $cuidador->listarCuidador();
 
 ?>
-<?php // Inclusão do HEADER do sistema ?>
+<!-- Inclusão do HEADER do sistema -->
 <?php require_once('includes/startfile.php'); ?>
+
 <body id="page-top">
-  <div id="wrapper">
-<?php // Inclusão da NAVBAR lateral do sistema ?>
+    <div id="wrapper">
+
+<!-- Inclusão da NAVBAR lateral do sistema -->
 <?php require_once('includes/navbar.php'); ?>
 
 <div id="content">

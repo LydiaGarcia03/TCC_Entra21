@@ -1,7 +1,7 @@
 <?php
 
-    require_once "classes/solicitar_servico.class.php";
-    $solicitar_servico = new Solicitar_servico();
+    require_once "classes/servico.class.php";
+    $servico = new Servico();
 
     // if(!parent::$solicitar_servico->session_error()){
     //     header('Location: error.php');

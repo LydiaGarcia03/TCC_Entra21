@@ -11,12 +11,12 @@ class Site{
 
 	public function __construct(){
 
-		$this->conexao();
+		$this->connection();
 		$this->config();
 
 	}
 
-	public function conexao(){
+	public function connection(){
 
 		$this->con = mysqli_connect(self::HOST, self::USER, self::PASS, self::DB);
 		// Verifica erro
@@ -46,7 +46,15 @@ class Site{
 
 	}
 
-}
+	public function session_type(){
 
+		if($_SESSION['tipo_usuario'] == 'contratante')
+			return 'contratante';
+		elseif ($_SESSION['tipo_usuario'] == 'cuidador') 
+			return 'cuidador';
+
+	}
+
+}
 
 ?>

@@ -2,16 +2,20 @@
 
 require_once "site.class.php";
 
-class Cadastro_user extends Site{
+class Usuario extends Site{
 
 	public function __construct(){
 
 		parent::__construct();
 
 		session_start();
+		
+		if(isset($_POST['btnNovaConta']))
+			$this->novaConta();
 
-		$this->novaConta();
-
+		if (isset($_GET['id'])) 
+			$id_user = $_GET['id'];
+	
 	}
 
 	public function receberDados(){
@@ -30,23 +34,25 @@ class Cadastro_user extends Site{
 
 		// Criptografia de senha
 		$crip_senha = hash('sha512', $senha);
-		
+
 	}
 
 	public function novaConta(){
 
-		$this->receberDados();
+		$sql = "INSERT INTO necessitado VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento', '$email', '$crip_senha', '$cep', '$numero', '$complemento', '$tel_residencialular', '$tel_residencial')";
 
-		if(isset($_POST['btnNovaConta'])){
+		$query = mysqli_query($this->con, $sql);
 
-			$sql = "INSERT INTO necessitado VALUES (DEFAULT, '$nomeCompleto', NULL, '$genero', '$dt_nascimento', '$crip_senha', '$cep', '$numero', '$complemento', '$tel_celular', '$tel_residencial')";
+		var_dump($sql);
+		die('<br>droga');
 
+	}
 
-			$query = mysqli_query($this->con, $sql);
+	public function listarUsuario(){
 
-			echo 'oi';
-			die('droga');
-		}
+		$sql = "SELECT * FROM necessitado";
+
+		$query = mysqli_query($this->con, $sql);
 
 	}
 

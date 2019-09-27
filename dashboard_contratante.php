@@ -1,21 +1,18 @@
-<!-- <?php
+<?php
 
-//session_start();
-//require_once "classes/site.class.php";
-$site //= new Site();
+    require_once 'classes/usuario.class.php';
 
+    $usuario = new Usuario();
+    $usuario->listarUsuario(); // Deveria ter exeutado ou atribuido para funcionar o foreach (?)
 
-//if($site->session_error() == 0){
-  //  session_destroy();
-    //header('Location: error.php');
-
-
-?>-->
-<?php // Inclusão do HEADER do sistema ?>
+?>
+<!-- Inclusão do HEADER do sistema -->
 <?php require_once('includes/startfile.php'); ?>
+
 <body id="page-top">
-  <div id="wrapper">
-<?php // Inclusão da NAVBAR lateral do sistema ?>
+    <div id="wrapper">
+
+<!-- Inclusão da NAVBAR lateral do sistema -->
 <?php require_once('includes/navbar.php'); ?> 
 
     <div id="content">
@@ -26,7 +23,8 @@ $site //= new Site();
         <div class="card-body float-left">
             <div class="spinner-border text-danger float-right" role="status">
         </div>
-            <h5>#2760</h5>
+        <?php foreach ($usuario as $user){ ?>
+            <h5>#<?=$user['id']?></h5>
             <hr>
             <div class="row">
                 <div class="col-4">

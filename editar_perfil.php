@@ -3,20 +3,19 @@
 	require_once "classes/site.class.php";
 	$site = new Site();
 
-	if(!isset($_SESSION))
-		session_start();
-
-	if(!isset($_SESSION['tipo_usuario'])){
-		// session_destroy(   );
-		// header('Location: error.php');
+	if($site->session_error() == 0){
+		session_destroy();
+		header('Location: error.php');
 	}
 
 ?>
-<?php // Inclusão do HEADER do sistema ?>
+<!-- Inclusão do HEADER do sistema -->
 <?php require_once('includes/startfile.php'); ?>
+
 <body id="page-top">
-  <div id="wrapper">
-<?php // Inclusão da NAVBAR lateral do sistema ?>
+    <div id="wrapper">
+
+<!-- Inclusão da NAVBAR lateral do sistema -->
 <?php require_once('includes/navbar.php'); ?>	
 
     <div id="content">
@@ -93,7 +92,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-label-group">
-                                <input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control"
+                                <input type="password" name="confirmarSenha" id="confirmarSenha" class="form-control"
                                 placeholder="Confirmar Senha" minlength="8" maxlength="16" required autocomplete="off">
                             </div>
                         </div>
@@ -117,12 +116,14 @@
                                 placeholder="Rua" required autofocus disabled autocomplete="off">
                             </div>
                         </div>
+                        <?php if($site->session_type() == 'contratante'){ ?>
                         <div class="col-md-6">
                             <div class="form-label-group">
-                                <input type="text" name="numeroCasa" id="numeroCasa" class="form-control"
+                                <input type="text" name="numeroCasa" id="numeroCasa" class="form-control <?='d-none'; ?>"
                                 placeholder="Número da residência" required autofocus autocomplete="off">
                             </div>
                         </div>
+                    <?php } ?>
                     </div>
                 </div>
 
@@ -167,24 +168,35 @@
                                 placeholder="Número de telefone fixo" required autocomplete="off">
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="tel_celular" id="tel_celular" class="form-control"
-                                placeholder="Número de celular" requiredautocomplete="off">
+                                placeholder="Número de celular" required autocomplete="off">
                             </div>
                         </div>
-                        <div class="col-md-4 mt-3">
+
+                        <div class="col-md-2 mt-3">
                             <div class="form-label-group">
                                 <input type="text" name="num_coren" id="num_coren" class="form-control"
-                                placeholder="Número do Coren" required autofocusautocomplete="off">
+                                placeholder="Número do Coren" required autofocus autocomplete="off">
                             </div>
                         </div>
+
+                        <div class="col-md-2 mt-3">
+                            <div class="form-label-group">
+                                <input type="text" name="val_hora" id="val_hora" class="form-control"
+                                placeholder="Valor hora (R$)" required autofocus autocomplete="off">
+                            </div>
+                        </div>
+
                         <div class="col-md-4 mt-3">
                             <div class="form-label-group">
                                 <input type="text" name="curso_formacao" id="curso_formacao" class="form-control"
                                 placeholder="Curso de formação" required autofocus autocomplete="off">
                             </div>
                         </div>
+
                         <div class="col-md-4 mt-3">
                             <div class="form-label-group">
                                 <input type="text" name="instituicao" id="instituicao" class="form-control"
@@ -211,12 +223,6 @@
 			$('#tel_celular').mask('(99) 9 9999-9999');
 			$('#tel_residencial').mask('(99) 9999-9999');
 			$('#num_coren').mask('999.999');
-			$('#cod_banco').mask('999');
-			$('#num_agencia').mask('9999');
-			$('#tipo_conta').mask('999');
-			$('#num_conta').mask('99999999');
-			$('#dig_conta').mask('9');
-			$('#num_cartao').mask('9999 9999 9999 9999');
 		});
 	</script>
 

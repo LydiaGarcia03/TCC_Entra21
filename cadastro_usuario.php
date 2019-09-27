@@ -1,7 +1,7 @@
 <?php
 
-require_once "classes/cadastro_user.class.php";
-$cadastro = new Cadastro_user();
+	require_once "classes/usuario.class.php";
+	$user = new Usuario();
 
 ?>
 
@@ -100,16 +100,13 @@ $cadastro = new Cadastro_user();
 		<div class="container">
 
 
-			<div class="card card-register mx-auto mt-5">
+			<div class="card mx-auto mt-5">
 
-			
-
-
-				<div class="card-header">Crie sua conta grátis</div>
+				<div class="card-header text-center">Crie sua conta grátis</div>
 
 				<div class="card-body">
 
-					<form method="POST" action="login.php">
+					<form method="POST" action="" name="formCadastroUser">
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-6">
@@ -121,8 +118,8 @@ $cadastro = new Cadastro_user();
 								<div class="col-6">
 
 									<div class="input-group">
-										<label class="custom-file-label text-secondary" for="c_foto"></label>
-										<input type="file" name="c_foto" id="c_foto" class="custom-file-input" placeholder="Escolha uma foto de perfil">
+										<label class="custom-file-label text-secondary" for="fotoUser"></label>
+										<input type="file" name="fotoUser" id="fotoUser" class="custom-file-input" placeholder="Escolha uma foto de perfil">
 									</div>
 
 								</div>
@@ -246,7 +243,7 @@ $cadastro = new Cadastro_user();
 							</div>
 						</div>
 
-						<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Criar Conta">
+						<input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" id="btnNovaConta" value="Criar Conta">
 
 					</form>
 

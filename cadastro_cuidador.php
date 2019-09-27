@@ -1,9 +1,9 @@
-<!-- <?php
+<?php
 
-	//require_once "classes/cadastro_cuidador.class.php";
-	//$cadastro = new Cadastro_cuidador();
+	require_once "classes/cuidador.class.php";
+	$cuidador = new Cuidador();
 
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -256,11 +256,18 @@
 					<!-- Dados acadêmicos -->
 					<div class="form-group">
 						<div class="form-row">
-							<div class="col-md-4">
+							<div class="col-md-2">
 								<div class="form-label-group">
 									<input type="text" id="num_coren" name="num_coren" placeholder="Número do Coren" class="form-control">
 								</div>
 							</div>
+
+							<div class="col-md-2">
+	                            <div class="form-label-group">
+	                                <input type="text" name="val_hora" id="val_hora" class="form-control"
+	                                placeholder="Valor hora (R$)" required autofocus autocomplete="off">
+	                            </div>
+	                        </div>
 
 							<div class="col-md-4">
 								<div class="form-label-group">
