@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS hcdigital;
 
 USE hcdigitaL;
 
-CREATE TABLE profissional (
+CREATE TABLE cuidador (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome_completo VARCHAR(250) NOT NULL,
     foto BLOB NOT NULL,
@@ -10,6 +10,7 @@ CREATE TABLE profissional (
     dt_nascimento DATE NOT NULL,
     email VARCHAR(250) NOT NULL,
     senha VARCHAR(128) NOT NULL, -- CRIP
+    token_recuperacao CHAR(13) NULL,
     cep REAL NOT NULL, 
     end_numero INT NULL,
     end_complemento VARCHAR(250) NULL,
@@ -22,7 +23,7 @@ CREATE TABLE profissional (
     dt_ingresso DATE NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = 'utf8';
 
-CREATE TABLE necessitado (
+CREATE TABLE contratante (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome_completo VARCHAR(250) NOT NULL,
     foto BLOB NULL,
@@ -30,6 +31,7 @@ CREATE TABLE necessitado (
     dt_nascimento DATE NOT NULL,
     email VARCHAR(250) NOT NULL,
     senha VARCHAR(128) NOT NULL, -- CRIP
+    token_recuperacao CHAR(13) NULL,
     cep REAL NOT NULL,
     end_numero INT NULL,
     end_complemento VARCHAR(250) NULL,
@@ -49,16 +51,26 @@ CREATE TABLE servico (
     deficiencia_mental BOOLEAN NOT NULL,
     hipertensao BOOLEAN NOT NULL,
     descricao_op VARCHAR(500) NULL,
-    fk_id_necessitado INT NOT NULL,
+    fk_id_contratante INT NOT NULL,
     qtd_horas_diarias INT NOT NULL,
     dias_servico VARCHAR(250) NOT NULL,
     estado BOOLEAN NULL,
     
-    FOREIGN KEY(fk_id_necessitado) REFERENCES necessitado(id)
+    FOREIGN KEY(fk_id_contratante) REFERENCES contratante(id)
 ) ENGINE = InnoDB DEFAULT CHARSET = 'utf8';
+
+
+CREATE TABLE servicos_cuidadores(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    fk_id_servico INT NOT NULL,
+    fk_id_cuidador INT NOT NULL,
+    
+    FOREIGN KEY (fk_id_servico) REFERENCES servico(id),
+    FOREIGN KEY (fk_id_cuidador) REFERENCES cuidador(id)
+) ENGINE = InnoDB DEFAULT CHARSET  = 'utf8';
 
 -- CRIP de 128 caracteres é utilizado para sha512 que retorna 512 bits
 -- 512 bits = 128 caracteres
 
-INSERT INTO necessitado VALUES 
+INSERT INTO contratante VALUES 
     (DEFAULT, 'Lydia Garcia', NULL, 'F', '2002-01-03', 'lydiagarcia.chan@gmail.com', '5C63B0C8D48B70EBA12F932113BFEB8C3E9A2F56CA8307FC4A9F9E1349F7CDE361A128B1E40EB38CE37C9892C787A54F0D407854094E723D9A3089FF0EF8EEBD', '89115040', '2229', 'Fundos 2225', '47999340994', '4733322549');

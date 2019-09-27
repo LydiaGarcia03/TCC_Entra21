@@ -36,7 +36,8 @@
                 <div class="col-4">
                   <button type="button" class="btn btn-primary  btn-sm ml-5">Ver detalhes</button>
               </div>
-          </div>    
+          </div>  
+          <?php } ?>  
       </div>
   </div>
   <div class="card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
@@ -97,5 +98,5 @@
     </div>
 </div>
 
-<?php // Inclusão da FOOTER do sistema ?>
-<?php require_once('includes/footer.php'); ?>
+<!-- Inclusão da FOOTER do sistema -->
+<?php require_once 'includes/footer.php'; ?>

@@ -39,7 +39,7 @@ class Usuario extends Site{
 
 	public function novaConta(){
 
-		$sql = "INSERT INTO necessitado VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento', '$email', '$crip_senha', '$cep', '$numero', '$complemento', '$tel_residencialular', '$tel_residencial')";
+		$sql = "INSERT INTO necessitado VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento', '$email', '$crip_senha', NULL, '$cep', '$numero', '$complemento', '$tel_residencialular', '$tel_residencial')";
 
 		$query = mysqli_query($this->con, $sql);
 

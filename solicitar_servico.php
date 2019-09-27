@@ -3,10 +3,6 @@
     require_once "classes/servico.class.php";
     $servico = new Servico();
 
-    // if(!parent::$solicitar_servico->session_error()){
-    //     header('Location: error.php');
-    // }
-
 ?>
 
 <?php // Inclusão do HEADER do sistema ?>

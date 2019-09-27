@@ -60,9 +60,10 @@ class Servico extends Site{
 
 	}
 
-	public function listarDetalhesServico(){
+	public function listarServico(){
 
-		$sql = "SELECT * FROM servico WHERE id = "
+		$sql = "SELECT * FROM servico";
+		$query = mysqli_query($this->con, $sql);
 
 	}
 
