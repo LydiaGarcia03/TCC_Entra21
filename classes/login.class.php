@@ -28,13 +28,13 @@ class Login extends Site{
 				if($tipoUser == 'contratante'){
 
 					$user = 'contratante';
-					$sql = "SELECT * FROM necessitado WHERE email = '$email' AND senha = '$crip_senha'";
+					$sql = "SELECT * FROM contratante WHERE email = '$email' AND senha = '$crip_senha'";
 
                 }
 				else if($tipoUser == 'cuidador'){
 
 					$user = 'cuidador';
-					$sql = "SELECT * FROM profissional WHERE email = '$email' AND senha = '$crip_senha'";
+					$sql = "SELECT * FROM cuidador WHERE email = '$email' AND senha = '$crip_senha'";
 				}
 
 				$query = mysqli_query($this->con, $sql);

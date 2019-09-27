@@ -46,7 +46,7 @@ class Servico extends Site{
 
 		if(isset($_POST['btnSolicitarServico'])){
 
-			$sqlAcharFK = "SELECT id FROM necessitado WHERE email = $email_responsavel";
+			$sqlAcharFK = "SELECT id FROM contratante WHERE email = $email_responsavel";
 			$queryIdResponsavel = mysqli_query($this->con, $sqlAcharFK);
 			$resultIdResponsavel = mysqli_fetch_array($queryIdResponsavel);
 
@@ -64,6 +64,10 @@ class Servico extends Site{
 
 		$sql = "SELECT * FROM servico";
 		$query = mysqli_query($this->con, $sql);
+
+	}
+
+	public function listarServicosPorCuidador(){
 
 	}
 

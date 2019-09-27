@@ -43,7 +43,7 @@ class Cuidador extends Site{
 
 		$this->receberDados();
 
-		$sql = "INSERT INTO profissional VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento', '$email', '$crip_senha', NULL, '$cep', '$end_numero', '$end_complemento', '$tel_celular', '$num_coren', '$val_hora', '$curso_formacao', '$instituicao', CURDATE())";
+		$sql = "INSERT INTO cuidador VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento', '$email', '$crip_senha', NULL, '$cep', '$end_numero', '$end_complemento', '$tel_celular', '$num_coren', '$val_hora', '$curso_formacao', '$instituicao', CURDATE())";
 
 		$query = mysqli_query($this->con, $sql);
 
@@ -51,7 +51,7 @@ class Cuidador extends Site{
 
 	public function listarCuidador(){
 
-		$sql = "SELECT * FROM profissional";
+		$sql = "SELECT * FROM cuidador";
 
 		$query = mysqli_query($this->con, $sql);
 
