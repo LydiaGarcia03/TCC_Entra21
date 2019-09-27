@@ -19,7 +19,7 @@
 
     <!-- Begin Page Content -->
     <div class="container">
-        <div class="card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
+        <div class="col card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
         <div class="card-body float-left">
             <div class="spinner-border text-danger float-right" role="status">
         </div>
@@ -99,4 +99,4 @@
 </div>
 
 <!-- Inclusão da FOOTER do sistema -->
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once 'includes/footer.php';?>

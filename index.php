@@ -19,7 +19,7 @@
         <div class="container">
 
             <i class="fas fa-laptop-medical pr-2 fa-4x text-white"></i><a href="index.php" class="navbar-brand h1 m-0">HCDigital</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+            <button class="col- navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -48,10 +48,10 @@
                     </li>
                 </ul>
             </div>
-
-            <a href="login.php" class="btn btn-outline-light btn-sm mr-3">Login</a>
-            <a href="cadastro_usuario.php" class="btn btn-outline-light btn-sm">Cadastro</a>
-
+        <div>
+            <a href="login.php" class="col-sm- btn btn-outline-light btn-sm mr-3">Login</a>
+            <a href="cadastro_usuario.php" class="col-sm- btn btn-outline-light btn-sm">Cadastro</a>
+        </div>
         </nav>
 
         <!-- CARROSEL -->

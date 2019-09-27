@@ -19,7 +19,7 @@
 
     <!-- Begin Page Content -->
     <div class="container">
-        <div class="card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
+        <div class="col-sm card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
         <div class="card-body float-left">
             <div class="spinner-border text-danger float-right" role="status">
         </div>
@@ -38,7 +38,7 @@
           </div>    
       </div>
   </div>
-  <div class="card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
+  <div class="col-sm card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
     <div class="card-body float-left">
         <div class="spinner-border text-primary float-right" role="status">
         </div>
@@ -57,7 +57,7 @@
         </div>
     </div>
 </div>
-<div class="card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
+<div class="col-sm card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
     <div class="card-body float-left">
         <div class="spinner-border text-danger  float-right" role="status">
         </div>
@@ -76,7 +76,7 @@
         </div>
     </div>
 </div>
-<div class="card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
+<div class="col-sm card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
     <div class="card-body float-left">
         <div class="spinner-border text-primary float-right" role="status">
         </div>

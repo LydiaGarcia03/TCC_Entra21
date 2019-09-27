@@ -24,7 +24,7 @@ if(!$site->session_error()){
     </button>
 
     <!-- Tabela -->
-    <table class="table table-hover">
+    <table class="table table-hover col">
         <thead>
             <tr class="my-auto">
                 <th class="py-0">Nome</th>
@@ -40,14 +40,14 @@ if(!$site->session_error()){
         <tbody>
             <!-- Visible -->
             <tr id="tr_visible">
-                <td>Alpha</td>
+                <td>Alpha</td>  
                 <td>Cuidado Infantil</td>
                 <td>4h</td>
                 <td>20/10</td>
                 <td>Cuidador infantil</td>
                 <td>3/5</td>
                 <td> 
-                    <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" class="mostra_aba1">Mais</button>  
+                    <button type="button" class="col-md btn btn-outline-info" onclick="mostrar_abas(this);" class="mostra_aba1">Mais</button>  
                     <button type="button" class="btn btn-outline-success">Aceitar</button> 
                 </td>
             </tr>

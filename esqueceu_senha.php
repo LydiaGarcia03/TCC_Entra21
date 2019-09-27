@@ -19,7 +19,7 @@ $login = new Login();
 <!--botao voltar-->
 <body style="background-color: dodgerblue">
 	<div class="container">
-		<div class="col-lg-4" style="position: absolute; top: 20%; left: 34%">		
+		<div class="col-" style="position: absolute; top: 20%; left: 34%">		
 			<div class="card card-register rounded-0 shadow-lg">
 				<div class="card-header py-4 text-center">
 					Confirme seu endereço de login
