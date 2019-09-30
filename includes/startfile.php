@@ -9,13 +9,13 @@
     <!-- ============ CUSTOM CSS ============ -->
     <link href="media/css/custom/blog.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/chat.css" rel="stylesheet" type="text/css">
-    <link href="media/css/custom/dashboard.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/home.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/index.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/servicos_disponiveis.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/sobre_nos.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/style.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/style_blog.css" rel="stylesheet" type="text/css">
+    <link href="media/css/custom/dashboard.css" rel="stylesheet" type="text/css">
 
     <!-- ============ RESOURCES ============ -->
     <!-- Boostrap -->
