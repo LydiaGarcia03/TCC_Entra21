@@ -2,10 +2,10 @@
 
 class Site{
 	
-	CONST HOST = 'homecare.org:3306';
-	CONST USER = 'homecare';
+	CONST HOST = 'homecaredigital.org:3306';
+	CONST USER = 'homecare_master';
 	CONST DB = 'homecare_master';
-	CONST PASS = 'entra21@blusoft2019-';
+	CONST PASS = 'senha_loka2019@';
 
 	public $con;
 
@@ -21,6 +21,7 @@ class Site{
 		$this->con = mysqli_connect(self::HOST, self::USER, self::PASS, self::DB);
 		// Verifica erro
 		if(!$this->con){
+		    mysqli_connect_error();
 			die('erro na conexao');
 			header('location: error.php');
 		}
