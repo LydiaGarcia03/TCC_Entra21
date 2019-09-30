@@ -15,7 +15,7 @@ CREATE TABLE cuidador (
     end_numero VARCHAR(5) NULL,
     end_complemento VARCHAR(250) NULL,
     tel_cel CHAR(16) NOT NULL,
-    num_coren CHAR()7 NOT NULL,
+    num_coren CHAR(7) NOT NULL,
     valor_hora REAL NOT NULL,
     # Info acadêmica
     curso_formacao VARCHAR(250) NOT NULL,

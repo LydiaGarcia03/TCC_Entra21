@@ -17,7 +17,8 @@
 	<!-- ============ RESOURCES ============ -->
 	<!-- Boostrap -->
 	<link href="media/css/resource/bootstrap.min.css" rel="stylesheet" type="text/css">
-
+	<!-- Media -->
+    <link href="media/css/custom/responsivo/cadastro_cuidador.css" rel="stylesheet" type="text/css">
 	<!-- Datepicker -->
 	<link href="media/css/resource/datepicker.css" rel="stylesheet" type="text/css">
 
@@ -235,9 +236,11 @@
 
 	</div>
 	<!-- Button TopPage -->
+	<div id="btn_voltar">
 	<a class="scroll-to-top rounded d-inline" href="index.php" id="btn-voltar">
 		<i class="fas fa-angle-left"></i>
 	</a>
+	</div>
 	<!-- Bootstrap core JavaScript-->
 	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
 	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
