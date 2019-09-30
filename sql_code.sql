@@ -5,17 +5,17 @@ USE hcdigitaL;
 CREATE TABLE cuidador (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome_completo VARCHAR(250) NOT NULL,
-    foto BLOB NOT NULL,
+    foto BLOB NULL,
     genero SET('M', 'F', 'O') NOT NULL,
     dt_nascimento DATE NOT NULL,
     email VARCHAR(250) NOT NULL,
     senha VARCHAR(128) NOT NULL, -- CRIP
     token_recuperacao CHAR(13) NULL,
-    cep REAL NOT NULL, 
-    end_numero INT NULL,
+    cep CHAR(9) NOT NULL, 
+    end_numero VARCHAR(5) NULL,
     end_complemento VARCHAR(250) NULL,
-    tel_cel REAL NOT NULL,
-    num_coren INT NOT NULL,
+    tel_cel CHAR(16) NOT NULL,
+    num_coren CHAR()7 NOT NULL,
     valor_hora REAL NOT NULL,
     # Info acadêmica
     curso_formacao VARCHAR(250) NOT NULL,
@@ -32,11 +32,11 @@ CREATE TABLE contratante (
     email VARCHAR(250) NOT NULL,
     senha VARCHAR(128) NOT NULL, -- CRIP
     token_recuperacao CHAR(13) NULL,
-    cep REAL NOT NULL,
-    end_numero INT NULL,
+    cep CHAR(9) NOT NULL,
+    end_numero VARCHAR(5) NULL,
     end_complemento VARCHAR(250) NULL,
-    tel_cel REAL NOT NULL,
-    tel_res REAL NULL
+    tel_cel CHAR(16) NOT NULL,
+    tel_res CHAR(14) NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = 'utf8';
 
 CREATE TABLE servico (
@@ -46,11 +46,13 @@ CREATE TABLE servico (
     dt_nascimento_paciente DATE NOT NULL,
     genero_paciente SET('M', 'F', 'O') NOT NULL,
     tipo_servico SET('Infantil', 'Idoso', 'Enfermagem'),
-    diabetico BOOLEAN NOT NULL,
+    doenca_cronica BOOLEAN NOT NULL,
+    doenca_cronica_descricao VARCHAR(250) NULL,
     deficiencia_fisica BOOLEAN NOT NULL,
+    deficiencia_fisica_descricao VARCHAR(250) NULL,
     deficiencia_mental BOOLEAN NOT NULL,
-    hipertensao BOOLEAN NOT NULL,
-    descricao_op VARCHAR(500) NULL,
+    deficiencia_mental_descricao VARCHAR(250) NULL,
+    descricao_geral VARCHAR(500) NULL,
     fk_id_contratante INT NOT NULL,
     qtd_horas_diarias INT NOT NULL,
     dias_servico VARCHAR(250) NOT NULL,

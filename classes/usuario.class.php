@@ -18,33 +18,30 @@ class Usuario extends Site{
 	
 	}
 
-	public function receberDados(){
-
-		$nome_completo = $POST['nomeCompleto'];
-		// Upload de imagens 
-		$genero = $POST['genero'];
-		$dt_nascimento = $POST['dt_nascimento'];
-		$email = $POST['email'];
-		$senha = $POST['senha'];
-		$cep = $POST['cep'];
-		$numero = $POST['numeroCasa'];
-		$complemento = $POST['complemento'];
-		$tel_celular = $POST['tel_celular'];
-		$tel_residencial = $POST['tel_residencial'];
-
-		// Criptografia de senha
-		$crip_senha = hash('sha512', $senha);
-
-	}
-
 	public function novaConta(){
 
-		$sql = "INSERT INTO contratante VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento', '$email', '$crip_senha', NULL, '$cep', '$numero', '$complemento', '$tel_residencialular', '$tel_residencial')";
+		// Recebendo dados
+		$nome_completo = $_POST['nomeCompleto'];
+		$genero = $_POST['genero'];
+		$dt_nascimento = $_POST['dt_nascimento'];
+		$email = $_POST['email'];
+		$senha = $_POST['senha'];
+		$cep = $_POST['cep'];
+		$numeroCasa = $_POST['numeroCasa'];
+		$complemento = $_POST['complemento'];
+		$tel_celular = $_POST['tel_celular'];
+		$tel_residencial = $_POST['tel_residencial'];
 
+		// Tratamento de dados
+		$crip_senha = hash('sha512', $senha);
+
+		$dt_aux = str_replace('/', '-', $dt_nascimento);
+		$dt_nascimento_sql = date("Y-m-d", strtotime($dt_aux));
+
+
+		$sql = "INSERT INTO contratante VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento_sql', '$email', '$crip_senha', NULL, '$cep', '$numeroCasa', '$complemento', '$tel_celular', '$tel_residencial')";
+		
 		$query = mysqli_query($this->con, $sql);
-
-		var_dump($sql);
-		die('<br>droga');
 
 	}
 

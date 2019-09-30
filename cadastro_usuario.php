@@ -68,9 +68,9 @@
 								<div class="col-md-6">
 									<select class="form-control" name="genero">
 										<option selected disabled>Gênero</option>
-										<option value="masculino">Masculino</option>
-										<option value="feminino">Feminino</option>
-										<option value="outros">Outros</option>
+										<option value="M">Masculino</option>
+										<option value="F">Feminino</option>
+										<option value="O">Outros</option>
 									</select>
 								</div>
 								<div class="col-md-6">

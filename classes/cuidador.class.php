@@ -14,10 +14,9 @@ class Cuidador extends Site{
 			$this->novaConta();
 
 	}
+	public function novaConta(){
 
-	public function receberDados(){
-
-		$nome_completo = $_POST['nome_completo'];
+		$nome_completo = $_POST['nomeCompleto'];
 		// Upload de foto
 		$genero = $_POST['genero'];
 		$dt_nascimento = $_POST['dt_nascimento'];
@@ -25,27 +24,26 @@ class Cuidador extends Site{
 		$senha = $_POST['senha'];
 		$tel_celular = $_POST['tel_celular'];
 		$cep = $_POST['cep'];
-		$end_numero = $_POST['end_numero'];
-		$end_complemento = $_POST['end_complemento'];
+		$end_numero = $_POST['numeroCasa'];
+		$end_complemento = $_POST['complemento'];
 
 		$num_coren = $_POST['num_coren'];
 		$val_hora = $_POST['val_hora'];
 		$curso_formacao = $_POST['form_curso'];
 		$instituicao = $_POST['form_instituicao'];
 
-		// Criptografia
+		// Tratamento de dados
 		$crip_senha = hash('sha512', $senha);
 
-	}
+		$dt_aux = str_replace('/', '-', $dt_nascimento);
+		$dt_nascimento_sql = date("Y-m-d", strtotime($dt_aux));
 
-	public function novaConta(){
+		$dataAtual = date('Y-m-d');
 
-		$this->receberDados();
-
-		$sql = "INSERT INTO cuidador VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento', '$email', '$crip_senha', NULL, '$cep', '$end_numero', '$end_complemento', '$tel_celular', '$num_coren', '$val_hora', '$curso_formacao', '$instituicao', CURDATE())";
+		$sql = "INSERT INTO cuidador VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento_sql', '$email', '$crip_senha', NULL, '$cep', '$end_numero', '$end_complemento', '$tel_celular', '$num_coren', $val_hora, '$curso_formacao', '$instituicao', '$dataAtual')";
 
 		$query = mysqli_query($this->con, $sql);
-
+		
 	}
 
 	public function listarCuidador(){

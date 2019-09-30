@@ -10,9 +10,12 @@ class Servico extends Site{
 
 		session_start();
 
+		if(isset($_POST['btnSolicitarServico']))
+			$this->novoServico();
+
 	}
 
-	public function receber_dados(){
+	public function novoServico(){
 
 		$nome_paciente = $_POST['nomePaciente'];
 		$dt_nascimento = $_POST['dt_nascimento'];
@@ -27,6 +30,10 @@ class Servico extends Site{
 		$estado = 'em espera';
 		$dias_servico_string = $_POST['diasServico'];
 
+		// Tratamento dos dados
+		$dt_aux = str_replace('/', '-', $dt_nascimento);
+		$dt_nascimento_sql = date("Y-m-d", strtotime($dt_aux));
+
 		$qtd_funcionarios_necessarios = 1;
 
 		// Separando a string no array
@@ -40,25 +47,20 @@ class Servico extends Site{
 		if(count($dias_servico) >= 2)
 			$qtd_funcionarios_necessarios = 2;
 
-	}
+		$sqlAcharFK = "SELECT id FROM contratante WHERE email = $email_responsavel";
+		$queryIdResponsavel = mysqli_query($this->con, $sqlAcharFK);
+		$resultIdResponsavel = mysqli_fetch_array($queryIdResponsavel);
 
-	public function novoServico(){
+		$sql = "INSERT INTO servico VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento_sql', '$genero', '$tipo_servico', '$diabetico', '$deficiencia_fisica', '$deficiencia_mental', '$descricao', '$resultIdResponsavel', '$carga_horaria_diaria', '$dias_servico_string', '$estado')";
+	
+		var_dump($sql);
+		echo "<br>";;
+		var_dump($query);
+		die();
 
-		$this->receber_dados();
+		$query = mysqli_query($this->con, $sql);
 
-		if(isset($_POST['btnSolicitarServico'])){
-
-			$sqlAcharFK = "SELECT id FROM contratante WHERE email = $email_responsavel";
-			$queryIdResponsavel = mysqli_query($this->con, $sqlAcharFK);
-			$resultIdResponsavel = mysqli_fetch_array($queryIdResponsavel);
-
-			$sql = "INSERT INTO servico VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento', '$genero', '$tipo_servico', '$diabetico', '$deficiencia_fisica', '$deficiencia_mental', '$hipertensao', '$descricao', '$resultIdResponsavel', '$carga_horaria_diaria', '$dias_servico_string', '$estado')";
-			$query = mysqli_query($this->con, $sql);
-			$result = mysqli_fetch_array($query);
-
-			header('Location: dashboard_usuario.php');
-
-		}
+		header('Location: dashboard_usuario.php');
 
 	}
 

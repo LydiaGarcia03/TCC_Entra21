@@ -42,9 +42,9 @@
                     <div class="col-md-6">
                         <select class="custom-select" name="genero">
                             <option selected disabled>Gênero</option>
-                            <option value="masculino">Masculino</option>
-                            <option value="feminino">Feminino</option>
-                            <option value="outro">Outro</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="O">Outro</option>
                         </select>
                     </div>
 
@@ -63,9 +63,9 @@
                         <div class="form-label-group">
                             <select class="custom-select" name="servico">
                                 <option selected disabled>Tipo de serviço</option>
-                                <option value="infantil">Cuidador infantil</option>
-                                <option value="idoso">Cuidador de idosos</option>
-                                <option value="enfermagem">Enfermagem</option>
+                                <option value="Infantil">Cuidador infantil</option>
+                                <option value="Idoso">Cuidador de idosos</option>
+                                <option value="Enfermagem">Enfermagem</option>
                             </select>
                         </div>
                     </div>
