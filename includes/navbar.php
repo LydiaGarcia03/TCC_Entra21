@@ -76,7 +76,7 @@ session_start();
 
     <div style="bottom: 0px">
         <li class="nav-item no-arrow mb-0">
-            <a href="" class="nav-link text-center" data-dismiss = 'modal'>
+            <a href="index.php" class="nav-link text-center" data-dismiss = 'modal'>
                 <i class="fas fa-fw fa-sign-out-alt"></i>
                 <span>Sair</span>
             </a>
