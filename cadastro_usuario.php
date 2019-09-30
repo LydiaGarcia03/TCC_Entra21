@@ -76,7 +76,7 @@
 								<div class="col-md-6">
 									<div class="form-label-group">
 										<input type="text" name="dt_nascimento" id="dt_nascimento" cadastro_usuario0/0000" maxlength="10" class="form-control" 
-										placeholder="cadastro_usuarionto" required>    
+										placeholder="Data de nascimento" required>    
 									</div>
 								</div>
 							</div>
