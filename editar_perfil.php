@@ -118,10 +118,10 @@
                         </div>
     
                         <div class="col-md-6">
-                            <div class="form-label-group">
-                                <input type="text" name="numeroCasa" id="numeroCasa" class="form-control <?='d-none'; ?>"
-                                placeholder="Número da residência" required autofocus autocomplete="off">
-                            </div>
+                           <div class="form-label-group">
+                                    <input type="text" name="numero_casa" id="numero_casa" class="form-control" 
+                                    placeholder="Número da residência" minlength="2" maxlength="4" required>    
+                                </div>
                         </div>
                     </div>
                 </div>

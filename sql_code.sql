@@ -15,7 +15,7 @@ CREATE TABLE cuidador (
     end_numero VARCHAR(5) NULL,
     end_complemento VARCHAR(250) NULL,
     tel_cel CHAR(16) NOT NULL,
-    num_coren CHAR()7 NOT NULL,
+    num_coren CHAR(7) NOT NULL,
     valor_hora REAL NOT NULL,
     # Info acadêmica
     curso_formacao VARCHAR(250) NOT NULL,
@@ -75,7 +75,7 @@ CREATE TABLE servicos_cuidadores(
 -- 512 bits = 128 caracteres
 
 INSERT INTO contratante VALUES 
-    (DEFAULT, 'Lydia Garcia', NULL, 'F', '2002-01-03', 'lydiagarcia.chan@gmail.com', '5C63B0C8D48B70EBA12F932113BFEB8C3E9A2F56CA8307FC4A9F9E1349F7CDE361A128B1E40EB38CE37C9892C787A54F0D407854094E723D9A3089FF0EF8EEBD', NULL, '89115040', '2229', 'Fundos 2225', '47999340994', '4733322549');
+    (DEFAULT, 'Lydia Garcia', NULL, 'F', '2002-01-03', 'lydiagarcia.chan@gmail.com', '5C63B0C8D48B70EBA12F9x32113BFEB8C3E9A2F56CA8307FC4A9F9E1349F7CDE361A128B1E40EB38CE37C9892C787A54F0D407854094E723D9A3089FF0EF8EEBD', NULL, '89115040', '2229', 'Fundos 2225', '47999340994', '4733322549');
 
 -- Tokens de recuperação devem seguir um padrão
 -- <6 números random> - <Encode de Base64 do tempo atual>
