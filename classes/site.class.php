@@ -2,10 +2,10 @@
 
 class Site{
 	
-	CONST HOST = 'homecaredigital.org:3306';
-	CONST USER = 'homecare_master';
-	CONST DB = 'homecare_master';
-	CONST PASS = 'senha_loka2019@';
+	CONST HOST = '162.241.2.207:3306';
+	CONST USER = 'recei134_yuri';
+	CONST DB = 'recei134_fidelize';
+	CONST PASS = '1234qwer';
 
 	public $con;
 
