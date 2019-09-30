@@ -132,7 +132,8 @@
 								</div>
 								<div class="col-md-4">
 									<div class="form-label-group">
-										<input type="text" name="numeroCasa" id="numeroCasa" class="form-control" placeholder="Número da residência" required autofocus>    
+										<input type="text" name="numero_casa" id="numero_casa" class="form-control" 
+										placeholder="Número da residência" minlength="2" maxlength="4" required>    
 									</div>
 								</div>
 							</div>
@@ -158,7 +159,7 @@
 							<div class="form-row">
 								<div class="col-md-12">
 									<div class="form-label-group">
-										<input type="text" name="complemento" id="complemento" class="form-control" placeholder="Complemento" required autofocus>    
+										<input type="text" name="complemento" id="complemento" class="form-control" placeholder="Complemento" minlength="8" maxlength="16" required autofocus>    
 									</div>
 								</div>
 
@@ -210,14 +211,6 @@
 	<!-- JQuery Mask -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('#dt_nascimento').mask('99/99/9999');
-			$('#cep').mask('99999-999');
-			$('#tel_celular').mask('(99) 9 9999-9999');
-			$('#tel_residencial').mask('(99) 9999-9999');
-		});
-	</script>
+	<script type="text/javascript" src="media/js/custom/data_nascimento.js"></script>
 </body>
 </html>

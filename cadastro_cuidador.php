@@ -1,7 +1,7 @@
 <?php
 
-	require_once "classes/cuidador.class.php";
-	$cuidador = new Cuidador();
+require_once "classes/cuidador.class.php";
+$cuidador = new Cuidador();
 
 ?>
 
@@ -29,9 +29,9 @@
 	<script type="text/javascript" src="media/js/custom/cep.js"></script>
 </head>
 <body style="background-color: dodgerblue">
-<!--botao voltar-->
+	<!--botao voltar-->
 
-<div class="container">
+	<div class="container">
 
 
 		<div class="card mx-auto my-5">
@@ -136,8 +136,8 @@
 
 							<div class="col-md-4">
 								<div class="form-label-group">
-									<input type="number" name="numeroCasa" id="numeroCasa" class="form-control" 
-									placeholder="Número da residência" maxlength="5" minlength="2" required autofocus>    
+									<input type="text" name="numero_casa" id="numero_casa" class="form-control" 
+									placeholder="Número da residência" minlength="2" maxlength="4" required>    
 								</div>
 							</div>
 						</div>
@@ -199,11 +199,11 @@
 							</div>
 
 							<div class="col-md-2">
-	                            <div class="form-label-group">
-	                                <input type="text" name="val_hora" id="val_hora" class="form-control"
-	                                placeholder="Valor hora (R$)" required autofocus autocomplete="off">
-	                            </div>
-	                        </div>
+								<div class="form-label-group">
+									<input type="text" name="val_hora" id="val_hora" class="form-control"
+									placeholder="Valor hora (R$)" required autofocus autocomplete="off">
+								</div>
+							</div>
 
 							<div class="col-md-4">
 								<div class="form-label-group">

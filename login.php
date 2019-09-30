@@ -6,7 +6,7 @@ $login = new Login();
 require_once 'includes/startfile.php';
 
 ?>
-	<title>HCD | Login</title>
+<title>HCD | Login</title>
 </head>
 <body style="background-color: dodgerblue">
 	<!--botao voltar-->
@@ -19,8 +19,8 @@ require_once 'includes/startfile.php';
 				<div class="card-header py-4 text-center">
 
 					<div id="btn-volta">
-							<a class="navbar-brand logo" href="index.php">
-								<i class="fas fa-laptop-medical fa-2x mx-3 .text-white"></i>HCDigital</a>
+						<a class="navbar-brand logo" href="index.php">
+							<i class="fas fa-laptop-medical fa-2x mx-3 .text-white"></i>HCDigital</a>
 						</div> <br>
 
 						Faça o login para acessar sua conta
@@ -41,7 +41,7 @@ require_once 'includes/startfile.php';
 									<div class="col-md-12">
 										<div class="form-label-group">
 											<input type="password" name="senha" id="senha" class="form-control" 
-											placeholder="Senha" required="required">    
+											placeholder="Senha" minlength="8" maxlength="16" required>
 										</div>
 									</div>
 								</div>
