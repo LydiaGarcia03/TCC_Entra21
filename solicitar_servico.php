@@ -118,9 +118,9 @@
                     <div class="col-md-12">
                         <div class="form-label-group">
                             O paciente possui alguma doença crônica?
-                            <input type="radio" name="doenca" id="doenca_true" value="doenca_true">
+                            <input type="radio" name="doenca" id="doenca_true" value="true">
                             <label>Sim</label>
-                            <input type="radio" name="doenca" id="doenca_false" value="doenca_false">
+                            <input type="radio" name="doenca" id="doenca_false" value="false">
                             <label>Não</label>
                             <!-- Hidden -->
                             <input type="text" name="desc_doenca" id="desc_doenca" placeholder="Se sim, qual?" class="form-control mb-3 d-none desc_hidden">
@@ -135,7 +135,7 @@
                             <input type="radio" name="deficFisica" id="deficFisica_false" value="deficFisica_false">
                             <label>Não</label>
                             <!-- Hidden -->
-                            <input type="text" name="desc_doenca" id="desc_doenca" placeholder="Se sim, qual?" class="form-control mb-3 d-none desc_hidden">
+                            <input type="text" name="desc_deficFisica" id="desc_deficFisica" placeholder="Se sim, qual?" class="form-control mb-3 d-none desc_hidden">
                         </div>
                     </div>
 
@@ -147,7 +147,7 @@
                             <input type="radio" name="deficMental" id="deficMental_false" value="deficMental_false">
                             <label>Não</label>
                             <!-- Hidden -->
-                            <input type="text" name="desc_doenca" id="desc_doenca" placeholder="Se sim, qual?" class="form-control mb-3 d-none desc_hidden">
+                            <input type="text" name="desc_deficMental" id="desc_deficMental" placeholder="Se sim, qual?" class="form-control mb-3 d-none desc_hidden">
                         </div>
                     </div>
                 </div>

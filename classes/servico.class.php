@@ -22,8 +22,11 @@ class Servico extends Site{
 		$genero = $_POST['genero'];
 		$tipo_servico = $_POST['servico'];
 		$doenca = $_POST['doenca'];
+		$doenca_descricao = $_POST['desc_doenca'];
 		$deficiencia_fisica = $_POST['deficFisica'];
+		$deficiencia_fisica_descricao = $_POST['desc_deficFisica'];
 		$deficiencia_mental = $_POST['deficMental'];
+		$deficiencia_mental_descricao = $_POST['desc_deficMental'];
 		$descricao = $_POST['descricao'];
 		$email_responsavel = $_POST['email'];
 		$carga_horaria_diaria = $_POST['carga_horaria'];
@@ -33,6 +36,13 @@ class Servico extends Site{
 		// Tratamento dos dados
 		$dt_aux = str_replace('/', '-', $dt_nascimento);
 		$dt_nascimento_sql = date("Y-m-d", strtotime($dt_aux));
+
+		if($doenca == 'doenca_false')
+			$doenca_descricao = 'NULL';
+		if($deficiencia_fisica == 'deficFisica_false')
+			$deficiencia_fisica_descricao = 'NULL';
+		if($deficiencia_mental == 'deficMental_false')
+			$deficiencia_mental_descricao = 'NULL';
 
 		$qtd_funcionarios_necessarios = 1;
 
@@ -47,20 +57,17 @@ class Servico extends Site{
 		if(count($dias_servico) >= 2)
 			$qtd_funcionarios_necessarios = 2;
 
-		$sqlAcharFK = "SELECT id FROM contratante WHERE email = $email_responsavel";
+		$sqlAcharFK = "SELECT id FROM contratante WHERE email = '$email_responsavel'";
 		$queryIdResponsavel = mysqli_query($this->con, $sqlAcharFK);
 		$resultIdResponsavel = mysqli_fetch_array($queryIdResponsavel);
 
-		$sql = "INSERT INTO servico VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento_sql', '$genero', '$tipo_servico', '$diabetico', '$deficiencia_fisica', '$deficiencia_mental', '$descricao', '$resultIdResponsavel', '$carga_horaria_diaria', '$dias_servico_string', '$estado')";
-	
-		var_dump($sql);
-		echo "<br>";;
-		var_dump($query);
-		die();
+		$idResponsavel = $resultIdResponsavel['id'];
+
+		$sql = "INSERT INTO servico VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento_sql', '$genero', '$tipo_servico', '$doenca', $doenca_descricao, '$deficiencia_fisica', $deficiencia_fisica_descricao, '$deficiencia_mental', $deficiencia_mental_descricao, '$descricao', $idResponsavel, '$carga_horaria_diaria', '$dias_servico_string', '$estado')";
 
 		$query = mysqli_query($this->con, $sql);
 
-		header('Location: dashboard_usuario.php');
+		header('Location: dashboard_contratante.php');
 
 	}
 
