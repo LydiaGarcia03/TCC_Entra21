@@ -254,22 +254,7 @@ $cuidador = new Cuidador();
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('#dt_nascimento').mask('99/99/9999');
-			$('#cep').mask('99999-999');
-			$('#tel_celular').mask('(99) 9 9999-9999');
-			$('#tel_residencial').mask('(99) 9999-9999');
-			$('#num_coren').mask('999.999');
-		});
-	</script>
-
-	<script>
-		$('.custom-file-input').on('change', function() {
-			var fileName = $(this).val();
-			$(this).attr('placeholder', fileName);
-		});
-	</script>
+	<script type="text/javascript" src="media/js/custom/cadastro_cuidador.js"></script>
 
 </body>
 </html>
