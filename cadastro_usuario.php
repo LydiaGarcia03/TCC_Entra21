@@ -75,8 +75,8 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-label-group">
-										<input type="text" name="dt_nascimento" id="dt_nascimento" data-mask="00/00/0000" maxlength="10" class="form-control" 
-										placeholder="Data de nascimento" required>    
+										<input type="text" name="dt_nascimento" id="dt_nascimento" cadastro_usuario0/0000" maxlength="10" class="form-control" 
+										placeholder="cadastro_usuarionto" required>    
 									</div>
 								</div>
 							</div>
@@ -211,6 +211,6 @@
 	<!-- JQuery Mask -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
-	<script type="text/javascript" src="media/js/custom/data_nascimento.js"></script>
+	<script type="text/javascript" src="media/js/custom/cadastro_usuario.js"></script>
 </body>
 </html>
