@@ -116,14 +116,13 @@
                                 placeholder="Rua" required autofocus disabled autocomplete="off">
                             </div>
                         </div>
-                        <?php if($site->session_type() == 'contratante'){ ?>
+    
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="numeroCasa" id="numeroCasa" class="form-control <?='d-none'; ?>"
                                 placeholder="Número da residência" required autofocus autocomplete="off">
                             </div>
                         </div>
-                    <?php } ?>
                     </div>
                 </div>
 
@@ -162,12 +161,14 @@
                 </div>
                 <div class="form-group">
                     <div class="form-row">
+                        <?php if($site->session_type() == 'contratante'){ ?>
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="tel_residencial" id="tel_residencial" class="form-control"
                                 placeholder="Número de telefone fixo" required autocomplete="off">
                             </div>
                         </div>
+                        <?php } ?>
 
                         <div class="col-md-6">
                             <div class="form-label-group">
@@ -176,6 +177,7 @@
                             </div>
                         </div>
 
+                        <?php if($site->session_type() == 'contratante'){ ?>
                         <div class="col-md-2 mt-3">
                             <div class="form-label-group">
                                 <input type="text" name="num_coren" id="num_coren" class="form-control"
@@ -203,6 +205,7 @@
                                 placeholder="Instituição de formação" required autofocus autocomplete="off">
                             </div>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
 
