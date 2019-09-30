@@ -37,11 +37,11 @@ class Servico extends Site{
 		$dt_aux = str_replace('/', '-', $dt_nascimento);
 		$dt_nascimento_sql = date("Y-m-d", strtotime($dt_aux));
 
-		if($doenca == 'doenca_false')
+		if($doenca == 'false')
 			$doenca_descricao = 'NULL';
-		if($deficiencia_fisica == 'deficFisica_false')
+		if($deficiencia_fisica == 'false')
 			$deficiencia_fisica_descricao = 'NULL';
-		if($deficiencia_mental == 'deficMental_false')
+		if($deficiencia_mental == 'false')
 			$deficiencia_mental_descricao = 'NULL';
 
 		$qtd_funcionarios_necessarios = 1;
@@ -66,8 +66,8 @@ class Servico extends Site{
 		$sql = "INSERT INTO servico VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento_sql', '$genero', '$tipo_servico', '$doenca', $doenca_descricao, '$deficiencia_fisica', $deficiencia_fisica_descricao, '$deficiencia_mental', $deficiencia_mental_descricao, '$descricao', $idResponsavel, '$carga_horaria_diaria', '$dias_servico_string', '$estado')";
 
 		$query = mysqli_query($this->con, $sql);
-
-		header('Location: dashboard_contratante.php');
+		
+		// header('Location: dashboard_contratante.php');
 
 	}
 
