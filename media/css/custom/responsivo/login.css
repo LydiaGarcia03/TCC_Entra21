@@ -1,0 +1,18 @@
+#login{
+	text-align: center;
+	padding-left: 100px;
+}
+
+#card_login{
+	text-align: center;
+	padding-left: 218px;
+}
+
+@media only screen and (max-width: 600px) {
+  #login {
+    
+    margin-right:10px;
+  }
+}
+ 
+

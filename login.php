@@ -8,13 +8,15 @@ require_once 'includes/startfile.php';
 ?>
 <title>HCD | Login</title>
 </head>
-<body style="background-color: dodgerblue">
-	<!--botao voltar-->
 
+<body style="">
+	<!--botao voltar-->
+	<!-- Media -->
+	<link href="media/css/custom/responsivo/login.css" rel="stylesheet" type="text/css">
 
 	<div class="container">
-		<div class="col-lg-4" style="position: absolute; top: 20%; left: 34%">		
-			<div class="card card-register rounded-0 shadow-lg">
+		<div class="col-" style="padding-left:180px; padding-top: 135px; padding-right: 0px;" id="login">		
+			<div class="col- card card-register rounded-0 shadow-lg">
 
 				<div class="card-header py-4 text-center">
 
@@ -54,14 +56,16 @@ require_once 'includes/startfile.php';
 										<div class="btn-group btn-group-toggle" style="width: 100%" data-toggle="buttons">
 											<label class="btn btn-light">
 												<input type="radio" name="btnTipoUsuario" id="cuidador" value="cuidador" required>Cuidador
-											</label>										
+											</label>	<br>	
+																
 
+										
 											<label class="btn btn-light">
 												<input type="radio" name="btnTipoUsuario" id="contratante" value="contratante">Contratante
 											</label>										
 										</div>
 
-									</div	>
+									</div>
 								</div>
 							</div>
 
