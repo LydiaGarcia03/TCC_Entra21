@@ -1,7 +1,7 @@
 <?php
 
-	require_once "classes/cuidador.class.php";
-	$cuidador = new Cuidador();
+require_once "classes/cuidador.class.php";
+$cuidador = new Cuidador();
 
 ?>
 
@@ -17,7 +17,8 @@
 	<!-- ============ RESOURCES ============ -->
 	<!-- Boostrap -->
 	<link href="media/css/resource/bootstrap.min.css" rel="stylesheet" type="text/css">
-
+	<!-- Media -->
+    <link href="media/css/custom/responsivo/cadastro_cuidador.css" rel="stylesheet" type="text/css">
 	<!-- Datepicker -->
 	<link href="media/css/resource/datepicker.css" rel="stylesheet" type="text/css">
 
@@ -28,9 +29,9 @@
 	<script type="text/javascript" src="media/js/custom/cep.js"></script>
 </head>
 <body style="background-color: dodgerblue">
-<!--botao voltar-->
+	<!--botao voltar-->
 
-<div class="container">
+	<div class="container">
 
 
 		<div class="card mx-auto my-5">
@@ -135,8 +136,8 @@
 
 							<div class="col-md-4">
 								<div class="form-label-group">
-									<input type="number" name="numeroCasa" id="numeroCasa" class="form-control" 
-									placeholder="Número da residência" maxlength="5" minlength="2" required autofocus>    
+									<input type="text" name="numero_casa" id="numero_casa" class="form-control" 
+									placeholder="Número da residência" minlength="2" maxlength="4" required>    
 								</div>
 							</div>
 						</div>
@@ -198,11 +199,11 @@
 							</div>
 
 							<div class="col-md-2">
-	                            <div class="form-label-group">
-	                                <input type="text" name="val_hora" id="val_hora" class="form-control"
-	                                placeholder="Valor hora (R$)" required autofocus autocomplete="off">
-	                            </div>
-	                        </div>
+								<div class="form-label-group">
+									<input type="text" name="val_hora" id="val_hora" class="form-control"
+									placeholder="Valor hora (R$)" required autofocus autocomplete="off">
+								</div>
+							</div>
 
 							<div class="col-md-4">
 								<div class="form-label-group">
@@ -235,9 +236,11 @@
 
 	</div>
 	<!-- Button TopPage -->
+	<div id="btn_voltar">
 	<a class="scroll-to-top rounded d-inline" href="index.php" id="btn-voltar">
 		<i class="fas fa-angle-left"></i>
 	</a>
+	</div>
 	<!-- Bootstrap core JavaScript-->
 	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
 	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -251,22 +254,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('#dt_nascimento').mask('99/99/9999');
-			$('#cep').mask('99999-999');
-			$('#tel_celular').mask('(99) 9 9999-9999');
-			$('#tel_residencial').mask('(99) 9999-9999');
-			$('#num_coren').mask('999.999');
-		});
-	</script>
-
-	<script>
-		$('.custom-file-input').on('change', function() {
-			var fileName = $(this).val();
-			$(this).attr('placeholder', fileName);
-		});
-	</script>
+	<script type="text/javascript" src="media/js/custom/cadastro_cuidador.js"></script>
 
 </body>
 </html>

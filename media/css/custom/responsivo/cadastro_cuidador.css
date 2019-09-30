@@ -1,6 +1,6 @@
 @media screen and (max-width: 1200px) {
-    #navbarSite{ 
-    	text-align: center;
+    #botao_voltar{ 
+    	margin-top: 15px
 
   }
    
@@ -8,8 +8,8 @@
 
 
 @media screen and (max-width: 991.5px) {
-	#btns2{
+	#botao_voltar{
 		margin-top: 15px;
-		text-align: center;
+		
 		 
 }
