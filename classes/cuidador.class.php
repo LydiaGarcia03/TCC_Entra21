@@ -17,7 +17,8 @@ class Cuidador extends Site{
 	public function novaConta(){
 
 		$nome_completo = $_POST['nomeCompleto'];
-		// Upload de foto
+		$c_foto = $_FILES['imagem']['tpm_name'];
+		$tamanho = $_FILES['imagem']['tamanho'];
 		$genero = $_POST['genero'];
 		$dt_nascimento = $_POST['dt_nascimento'];
 		$email = $_POST['email'];
