@@ -15,6 +15,7 @@
     // echo '</pre>';
     // die();
 
+
 ?>
     <title>HCD | Dashboard</title>
 </head>
@@ -32,7 +33,7 @@
 
         <?php foreach($lista as $servico){ ?>
 
-        <div class="card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
+        <div class="card my-5 rounded-0">
             <div class="card-body float-left">
 
                 <div class="row">
@@ -51,44 +52,51 @@
 
                 <div class="row">
                     <div class="col-4">
-                        <p class="card-text mr-5">Nome do profissional: <?=$servicos->verificarEstado()?></p>  
+                        <p class="card-text m-0 campo"><?=$servico['nome_paciente']?></p>  
+                        <small class="p-0 m-0 descricao_campos">Paciente</small>
                     </div>
 
-                    <div class="col-4">
-                        <p class="card-text">Tipo do serviço: <?=$servico['tipo_servico']?></p>
+                    <div class="col-3">
+                        <p class="card-text m-0 campo"><?=$servico['tipo_servico']?></p>  
+                        <small class="p-0 m-0 descricao_campos">Tipo de serviço</small></p>
                     </div>
 
-                    <div class="col-4">
-                        <button type="button" class="btn btn-primary btn-sm ml-5" name="btnDetalhes" id="btnDetalhes" data-toggle="modalDetalhes" data-target="#modalDetalhes">Ver detalhes</button>
+                    <div class="col-3">
+                        <p class="card-text m-0 campo"><?=$servicos->verificarEstado()?></p>  
+                        <small class="p-0 m-0 descricao_campos">Profissionais</small></p>
+                    </div>
+
+                    <div class="col-2">
+                        <button type="button" class="btn btn-primary btn-sm float-right" name="btnDetalhes" id="btnDetalhes" data-toggle="modal" data-target="#modalDetalhes">Ver detalhes</button>
                     </div>
                 </div>  
             </div>
         </div>
 
         <!-- Modal -->
-        <!-- <div class="modal fade" id="modalDetalhes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+        <div class="modal fade" id="modalDetalhes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <div class="modal-header text-white rounded-0 bg-primary">
+                        <h5 class="modal-title" id="exampleModalLabel">#<?=$servico['id']?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                    uhdiaudisa
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                    
+                        <?=$servico['genero_paciente']?>
+                        <?=$servico['nome_paciente']?>
+
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <?php } ?>
 
     </div>
+    
 
 <!-- Inclusão da FOOTER do sistema -->
 <?php require_once 'includes/footer.php';?>

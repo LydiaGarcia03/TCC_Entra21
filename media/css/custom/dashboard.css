@@ -37,3 +37,12 @@ span.dot {
   display: block !important;
   float: right;
 }
+small.descricao_campos{
+	text-transform: uppercase !important;
+	font-weight: bold !important;
+	font-size: 10px;
+}
+p.campo{
+	border-bottom: 1px solid gray !important;
+	width: 65%;
+}

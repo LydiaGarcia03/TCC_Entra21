@@ -12,9 +12,6 @@ class Usuario extends Site{
 		
 		if(isset($_POST['btnNovaConta']))
 			$this->novaConta();
-
-		if (isset($_GET['id'])) 
-			$id_user = $_GET['id'];
 	
 	}
 
@@ -59,8 +56,6 @@ class Usuario extends Site{
 		$nome_completo = $_POST['nomeCompleto'];
 		$genero = $_POST['genero'];
 		$dt_nascimento = $_POST['dt_nascimento'];
-		$email = $_POST['email'];
-		$senha = $_POST['senha'];
 		$cep = $_POST['cep'];
 		$numeroCasa = $_POST['numeroCasa'];
 		$complemento = $_POST['complemento'];
@@ -70,11 +65,18 @@ class Usuario extends Site{
 		$dt_aux = str_replace('/', '-', $dt_nascimento);
 		$dt_nascimento_sql = date("Y-m-d", strtotime($dt_aux));
 
+		$id_user = $_SESSION['id_usuario'];
+
 		$sql = "UPDATE contratante 
 			SET nome_completo = '$nome_completo', 
 				genero = '$genero', 
-				dt_nascimento = '$dt_nascimento_sql'
-			WHERE ";
+				dt_nascimento = '$dt_nascimento_sql',
+				cep = '$cep',
+				end_numero = '$numeroCasa',
+				end_complemento = '$complemento',
+				tel_cel = '$tel_celular',
+				tel_res = '$tel_residencial'
+			WHERE id = $id_user";
 
 		$query = mysqli_query($this->con, $sql);
 

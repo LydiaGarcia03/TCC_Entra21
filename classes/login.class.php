@@ -16,8 +16,8 @@ class Login extends Site{
 
 	public function autenticacao(){
 
-		if(!parent::session_error()){
-			
+		if(parent::session_error() == 1){
+
 			if(isset($_POST['btnEntrar'])){
 
 				$email = $_POST['email'];
@@ -38,7 +38,7 @@ class Login extends Site{
 				}
 
 				$query = mysqli_query($this->con, $sql);
-				$result = mysqli_fetch_array($query);
+				$result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
 				if($result !== null){
 
@@ -50,7 +50,7 @@ class Login extends Site{
                         // De acordo com a session do nome e da foto, modificar a sidebar
                         
                         // $_SESSION['foto_usuario'] = $result['foto'];
-                        $_SESSION['nome_usuario'] = $result['nome'];
+                        $_SESSION['nome_usuario'] = $result['nome_completo'];
                         $_SESSION['id_usuario'] = $result['id'];
 
 						header('Location: dashboard_contratante.php');
@@ -59,7 +59,7 @@ class Login extends Site{
 
 						$_SESSION['tipo_usuario'] = 'cuidador';
 						// $_SESSION['foto_usuario'] = $result['foto'];
-                        $_SESSION['nome_usuario'] = $result['nome'];
+                        $_SESSION['nome_usuario'] = $result['nome_completo'];
                         $_SESSION['id_usuario'] = $result['id'];
 
                         header('Location: dashboard_cuidador.php');
@@ -68,7 +68,7 @@ class Login extends Site{
 
 				} else{
 
-					// header('Location: error.php');
+					header('Location: error.php');
 
 				}
 

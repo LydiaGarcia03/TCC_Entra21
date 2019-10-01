@@ -36,8 +36,6 @@ class Site{
 
 	public function session_error(){
 
-		session_start();
-
 		// Verifica erro
 		if(!isset($_SESSION['tipo_usuario']) || is_null($_SESSION['tipo_usuario'])){
 			return 0;
