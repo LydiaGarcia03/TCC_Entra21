@@ -12,6 +12,11 @@
 
 
 	<div class="container-fluid">
+		    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard_contratante.php">
+        <div class="sidebar-brand-icon">
+            <i class="fas fa-laptop-medical"></i>
+        </div>
+    </a>
 
 		<div class="container mb-5	">
 
