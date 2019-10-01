@@ -13,7 +13,7 @@
 
 	<div class="container-fluid">
 
-		<div class="container">
+		<div class="container mb-5">
 
 
 			<div class="card mx-auto mt-5">
@@ -179,3 +179,6 @@
 	</a>
 
 	<?php require_once 'includes/endfile.php'; ?>
+
+
+	<?php require_once 'includes/footer.php'; ?>
