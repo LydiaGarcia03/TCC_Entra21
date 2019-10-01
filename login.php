@@ -5,7 +5,6 @@
 	require_once 'classes/login.class.php';
 	$login = new Login();
 
-
 ?>
 	<title>HCD | Login</title>
 </head>
@@ -80,5 +79,5 @@
 			</div>
 		</div>  
 	</div>
-
-	<?php require_once 'includes/endfile.php'; ?>
+		
+		<?php require_once 'includes/endfile.php'; ?>
