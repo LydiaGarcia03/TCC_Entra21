@@ -13,7 +13,7 @@
 
 	<div class="container-fluid">
 
-		<div class="container mb-5">
+		<div class="container mb-5	">
 
 
 			<div class="card mx-auto mt-5">
