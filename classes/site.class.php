@@ -4,7 +4,7 @@ class Site{
 	
 	CONST HOST = '162.241.2.207:3306';
 	CONST USER = 'recei134_yuri';
-	CONST DB = 'recei134_fidelize';
+	CONST DB = 'recei134_hcd_master';
 	CONST PASS = '1234qwer';
 
 	public $con;

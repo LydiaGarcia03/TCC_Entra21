@@ -42,7 +42,7 @@
 
                 <div class="row">
                     <div class="col-4">
-                        <p class="card-text mr-5">Nome do profissional: <?=?></p>  
+                        <p class="card-text mr-5">Nome do profissional: </p>  
                     </div>
 
                     <div class="col-4">
