@@ -19,85 +19,42 @@
 
     <!-- Begin Page Content -->
     <div class="container">
-        <div class="col-sm card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
-        <div class="card-body float-left">
-            <div class="spinner-border text-danger float-right" role="status">
-        </div>
-            <h5>#2760</h5>
-            <hr>
-            <div class="row">
-                <div class="col-4">
-                    <p class="card-text mr-5">Nome do pasciente: Alpha</p>  
+        
+        <!-- <?php // foreach($lista as $servico){ ?> -->
+
+        <div class="card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
+            <div class="card-body float-left">
+
+                <div class="row">
+                    <div class="col-6 my-auto">
+                        <h5>#<?=$servico['id']?></h5>
+                    </div>
+
+                    <div class="col-6 my-auto">
+                        <span class="dot"></span>
+                    </div>
                 </div>
-                <div class="col-4">
-                    <p class="card-text">Tipo do serviço: Cuidador de Idoso</p>
-                </div>
-                <div class="col-4">
-                  <button type="button" class="btn btn-primary  btn-sm ml-5">Ver detalhes</button>
-              </div>
-          </div>    
-      </div>
-  </div>
-  <div class="col-sm card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
-    <div class="card-body float-left">
-        <div class="spinner-border text-primary float-right" role="status">
-        </div>
-        <h5>#2760</h5>
-        <hr>
-        <div class="row">
-             <div class="col-4">
-            <p class="card-text">Nome do pasciente: Beta</p>  
-        </div>
-             <div class="col-4">
-            <p class="card-text">Tipo do serviço: Cuidador de Idoso</p>
-        </div>
-        <div class="col-4">
-                  <button type="button" class="btn btn-primary  btn-sm ml-5">Ver detalhes</button>
-              </div>
-        </div>
-    </div>
-</div>
-<div class="col-sm card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
-    <div class="card-body float-left">
-        <div class="spinner-border text-danger  float-right" role="status">
-        </div>
-        <h5>#2760</h5>
-        <hr>
-        <div class="row">
-             <div class="col-4">
-            <p class="card-text">Nome do pasciente: Charlie</p>  
-        </div>
-             <div class="col-4">
-            <p class="card-text">Tipo do serviço: Cuidador Infantil</p>
-        </div>
-        <div class="col-4">
-                  <button type="button" class="btn btn-primary  btn-sm ml-5">Ver detalhes</button>
-              </div>
-        </div>
-    </div>
-</div>
-<div class="col-sm card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
-    <div class="card-body float-left">
-        <div class="spinner-border text-primary float-right" role="status">
-        </div>
-        <h5>#2760</h5>
-        <hr>
-        <div class="row">
-             <div class="col-4">
-            <p class="card-text">Nome do pasciente: Delta</p>  
-        </div>
-             <div class="col-4">
-            <p class="card-text">Tipo do serviço: Cuidador de Idoso</p>
-        </div>
-        <div class="col-4">
-                  <button type="button" class="btn btn-primary  btn-sm ml-5">Ver detalhes</button>
-              </div>
-        </div>
-    </div>
-</div>
+                
+                <hr>
 
+                <div class="row">
+                    <div class="col-4">
+                        <p class="card-text mr-5">Nome do profissional: </p>  
+                    </div>
 
+                    <div class="col-4">
+                        <p class="card-text">Tipo do serviço: <?=$servico['tipo_servico']?></p>
+                    </div>
 
+                    <div class="col-4">
+                        <button type="button" class="btn btn-primary  btn-sm ml-5">Ver detalhes</button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+        <!-- <?php //} ?> -->
+    </div>
 
 <!-- SCRIPT PARA CONVERTER DEPOIS... -->
 <script type="text/javascript" src="media/js/custom/calendario.js"></script>

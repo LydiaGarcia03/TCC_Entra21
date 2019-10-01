@@ -76,6 +76,10 @@ class Servico extends Site{
 		$sql = "SELECT * FROM servico";
 		$query = mysqli_query($this->con, $sql);
 
+		$result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+
+		return $result;
+
 	}
 
 }
