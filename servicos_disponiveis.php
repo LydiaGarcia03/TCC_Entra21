@@ -1,139 +1,165 @@
-<?php 
+<?php
 
-require_once "classes/site.class.php";
-$site = new Site();
+    require_once "classes/site.class.php";
+    require_once "classes/servico.class.php";
 
-if(!$site->session_error()){
-	header('Location: error.php');
-}
+    $site = new Site();
+
+    if(!$site->session_error()){
+        header('Location: error.php');
+    }
+
+    $servicos = new Servico();
+    $servicos = $servicos->listarServicos();
 
 ?>
 <?php // Inclusão do HEADER do sistema ?>
 <?php require_once('includes/startfile.php'); ?>
-<body id="page-top">
-  <div id="wrapper">
-<?php // Inclusão da NAVBAR lateral do sistema ?>
-<?php require_once('includes/navbar.php'); ?>
-<!--linkando css -->
+<!-- CSS Custom -->
 <link rel="stylesheet" type="text/css" href="media/css/custom/servicos_disponiveis.css">
 
-<div id="content">
-    <!-- Button TopPage -->
-    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-        <i class="fa fa-bars"></i>
-    </button>
+<body id="page-top">
+    <div id="wrapper">
+        <?php // Inclusão da NAVBAR lateral do sistema ?>
+        <?php require_once('includes/navbar.php'); ?>
 
-    <!-- Tabela -->
-    <table class="table table-hover col">
-        <thead>
-            <tr class="my-auto">
-                <th class="py-0">Nome</th>
-                <th class="py-0">Tipo de Serviço</th>
-                <th class="py-0">Carga Horaria</th>
-                <th class="py-0">Dia</th>
-                <th class="py-0">Funcionarios<br>necessitados</th>
-                <th class="py-0">Funcionarios<br>aceitos</th>
-                <th class="py-0"></th>
-            </tr>
-        </thead>
+        <div id="content">
+            <!-- Button TopPage -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
 
-        <tbody>
-            <!-- Visible -->
-            <tr id="tr_visible">
-                <td>Alpha</td>  
-                <td>Cuidado Infantil</td>
-                <td>4h</td>
-                <td>20/10</td>
-                <td>Cuidador infantil</td>
-                <td>3/5</td>
-                <td> 
-                    <button type="button" class="col-md btn btn-outline-info" onclick="mostrar_abas(this);" class="mostra_aba1">Mais</button>  
-                    <button type="button" class="btn btn-outline-success">Aceitar</button> 
-                </td>
-            </tr>
+            <div class="card mx-5">
+                <div class="card-header font-weight-bolder">
+                    Serviços Disponíveis
+                </div>
+                <div class="card-body p-0 m-0">
+                    <table class="table table-hover table-striped border-0 m-0">
+                        <thead class="py-5">
+                            <tr>
+                                <th class="text-left">Nome</th>
+                                <th class="text-left">Tipo de Serviço</th>
+                                <th class="text-center">Carga</th>
+                                <th class="text-center">Dia</th>
+                                <th class="text-left">Funcionarios necessitados</th>
+                                <th class="text-left">Aceites</th>
+                                <th></th>
+                            </tr>
+                        </thead>
 
-            <!-- Hidden -->
-            <tr class="tr_hidden" style="display: none;">
-                <td>Hipertenso: sim</td>
-                <td>Diabético: não</td>
-                <td>Descrição:
-                Aqui devera ficar as informações sobre o "paciente" dentro delas algumas observações</td>
-            </tr>
+                        <tbody>
+                            <?php foreach($servicos as $chave => $servico) : ?>
+                                <!-- Visible -->
+                                <tr>
+                                    <td class="text-left py-4"><?=$servico['nome_paciente']?></td>
+                                    <td class="text-left py-4"><?=$servico['tipo_servico']?></td>
+                                    <td class="text-center py-4"><?=$servico['qtd_horas_diarias']?>h</td>
+                                    <td class="text-left py-4">FALTA O DIA AQUI</td>
+                                    <td class="text-left py-4">FALTA A QUANTIDADE DE FUNCIONARIOS AQUI</td>
+                                    <td class="text-left py-4">3/5 FALTA O CALCULO AQUI</td>
+                                    <td class="text-right py-3">
+                                        <button type="button" class="btn btn-info mostrar_aba" data-hidden="<?=$chave?>" data-texto="<i class='fas fa-minus'></i>" title="Detalhes">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-success aceitar_servico" data-servico="<?=$servico['id']?>" title="Aceitar serviço">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                    </td>
+                                </tr>
 
-                <!-- Visible -->
-                <tr id="tr_visible">
-                    <td>Beta</td>
-                    <td>Cuidado Infantil</td>
-                    <td>8h</td>
-                    <td>20/10</td>
-                    <td>Cuidador infantil</td>
-                    <td>2/3</td>
-                    <td> 
-                        <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba2">Mais</button> 
-                        <button type="button" class="btn btn-outline-success">Aceitar</button> 
-                    </td>
-                </tr>
+                                <!-- Hidden -->
+                                <tr class="<?=$chave?>" style="display: none;">
+                                    <td colspan="2" class="text-left">
+                                        <strong>Doença crônica:</strong>
+                                        <?=($servico['doenca_cronica']==1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
+                                    </td>
+                                    <td colspan="5" class="text-left">
+                                        <strong>Descrição da doença crônica:</strong>
+                                        <?=($servico['doenca_cronica_descricao']!=null) ? $servico['doenca_cronica_descricao'] : '<i>Não Informada</i>' ?>
+                                    </td>
+                                </tr>
 
-                <!-- Hidden -->
-                <tr id="tr_hidden" style="display: none;">
+                                <tr class="<?=$chave?>" style="display: none;">
+                                    <td colspan="2" class="text-left">
+                                        <strong>Deficiência física:</strong>
+                                        <?=($servico['deficiencia_fisica']==1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
+                                    </td>
+                                    <td colspan="5" class="text-left">
+                                        <strong>Descrição da deficiência física:</strong>
+                                        <?=($servico['deficiencia_fisica_descricao']!=null) ? $servico['deficiencia_fisica_descricao'] : '<i>Não Informada</i>' ?>
+                                    </td>
+                                </tr>
 
-                    <td>Hipertenso: sim</td>
-                    <td>Diabético: não</td>
-                    <td colspan="5">
-                        <strong>Descrição:</strong> 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </td>
-                </tr>
+                                <tr class="<?=$chave?>" style="display: none;">
+                                    <td colspan="2" class="text-left">
+                                        <strong>Doença mental:</strong>
+                                        <?=($servico['deficiencia_mental']==1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
+                                    </td>
+                                    <td colspan="5" class="text-left">
+                                        <strong>Descrição da deficiência mental:</strong>
+                                        <?=($servico['deficiencia_mental_descricao']!=null) ? $servico['deficiencia_mental_descricao'] : '<i>Não Informada</i>' ?>
+                                    </td>
+                                </tr>
 
-                <!-- Visible -->
-                <tr id="tr_visible">
-                    <td>Charlie</td>
-                    <td>Cuidado Infantil</td>
-                    <td>12h</td>
-                    <td>20/10</td>
-                    <td>Cuidador infantil</td>
-                    <td>4/5</td>
-                    <td> 
-                        <button type="button" class="btn btn-outline-info" onclick="mostrar_abas(this);" id="mostra_aba3">Mais</button> 	 
-                        <button type="button" class="btn btn-outline-success">Aceitar</button> 
-                    </td>
-                </tr>
+                                <tr class="<?=$chave?>" style="display: none;">
+                                    <td colspan="7" class="text-left">
+                                        <strong>Descrição geral:</strong>
+                                        <?=$servico['descricao_geral']?>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                            <?php if (count($servicos)==0) : ?>
+                                <tr>
+                                    <td colspan="7" class="text-center py-4">
+                                        <i class="fas fa-2x fa-frown text-danger mb-3"></i><br>
+                                        Nenhum serviço disponível no momento
+                                    </td>
+                                </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-                <!-- Hidden -->
-                <tr id="tr_hidden" style="display: none;">
 
-                    <td>Hipertenso: sim</td>
-                    <td>Diabético: não</td>
-                    <td colspan="5">
-                        <strong>Descrição:</strong> 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        </div>
 
-    <script>
+        <?php // Inclusão da FOOTER do sistema ?>
+        <?php require_once('includes/footer.php'); ?>
 
-        function mostrar_abas(obj) {
-            document.getElementsByClassName('tr_hidden').style.display = "none";
-            // document.getElementById('div_aba2').style.display = "none";
-            // document.getElementById('div_aba3').style.display = "none";
+        <script>
+            $(document).ready(function() {
 
-            switch (obj.class) {
-                case 'mostra_aba1':
-                document.getElementById('div_aba1').style.display = "block";
-                break;
-                case 'mostra_aba2':
-                document.getElementById('div_aba2').style.display = "block";
-                break;
-                case 'mostra_aba3':
-                document.getElementById('div_aba3').style.display = "block";
-                break;
-            }
-        }
+                $('.mostrar_aba').click(function() {
+                    var hidden = $(this).attr('data-hidden');
+                    var texto = $(this).attr('data-texto');
 
-    </script>
+                    $(this).attr('data-texto', $(this).html());
+                    $(this).parent().parent().toggleClass('bg-secondary');
+                    $(this).parent().parent().toggleClass('text-white');
+                    $(this).parent().parent().toggleClass('font-weight-bolder');
 
-    <?php // Inclusão da FOOTER do sistema ?>
-    <?php require_once('includes/footer.php'); ?>
+                    $('.'+hidden).fadeToggle();
+
+                    $(this).html(texto);
+                });
+
+                $('.aceitar_servico').click(function() {
+                    var servico = $(this).attr('data-servico');
+                    var esse = $(this);
+
+                    $.ajax({
+                        url: "servicos_disponiveis_ajax.php",
+                        type: "POST",
+                        data: {
+                            "servico": servico
+                        }
+                    }).done(function (resposta) {
+                        if (resposta=='1') {
+                            esse.attr('disabled', true);
+                        }
+                    });
+
+                });
+            });
+        </script>

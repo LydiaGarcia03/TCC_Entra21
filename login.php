@@ -54,13 +54,13 @@ require_once 'includes/startfile.php';
 									<div class="col-md-8 offset-md-2 bg-light p-0 rounded">
 
 										<div class="btn-group btn-group-toggle" style="width: 100%" data-toggle="buttons">
-											<label class="btn btn-light">
+											<label class="btn btn-light" for="cuidador">
 												<input type="radio" name="btnTipoUsuario" id="cuidador" value="cuidador" required>Cuidador
-											</label>	<br>	
-																
+											</label>
 
-										
-											<label class="btn btn-light">
+                                            <br>
+
+											<label class="btn btn-light" for="contratante">
 												<input type="radio" name="btnTipoUsuario" id="contratante" value="contratante">Contratante
 											</label>										
 										</div>
@@ -69,7 +69,7 @@ require_once 'includes/startfile.php';
 								</div>
 							</div>
 
-							<input type="submit" href="dashboard_cuidador.php" name="btnEntrar" value="Entrar" class="btn btn-primary btn-block mt-5">
+							<input type="submit" name="btnEntrar" value="Entrar" class="btn btn-primary btn-block mt-5">
 
 						</form>
 
