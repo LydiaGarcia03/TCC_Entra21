@@ -1,6 +1,8 @@
 <?php
-session_start();
+    
+    require_once 'classes/site.class.php';
 
+    $site = new Site();
 
 ?>
 
@@ -20,9 +22,10 @@ session_start();
     <!-- Perfil Info -->
     <div class="text-center text-white my-3">
         <img src="media/img/img-04.jpeg" class="rounded-circle profile-img d-inline" id="profile-img">
-        <p class="mb-0 mt-2">Nome</p>
+        <p class="mb-0 mt-2"><?=$_SESSION['nome_usuario']?></p>
     </div>
 
+    <?php if($site->session_type() == 'contratante'){ ?>
     <div class="text-center my-3">
         <li class="nav-item">
             <small>
@@ -33,7 +36,9 @@ session_start();
             </small>
         </li>
     </div>
+    <?php } ?>
 
+    <?php if($site->session_type() == 'cuidador'){ ?>
     <div class="text-center my-3">
         <li class="nav-item">
             <small>
@@ -44,6 +49,7 @@ session_start();
             </small>
         </li>
     </div>
+    <?php }?>
 
     <div class="text-center my-3">
         <li class="nav-item">
@@ -56,6 +62,7 @@ session_start();
         </li>
     </div>
 
+    <?php if($site->session_type() == 'contratante'){ ?>
     <div class="text-center my-3">
         <li class="nav-item">
             <a href="solicitar_servico.php" class="nav-link text-center p-0">
@@ -64,7 +71,9 @@ session_start();
             </a>
         </li>
     </div>
+    <?php } ?>
 
+    <?php if($site->session_type() == 'cuidador'){ ?>
     <div class="text-center my-3">
         <li class="nav-item">
             <a href="servicos_disponiveis.php" class="nav-link text-center p-0">
@@ -73,6 +82,7 @@ session_start();
             </a>
         </li>
     </div>
+    <?php } ?>
 
     <div style="bottom: 0px">
         <li class="nav-item no-arrow mb-0">
@@ -95,21 +105,7 @@ session_start();
             <li class="nav-item dropdown no-arrow mx-auto">
                 <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 </a>
-                <!-- Mensagens -->
-                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                    <h6 class="dropdown-header bg-primary border-0">Notificações</h6>
-                    <a href="#" class="dropdown-item d-flex align-items-center">
-                        <i class="fas fa-exclamation-circle text-primary mr-3 fa-3x"></i>
-                        <div>
-                            <div class="small text-gray-500">
-                                Serviço
-                            </div>
-                            <span class="font-weight-bold">
-                                Você tem uma nova solicitação de serviço
-                            </span>
-                        </div>
-                    </a>
-                </div>
+                
             </li>
         </ul>
     </nav>

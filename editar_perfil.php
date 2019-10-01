@@ -1,14 +1,9 @@
 <?php
 
-    require_once('includes/startfile.php');
+    require_once 'includes/startfile.php';
 
-    require_once "classes/site.class.php";
+    require_once 'classes/site.class.php';
     $site = new Site();
-
-    if($site->session_error() == 0){
-        session_destroy();
-        header('Location: error.php');
-    }
 
 ?>
 
@@ -19,7 +14,7 @@
     <div id="wrapper">
 
 <!-- Inclusão da NAVBAR lateral do sistema -->
-<?php require_once('includes/navbar.php'); ?>	
+<?php require_once 'includes/navbar.php'; ?>	
 
     <div id="content">
 
@@ -56,9 +51,9 @@
                         <div class="col-md-6">
                             <select class="form-control" name="genero" required autofocus>
                                 <option selected disabled>Gênero</option>
-                                <option value="masculino">Masculino</option>
-                                <option value="feminino">Feminino</option>
-                                <option value="outros">Outros</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                                <option value="O">Outros</option>
                             </select>
                         </div>
                         <div class="col-md-6">
@@ -232,28 +227,6 @@
 		});
 	</script>
 
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-    </script>
-
     <script type="text/javascript" src="media/js/custom/cep.js"></script>
 
-<?php // Inclusão da FOOTER do sistema ?>
-<?php require_once('includes/footer.php'); ?>
+<?php require_once 'includes/footer.php'; ?>
