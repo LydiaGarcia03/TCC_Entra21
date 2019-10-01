@@ -70,8 +70,8 @@
             <div class="carousel-item">
                 <img src="media/img/vida.jpg" class="img-fluid d-block" alt="Segundo_Slide">
                 <div class="carousel-caption d-none d-md-block ">
-                    <h2>Cuidados </h2>
-                    <p>Aumenta a confiança e melhoram sintomas dos pacientes</p>
+                    <h2></h2>
+                    <p></p>
                 </div>
             </div>
 
