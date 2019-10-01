@@ -7,10 +7,11 @@
 
 
 ?>
+
 	<title>HCD | Login</title>
 </head>
 
-<body>
+<body style="background-color: rgb(30,144, 255);">
 <link href="media/css/custom/responsivo/login.css" rel="stylesheet" type="text/css">
 	<div class="container">
 		<div id="login">		
@@ -80,6 +81,6 @@
 			</div>
 		</div>  
 	</div>
-</div:
+</body>
 
 	<?php require_once 'includes/endfile.php'; ?>
