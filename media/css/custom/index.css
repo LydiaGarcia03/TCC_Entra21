@@ -7,7 +7,7 @@ html, body {
 
 .carousel-inner img{
 	width: 1980px;
-	height:	500px;
+	height:	600px !important;
 }
 
 .container .sobre h2 {
