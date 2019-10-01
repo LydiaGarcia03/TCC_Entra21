@@ -1,13 +1,15 @@
 <?php
 
+    require_once('includes/startfile.php'); 
+
     require_once 'classes/cuidador.class.php';
 
     $cuidador = new Cuidador();
     $cuidador->listarCuidador();
 
 ?>
-<!-- Inclusão do HEADER do sistema -->
-<?php require_once('includes/startfile.php'); ?>
+    <title>HCD | Dashboard</title>
+</head>
 
 <body id="page-top">
     <div id="wrapper">

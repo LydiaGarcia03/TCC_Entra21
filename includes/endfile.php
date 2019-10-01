@@ -15,9 +15,16 @@
         <!-- SBAdmin -->
         <script src="media/js/resources/sb-admin-2.min.js"></script>
 
+        <!-- Popper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
         <!-- ============ CUSTOM JS ============ -->
+        <script src="media/js/custom/cadastro_cuidador.js"></script>
+        <script src="media/js/custom/cadastro_usuario.js"></script>
+        <script src="media/js/custom/calendario.js"></script>
         <script src="media/js/custom/cep.js"></script>
-        <script src="media/js/custom/funcoes.js"></script>
+        <script src="media/js/custom/data_nascimento.js"></script>
+        <script src="media/js/custom/escolha_enfermidade.js"></script>
 
         <!-- ============ FONTES ============ -->
         <!-- FontAwesome -->

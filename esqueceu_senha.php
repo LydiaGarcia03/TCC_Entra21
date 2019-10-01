@@ -1,22 +1,15 @@
 <?php
 
-require_once 'classes/login.class.php';
-$login = new Login();
+	require_once 'includes/startfile.php';
+	
+	require_once 'classes/login.class.php';
+	$login = new Login();
 
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
+
 	<title>HCD | Esqueceu sua senha</title>
-	<meta charset="utf-8">
-	<!-- CSS -->   
-	<link rel="stylesheet" type="text/css" href="media/css/custom/esqueceu_senha.css">
-	<link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet">
-	<link href="media/css/custom/home.css" rel="stylesheet" type="text/css">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<!--botao voltar-->
+
 <body style="background-color: dodgerblue">
 	<div class="container">
 		<div class="col-" style="position: absolute; top: 20%; left: 34%">		
@@ -38,18 +31,15 @@ $login = new Login();
 					</form>
 				</div>
 			</div>
-		</div>  
+		</div>
+
 		<a class="scroll-to-top rounded d-inline" href="login.php" id="btn-voltar">
-		<i class="fas fa-angle-left"></i>
-	</a>
+			<i class="fas fa-angle-left"></i>
+		</a>
+
 	</div>
 
-
-<!--botao voltar-->
-<script src="https://kit.fontawesome.com/635b697ad0.js"></script>
-		
-	
-
+	<?php require_once 'includes/endfile.php'; ?>
 
 <!-- 	<div class="container">
 		<div class="col-lg-4 m-b-3" style="position: absolute; top: 20%; left: 34%">		

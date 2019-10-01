@@ -1,32 +1,12 @@
 <?php
 
-require_once "classes/cuidador.class.php";
-$cuidador = new Cuidador();
+	require_once 'includes/startfile.php';
+
+	require_once "classes/cuidador.class.php";
+	$cuidador = new Cuidador();
 
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
 	<title>HCD | Cadastro</title>
-	<meta charset="utf-8">
-	<link href="media/css/custom/cadastro_cuidador.css" rel="stylesheet" type="text/css">
-	<link href="media/css/custom/style.css" rel="stylesheet" type="text/css">
-	<link href="media/css/custom/style_blog.css" rel="stylesheet" type="text/css">
-
-	<!-- ============ RESOURCES ============ -->
-	<!-- Boostrap -->
-	<link href="media/css/resource/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<!-- Media -->
-    <link href="media/css/custom/responsivo/cadastro_cuidador.css" rel="stylesheet" type="text/css">
-	<!-- Datepicker -->
-	<link href="media/css/resource/datepicker.css" rel="stylesheet" type="text/css">
-
-	<!-- SBAdmin -->
-	<link href="media/css/resource/sb-admin-2.min.css" rel="stylesheet" type="text/css">
-	<!-- CEP -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="media/js/custom/cep.js"></script>
 </head>
 <body style="background-color: dodgerblue">
 	<!--botao voltar-->
@@ -235,26 +215,12 @@ $cuidador = new Cuidador();
 		</div>
 
 	</div>
+	
 	<!-- Button TopPage -->
 	<div id="btn_voltar">
-	<a class="scroll-to-top rounded d-inline" href="index.php" id="btn-voltar">
-		<i class="fas fa-angle-left"></i>
-	</a>
+		<a class="scroll-to-top rounded d-inline" href="index.php" id="btn-voltar">
+			<i class="fas fa-angle-left"></i>
+		</a>
 	</div>
-	<!-- Bootstrap core JavaScript-->
-	<script src="sbadmin/vendor/jquery/jquery.min.js"></script>
-	<script src="sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-	<!-- Optional JavaScript -->
-	<script src="https://kit.fontawesome.com/635b697ad0.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="https://kit.fontawesome.com/635b697ad0.js"></script>
-	<!-- JQuery Mask -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
-
-	<script type="text/javascript" src="media/js/custom/cadastro_cuidador.js"></script>
-
-</body>
-</html>
+	<?php require_once 'includes/endfile.php'; ?>

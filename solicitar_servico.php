@@ -1,17 +1,16 @@
 <?php
 
-require_once "classes/servico.class.php";
-$servico = new Servico();
+    require_once 'includes/startfile.php';
+
+    require_once "classes/servico.class.php";
+    $servico = new Servico();
 
 ?>
-
-<?php // Inclusão do HEADER do sistema ?>
-<?php require_once('includes/startfile.php'); ?>
 
     <body id="page-top">
 <div id="wrapper">
 
-<?php // Inclusão da NAVBAR lateral do sistema ?>
+<!-- Inclusão da NAVBAR lateral do sistema -->
 <?php require_once('includes/navbar.php'); ?>
 
     <div id="content">
@@ -173,8 +172,7 @@ $servico = new Servico();
 
 
 
-<?php // Inclusão da FOOTER do sistema ?>
-<?php require_once('includes/footer.php'); ?>
+    <?php require_once 'includes/footer.php'; ?>
 
-<!-- JS para alternar o campo de descrever infermidades -->
-<script type="text/javascript" src="media/js/custom/escolha_enfermidade.js"></script>
+    <!-- JS para alternar o campo de descrever infermidades -->
+    <script type="text/javascript" src="media/js/custom/escolha_enfermidade.js"></script>

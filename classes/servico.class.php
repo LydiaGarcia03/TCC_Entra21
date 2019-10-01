@@ -66,6 +66,17 @@ class Servico extends Site{
     }
 
     public function listarServicos(){
+
+    	$sql = "SELECT * FROM servico";
+
+    	$query = mysqli_query($this->con, $sql);
+    	$result = mysqli_fetch_all($query, MYSQLI_ASSOC);
+
+    	return $result;
+
+    }
+
+    public function listarServicosDisponiveis(){
         $sql = "SELECT 
                         s.*,
                         (SELECT COUNT(*) FROM servicos_cuidadores WHERE fk_id_servico = s.id) as total,
@@ -74,7 +85,7 @@ class Servico extends Site{
                     HAVING my <= 0";
         $query = mysqli_query($this->con, $sql);
         $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
-        return $result;
+
     }
 
     public function candidatar_servico($servico_id) {
@@ -85,7 +96,26 @@ class Servico extends Site{
             return false;
     }
 
-}
+    public function verificarEstado(){
 
+		$listagem = $this->listarServicos();
+
+		foreach($listagem as $servico){
+			
+			if($servico['estado'] == 'disponivel')
+				return 'warning';
+			elseif($servico['estado'] == 'andamento')
+				return 'success';
+			elseif($servico['estado'] == 'terminado')
+				return 'danger';
+			
+			// echo '<pre>';
+			// var_dump($servico);
+			// echo '</pre>';
+		}
+
+	}
+
+}
 
 ?>

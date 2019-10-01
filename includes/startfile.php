@@ -3,19 +3,20 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- ============ CUSTOM CSS ============ -->
     <link href="media/css/custom/blog.css" rel="stylesheet" type="text/css">
-    <link href="media/css/custom/chat.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/home.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/index.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/servicos_disponiveis.css" rel="stylesheet" type="text/css">
-    <link href="media/css/custom/sobre_nos.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/style.css" rel="stylesheet" type="text/css">
-    <link href="media/css/custom/style_blog.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/dashboard.css" rel="stylesheet" type="text/css">
+
+    <!-- Responsivo -->
+    <link href="media/css/custom/responsivo/index.css" rel="stylesheet" type="text/css">
+    <link href="media/css/custom/responsivo/cadastro_cuidador.css" rel="stylesheet" type="text/css">
+    <link href="media/css/custom/responsivo/login.css" rel="stylesheet" type="text/css">
 
     <!-- ============ RESOURCES ============ -->
     <!-- Boostrap -->

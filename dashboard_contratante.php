@@ -1,14 +1,21 @@
 <?php
+    
+    require_once 'includes/startfile.php';
 
     require_once 'classes/servico.class.php';
 
-    $servico = new Servico();
-    $lista = $servico->listarServico(); // Deveria ter exeutado ou atribuido para funcionar o foreach (?)
+    $servicos = new Servico();
+    $lista = $servicos->listarServicos(); 
+
+    // $t = $servicos->verificarEstado();
+
+    // echo '<pre>';
+    // var_dump($lista);
+    // var_dump($t);
+    // echo '</pre>';
+    // die();
 
 ?>
-<!-- Inclusão do HEADER do sistema -->
-<?php require_once('includes/startfile.php'); ?>
-
     <title>HCD | Dashboard</title>
 </head>
 
@@ -34,7 +41,9 @@
                     </div>
 
                     <div class="col-6 my-auto">
-                        <span class="dot"></span>
+
+                        <span class="dot bg-<?=$servicos->verificarEstado()?>"></span>
+                       
                     </div>
                 </div>
                 
@@ -42,7 +51,7 @@
 
                 <div class="row">
                     <div class="col-4">
-                        <p class="card-text mr-5">Nome do profissional: </p>  
+                        <p class="card-text mr-5">Nome do profissional: <?=$servicos->verificarEstado()?></p>  
                     </div>
 
                     <div class="col-4">
@@ -50,16 +59,36 @@
                     </div>
 
                     <div class="col-4">
-                        <button type="button" class="btn btn-primary  btn-sm ml-5">Ver detalhes</button>
+                        <button type="button" class="btn btn-primary btn-sm ml-5" name="btnDetalhes" id="btnDetalhes" data-toggle="modalDetalhes" data-target="#modalDetalhes">Ver detalhes</button>
                     </div>
                 </div>  
             </div>
         </div>
 
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="modalDetalhes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    uhdiaudisa
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
         <?php } ?>
 
     </div>
-
 
 <!-- Inclusão da FOOTER do sistema -->
 <?php require_once 'includes/footer.php';?>

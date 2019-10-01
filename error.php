@@ -1,5 +1,9 @@
+<?php require_once 'includes/startfile.php'; ?>
 
+	<title>HCD | Erro</title>
+</head>
 
+<body>
 	<div class="container-fluid">
 		<div class="container">
 			<div class="row">
@@ -21,3 +25,5 @@
 			</div>
 		</div>
 	</div>
+
+<?php require_once 'includes/endfile.php'; ?>

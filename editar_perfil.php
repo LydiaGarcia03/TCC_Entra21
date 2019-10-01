@@ -1,16 +1,19 @@
 <?php
 
-	require_once "classes/site.class.php";
-	$site = new Site();
+    require_once('includes/startfile.php');
 
-	if($site->session_error() == 0){
-		session_destroy();
-		header('Location: error.php');
-	}
+    require_once "classes/site.class.php";
+    $site = new Site();
+
+    if($site->session_error() == 0){
+        session_destroy();
+        header('Location: error.php');
+    }
 
 ?>
-<!-- Inclusão do HEADER do sistema -->
-<?php require_once('includes/startfile.php'); ?>
+
+    <title>HCD | Perfil</title>
+</head>
 
 <body id="page-top">
     <div id="wrapper">

@@ -1,22 +1,18 @@
 <?php
 
+    require_once 'includes/startfile.php';
+
     require_once "classes/site.class.php";
     require_once "classes/servico.class.php";
 
     $site = new Site();
 
-    if(!$site->session_error()){
-        header('Location: error.php');
-    }
-
     $servicos = new Servico();
-    $servicos = $servicos->listarServicos();
+    $servicos = $servicos->listarServicosDisponiveis();
 
 ?>
-<?php // Inclusão do HEADER do sistema ?>
-<?php require_once('includes/startfile.php'); ?>
-<!-- CSS Custom -->
-<link rel="stylesheet" type="text/css" href="media/css/custom/servicos_disponiveis.css">
+    <title>HCD | Serviços</title>
+</head>
 
 <body id="page-top">
     <div id="wrapper">
@@ -124,7 +120,6 @@
 
         </div>
 
-        <?php // Inclusão da FOOTER do sistema ?>
         <?php require_once('includes/footer.php'); ?>
 
         <script>

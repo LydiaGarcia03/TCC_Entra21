@@ -32,7 +32,7 @@ h2.dashboard{
 span.dot {
   height: 10px !important;
   width: 10px !important;
-  background-color: #bbb !important;
+  background-color: #bbb;
   border-radius: 50% !important;
   display: block !important;
   float: right;
