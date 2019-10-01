@@ -5,14 +5,15 @@
 	require_once 'classes/login.class.php';
 	$login = new Login();
 
+
 ?>
 	<title>HCD | Login</title>
 </head>
 
-<body style="background-color: dodgerblue">
-
+<body>
+<link href="media/css/custom/responsivo/login.css" rel="stylesheet" type="text/css">
 	<div class="container">
-		<div class="row" id="login">		
+		<div id="login">		
 			<div class="col-6 offset-md-2 my-5 card card-register rounded-0 shadow-lg">
 
 				<div class="card-header py-4 text-center">
@@ -51,7 +52,7 @@
 							<div class="form-row">
 								<div class="col-md-8 offset-md-2 bg-light p-0 rounded">
 
-									<div class="btn-group btn-group-toggle" style="width: 100%" data-toggle="buttons">
+									<div class="col- btn-group btn-group-toggle" style="width: 100%" data-toggle="buttons" id="opc_botao">
 										<label class="btn btn-light" for="cuidador">
 											<input type="radio" name="btnTipoUsuario" id="cuidador" value="cuidador" required>Cuidador
 										</label>
@@ -59,7 +60,7 @@
                                         <br>
 
 										<label class="btn btn-light" for="contratante">
-											<input type="radio" name="btnTipoUsuario" id="contratante" value="contratante">Contratante
+											<input type="radio" name="btnTipoUsuario" id="contratante" value="contratante">Contratado
 										</label>										
 									</div>
 
@@ -79,5 +80,6 @@
 			</div>
 		</div>  
 	</div>
-		
-		<?php require_once 'includes/endfile.php'; ?>
+</div:
+
+	<?php require_once 'includes/endfile.php'; ?>

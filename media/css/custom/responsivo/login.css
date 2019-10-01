@@ -1,18 +1,17 @@
-#login{
-	text-align: center;
-	padding-left: 100px;
+body{
+	background-color: rgb(250, 250, 250);
 }
 
-#card_login{
-	text-align: center;
-	padding-left: 218px;
+
+@media screen and (max-width: 778px) {
+	#login i{
+		margin-left: 150px;
+		display: none;
+		margin-top: 500px;
 }
 
-@media only screen and (max-width: 600px) {
-  #login {
-    
-    margin-right:10px;
-  }
-}
- 
+@media screen and (max-width: 778px) {
+	a{
+		display: none;
+	}
 
