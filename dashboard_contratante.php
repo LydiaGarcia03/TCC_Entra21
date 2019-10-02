@@ -95,5 +95,5 @@
     </div>
     
 
-<!-- Inclusão da FOOTER do sistema -->
-<?php require_once 'includes/footer.php';?>
+<!-- Inclusão da endfile do sistema -->
+<?php require_once 'includes/endfile.php';?>

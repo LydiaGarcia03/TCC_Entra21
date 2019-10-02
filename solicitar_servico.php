@@ -171,8 +171,6 @@
     </div>
 
 
+    <?php require_once 'includes/endfile.php'; ?>
 
-    <?php require_once 'includes/footer.php'; ?>
-
-    <!-- JS para alternar o campo de descrever infermidades -->
-    <script type="text/javascript" src="media/js/custom/escolha_enfermidade.js"></script>
+    
