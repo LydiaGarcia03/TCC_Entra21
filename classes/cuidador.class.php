@@ -17,8 +17,7 @@ class Cuidador extends Site{
 	public function novaConta(){
 
 		$nome_completo = $_POST['nomeCompleto'];
-		$c_foto = $_FILES['imagem']['tpm_name'];
-		$tamanho = $_FILES['imagem']['tamanho'];
+		$c_foto = $_FILES['c_foto'];
 		$genero = $_POST['genero'];
 		$dt_nascimento = $_POST['dt_nascimento'];
 		$email = $_POST['email'];
@@ -41,7 +40,7 @@ class Cuidador extends Site{
 
 		$dataAtual = date('Y-m-d');
 
-		$sql = "INSERT INTO cuidador VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento_sql', '$email', '$crip_senha', NULL, '$cep', '$end_numero', '$end_complemento', '$tel_celular', '$num_coren', $val_hora, '$curso_formacao', '$instituicao', '$dataAtual')";
+		$sql = "INSERT INTO cuidador VALUES (DEFAULT, '$nome_completo', $c_foto, '$genero', '$dt_nascimento_sql', '$email', '$crip_senha', NULL, '$cep', '$end_numero', '$end_complemento', '$tel_celular', '$num_coren', $val_hora, '$curso_formacao', '$instituicao', '$dataAtual')";
 
 		$query = mysqli_query($this->con, $sql);
 		
