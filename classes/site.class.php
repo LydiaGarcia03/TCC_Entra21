@@ -34,17 +34,6 @@ class Site{
 
 	}
 
-	public function session_error(){
-
-		// Verifica erro
-		if(!isset($_SESSION['tipo_usuario']) || is_null($_SESSION['tipo_usuario'])){
-			return 0;
-		} else {
-			return 1;
-		}
-
-	}
-
 	public function session_type(){
 
 		if($_SESSION['tipo_usuario'] == 'contratante')

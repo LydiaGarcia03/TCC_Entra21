@@ -1,4 +1,11 @@
-<?php require_once 'includes/startfile.php'; ?>
+<?php 
+
+    require_once 'includes/startfile.php'; 
+
+    require_once 'classes/logout.class.php';
+    $logout = new Logout();
+
+?>
 
 <title>HCD | Página Inicial</title>
 </head>

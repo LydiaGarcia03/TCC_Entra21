@@ -86,11 +86,26 @@
 
     <div style="bottom: 0px">
         <li class="nav-item no-arrow mb-0">
-            <a href="index.php" class="nav-link text-center" data-dismiss = 'modal'>
+            <a href="#" class="nav-link text-center" data-toggle="modal" data-target="#logoutModal">
                 <i class="fas fa-fw fa-sign-out-alt"></i>
                 <span>Sair</span>
             </a>
         </li>
+    </div>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <i class="fas fa-5x fa-exclamation-circle my-4"></i>
+                    <p>Você realmente deseja sair?</p>
+
+                    <a class="btn btn-block btn-primary mt-5" href="index.php">Sair</a>
+                    <button class="btn btn-block btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </ul>

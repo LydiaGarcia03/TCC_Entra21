@@ -16,7 +16,7 @@ class Login extends Site{
 
 	public function autenticacao(){
 
-		if(parent::session_error() == 1){
+		if(!isset($_SESSION['tipo_usuario']) || is_null($_SESSION['tipo_usuario'])){
 
 			if(isset($_POST['btnEntrar'])){
 
