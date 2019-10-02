@@ -40,6 +40,7 @@ class Login extends Site{
 				$query = mysqli_query($this->con, $sql);
 				$result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
+
 				if($result !== null){
 
 					// Criando sessões

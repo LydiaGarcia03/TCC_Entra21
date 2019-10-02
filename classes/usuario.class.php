@@ -50,6 +50,18 @@ class Usuario extends Site{
 
 	}
 
+	public function procuraUsuario(){
+
+		$id_user = $_SESSION['id_usuario'];
+
+		$sql = "SELECT * FROM contratante WHERE id = $id_user";
+		$query = mysqli_query($this->con, $sql);
+		$result = mysqli_fetch_array($query);
+
+		return $result;
+
+	}
+
 	public function editarUsuario(){
 
 		// Recebendo dados

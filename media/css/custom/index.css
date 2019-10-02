@@ -35,3 +35,17 @@ html, body {
 #tbConosco img{
 	margin-left: -21px;
 }
+.carousel-caption{
+	float: left !important;
+    display: inline !important;
+    top: auto !important;
+    bottom: 10% !important;
+    left: 0 !important;
+    right: 0 !important;
+	background-color: rgba(69, 69, 69, 0.2);
+	color: black !important;
+}
+.carousel-caption h2{
+	text-transform: uppercase !important;
+	font-weight: bold;
+}

@@ -1,20 +1,9 @@
-body{
-	background-color: rgb(30,144, 255);
-
-}
-
-#login{
-
-	margin-top: 89px;
-  }
-
-
 @media screen and (max-width: 778px) {
 	#login i{
 		margin-left: 150px;
 		display: none;
 		margin-top: 500px;
-}
+	}
 
 @media screen and (max-width: 778px) {
 	a{

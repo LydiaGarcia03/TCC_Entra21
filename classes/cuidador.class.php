@@ -60,6 +60,18 @@ class Cuidador extends Site{
 
 	}
 
+	public function procuraCuidador(){
+
+		$id_user = $_SESSION['id_usuario'];
+
+		$sql = "SELECT * FROM cuidador WHERE id = $id_user";
+		$query = mysqli_query($this->con, $sql);
+		$result = mysqli_fetch_array($query);
+
+		return $result;
+
+	}
+
 }
 
 /*

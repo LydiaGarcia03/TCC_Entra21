@@ -46,10 +46,13 @@ select.custom-select,
 .btn input:active, 
 select.custom-select:active, 
 select.custom-select:focus{
-	background-color: rgba(0,0,0,.03) !important;
+	background-color: rgba(0, 0, 0, 0.03) !important;
 	outline: none !important;
 	box-shadow: none !important;
 	border-bottom: 1px solid darkgray !important;
+}
+.form-control:disabled{
+	background-color: rgba(0, 0, 0, 0.1) !important;
 }
 .custom-file-label:after{
 	content: "Escolha a foto de perfil" !important;

@@ -69,23 +69,23 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="media/img/cuidado_em_domicilio.jpg" class="img-fluid d-block" alt="Primeiro_Slide">
-                <div class="carousel-caption d-none d-md-block ">
+                <div class="carousel-caption d-none d-md-block text-right pr-5">
                     <h2>Cuidados domiciliares</h2>
                     <p>Aumenta a confiança e melhoram sintomas dos pacientes</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="media/img/vida.jpg" class="img-fluid d-block" alt="Segundo_Slide">
-                <div class="carousel-caption d-none d-md-block ">
-                    <h2></h2>
-                    <p></p>
+                <div class="carousel-caption d-none d-md-block text-right pr-5">
+                    <h2>Facilidade para contratação</h2>
+                    <p>Usuários do site encontram cuidadores mais facilmente</p>
                 </div>
             </div>
 
 
             <div class="carousel-item">
                 <img src="media/img/elders-03.jpg" class="img-fluid d-block" alt="Terceiro_Slide">
-                <div class="carousel-caption d-none d-md-block ">
+                <div class="carousel-caption d-none d-md-block text-right pr-5">
                     <h2>domiciliares</h2>
                     <p>Aumenta a confiança e melhoram sintomas dos pacientes</p>
                 </div>

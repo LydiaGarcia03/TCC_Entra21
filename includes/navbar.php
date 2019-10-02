@@ -4,15 +4,18 @@
 
     $site = new Site();
 
+    session_start();
+
+    if(!isset($_SESSION['tipo_usuario']) || is_null($_SESSION['tipo_usuario'])){
+        header("Location: error.php");
+    }
+
 ?>
 
 <!-- Sidebar -->
 <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: rgb(30, 144, 255);">
 
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard_contratante.php">
-        <div class="sidebar-brand-icon">
-            <i class="fas fa-laptop-medical"></i>
-        </div>
         <div class="sidebar-brand-text mx-3">HCDigital</div>
     </a>
 

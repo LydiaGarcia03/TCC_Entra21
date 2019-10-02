@@ -7,15 +7,6 @@
     $servicos = new Servico();
     $lista = $servicos->listarServicos(); 
 
-    // $t = $servicos->verificarEstado();
-
-    // echo '<pre>';
-    // var_dump($lista);
-    // var_dump($t);
-    // echo '</pre>';
-    // die();
-
-
 ?>
     <title>HCD | Dashboard</title>
 </head>
@@ -45,7 +36,7 @@
 
                         <span class="dot bg-<?=$servicos->verificarEstado()?>"></span>
                        
-                    </div>
+                    </div>  
                 </div>
                 
                 <hr>
@@ -85,8 +76,14 @@
                     </div>
                     <div class="modal-body">
                     
-                        <?=$servico['genero_paciente']?>
                         <?=$servico['nome_paciente']?>
+                        <?=$servico['dt_nascimento_paciente']?>
+                        <?=$servico['genero_paciente']?>
+                        <?=$servico['tipo_servico']?>
+                        <?=$servico['doenca_cronica']?>
+                        <?=$servico['doenca_cronica_descricao']?>
+                        <?=$servico['descricao_geral']?>
+                        <?=$servico['']?>
 
                     </div>
                 </div>

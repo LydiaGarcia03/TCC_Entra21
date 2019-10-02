@@ -2,8 +2,26 @@
 
     require_once 'includes/startfile.php';
 
-    require_once 'classes/site.class.php';
-    $site = new Site();
+    require_once 'classes/usuario.class.php';
+    require_once 'classes/cuidador.class.php';
+        
+    session_start();
+
+    if($_SESSION['tipo_usuario'] == 'contratante'){
+
+        $usuario_obj = new Usuario();
+
+        $user = $usuario_obj->procuraUsuario();
+
+    }
+    elseif($_SESSION['tipo_usuario'] == 'cuidador'){
+
+        $cuidador_obj = new Cuidador();
+
+        $cuidador = $cuidador_obj->procuraCuidador();
+
+    }
+
 
 ?>
 
@@ -32,7 +50,7 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control"
-                                placeholder="Nome completo" required autofocus autocomplete="off">
+                                placeholder="<?=$user['nome_completo']?>" autofocus autocomplete="off">
                             </div>
                         </div>
                         <div class="col-6">
@@ -49,17 +67,17 @@
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-6">
-                            <select class="form-control" name="genero" required autofocus>
+                            <select class="form-control" name="genero" autofocus>
                                 <option selected disabled>Gênero</option>
-                                <option value="M">Masculino</option>
-                                <option value="F">Feminino</option>
-                                <option value="O">Outros</option>
+                                <option value="M" <?php if($user['genero'] == 'M'){ echo 'selected'; } ?> >Masculino</option>
+                                <option value="F" <?php if($user['genero'] == 'F'){ echo 'selected'; } ?> >Feminino</option>
+                                <option value="O" <?php if($user['genero'] == 'O'){ echo 'selected'; } ?> >Outros</option>
                             </select>
                         </div>
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="dt_nascimento" id="dt_nascimento" class="form-control"
-                                placeholder="Data de nascimento" required autocomplete="off">
+                                placeholder="<?=$user['dt_nascimento']?>" autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -69,29 +87,7 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="email" name="email" id="email" class="form-control"
-                                placeholder="E-mail" required autocomplete="off">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-label-group">
-                                <input type="email" name="confirmarEmail" id="confirmarEmail" class="form-control"
-                                placeholder="Confirmar Email" required autocomplete="off">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-6">
-                            <div class="form-label-group">
-                                <input type="password" name="senha" id="senha" class="form-control"
-                                placeholder="Senha" minlength="8" maxlength="16" required autocomplete="off">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-label-group">
-                                <input type="password" name="confirmarSenha" id="confirmarSenha" class="form-control"
-                                placeholder="Confirmar Senha" minlength="8" maxlength="16" required autocomplete="off">
+                                placeholder="<?=$user['email']?>" disabled>
                             </div>
                         </div>
                     </div>
@@ -101,7 +97,7 @@
                         <div class="col-md-12">
                             <div class="form-label-group">
                                 <input type="text" name="cep" id="cep" class="form-control"
-                                placeholder="CEP" required autofocus autocomplete="off" value="" onblur="pesquisacep(this.value);">
+                                placeholder="<?=$user['cep']?>" autofocus autocomplete="off" value="" onblur="pesquisacep(this.value);">
                             </div>
                         </div>
                     </div>
@@ -111,14 +107,14 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="rua" id="rua" class="form-control"
-                                placeholder="Rua" required autofocus disabled autocomplete="off">
+                                placeholder="Rua" autofocus disabled autocomplete="off">
                             </div>
                         </div>
     
                         <div class="col-md-6">
                            <div class="form-label-group">
                                     <input type="text" name="numero_casa" id="numero_casa" class="form-control" 
-                                    placeholder="Número da residência" minlength="2" maxlength="4" required>    
+                                    placeholder="<?=$user['end_numero']?>" minlength="2" maxlength="4">    
                                 </div>
                         </div>
                     </div>
@@ -129,13 +125,13 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="complemento" id="complemento" class="form-control"
-                                placeholder="Complemento" autofocus required autocomplete="off">
+                                placeholder="<?=$user['end_complemento']?>" autofocus autocomplete="off">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="cidade" id="cidade" class="form-control"
-                                placeholder="Cidade" required autofocus disabled autocomplete="off">
+                                placeholder="Cidade" autofocus disabled autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -146,13 +142,13 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="bairro" id="bairro" class="form-control"
-                                placeholder="Bairro" required autofocus disabled>
+                                placeholder="Bairro" autofocus disabled>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="uf" id="uf" class="form-control"
-                                placeholder="Estado" required autofocus disabled autocomplete="off">
+                                placeholder="Estado" autofocus disabled autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -163,7 +159,7 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="tel_residencial" id="tel_residencial" class="form-control"
-                                placeholder="Número de telefone fixo" required autocomplete="off">
+                                placeholder="<?=$user['tel_res']?>" autocomplete="off">
                             </div>
                         </div>
                         <?php } ?>
@@ -171,7 +167,7 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="tel_celular" id="tel_celular" class="form-control"
-                                placeholder="Número de celular" required autocomplete="off">
+                                placeholder="<?=$user['tel_cel']?>" autocomplete="off">
                             </div>
                         </div>
 
@@ -179,28 +175,28 @@
                         <div class="col-md-2 mt-3">
                             <div class="form-label-group">
                                 <input type="text" name="num_coren" id="num_coren" class="form-control"
-                                placeholder="Número do Coren" required autofocus autocomplete="off">
+                                placeholder="<?=$cuidador['num_coren']?>" autofocus autocomplete="off">
                             </div>
                         </div>
 
                         <div class="col-md-2 mt-3">
                             <div class="form-label-group">
                                 <input type="text" name="val_hora" id="val_hora" class="form-control"
-                                placeholder="Valor hora (R$)" required autofocus autocomplete="off">
+                                placeholder="<?=$cuidador['valor_hora']?>" autofocus autocomplete="off">
                             </div>
                         </div>
 
                         <div class="col-md-4 mt-3">
                             <div class="form-label-group">
                                 <input type="text" name="curso_formacao" id="curso_formacao" class="form-control"
-                                placeholder="Curso de formação" required autofocus autocomplete="off">
+                                placeholder="<?=$cuidador['curso_formacao']?>" autofocus autocomplete="off">
                             </div>
                         </div>
 
                         <div class="col-md-4 mt-3">
                             <div class="form-label-group">
                                 <input type="text" name="instituicao" id="instituicao" class="form-control"
-                                placeholder="Instituição de formação" required autofocus autocomplete="off">
+                                placeholder="<?=$cuidador['instituicao']?>" autofocus autocomplete="off">
                             </div>
                         </div>
                         <?php } ?>
@@ -212,11 +208,6 @@
         </div>
     </div>
 
-    <!-- SCRIPTS PARA EDITAR E GERAR ARQUIVOS SEPARADOS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="media/js/resources/jquery.mask.min.js"/></script>
-
-
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#dt_nascimento').mask('99/99/9999');
@@ -226,7 +217,5 @@
 			$('#num_coren').mask('999.999');
 		});
 	</script>
-
-    <script type="text/javascript" src="media/js/custom/cep.js"></script>
 
 <?php require_once 'includes/footer.php'; ?>
