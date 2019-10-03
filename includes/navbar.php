@@ -118,15 +118,3 @@
 
 <!-- Inicio do Conteudo da Página -->
 <div id="content-wrapper" class="d-flex flex-column">
-
-    <!-- Topbar -->
-    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-        <!-- Notificações -->
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown no-arrow mx-auto">
-                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                </a>
-                
-            </li>
-        </ul>
-    </nav>
