@@ -49,3 +49,6 @@ html, body {
 	text-transform: uppercase !important;
 	font-weight: bold;
 }
+.navbar{
+	background-color: dodgerblue !important;
+}

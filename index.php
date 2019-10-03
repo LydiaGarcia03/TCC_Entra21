@@ -12,7 +12,7 @@
 <body class="bg-light">
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3" id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3" id="navbar">
         <a href="index.php" class="navbar-brand h1 m-0 ml-5">Home Care Digital</a>
         <div class="container">
 
