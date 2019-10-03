@@ -65,7 +65,7 @@ class Servico extends Site{
         // header('Location: dashboard_contratante.php');
     }
 
-    public function listarServicos(){
+    public function listarTodosServicos(){
 
     	$sql = "SELECT * FROM servico";
 
@@ -73,6 +73,17 @@ class Servico extends Site{
     	$result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
     	return $result;
+
+    }
+
+    public function listarServicosSeparados(){
+
+        $sql = "SELECT * FROM servico";
+
+        $query = mysqli_query($this->con, $sql);
+        $result = mysqli_fetch_array($query);
+
+        return $result;
 
     }
 
@@ -96,22 +107,37 @@ class Servico extends Site{
             return false;
     }
 
+    public function cadastraServicoPorCuidador($servico, $idCuidador){
+
+        if(is_array($servico)){
+
+            foreach ($servico as $idServico) {
+                
+                $sql = "INSERT INTO servicos_cuidadores VALUES (DEFAULT, $idServico, $idCuidador)";
+                $query = mysqli_query($this->con, $sql);
+
+            }
+            return 1;
+        } else
+            return 0;
+        
+    }
+
     public function verificarEstado(){
 
-		$listagem = $this->listarServicos();
-
+		$listagem = $this->listarTodosServicos();
+      
 		foreach($listagem as $servico){
 			
 			if($servico['estado'] == 'disponivel')
-				return 'warning';
+				$dot_color = 'warning';
 			elseif($servico['estado'] == 'andamento')
-				return 'success';
+				$dot_color = 'success';
 			elseif($servico['estado'] == 'terminado')
-				return 'danger';
+				$dot_color = 'danger';
+
 			
-			// echo '<pre>';
-			// var_dump($servico);
-			// echo '</pre>';
+            return $dot_color;
 		}
 
 	}

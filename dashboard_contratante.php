@@ -5,7 +5,7 @@
     require_once 'classes/servico.class.php';
 
     $servicos = new Servico();
-    $lista = $servicos->listarServicos(); 
+    $lista = $servicos->listarTodosServicos();
 
 ?>
     <title>HCD | Dashboard</title>

@@ -50,7 +50,7 @@
                                     <td class="text-left py-4"><?=$servico['nome_paciente']?></td>
                                     <td class="text-left py-4"><?=$servico['tipo_servico']?></td>
                                     <td class="text-center py-4"><?=$servico['qtd_horas_diarias']?>h</td>
-                                    <td class="text-left py-4">FALTA O DIA AQUI</td>
+                                    <td class="text-left py-4"><?=$servico['dias_servico']?></td>
                                     <td class="text-left py-4">FALTA A QUANTIDADE DE FUNCIONARIOS AQUI</td>
                                     <td class="text-left py-4">3/5 FALTA O CALCULO AQUI</td>
                                     <td class="text-right py-3">

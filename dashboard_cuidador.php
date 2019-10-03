@@ -2,10 +2,11 @@
 
     require_once 'includes/startfile.php'; 
 
-    require_once 'classes/cuidador.class.php';
+    require_once 'classes/servico.class.php';
 
-    $cuidador = new Cuidador();
-    $cuidador->listarCuidador();
+    $servicos = new Servico();
+    $lista = $servicos->listarTodosServicos();
+
 
 ?>
     <title>HCD | Dashboard</title>
@@ -22,7 +23,7 @@
     <!-- Begin Page Content -->
     <div class="container">
         
-        <!-- <?php // foreach($lista as $servico){ ?> -->
+        <?php  foreach($lista as $servico){ ?>
 
         <div class="card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
             <div class="card-body float-left">
@@ -55,7 +56,7 @@
             </div>
         </div>
 
-        <!-- <?php //} ?> -->
+        <?php } ?>
     </div>
 
 <!-- SCRIPT PARA CONVERTER DEPOIS... -->

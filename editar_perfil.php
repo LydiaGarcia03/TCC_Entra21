@@ -77,7 +77,7 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="dt_nascimento" id="dt_nascimento" class="form-control"
-                                placeholder="Data de nascimeto" value="<?=$user['dt_nascimento']?>" autocomplete="off">
+                                placeholder="Data de nascimento" value="<?=$user['dt_nascimento']?>" autocomplete="off">
                             </div>
                         </div>
                     </div>
