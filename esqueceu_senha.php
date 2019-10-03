@@ -1,25 +1,24 @@
 <?php
 
-require_once 'includes/startfile.php';
+	require_once 'includes/startfile.php';
+	
+	require_once 'classes/login.class.php';
+	$login = new Login();
 
-require_once 'classes/login.class.php';
-$login = new Login();
+	if (isset($_POST[btnEntrar])) {
+		$email = $mysqli->escape_string($_POST['email']);
 
-if (isset($_POST[btnEntrar])) {
-	$email = $mysqli->escape_string($_POST['email']);
+		if (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
+			$erro[] = "E-mail inválido.";
+		}
 
-	if (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
-		$erro[] = "E-mail inválido.";
-	}
-
-	if (count($erro) == 0) {
+		if (count($erro) == 0) {
 		
 		$novasenha = substr(md5(time(),0,6));
 		$nscriptografada = md5(md5($novasenha));
-	}
-	
+		
 
-	function enviar_email($para, $de, $de_nome, $copia, $Sua, $corpo){	
+	if (mail($email, "Sua nova senha", "Sua nova senha:".$novasenha)){	
 		$sql_code = "UPDATE contratante SET senha = '$nscriptografada' WHERE email = '$email'";
 		$sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 
@@ -27,11 +26,11 @@ if (isset($_POST[btnEntrar])) {
 	}
 }
 
-
+}
 
 ?>
 
-<title>HCD | Esqueceu sua senha</title>
+	<title>HCD | Esqueceu sua senha</title>
 </head>
 
 <body style="background-color: dodgerblue">
@@ -51,7 +50,7 @@ if (isset($_POST[btnEntrar])) {
 								placeholder="Endereço de e-mail" required="required">
 							</div>
 						</div>
-						<input type="submit" href="login.php" name="btnEntrar" value="Confirmar" class="btn btn-primary btn-block mt-5">
+						<input  type="submit" href="dashboard_cuidador.php" name="btnEntrar" value="Confirmar" class="btn btn-primary btn-block mt-5">
 					</form>
 				</div>
 			</div>
