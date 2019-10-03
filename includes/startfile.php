@@ -18,6 +18,7 @@
     <link href="media/css/custom/responsivo/cadastro_cuidador.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/responsivo/login.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/responsivo/navbar.css" rel="stylesheet" type="text/css">
+    <link href="media/css/custom/responsivo/dashboard_contratante.css" rel="stylesheet" type="text/css">
 
     <!-- ============ RESOURCES ============ -->
     <!-- Boostrap -->
