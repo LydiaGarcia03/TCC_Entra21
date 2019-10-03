@@ -9,21 +9,14 @@
 
 	<title>HCD | Login</title>
 </head>
-
 <body style="background-color: dodgerblue">
 
 	<!-- Gambiarra para estética -->
 	<div class="row" style="height: 51.5px;">
 		&nbsp;
 	</div>
-
-	<div class="container-fluid">
 		<div class="container">
-			<div class="row">
-	
-				<div class="col-4 offset-md-4">
-
-					<div class="card card-register rounded-0 shadow-lg my-5">
+					<div class="card card-register rounded-0 shadow-lg my-5" id="card_r">
 
 						<div class="card-header text-center">
 							<div id="btn-volta">
@@ -96,5 +89,21 @@
 	<div class="row" style="height: 51.5px;">
 		&nbsp;
 	</div>
+
+	<!-- estilo para teste -->
+	<style type="text/css">
+	@media screen and (min-width: 985px) {
+		#card_r{
+			margin-top: 336px !important;			
+    		left: 50%;
+    		margin-right: -50%;
+    		transform: translate(-50%, -50%) }
+		}
+
+		@media screen and (max-width: 575px) {
+			#card_r{
+				margin-left: 14px;
+			}
+</style>
 
 <?php require_once 'includes/endfile.php'; ?>

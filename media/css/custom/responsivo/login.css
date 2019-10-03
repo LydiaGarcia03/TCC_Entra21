@@ -1,12 +1,6 @@
-@media screen and (max-width: 778px) {
+@media screen and (max-width: 500px) {
 	#login i{
 		margin-left: 150px;
 		display: none;
 		margin-top: 500px;
 	}
-
-@media screen and (max-width: 778px) {
-	a{
-		display: none;
-	}
-
