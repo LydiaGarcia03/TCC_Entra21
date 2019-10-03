@@ -52,3 +52,6 @@ html, body {
 .navbar{
 	background-color: dodgerblue !important;
 }
+.bg-primary, .btn-primary{
+	background-color: dodgerblue !important;
+}

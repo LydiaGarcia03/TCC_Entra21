@@ -76,12 +76,35 @@
                     </div>
                     <div class="modal-body">
                     
-                        <?=$servico['nome_paciente']?>
-                        <?=$servico['dt_nascimento_paciente']?>
-                        <?=$servico['genero_paciente']?>
-                        <?=$servico['tipo_servico']?>
-                        <?=$servico['doenca_cronica']?>
-                        <?=$servico['doenca_cronica_descricao']?>
+                        <h5><?=$servico['nome_paciente']?></h5>
+
+                        <p>Nasceu em <?=$servico['dt_nascimento_paciente']?></p>
+
+                        <?php if($servico['genero_paciente'] == 'F'){ ?>
+                        <p>Sexo Feminino</p>
+                        <?php } elseif($servico['genero_paciente'] == 'M'){ ?>
+                        <p>Sexo Masculino</p>
+                        <?php } else{ ?>
+                        <p>Outro sexo</p>
+                        <?php } ?>
+
+                        <?php if($servico['tipo_servico'] == 'Idoso'){ ?>
+                        <p>Serviço para cuidado de idosos</p>
+                        <?php } elseif($servico['tipo_servico'] == 'Infantil'){ ?>
+                        <p>Serviço para cuidados infantis</p>
+                        <?php } else{ ?>
+                        <p>Serviço de enfermagem</p>
+                        <?php } ?>
+                        
+                        Possui doença crônica
+                        <?=($servico['doenca_cronica'] == 1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
+
+                        Possui deficiência física
+                        <?=($servico['deficiencia_fisica'] == 1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
+
+                        Possui deficiência mental
+                        <?=($servico['deficiencia_mental'] == 1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
+
                         <?=$servico['descricao_geral']?>
                         <?=$servico['']?>
 

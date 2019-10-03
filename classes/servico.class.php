@@ -48,6 +48,13 @@ class Servico extends Site{
         // Separando a string no array
         $dias_servico = explode(',', $dias_servico_string);
 
+        for($i = 0; $i > count($dias_servico); $i++){
+
+            $dt_servico_aux = str_replace('/', '-', $dias_servico['$i']);
+            $dt_servico_sql = date("Y-m-d", strtotime($dt_servico_aux));
+
+        }
+
         // Não é permitido carga horária superior a 12h diárias
         if($carga_horaria_diaria > 12)
             die('mais de 12h');
@@ -58,7 +65,7 @@ class Servico extends Site{
 
         $idResponsavel = $_SESSION['id_usuario'];
 
-        $sql = "INSERT INTO servico VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento_sql', '$genero', '$tipo_servico', '$doenca', '$doenca_descricao', '$deficiencia_fisica', '$deficiencia_fisica_descricao', '$deficiencia_mental', '$deficiencia_mental_descricao', '$descricao', $idResponsavel, '$carga_horaria_diaria', '$dias_servico_string', '$estado');";
+        $sql = "INSERT INTO servico VALUES (DEFAULT, '$nome_paciente', '$dt_nascimento_sql', '$genero', '$tipo_servico', '$doenca', '$doenca_descricao', '$deficiencia_fisica', '$deficiencia_fisica_descricao', '$deficiencia_mental', '$deficiencia_mental_descricao', '$descricao', $idResponsavel, '$carga_horaria_diaria', '$dias_servico_string', '$qtd_funcionarios_necessarios', '$estado');";
 
         $query = mysqli_query($this->con, $sql);
 

@@ -56,6 +56,7 @@ CREATE TABLE servico (
     fk_id_contratante INT NOT NULL,
     qtd_horas_diarias INT NOT NULL,
     dias_servico VARCHAR(250) NOT NULL,
+    qtd_func_necessarios INT NULL,
     estado BOOLEAN NULL,
     
     FOREIGN KEY(fk_id_contratante) REFERENCES contratante(id)
