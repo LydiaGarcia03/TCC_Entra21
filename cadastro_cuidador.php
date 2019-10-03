@@ -14,11 +14,7 @@
 	<div class="container">
 
 		<div class="container-fluid">
-		    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard_contratante.php">
-        <div class="sidebar-brand-icon">
-            <i class="fas fa-laptop-medical"></i>
-        </div>
-    </a>
+		    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#"></a>
 
 
 		<div class="card mx-auto my-5">
