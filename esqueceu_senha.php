@@ -5,6 +5,29 @@
 	require_once 'classes/login.class.php';
 	$login = new Login();
 
+	if (isset($_POST[btnEntrar])) {
+		$email = $mysqli->escape_string($_POST['email']);
+
+		if (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
+			$erro[] = "E-mail inválido.";
+		}
+
+		if (count($erro) == 0) {
+		
+		$novasenha = substr(md5(time()));
+		$nscriptografada = md5(md5($novasenha));
+		
+
+	if (mail($email, "Sua nova senha", "Sua nova senha:".$novasenha)){	
+		$sql_code = "UPDATE contratante SET senha = '$nscriptografada' WHERE email = '$email'";
+		$sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+
+
+	}
+}
+
+}
+
 ?>
 
 	<title>HCD | Esqueceu sua senha</title>
