@@ -14,7 +14,7 @@
 
 		if (count($erro) == 0) {
 		
-		$novasenha = substr(md5(time()));
+		$novasenha = substr(md5(time(),0,6));
 		$nscriptografada = md5(md5($novasenha));
 		
 
