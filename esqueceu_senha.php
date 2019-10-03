@@ -5,27 +5,25 @@ require_once 'includes/startfile.php';
 require_once 'classes/login.class.php';
 $login = new Login();
 
-if (isset($_POST[btnEntrar])) {
-	$email = $mysqli->escape_string($_POST['email']);
+// Chanmando arquivos de funções
+require_once 'funcoes.php';
 
-	if (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
-		$erro[] = "E-mail inválido.";
+// Receber as informações do formulário
+if(isset($_POST['btnEnviar'])){
+	$email = $_POST['email'];
+
+	$corpo = '<h1>Obrigado pelo seu contato</h1>';
+	$corpo .= '<p>Sua redefinição de senha foi confirmada </p>';
+	$corpo .= '<p>$mensagem</p>';
+
+	$envio = enviar_email($email, 'lydiagarcia.chan@gmail.com', 'Lydia', 'lydiagarcia.chan@gmail.com', 'Teste', $corpo);
+
+	if($envio == true){
+		echo 'Contato enviado com sucesso';
+	} else{
+		echo 'Erro ao enviar contato :(';
+		echo $envio;
 	}
-
-	if (count($erro) == 0) {
-		
-		$novasenha = substr(md5(time(),0,6));
-		$nscriptografada = md5(md5($novasenha));
-		
-
-		if (mail($email, "Sua nova senha", "Sua nova senha:".$novasenha)){	
-			$sql_code = "UPDATE contratante SET senha = '$nscriptografada' WHERE email = '$email'";
-			$sql_query = $mysqli->query($sql_code) or die($mysqli->error);
-
-
-		}
-	}
-
 }
 
 ?>
