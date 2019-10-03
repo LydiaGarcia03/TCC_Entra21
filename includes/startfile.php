@@ -8,10 +8,10 @@
     <!-- ============ CUSTOM CSS ============ -->
     <link href="media/css/custom/blog.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/home.css" rel="stylesheet" type="text/css">
-    <link href="media/css/custom/index.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/servicos_disponiveis.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/style.css" rel="stylesheet" type="text/css">
     <link href="media/css/custom/dashboard.css" rel="stylesheet" type="text/css">
+    <link href="media/css/custom/index.css" rel="stylesheet" type="text/css">
 
     <!-- Responsivo -->
     <link href="media/css/custom/responsivo/index.css" rel="stylesheet" type="text/css">

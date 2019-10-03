@@ -38,9 +38,6 @@
                         <a href="#faq" class="nav-link">DÚVIDAS</a>
                     </li>
                     <li class="nav-item active">
-                        <a href="blog.php" class="nav-link">BLOG</a>
-                    </li>
-                    <li class="nav-item active">
                         <a href="cadastro_cuidador.php" class="nav-link">TRABALHE CONOSCO</a>
                     </li>
                 </ul>
@@ -85,8 +82,8 @@
             <div class="carousel-item">
                 <img src="media/img/elders-03.jpg" class="img-fluid d-block" alt="Terceiro_Slide">
                 <div class="carousel-caption d-none d-md-block text-right pr-5">
-                    <h2>domiciliares</h2>
-                    <p>Aumenta a confiança e melhoram sintomas dos pacientes</p>
+                    <h2>Facilidade para contratação</h2>
+                    <p>Usuários do site encontram cuidadores mais facilmente</p>
                 </div>
             </div>
 
@@ -408,7 +405,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center pt-4">
-                    <h1 class="display-5"><i class="fas fa-paper-plane text-primary" aria-hidden="true"></i> CONTATO</h1>
+                    <h1 class="display-5"><i class="fas fa-paper-plane text-primary mb-3" aria-hidden="true"></i> CONTATO </h1>
                 </div>
             </div>
         </div>
@@ -419,21 +416,21 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="inputNome">Nome</label>
-                                <input class="form-control" id="inputNome" type="text" placeholder="Nome">
+                                <input class="form-control" id="inputNome" type="text" placeholder="João Santos">
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail">Email</label>
-                                <input class="form-control" id="V" type="email" placeholder="Email">
+                                <input class="form-control" id="V" type="email" placeholder="Email@email.com">
                             </div>
                             <div class="form-group">
                                 <label for="inputTel">Telefone</label>
-                                <input class="form-control" id="inputTel" type="tel" placeholder="Telefone">
+                                <input class="form-control" id="inputTel" type="tel" placeholder="(00)0000-0000">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="inputMsg">Mensagem</label>
-                                <textarea style="resize: none;" class="form-control" id="inputMsg" rows="8" placeholder="Como podemos ajudar?"></textarea>
+                                <textarea style="height: 230px;" class="form-control" id="inputMsg" rows="8" placeholder="Como podemos ajudar?"></textarea>
                             </div>
                         </div>
                         <div class="form-row">
@@ -447,7 +444,7 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <button class="btn btn-primary btn-lg">Enviar</button>
+                        <a class="btn btn-primary btn-lg text-white" href="mailto:someone@example.com?Subject=Hello%20again">Enviar</a>
                     </div>
                 </form>
             </div>
