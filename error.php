@@ -7,7 +7,7 @@
 	<div class="container-fluid">
 		<div class="container">
 			<div class="row">
-				<div class="col-12">
+				<div class="col-6 offset-md-3">
 
 					<div class="card border-0 rounded-0 my-5">
 						<div class="card-body">

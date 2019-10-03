@@ -1,6 +1,6 @@
 <?php
 
-    require_once('includes/startfile.php'); 
+    require_once 'includes/startfile.php'; 
 
     require_once 'classes/cuidador.class.php';
 
@@ -61,5 +61,5 @@
 <!-- SCRIPT PARA CONVERTER DEPOIS... -->
 <script type="text/javascript" src="media/js/custom/calendario.js"></script>
 
-<?php // Inclusão da endfile do sistema ?>
-<?php require_once('includes/endfile.php'); ?>
+<?php // Inclusão da FOOTER do sistema ?>
+<?php require_once 'includes/endfile.php'; ?>

@@ -18,7 +18,7 @@
 
         $cuidador_obj = new Cuidador();
 
-        $cuidador = $cuidador_obj->procuraCuidador();
+        $user = $cuidador_obj->procuraCuidador();
 
     }
 
@@ -32,7 +32,7 @@
     <div id="wrapper">
 
 <!-- Inclusão da NAVBAR lateral do sistema -->
-<?php require_once 'includes/navbar.php'; ?>	
+<?php require_once 'includes/navbar.php'; ?>    
 
     <div id="content">
 
@@ -50,7 +50,7 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control"
-                                placeholder="<?=$user['nome_completo']?>" autofocus autocomplete="off">
+                                placeholder="Nome completo" value="<?=$user['nome_completo']?>" autofocus autocomplete="off">
                             </div>
                         </div>
                         <div class="col-6">
@@ -77,7 +77,7 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="text" name="dt_nascimento" id="dt_nascimento" class="form-control"
-                                placeholder="<?=$user['dt_nascimento']?>" autocomplete="off">
+                                placeholder="Data de nascimeto" value="<?=$user['dt_nascimento']?>" autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="email" name="email" id="email" class="form-control"
-                                placeholder="<?=$user['email']?>" disabled>
+                                placeholder="E-mail" value="<?=$user['email']?>" disabled>
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                         <div class="col-md-12">
                             <div class="form-label-group">
                                 <input type="text" name="cep" id="cep" class="form-control"
-                                placeholder="<?=$user['cep']?>" autofocus autocomplete="off" value="" onblur="pesquisacep(this.value);">
+                                placeholder="CEP" autofocus autocomplete="off" value="<?=$user['cep']?>" onblur="pesquisacep(this.value);">
                             </div>
                         </div>
                     </div>
@@ -203,19 +203,19 @@
                     </div>
                 </div>
 
-                <input type="submit" class="btn btn-primary btn-block" name="btnNovaConta" value="Concluir alterações">
+                <input type="submit" class="btn btn-primary btn-block" name="btnEditarPerfil" value="Concluir alterações">
             </form>
         </div>
     </div>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('#dt_nascimento').mask('99/99/9999');
-			$('#cep').mask('99999-999');
-			$('#tel_celular').mask('(99) 9 9999-9999');
-			$('#tel_residencial').mask('(99) 9999-9999');
-			$('#num_coren').mask('999.999');
-		});
-	</script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#dt_nascimento').mask('99/99/9999');
+            $('#cep').mask('99999-999');
+            $('#tel_celular').mask('(99) 9 9999-9999');
+            $('#tel_residencial').mask('(99) 9999-9999');
+            $('#num_coren').mask('999.999');
+        });
+    </script>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once 'includes/endfile.php'; ?>

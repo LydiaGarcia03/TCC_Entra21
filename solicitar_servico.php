@@ -86,16 +86,6 @@
                         <div class="col-md-6">
                             <div class="form-label-group">
                                 <input type="number" name="carga_horaria" id="carga_horaria" class="form-control" placeholder="Carga horária diária">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-6">
-                            <div class="form-label-group">
-                                <input type="number" name="qtd_cuidadores" id="qtd_cuidadores" class="form-control" placeholder="Quantidade de profissionais necessários" disabled>
                                 <small>A quantidade é definida pelo sistema de acordo com a PLC Nº 11, DE 2016</small>
                             </div>
                         </div>
@@ -171,6 +161,8 @@
     </div>
 
 
-    <?php require_once 'includes/endfile.php'; ?>
+    <!-- JS para alternar o campo de descrever infermidades -->
+    <script type="text/javascript" src="media/js/custom/escolha_enfermidade.js"></script>
 
+    <?php require_once 'includes/endfile.php'; ?>
     

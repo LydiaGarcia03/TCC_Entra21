@@ -37,4 +37,4 @@
 		</div>
 	</nav>
 
-	<?php require_once 'includes/endfile.php'; ?>
+<?php require_once 'includes/endfile.php'; ?>

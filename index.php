@@ -4,7 +4,6 @@
 
     require_once 'classes/logout.class.php';
     $logout = new Logout();
-
 ?>
 
 <title>HCD | Página Inicial</title>
@@ -260,7 +259,7 @@
                             </div>
                             <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                    <p>Home Care Digital é uma plataforma que, por meio da tecnologia auxilia as pessoas na busca por profissionais de saúde para apoio no cuidado de seus entes queridos em domicilio.</p>
                                 </div>
                             </div>
                         </div>
@@ -268,13 +267,13 @@
                             <div class="card-header bg-primary" id="faqHeading-2">
                                 <div class="mb-0">
                                     <h5 class="faq-title text-white" data-toggle="collapse" data-target="#faqCollapse-2" data-aria-expanded="false" data-aria-controls="faqCollapse-2">
-                                        <span class="badge">2</span> Where does it come from?
+                                        <span class="badge">2</span>Como me cadastrar?
                                     </h5>
                                 </div>
                             </div>
                             <div id="faqCollapse-2" class="collapse" aria-labelledby="faqHeading-2" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                    <p>Clique em cadastro e insira seus dados no campo CRIAR UMA CONTA. Não leva mais do que 2 minutos.</p>
                                 </div>
                             </div>
                         </div>
@@ -282,13 +281,13 @@
                             <div class="card-header bg-primary" id="faqHeading-3">
                                 <div class="mb-0">
                                     <h5 class="faq-title text-white" data-toggle="collapse" data-target="#faqCollapse-3" data-aria-expanded="false" data-aria-controls="faqCollapse-3">
-                                        <span class="badge">3</span>Why do we use it?
+                                        <span class="badge">3</span>Como pedir um profissional?
                                     </h5>
                                 </div>
                             </div>
                             <div id="faqCollapse-3" class="collapse" aria-labelledby="faqHeading-3" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here.</p>
+                                    <p>Informe o endereço onde precisa receber um o profissional, a especialidade desejada do profissional. Logo após, selecione  agende data e hora de acordo com sua disponibilidade.</p>
                                 </div>
                             </div>
                         </div>
@@ -296,13 +295,13 @@
                             <div class="card-header bg-primary" id="faqHeading-4">
                                 <div class="mb-0">
                                     <h5 class="faq-title text-white" data-toggle="collapse" data-target="#faqCollapse-4" data-aria-expanded="false" data-aria-controls="faqCollapse-4">
-                                        <span class="badge">4</span> Where can I get some?
+                                        <span class="badge">4</span> Qual o valor do serviços?
                                     </h5>
                                 </div>
                             </div>
                             <div id="faqCollapse-4" class="collapse" aria-labelledby="faqHeading-4" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                    <p>O valor varia de profissional para profissional e disponibilidade do mesmo selecionado. O próprio Profissional é quem determina os valores dos seu serviço.</p>
                                 </div>
                             </div>
                         </div>
@@ -310,13 +309,13 @@
                             <div class="card-header bg-primary" id="faqHeading-5">
                                 <div class="mb-0">
                                     <h5 class="faq-title text-white" data-toggle="collapse" data-target="#faqCollapse-5" data-aria-expanded="false" data-aria-controls="faqCollapse-5">
-                                        <span class="badge">5</span> What is Lorem Ipsum?
+                                        <span class="badge">5</span> Como é realizado o pagamento?
                                     </h5>
                                 </div>
                             </div>
                             <div id="faqCollapse-5" class="collapse" aria-labelledby="faqHeading-5" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing</p>
+                                    <p> O pagamento é realizado diretamente ao profissional. </p>
                                 </div>
                             </div>
                         </div>
@@ -329,13 +328,13 @@
                             <div class="card-header bg-primary" id="faqHeading-6">
                                 <div class="mb-0">
                                     <h5 class="faq-title text-white" data-toggle="collapse" data-target="#faqCollapse-6" data-aria-expanded="true" data-aria-controls="faqCollapse-6">
-                                        <span class="badge">6</span> What is Lorem Ipsum?
+                                        <span class="badge">6</span> Quais documentos necessário para o cadastro?
                                     </h5>
                                 </div>
                             </div>
                             <div id="faqCollapse-6" class="collapse" aria-labelledby="faqHeading-6" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                    <p>É necessário o anexo de documento de identificação com foto (RG ou carteira de motorista) frente e verso, dos diplomas e certificados de especialização, caso os tenha.</p>
                                 </div>
                             </div>
                         </div>
@@ -343,13 +342,13 @@
                             <div class="card-header bg-primary" id="faqHeading-7">
                                 <div class="mb-0">
                                     <h5 class="faq-title text-white" data-toggle="collapse" data-target="#faqCollapse-7" data-aria-expanded="false" data-aria-controls="faqCollapse-7">
-                                        <span class="badge">7</span> Where does it come from?
+                                        <span class="badge">7</span> O que acontecerá depois do cadastro efetuado?
                                     </h5>
                                 </div>
                             </div>
                             <div id="faqCollapse-7" class="collapse" aria-labelledby="faqHeading-7" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                    <p>Seu perfil será analisado pela nossa equipe, para que então seja aprovado ou não.</p>
                                 </div>
                             </div>
                         </div>
@@ -357,13 +356,13 @@
                             <div class="card-header bg-primary" id="faqHeading-8">
                                 <div class="mb-0">
                                     <h5 class="faq-title text-white" data-toggle="collapse" data-target="#faqCollapse-8" data-aria-expanded="false" data-aria-controls="faqCollapse-8">
-                                        <span class="badge">8</span>Why do we use it?
+                                        <span class="badge">8</span>Quanto tempo leva até a ativação do cadastro?
                                     </h5>
                                 </div>
                             </div>
                             <div id="faqCollapse-8" class="collapse" aria-labelledby="faqHeading-8" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here.</p>
+                                    <p>A ativação do cadastro pode levar até 48 horas.</p>
                                 </div>
                             </div>
                         </div>
@@ -371,13 +370,13 @@
                             <div class="card-header bg-primary" id="faqHeading-9">
                                 <div class="mb-0">
                                     <h5 class="faq-title text-white" data-toggle="collapse" data-target="#faqCollapse-9" data-aria-expanded="false" data-aria-controls="faqCollapse-9">
-                                        <span class="badge">9</span> Where can I get some?
+                                        <span class="badge">9</span>Pode entrar em contato com o solicitante?
                                     </h5>
                                 </div>
                             </div>
                             <div id="faqCollapse-9" class="collapse" aria-labelledby="faqHeading-9" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                    <p>Sim. O profissional receberá o telefone de contato do solicitante e, caso seja necessário, podera entra em contato.</p>
                                 </div>
                             </div>
                         </div>
@@ -385,13 +384,13 @@
                             <div class="card-header bg-primary" id="faqHeading-10">
                                 <div class="mb-0">
                                     <h5 class="faq-title text-white" data-toggle="collapse" data-target="#faqCollapse-10" data-aria-expanded="false" data-aria-controls="faqCollapse-10">
-                                        <span class="badge">10</span> What is Lorem Ipsum?
+                                        <span class="badge">10</span> Como é feito o pagamento?
                                     </h5>
                                 </div>
                             </div>
                             <div id="faqCollapse-10" class="collapse" aria-labelledby="faqHeading-10" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing</p>
+                                    <p> O pagamento é feito direta a você pelo solicitante do serviço.</p>
                                 </div>
                             </div>
                         </div>
@@ -454,5 +453,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                Copyright &copy; HCDigital 2019
+            </div>
+        </div>
+    </footer>
 
     <?php require_once 'includes/endfile.php'; ?>

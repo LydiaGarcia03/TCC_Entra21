@@ -34,7 +34,7 @@
 
                     <div class="col-6 my-auto">
 
-                        <span class="dot bg-<?=$servicos->verificarEstado()?>"></span>
+                        <span class="dot"> <!--bg-<?php //$servicos->verificarEstado()?> --></span>
                        
                     </div>  
                 </div>
@@ -58,14 +58,14 @@
                     </div>
 
                     <div class="col-2">
-                        <button type="button" class="btn btn-primary btn-sm float-right" name="btnDetalhes" id="btnDetalhes" data-toggle="modal" data-target="#modalDetalhes">Ver detalhes</button>
+                        <button type="button" class="btn btn-primary btn-sm float-right" name="btnDetalhes" id="btnDetalhes" data-toggle="modal" data-target="#modalDetalhes<?=$servico['id']?>">Ver detalhes</button>
                     </div>
                 </div>  
             </div>
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="modalDetalhes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalDetalhes<?=$servico['id']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header text-white rounded-0 bg-primary">
@@ -93,7 +93,22 @@
         <?php } ?>
 
     </div>
+</div>
+
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            Copyright &copy; HCDigital 2019
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
     
 
-<!-- Inclusão da endfile do sistema -->
+<!-- Inclusão da FOOTER do sistema -->
 <?php require_once 'includes/endfile.php';?>

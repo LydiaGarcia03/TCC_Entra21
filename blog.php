@@ -173,4 +173,4 @@ require_once 'includes/startfile.php';
     </section>
 
 
-    <?php require_once 'includes/footer.php'; ?>
+    <?php require_once 'includes/endfile.php'; ?>

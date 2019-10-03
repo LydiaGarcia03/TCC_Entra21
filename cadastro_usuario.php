@@ -10,17 +10,15 @@
 </head>
 <body style="background-color: dodgerblue">
 
+	<!-- Gambiarra para estética -->
+	<div class="row">
+		&nbsp;
+	</div>
 
 	<div class="container-fluid">
-		    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-        <div class="sidebar-brand-icon">
-            
-        </div>
-    </a>
-
-		<div class="container mb-5	">
-
-
+	
+		<div class="container">
+			
 			<div class="card mx-auto mt-5">
 
 				<div class="card-header text-center">Crie sua conta grátis</div>
@@ -178,9 +176,16 @@
 		</div> 
 	</div>
 
+	<!-- Gambiarra para estética -->
+	<div class="row">
+		&nbsp;
+	</div>
+	
 	<!-- Button TopPage -->
-	<a class="scroll-to-top rounded d-inline" href="index.php" id="btn-voltar">
-		<i class="fas fa-angle-left"></i>
-	</a>
+	<div id="btn_voltar">
+		<a class="scroll-to-top rounded d-inline" href="index.php" id="btn-voltar">
+			<i class="fas fa-angle-left"></i>
+		</a>
+	</div>
 
 	<?php require_once 'includes/endfile.php'; ?>
