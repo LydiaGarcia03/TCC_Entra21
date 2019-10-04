@@ -26,7 +26,8 @@
     <!-- Perfil Info -->
     <div class="text-center text-white my-3">
         <img src="media/img/img-04.jpeg" class="rounded-circle profile-img d-inline" id="profile-img">
-        <p class="mb-0 mt-2" id="nome_perfil"><?=$_SESSION['nome_usuario']?></p>
+        <!-- <i class="fas fa-5x fa-user-circle my-3"></i> -->
+        <p class="mb-0 mt-3 text-uppercase font-weight-bold" id="nome_perfil"><?=$_SESSION['nome_usuario']?></p>
     </div>
 
     <div class="text-center my-3">

@@ -1,6 +1,8 @@
 <?php
 
 require_once "site.class.php";
+require_once 'upload.class.php';
+$upload = new Upload();
 
 class Usuario extends Site{
 
@@ -19,6 +21,7 @@ class Usuario extends Site{
 
 		// Recebendo dados
 		$nome_completo = $_POST['nomeCompleto'];
+		$imagem = $_FILES['foto'];
 		$genero = $_POST['genero'];
 		$dt_nascimento = $_POST['dt_nascimento'];
 		$email = $_POST['email'];
@@ -39,6 +42,10 @@ class Usuario extends Site{
 		$sql = "INSERT INTO contratante VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento_sql', '$email', '$crip_senha', NULL, '$cep', '$numeroCasa', '$complemento', '$tel_celular', '$tel_residencial')";
 		
 		$query = mysqli_query($this->con, $sql);
+
+		$upload->upload();
+
+		header('Location: ../login.php');
 
 	}
 

@@ -55,7 +55,6 @@ select.custom-select:focus{
 	background-color: rgba(0, 0, 0, 0.1) !important;
 }
 .custom-file-label:after{
-	content: "Escolha a foto de perfil" !important;
 	background-color: white !important;
 	float: left !important;
 	left: 0 !important;

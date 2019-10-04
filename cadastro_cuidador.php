@@ -37,8 +37,8 @@
 
 								<div class="col-6">
 									<div class="input-group">
-										<input type="file" class="custom-file-input" name="c_foto" id="c_foto" placeholder="Escolha uma foto de perfil" style="cursor: pointer;">
-										<label class="text-secondary custom-file-label" for="c_foto"></label>
+										<input type="file" class="custom-file-input" name="foto" id="foto" placeholder="Escolha uma foto de perfil" style="cursor: pointer;">
+										<label class="text-secondary custom-file-label" for="foto"></label>
 									</div>
 								</div>
 							</div>

@@ -1,6 +1,8 @@
 <?php
 
-require_once "site.class.php";
+require_once 'site.class.php';
+require_once 'upload.class.php';
+$upload = new Upload();
 
 class Cuidador extends Site{
 
@@ -17,7 +19,7 @@ class Cuidador extends Site{
 	public function novaConta(){
 
 		$nome_completo = $_POST['nomeCompleto'];
-		$c_foto = $_FILES['c_foto'];
+		$imagem = $_FILES['foto'];
 		$genero = $_POST['genero'];
 		$dt_nascimento = $_POST['dt_nascimento'];
 		$email = $_POST['email'];
@@ -40,9 +42,13 @@ class Cuidador extends Site{
 
 		$dataAtual = date('Y-m-d');
 
-		$sql = "INSERT INTO cuidador VALUES (DEFAULT, '$nome_completo', $c_foto, '$genero', '$dt_nascimento_sql', '$email', '$crip_senha', NULL, '$cep', '$end_numero', '$end_complemento', '$tel_celular', '$num_coren', $val_hora, '$curso_formacao', '$instituicao', '$dataAtual')";
+		$sql = "INSERT INTO cuidador VALUES (DEFAULT, '$nome_completo', NULL, '$genero', '$dt_nascimento_sql', '$email', '$crip_senha', NULL, '$cep', '$end_numero', '$end_complemento', '$tel_celular', '$num_coren', $val_hora, '$curso_formacao', '$instituicao', '$dataAtual')";
 
 		$query = mysqli_query($this->con, $sql);
+
+		$upload->upload();
+
+		header('Location: ../login.php');
 		
 	}
 

@@ -83,17 +83,6 @@ class Servico extends Site{
 
     }
 
-    public function listarServicosSeparados(){
-
-        $sql = "SELECT * FROM servico";
-
-        $query = mysqli_query($this->con, $sql);
-        $result = mysqli_fetch_array($query);
-
-        return $result;
-
-    }
-
     public function listarServicosDisponiveis(){
         $sql = "SELECT 
                         s.*,
@@ -103,6 +92,8 @@ class Servico extends Site{
                     HAVING my <= 0";
         $query = mysqli_query($this->con, $sql);
         $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
+
+        return $result;
 
     }
 

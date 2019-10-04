@@ -20,47 +20,134 @@
 
 <div id="content">
 
-    <!-- Begin Page Content -->
-    <div class="container">
-        
-        <?php  foreach($lista as $servico){ ?>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row pt-4 pb-3">
+                <div class="col-12">
+                    
+                    <h3 class="float-right p-0 m-0 text-uppercase font-weight-bolder">Histórico de serviços</h3>
 
-        <div class="card my-5 ml-5 rounded-0" style=" width: 890px; height: 10%;">
-            <div class="card-body float-left">
-
-                <div class="row">
-                    <div class="col-6 my-auto">
-                        <h5>#<?=$servico['id']?></h5>
-                    </div>
-
-                    <div class="col-6 my-auto">
-                        <span class="dot"></span>
-                    </div>
                 </div>
-                
-                <hr>
+            </div>
+            
+            <hr class="mt-0">
 
-                <div class="row">
-                    <div class="col-4">
-                        <p class="card-text mr-5">Nome do profissional: </p>  
+            <div class="row">
+                <div class="col-12">
+        
+                    <?php foreach($lista as $servico){ ?>
+
+                    <div class="card my-5 rounded-0">
+                        <div class="card-body float-left">
+
+                            <div class="row">
+                                <div class="col-6 my-auto">
+                                    <h5>#<?=$servico['id']?></h5>
+                                </div>
+
+                                <div class="col-6 my-auto">
+
+                                    <span class="dot"> <!--bg-<?php //$servicos->verificarEstado()?> --></span>
+                                   
+                                </div>  
+                            </div>
+                            
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <p class="card-text m-0 campo"><?=$servico['nome_paciente']?></p>  
+                                    <small class="p-0 m-0 descricao_campos">Paciente</small>
+                                </div>
+
+                                <div class="col-3">
+                                    <p class="card-text m-0 campo"><?=($servico['tipo_servico'] == 'Idoso') ? 'Cuidador de Idosos' : ($servico['tipo_servico'] == 'Infantil') ? 'Cuidador Infantil' : 'Enfermagem' ?></p>  
+                                    <small class="p-0 m-0 descricao_campos">Tipo de serviço</small></p>
+                                </div>
+
+                                <div class="col-3">
+                                    <p class="card-text m-0 campo"><?=$servicos->verificarEstado()?></p>  
+                                    <small class="p-0 m-0 descricao_campos">Profissionais</small></p>
+                                </div>
+
+                                <div class="col-2">
+                                    <button type="button" class="btn btn-primary btn-sm float-right" name="btnDetalhes" id="btnDetalhes" data-toggle="modal" data-target="#modalDetalhes<?=$servico['id']?>">Ver detalhes</button>
+                                </div>
+                            </div>  
+                        </div>
                     </div>
 
-                    <div class="col-4">
-                        <p class="card-text">Tipo do serviço: <?=$servico['tipo_servico']?></p>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalDetalhes<?=$servico['id']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header text-white rounded-0 bg-primary">
+                                    <h5 class="modal-title" id="exampleModalLabel">#<?=$servico['id']?></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                
+                                    <h5><?=$servico['nome_paciente']?></h5>
+
+                                    <p>Nasceu em <?=$servico['dt_nascimento_paciente']?></p>
+
+                                    <?php if($servico['genero_paciente'] == 'F'){ ?>
+                                    <p>Sexo Feminino</p>
+                                    <?php } elseif($servico['genero_paciente'] == 'M'){ ?>
+                                    <p>Sexo Masculino</p>
+                                    <?php } else{ ?>
+                                    <p>Outro sexo</p>
+                                    <?php } ?>
+
+                                    <?=($servico['tipo_servico'] == 'Idoso') ? '<p>Serviço para cuidado de idosos</p>' : ($servico['tipo_servico'] == 'Infantil') ? '<p>Serviço para cuidados infantis</p>' : '<p>Serviço de enfermagem</p>' ?>
+                                
+                                    <p>Responsável: <!-- Nome do responsavel pego por uma funcao --></p>
+                                
+                                    <p>
+                                        Possui doença crônica
+                                        <?=($servico['doenca_cronica'] == 1) ? '<i class="fas fa-check text-success pl-2"></i><br><i class="fas fa-caret-right mr-3"></i>' . $servico['doenca_cronica_descricao'] : '<i class="fas fa-times text-danger pl-2"></i>'?>
+                                    </p>
+
+                                    <p>
+                                        Possui deficiência física
+                                        <?=($servico['deficiencia_fisica'] == 1) ? '<i class="fas fa-check text-success pl-2"></i><br><i class="fas fa-caret-right mr-3"></i>' . $servico['deficiencia_fisica_descricao'] : '<i class="fas fa-times text-danger pl-2"></i>'?>
+                                    </p>
+                                                                                  
+                                    <p>
+                                        Possui deficiência mental
+                                        <?=($servico['deficiencia_mental'] == 1) ? '<i class="fas fa-check text-success pl-2"></i><br><i class="fas fa-caret-right mr-3"></i>' . $servico['deficiencia_mental_descricao'] : '<i class="fas fa-times text-danger pl-2"></i>'?>
+                                    </p>
+
+                                    <?=$servico['descricao_geral']?>
+                                    <?=$servico['']?>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-4">
-                        <button type="button" class="btn btn-primary  btn-sm ml-5">Ver detalhes</button>
-                    </div>
-                </div>  
+                    <?php } ?>
+                </div>
             </div>
         </div>
 
-        <?php } ?>
     </div>
+</div>
 
-<!-- SCRIPT PARA CONVERTER DEPOIS... -->
-<script type="text/javascript" src="media/js/custom/calendario.js"></script>
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            Copyright &copy; HCDigital 2019
+        </div>
+    </div>
+</footer>
 
-<?php // Inclusão da FOOTER do sistema ?>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
 <?php require_once 'includes/endfile.php'; ?>

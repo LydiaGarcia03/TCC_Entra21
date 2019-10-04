@@ -15,146 +15,157 @@
 </head>
 
 <body id="page-top">
+    
     <div id="wrapper">
         <?php // Inclusão da NAVBAR lateral do sistema ?>
         <?php require_once('includes/navbar.php'); ?>
 
-        <div id="content">
-            <!-- Button TopPage -->
-            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                <i class="fa fa-bars"></i>
-            </button>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row pt-4 pb-3">
+                    <div class="col-12">
+                        
+                        <h3 class="float-right p-0 m-0 text-uppercase font-weight-bolder">Serviços disponíveis</h3>
 
-            <div class="card mx-5">
-                <div class="card-header font-weight-bolder">
-                    Serviços Disponíveis
+                    </div>
                 </div>
-                <div class="card-body p-0 m-0">
-                    <table class="table table-hover table-striped border-0 m-0">
-                        <thead class="py-5">
-                            <tr>
-                                <th class="text-left">Nome</th>
-                                <th class="text-left">Tipo de Serviço</th>
-                                <th class="text-center">Carga</th>
-                                <th class="text-center">Dia</th>
-                                <th class="text-left">Funcionarios necessitados</th>
-                                <th class="text-left">Aceites</th>
-                                <th></th>
-                            </tr>
-                        </thead>
+            
+                <hr class="mt-0">
 
-                        <tbody>
-                            <?php foreach($servicos as $chave => $servico) : ?>
-                                <!-- Visible -->
-                                <tr>
-                                    <td class="text-left py-4"><?=$servico['nome_paciente']?></td>
-                                    <td class="text-left py-4"><?=$servico['tipo_servico']?></td>
-                                    <td class="text-center py-4"><?=$servico['qtd_horas_diarias']?>h</td>
-                                    <td class="text-left py-4"><?=$servico['dias_servico']?></td>
-                                    <td class="text-left py-4">FALTA A QUANTIDADE DE FUNCIONARIOS AQUI</td>
-                                    <td class="text-left py-4">3/5 FALTA O CALCULO AQUI</td>
-                                    <td class="text-right py-3">
-                                        <button type="button" class="btn btn-info mostrar_aba" data-hidden="<?=$chave?>" data-texto="<i class='fas fa-minus'></i>" title="Detalhes">
-                                            <i class="fas fa-plus"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-success aceitar_servico" data-servico="<?=$servico['id']?>" title="Aceitar serviço">
-                                            <i class="fas fa-check"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+                <div class="row">
+                    <div class="col-12">
 
-                                <!-- Hidden -->
-                                <tr class="<?=$chave?>" style="display: none;">
-                                    <td colspan="2" class="text-left">
-                                        <strong>Doença crônica:</strong>
-                                        <?=($servico['doenca_cronica']==1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
-                                    </td>
-                                    <td colspan="5" class="text-left">
-                                        <strong>Descrição da doença crônica:</strong>
-                                        <?=($servico['doenca_cronica_descricao']!=null) ? $servico['doenca_cronica_descricao'] : '<i>Não Informada</i>' ?>
-                                    </td>
-                                </tr>
+                        <div class="card">
+                            
+                            <div class="card-body p-0 m-0">
+                                <table class="table table-hover table-striped border-0 m-0">
+                                    <thead class="py-5">
+                                        <tr>
+                                            <th class="text-left">Nome</th>
+                                            <th class="text-left">Tipo de Serviço</th>
+                                            <th class="text-center">Carga</th>
+                                            <th class="text-center">Dia</th>
+                                            <th class="text-left">Funcionarios necessitados</th>
+                                            <th class="text-left">Aceites</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
 
-                                <tr class="<?=$chave?>" style="display: none;">
-                                    <td colspan="2" class="text-left">
-                                        <strong>Deficiência física:</strong>
-                                        <?=($servico['deficiencia_fisica']==1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
-                                    </td>
-                                    <td colspan="5" class="text-left">
-                                        <strong>Descrição da deficiência física:</strong>
-                                        <?=($servico['deficiencia_fisica_descricao']!=null) ? $servico['deficiencia_fisica_descricao'] : '<i>Não Informada</i>' ?>
-                                    </td>
-                                </tr>
+                                    <tbody>
+                                        <?php foreach($servicos as $chave => $servico) : ?>
+                                            <!-- Visible -->
+                                            <tr>
+                                                <td class="text-left py-4"><?=$servico['nome_paciente']?></td>
+                                                <td class="text-left py-4"><?=$servico['tipo_servico']?></td>
+                                                <td class="text-center py-4"><?=$servico['qtd_horas_diarias']?>h</td>
+                                                <td class="text-left py-4"><?=$servico['dias_servico']?></td>
+                                                <td class="text-left py-4"><?=$servico['qtd_func_necessarios']?></td>
+                                                <td class="text-left py-4">3/5 FALTA O CALCULO AQUI</td>
+                                                <td class="text-right py-3">
+                                                    <button type="button" class="btn btn-info mostrar_aba mb-1" data-hidden="<?=$chave?>" data-texto="<i class='fas fa-minus'></i>" title="Detalhes">
+                                                        <i class="fas fa-plus"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-success aceitar_servico" data-servico="<?=$servico['id']?>" title="Aceitar serviço">
+                                                        <i class="fas fa-check"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
 
-                                <tr class="<?=$chave?>" style="display: none;">
-                                    <td colspan="2" class="text-left">
-                                        <strong>Doença mental:</strong>
-                                        <?=($servico['deficiencia_mental']==1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
-                                    </td>
-                                    <td colspan="5" class="text-left">
-                                        <strong>Descrição da deficiência mental:</strong>
-                                        <?=($servico['deficiencia_mental_descricao']!=null) ? $servico['deficiencia_mental_descricao'] : '<i>Não Informada</i>' ?>
-                                    </td>
-                                </tr>
+                                            <!-- Hidden -->
+                                            <tr class="<?=$chave?>" style="display: none;">
+                                                <td colspan="2" class="text-left">
+                                                    <strong>Doença crônica:</strong>
+                                                    <?=($servico['doenca_cronica']==1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
+                                                </td>
+                                                <td colspan="5" class="text-left">
+                                                    <strong>Descrição da doença crônica:</strong>
+                                                    <?=($servico['doenca_cronica_descricao']!=null) ? $servico['doenca_cronica_descricao'] : '<i>Não Informada</i>' ?>
+                                                </td>
+                                            </tr>
 
-                                <tr class="<?=$chave?>" style="display: none;">
-                                    <td colspan="7" class="text-left">
-                                        <strong>Descrição geral:</strong>
-                                        <?=$servico['descricao_geral']?>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                            <?php if (count($servicos)==0) : ?>
-                                <tr>
-                                    <td colspan="7" class="text-center py-4">
-                                        <i class="fas fa-2x fa-frown text-danger mb-3"></i><br>
-                                        Nenhum serviço disponível no momento
-                                    </td>
-                                </tr>
-                            <?php endif; ?>
-                        </tbody>
-                    </table>
+                                            <tr class="<?=$chave?>" style="display: none;">
+                                                <td colspan="2" class="text-left">
+                                                    <strong>Deficiência física:</strong>
+                                                    <?=($servico['deficiencia_fisica']==1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
+                                                </td>
+                                                <td colspan="5" class="text-left">
+                                                    <strong>Descrição da deficiência física:</strong>
+                                                    <?=($servico['deficiencia_fisica_descricao']!=null) ? $servico['deficiencia_fisica_descricao'] : '<i>Não Informada</i>' ?>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="<?=$chave?>" style="display: none;">
+                                                <td colspan="2" class="text-left">
+                                                    <strong>Doença mental:</strong>
+                                                    <?=($servico['deficiencia_mental']==1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
+                                                </td>
+                                                <td colspan="5" class="text-left">
+                                                    <strong>Descrição da deficiência mental:</strong>
+                                                    <?=($servico['deficiencia_mental_descricao']!=null) ? $servico['deficiencia_mental_descricao'] : '<i>Não Informada</i>' ?>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="<?=$chave?>" style="display: none;">
+                                                <td colspan="7" class="text-left">
+                                                    <strong>Descrição geral:</strong>
+                                                    <?=$servico['descricao_geral']?>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                        <?php if (count($servicos)==0) : ?>
+                                            <tr>
+                                                <td colspan="7" class="text-center py-4">
+                                                    <i class="fas fa-2x fa-frown text-danger mb-3"></i><br>
+                                                    Nenhum serviço disponível no momento
+                                                </td>
+                                            </tr>
+                                        <?php endif; ?>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
         </div>
+    </div>
 
-        <?php require_once 'includes/endfile.php'; ?>
+    <?php require_once 'includes/endfile.php'; ?>
 
-        <script>
-            $(document).ready(function() {
+    <script>
+        $(document).ready(function() {
 
-                $('.mostrar_aba').click(function() {
-                    var hidden = $(this).attr('data-hidden');
-                    var texto = $(this).attr('data-texto');
+            $('.mostrar_aba').click(function() {
+                var hidden = $(this).attr('data-hidden');
+                var texto = $(this).attr('data-texto');
 
-                    $(this).attr('data-texto', $(this).html());
-                    $(this).parent().parent().toggleClass('bg-secondary');
-                    $(this).parent().parent().toggleClass('text-white');
-                    $(this).parent().parent().toggleClass('font-weight-bolder');
+                $(this).attr('data-texto', $(this).html());
+                $(this).parent().parent().toggleClass('bg-secondary');
+                $(this).parent().parent().toggleClass('text-white');
+                $(this).parent().parent().toggleClass('font-weight-bolder');
 
-                    $('.'+hidden).fadeToggle();
+                $('.'+hidden).fadeToggle();
 
-                    $(this).html(texto);
-                });
-
-                $('.aceitar_servico').click(function() {
-                    var servico = $(this).attr('data-servico');
-                    var esse = $(this);
-
-                    $.ajax({
-                        url: "servicos_disponiveis_ajax.php",
-                        type: "POST",
-                        data: {
-                            "servico": servico
-                        }
-                    }).done(function (resposta) {
-                        if (resposta=='1') {
-                            esse.attr('disabled', true);
-                        }
-                    });
-
-                });
+                $(this).html(texto);
             });
-        </script>
+
+            $('.aceitar_servico').click(function() {
+                var servico = $(this).attr('data-servico');
+                var esse = $(this);
+
+                $.ajax({
+                    url: "servicos_disponiveis_ajax.php",
+                    type: "POST",
+                    data: {
+                        "servico": servico
+                    }
+                }).done(function (resposta) {
+                    if (resposta=='1') {
+                        esse.attr('disabled', true);
+                    }
+                });
+
+            });
+        });
+    </script>
