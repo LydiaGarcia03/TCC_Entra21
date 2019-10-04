@@ -20,7 +20,7 @@ class Upload extends Site{
 
 		$confirm = 1;
 
-		$tipoImagem = pathinfo(($arquivo, PATHINFO_EXTENSION)));
+		$tipoImagem = ptahinfo($arquivo, PATHINFO_EXTENSION);
 
 		if(move_uploaded_file($_FILES['foto']['tmp_name'], $arquivo)){
 			echo 'O arquivo ' . basename($_FILES['foto']['name']) . ' foi baixado';
