@@ -69,6 +69,10 @@ class Servico extends Site{
 
         $query = mysqli_query($this->con, $sql);
 
+        $result = mysqli_fetch_array($query);
+
+        $this->candidatar_servico($result['id']);
+
         header('Location: dashboard_contratante.php');
     }
 
@@ -103,22 +107,6 @@ class Servico extends Site{
             return true;
         else
             return false;
-    }
-
-    public function cadastraServicoPorCuidador($servico, $idCuidador){
-
-        if(is_array($servico)){
-
-            foreach ($servico as $idServico) {
-                
-                $sql = "INSERT INTO servicos_cuidadores VALUES (DEFAULT, $idServico, $idCuidador)";
-                $query = mysqli_query($this->con, $sql);
-
-            }
-            return 1;
-        } else
-            return 0;
-        
     }
 
     public function verificarEstado(){
