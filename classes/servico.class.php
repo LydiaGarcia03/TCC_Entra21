@@ -69,7 +69,7 @@ class Servico extends Site{
 
         $query = mysqli_query($this->con, $sql);
 
-        // header('Location: dashboard_contratante.php');
+        header('Location: dashboard_contratante.php');
     }
 
     public function listarTodosServicos(){

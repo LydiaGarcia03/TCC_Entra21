@@ -1,5 +1,4 @@
- </div>
-</div>
+
 <!-- ============ RESOURCES ============ -->
 <!-- jQuery -->
 <script src="media/js/resources/jquery.min.js"></script>

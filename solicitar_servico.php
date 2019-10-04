@@ -159,7 +159,7 @@
                                 </div>
                             </div>
 
-                            <input type="submit" class="btn btn-primary btn-block" name="btnSolicitarServico" value="Solicitar serviço">
+                            <input type="submit" class="btn btn-primary btn-block my-4" name="btnSolicitarServico" value="Solicitar serviço">
 
                         </form>
 
@@ -170,9 +170,19 @@
         </div>
     </div>
 
-    <!-- Button TopPage -->
-    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-        <i class="fa fa-bars"></i>
-    </button>
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                Copyright &copy; HCDigital 2019
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    
 
     <?php require_once 'includes/endfile.php'; ?>
