@@ -28,7 +28,7 @@ if(isset($_POST['btnEnviar'])){
 
 ?>
 
-<title>HCD | Esqueceu sua senha</title>
+<title>Esqueceu sua senha</title>
 </head>
 
 <body style="background-color: dodgerblue">

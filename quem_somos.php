@@ -1,6 +1,6 @@
 <?php require_once 'includes/startfile.php'; ?>
 
-	<title>HCD | Quem somos</title>
+	<title>Quem somos</title>
 </head>
 
 <body class="bg-light">

@@ -7,7 +7,7 @@
 
 ?>
 
-	<title>HCD | Login</title>
+	<title>Login</title>
 </head>
 <body style="background-color: dodgerblue">
 

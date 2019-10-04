@@ -3,7 +3,7 @@
 require_once 'includes/startfile.php';
 
 ?>
-    <title>HCD | Blog</title>
+    <title>Blog</title>
 </head>
 
 <body>

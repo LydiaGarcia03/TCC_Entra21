@@ -9,7 +9,7 @@
 
 
 ?>
-    <title>HCD | Dashboard</title>
+    <title>Dashboard</title>
 </head>
 
 <body id="page-top">

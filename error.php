@@ -1,6 +1,6 @@
 <?php require_once 'includes/startfile.php'; ?>
 
-	<title>HCD | Erro</title>
+	<title>Erro</title>
 </head>
 
 <body>

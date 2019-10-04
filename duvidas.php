@@ -1,6 +1,6 @@
 <?php require_once 'includes/startfile.php'; ?>
 
-	<title>HCD | Dúvidas</title>
+	<title>Dúvidas</title>
 </head>
 
 <body class="bg-light">

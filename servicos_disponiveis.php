@@ -11,7 +11,7 @@
     $servicos = $servicos->listarServicosDisponiveis();
 
 ?>
-    <title>HCD | Serviços</title>
+    <title>Serviços</title>
 </head>
 
 <body id="page-top">

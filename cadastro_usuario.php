@@ -6,7 +6,7 @@
 	$user = new Usuario();
 
 ?>
-	<title>HCD | Cadastro</title>
+	<title>Cadastro</title>
 </head>
 <body style="background-color: dodgerblue">
 

@@ -8,7 +8,7 @@
     $lista = $servicos->listarTodosServicos();
 
 ?>
-    <title>HCD | Dashboard</title>
+    <title>Dashboard</title>
 </head>
 
 <body id="page-top">
@@ -101,7 +101,7 @@
 
                         Possui deficiência física
                         <?=($servico['deficiencia_fisica'] == 1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
-
+                                                                      
                         Possui deficiência mental
                         <?=($servico['deficiencia_mental'] == 1) ? '<i class="fas fa-check text-success pl-2"></i>' : '<i class="fas fa-times text-danger pl-2"></i>'?>
 

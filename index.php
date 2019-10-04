@@ -6,7 +6,7 @@
     $logout = new Logout();
 ?>
 
-<title>HCD | Página Inicial</title>
+<title>Página Inicial</title>
 </head>
 
 <body class="bg-light">
