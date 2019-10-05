@@ -25,7 +25,7 @@
 
 				<div class="card-body">
 
-					<form method="POST" action="" name="formCadastroUser">
+					<form method="POST" action="" name="formCadastroUser" enctype="multipart/form-data">
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col-md-6">
@@ -38,7 +38,7 @@
 
 									<div class="input-group">
 										<label class="custom-file-label text-secondary" for="foto"></label>
-										<input type="file" name="foto" id="foto" class="custom-file-input" placeholder="Escolha uma foto de perfil">
+										<input type="file" name="foto[]" id="foto" class="custom-file-input" placeholder="Escolha uma foto de perfil">
 									</div>
 
 								</div>

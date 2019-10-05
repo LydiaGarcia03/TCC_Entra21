@@ -8,18 +8,11 @@
     session_start();
 
     if($_SESSION['tipo_usuario'] == 'contratante'){
-
         $usuario_obj = new Usuario();
-
         $user = $usuario_obj->procuraUsuario();
-
-    }
-    elseif($_SESSION['tipo_usuario'] == 'cuidador'){
-
+    } elseif($_SESSION['tipo_usuario'] == 'cuidador'){
         $cuidador_obj = new Cuidador();
-
         $user = $cuidador_obj->procuraCuidador();
-
     }
 
 ?>
@@ -39,9 +32,7 @@
             <div class="container">
                 <div class="row pt-4 pb-3">
                     <div class="col-12">
-                        
                         <h3 class="float-right p-0 m-0 text-uppercase font-weight-bolder">Edição de conta</h3>
-
                     </div>
                 </div>
                 
@@ -50,20 +41,28 @@
                 <div class="row">
                     <div class="col-12">
     
-                        <form class="validation">
+                        <form class="validation" method="POST" action="" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col-md-12 text-center my-3">
+                                        <img src="<?=(isset($_SESSION['foto_usuario']) && $_SESSION['foto_usuario'] != null) ? ('upload/'.$_SESSION['foto_usuario']) : 'media/img/default-user.jpg' ?>" class="img-fluid img-thumbnail shadow rounded-circle" style="max-height: 200px; max-width: 200px;">
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="form-group">
                                 <div class="form-row">
                                     <div class="col-md-6">
                                         <div class="form-label-group">
                                             <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control"
-                                            placeholder="Nome completo" value="<?=$user['nome_completo']?>" autofocus autocomplete="off">
+                                                   placeholder="Nome completo" value="<?=$user['nome_completo']?>" autofocus autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-6">
 
                                         <div class="input-group">
                                             <label class="custom-file-label text-secondary" for="foto"></label>
-                                            <input type="file" class="custom-file-input" name="foto" id="foto" placeholder="Escolha uma foto de perfil">
+                                            <input type="file" class="custom-file-input" name="foto[]" id="foto" placeholder="Escolha uma foto de perfil">
                                         </div>
 
                                     </div>
@@ -110,7 +109,7 @@
                                     <div class="col-md-6">
                                         <div class="form-label-group">
                                             <input type="text" name="cep" id="cep" class="form-control"
-                                            placeholder="CEP" autofocus autocomplete="off" value="<?=$user['cep']?>" onblur="pesquisacep(this.value);">
+                                            placeholder="CEP" autofocus autocomplete="off" value="<?=$user['cep']?>">
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +126,7 @@
                                     <div class="col-md-6">
                                        <div class="form-label-group">
                                                 <input type="text" name="numero_casa" id="numero_casa" class="form-control" 
-                                                placeholder="<?=$user['end_numero']?>" minlength="2" maxlength="4">    
+                                                value="<?=$user['end_numero']?>" minlength="2" maxlength="4">
                                             </div>
                                     </div>
                                 </div>
@@ -138,7 +137,7 @@
                                     <div class="col-md-6">
                                         <div class="form-label-group">
                                             <input type="text" name="complemento" id="complemento" class="form-control"
-                                            placeholder="<?=$user['end_complemento']?>" autofocus autocomplete="off">
+                                            value="<?=$user['end_complemento']?>" autofocus autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -193,14 +192,14 @@
                                     <div class="col-md-3 mt-3">
                                         <div class="form-label-group">
                                             <input type="text" name="num_coren" id="num_coren" class="form-control"
-                                            placeholder="Número de Coren" value="<?=$cuidador['num_coren']?>" autofocus autocomplete="off">
+                                            placeholder="Número de Coren" value="<?=$user['num_coren']?>" autofocus autocomplete="off">
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 mt-3">
                                         <div class="form-label-group">
                                             <input type="text" name="val_hora" id="val_hora" class="form-control"
-                                            placeholder="Valor por hora (R$)" value="<?=$cuidador['valor_hora']?>" autofocus autocomplete="off">
+                                            placeholder="Valor por hora (R$)" value="<?=$user['valor_hora']?>" autofocus autocomplete="off">
                                         </div>
                                     </div>
                                 </div>
@@ -211,7 +210,7 @@
                                     <div class="col-md-6 mt-3">
                                         <div class="form-label-group">
                                             <input type="text" name="curso_formacao" id="curso_formacao" class="form-control"
-                                            placeholder="Curso de formação" value="<?=$cuidador['curso_formacao']?>" autofocus autocomplete="off">
+                                            placeholder="Curso de formação" value="<?=$user['curso_formacao']?>" autofocus autocomplete="off">
                                         </div>
                                     </div>
                                 </div>
@@ -222,7 +221,7 @@
                                     <div class="col-md-6 mt-3">
                                         <div class="form-label-group">
                                             <input type="text" name="instituicao" id="instituicao" class="form-control"
-                                            placeholder="Instituição de formação" value="<?=$cuidador['instituicao']?>" autofocus autocomplete="off">
+                                            placeholder="Instituição de formação" value="<?=$user['instituicao']?>" autofocus autocomplete="off">
                                         </div>
                                     </div>
                                     
@@ -253,6 +252,8 @@
         </div>
     </footer>
 
+    <?php require_once 'includes/endfile.php'; ?>
+
     <script type="text/javascript">
         $(document).ready(function(){
             $('#dt_nascimento').mask('99/99/9999');
@@ -260,7 +261,9 @@
             $('#tel_celular').mask('(99) 9 9999-9999');
             $('#tel_residencial').mask('(99) 9999-9999');
             $('#num_coren').mask('999.999');
+
+            setTimeout(function() {
+                pesquisacep($('#cep').val());
+            }, 500);
         });
     </script>
-
-<?php require_once 'includes/endfile.php'; ?>

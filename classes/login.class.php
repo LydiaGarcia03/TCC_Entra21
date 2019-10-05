@@ -53,13 +53,14 @@ class Login extends Site{
                         // $_SESSION['foto_usuario'] = $result['foto'];
                         $_SESSION['nome_usuario'] = $result['nome_completo'];
                         $_SESSION['id_usuario'] = $result['id'];
+                        $_SESSION['foto_usuario'] = $result['foto'];
 
 						header('Location: dashboard_contratante.php');
 
 					} else if($user == 'cuidador'){
 
 						$_SESSION['tipo_usuario'] = 'cuidador';
-						// $_SESSION['foto_usuario'] = $result['foto'];
+                        $_SESSION['foto_usuario'] = $result['foto'];
                         $_SESSION['nome_usuario'] = $result['nome_completo'];
                         $_SESSION['id_usuario'] = $result['id'];
 

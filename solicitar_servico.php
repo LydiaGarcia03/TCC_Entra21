@@ -103,7 +103,7 @@
                                     <div class="col-md-12">
                                         <div class="form-label-group">
                                             O paciente possui alguma doença crônica?
-                                            <input type="radio" name="doenca" id="doenca_true" value="true" class="ml-2">
+                                            <input type="radio" name="doenca" id="doenca_true" value="1" class="ml-2">
                                             <label>Sim</label>
                                             <input type="radio" name="doenca" id="doenca_false" value="false">
                                             <label>Não</label>
@@ -115,7 +115,7 @@
                                     <div class="col-md-12">
                                         <div class="form-label-group">
                                             O paciente possui deficiência física?
-                                            <input type="radio" name="deficFisica" id="deficFisica_true" value="true" class="ml-2">
+                                            <input type="radio" name="deficFisica" id="deficFisica_true" value="1" class="ml-2">
                                             <label>Sim</label>
                                             <input type="radio" name="deficFisica" id="deficFisica_false" value="false">
                                             <label>Não</label>
@@ -127,7 +127,7 @@
                                     <div class="col-md-12">
                                         <div class="form-label-group">
                                             O paciente possui deficiência mental?
-                                            <input type="radio" name="deficMental" id="deficMental_true" value="true" class="ml-2">
+                                            <input type="radio" name="deficMental" id="deficMental_true" value="1" class="ml-2">
                                             <label>Sim</label>
                                             <input type="radio" name="deficMental" id="deficMental_false" value="false">
                                             <label>Não</label>
@@ -148,7 +148,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group" class="my-4">
+                            <div class="form-group my-4">
                                 <div class="form-row">
                                     <div class="col-md-12">
                                         <div class="form-check">
@@ -183,6 +183,37 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-    
 
     <?php require_once 'includes/endfile.php'; ?>
+
+    <script>
+        $(document).ready(function(){
+
+            $('#dt_nascimento').mask('99/99/9999');
+
+            $("input[name='doenca']").change(function() {
+                if($(this).val() == '1') {
+                    $('#desc_doenca').show()
+                } else {
+                    $('#desc_doenca').hide();
+                }
+            });
+
+            $("input[name='deficFisica']").change(function() {
+                if($(this).val() == '1') {
+                    $('#desc_deficFisica').show()
+                } else {
+                    $('#desc_deficFisica').hide();
+                }
+            });
+
+            $("input[name='deficMental']").change(function() {
+                if($(this).val() == '1') {
+                    $('#desc_deficMental').show()
+                } else {
+                    $('#desc_deficMental').hide();
+                }
+            });
+
+        });
+    </script>

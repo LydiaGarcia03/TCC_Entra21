@@ -1,9 +1,9 @@
-$(document).ready(function(){
+$(document).ready(function($){
 
     $('#dt_nascimento').mask('99/99/9999');
 
     $("input[name='doenca']").change(function() {
-        if($(this).val() == 'true') {
+        if($(this).val() == '1') {
             $('#desc_doenca').show()
         } else {
             $('#desc_doenca').hide();
@@ -11,7 +11,7 @@ $(document).ready(function(){
     });
 
     $("input[name='deficFisica']").change(function() {
-        if($(this).val() == 'true') {
+        if($(this).val() == '1') {
             $('#desc_deficFisica').show()
         } else {
             $('#desc_deficFisica').hide();
@@ -19,7 +19,7 @@ $(document).ready(function(){
     });
 
     $("input[name='deficMental']").change(function() {
-        if($(this).val() == 'true') {
+        if($(this).val() == '1') {
             $('#desc_deficMental').show()
         } else {
             $('#desc_deficMental').hide();

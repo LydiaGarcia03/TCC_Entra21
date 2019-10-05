@@ -43,9 +43,8 @@
                                         <tr>
                                             <th class="text-left">Nome</th>
                                             <th class="text-left">Tipo de Serviço</th>
-                                            <th class="text-center">Carga</th>
-                                            <th class="text-center">Dia</th>
-                                            <th class="text-left">Funcionarios necessitados</th>
+                                            <th class="text-left">Carga</th>
+                                            <th class="text-left">Dia</th>
                                             <th class="text-left">Aceites</th>
                                             <th></th>
                                         </tr>
@@ -53,14 +52,29 @@
 
                                     <tbody>
                                         <?php foreach($servicos as $chave => $servico) : ?>
+                                            <?php
+                                                unset($data);
+                                                $explode = explode(',', $servico['dias_servico']);
+                                                foreach ($explode as $key => $value) :
+                                                    $explode2 = explode('-', $explode[$key]);
+                                                    $data[] = $explode2[0] . '/' . $explode2[1];
+                                                endforeach;
+                                            ?>
                                             <!-- Visible -->
                                             <tr>
                                                 <td class="text-left py-4"><?=$servico['nome_paciente']?></td>
                                                 <td class="text-left py-4"><?=$servico['tipo_servico']?></td>
                                                 <td class="text-center py-4"><?=$servico['qtd_horas_diarias']?>h</td>
-                                                <td class="text-left py-4"><?=$servico['dias_servico']?></td>
-                                                <td class="text-left py-4"><?=$servico['qtd_func_necessarios']?></td>
-                                                <td class="text-left py-4">3/5 FALTA O CALCULO AQUI</td>
+                                                <td class="text-left py-4">
+                                                    <?php
+                                                        foreach ($data as $chave => $dt)
+                                                            if ($chave < (count($data)-1))
+                                                                echo $dt . ', ';
+                                                            else
+                                                                echo $dt;
+                                                    ?>
+                                                </td>
+                                                <td class="text-left py-4"><?=$servico['total']?>/<?=$servico['qtd_func_necessarios']?></td>
                                                 <td class="text-right py-3">
                                                     <button type="button" class="btn btn-info mostrar_aba mb-1" data-hidden="<?=$chave?>" data-texto="<i class='fas fa-minus'></i>" title="Detalhes">
                                                         <i class="fas fa-plus"></i>

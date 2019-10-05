@@ -25,10 +25,36 @@
 
     <!-- Perfil Info -->
     <div class="text-center text-white my-3">
-        <img src="media/img/img-04.jpeg" class="rounded-circle profile-img d-inline" id="profile-img">
+        <img src="<?=(isset($_SESSION['foto_usuario']) && $_SESSION['foto_usuario'] != null) ? ('upload/'.$_SESSION['foto_usuario']) : 'media/img/default-user.jpg' ?>" class="rounded-circle profile-img d-inline" id="profile-img">
         <!-- <i class="fas fa-5x fa-user-circle my-3"></i> -->
         <p class="mb-0 mt-3 text-uppercase font-weight-bold" id="nome_perfil"><?=$_SESSION['nome_usuario']?></p>
     </div>
+
+    <?php if($site->session_type() == 'contratante'){ ?>
+        <div class="text-center my-3">
+            <li class="nav-item">
+                <small>
+                    <a href="dashboard_contratante.php" class="nav-link text-center p-0">
+                        <i class="fas fa-list"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </small>
+            </li>
+        </div>
+    <?php } ?>
+
+    <?php if($site->session_type() == 'cuidador'){ ?>
+        <div class="text-center my-3">
+            <li class="nav-item">
+                <small>
+                    <a href="dashboard_cuidador.php" class="nav-link text-center p-0">
+                        <i class="fas fa-list"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </small>
+            </li>
+        </div>
+    <?php }?>
 
     <div class="text-center my-3">
         <li class="nav-item">
@@ -40,34 +66,6 @@
             </small>
         </li>
     </div>
-
-    <?php if($site->session_type() == 'contratante'){ ?>
-    <div class="text-center my-3">
-        <li class="nav-item">
-            <small>
-                <a href="dashboard_contratante.php" class="nav-link text-center p-0">
-                    <i class="fas fa-list"></i>
-                    <span>Dashboard</span>
-                </a>
-            </small>
-        </li>
-    </div>
-    <?php } ?>
-
-    <?php if($site->session_type() == 'cuidador'){ ?>
-    <div class="text-center my-3">
-        <li class="nav-item">
-            <small>
-                <a href="dashboard_cuidador.php" class="nav-link text-center p-0">
-                    <i class="fas fa-list"></i>
-                    <span>Dashboard</span>
-                </a>
-            </small>
-        </li>
-    </div>
-
-    <?php }?>
-
 
     <?php if($site->session_type() == 'contratante'){ ?>
     <div class="text-center my-3">

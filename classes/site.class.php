@@ -28,19 +28,15 @@ class Site{
 	}
 
 	public function config(){
-
 		date_default_timezone_set('America/Sao_Paulo');
 		error_reporting(0);
-
 	}
 
 	public function session_type(){
-
 		if($_SESSION['tipo_usuario'] == 'contratante')
 			return 'contratante';
 		elseif ($_SESSION['tipo_usuario'] == 'cuidador') 
 			return 'cuidador';
-
 	}
 
 }
