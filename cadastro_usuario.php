@@ -8,7 +8,7 @@
 ?>
 	<title>Cadastro</title>
 </head>
-<body style="background-color: dodgerblue; height: 1000px;">
+<body style="background-color: dodgerblue; height: 2000px;">
 
 	<!-- Gambiarra para estética -->
 	<div class="row">
